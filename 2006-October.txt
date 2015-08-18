@@ -1,0 +1,128 @@
+From spe.stani.be at gmail.com  Fri Oct 20 03:56:13 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 20 Oct 2006 03:56:13 +0200
+Subject: [spe-mac] SPE 0.8.3.a released!
+Message-ID: <2078a7ad0610191856m7c4181baj6697ad0706d3de8a@mail.gmail.com>
+
+Hi all,
+
+For those who have been waiting with patience: the new SPE 0.8.3.b
+release is waiting for you!
+
+Read more here: http://pythonide.stani.be/blog/
+
+If you are using python 2.3 or 2.5 on Windows send me a mail in case
+there is not yet an installer yet.
+
+Thanks for all your support,
+
+Stani
+
+
+From spe.stani.be at gmail.com  Fri Oct 20 18:28:42 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 20 Oct 2006 18:28:42 +0200
+Subject: [spe-mac] SPE 0.8.3.a released!
+In-Reply-To: <2078a7ad0610191856m7c4181baj6697ad0706d3de8a@mail.gmail.com>
+References: <2078a7ad0610191856m7c4181baj6697ad0706d3de8a@mail.gmail.com>
+Message-ID: <2078a7ad0610200928g7c93f086n4e2d11020c69d0bb@mail.gmail.com>
+
+There was still a small bug, only for wxPython2.7 so SPE 0.8.3.b is
+now released.
+
+Stani
+
+On 10/20/06, SPE Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+> Hi all,
+>
+> For those who have been waiting with patience: the new SPE 0.8.3.b
+> release is waiting for you!
+>
+> Read more here: http://pythonide.stani.be/blog/
+>
+> If you are using python 2.3 or 2.5 on Windows send me a mail in case
+> there is not yet an installer yet.
+>
+> Thanks for all your support,
+>
+> Stani
+>
+
+
+-- 
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From jackseay at sbcglobal.net  Wed Oct 25 15:14:42 2006
+From: jackseay at sbcglobal.net (Jack Seay)
+Date: Wed, 25 Oct 2006 08:14:42 -0500
+Subject: [spe-mac] SPE won't run,
+	error: You need to install at least wxPython v2.5.4.1 to run SPE
+Message-ID: <CE60BAE9-EE7D-454D-962D-C8E51D945857@sbcglobal.net>
+
+SPE won't run, error: "You need to install at least wxPython v2.5.4.1  
+to run SPE..."
+I am trying to run SPE-0.8.3.c-wx2.6.1.0
+I installed wxPython2.6-osx-unicode-2.6.3.2-macosx10.3-py2.4.dmg
+and even rebooted. I tried running the uninstall program to see if it  
+showed any previous wxPython's it would remove. It didn't. I am  
+running the wxPython demo, showing that I am running wxPython 2.6.3.2
+I have installed Python 2.5, which Idle confirms it is using.
+What is the problem? I have been reading various web pages and docs  
+for days trying to fix this, with no luck.
+
+
+From spe.stani.be at gmail.com  Wed Oct 25 23:24:43 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 25 Oct 2006 23:24:43 +0200
+Subject: [spe-mac] SPE won't run,
+	error: You need to install at least wxPython v2.5.4.1 to run SPE
+In-Reply-To: <CE60BAE9-EE7D-454D-962D-C8E51D945857@sbcglobal.net>
+References: <CE60BAE9-EE7D-454D-962D-C8E51D945857@sbcglobal.net>
+Message-ID: <2078a7ad0610251424r4cdf26fdlc2b7a936458764d6@mail.gmail.com>
+
+If you are using python 2.5, you should install
+wxPython2.6-osx-unicode-2.6.3.2-macosx10.3-py2.5 instead of
+wxPython2.6-osx-unicode-2.6.3.2-macosx10.3-py2.4
+
+Always check if you're wxPython installation works well (for example
+by running the wxPython demo) before trying SPE. Problems with
+wxPython you can report on the wxpython-user or wxpython-mac mailing
+list.
+
+If wxPython works fine and SPE won't start, file me a bug report by
+running SPE from a terminal in this way:
+
+pythonw SPE.py --debug
+
+Stani
+
+On 10/25/06, Jack Seay <jackseay at sbcglobal.net> wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate _______________________________________________
+> SPE won't run, error: "You need to install at least wxPython v2.5.4.1
+> to run SPE..."
+> I am trying to run SPE-0.8.3.c-wx2.6.1.0
+> I installed wxPython2.6-osx-unicode-2.6.3.2-macosx10.3-py2.4.dmg
+> and even rebooted. I tried running the uninstall program to see if it
+> showed any previous wxPython's it would remove. It didn't. I am
+> running the wxPython demo, showing that I am running wxPython 2.6.3.2
+> I have installed Python 2.5, which Idle confirms it is using.
+> What is the problem? I have been reading various web pages and docs
+> for days trying to fix this, with no luck.
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+-- 
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+

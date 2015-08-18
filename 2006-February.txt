@@ -1,0 +1,326 @@
+From spe.stani.be at gmail.com  Thu Feb  2 01:21:45 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 2 Feb 2006 01:21:45 +0100
+Subject: [spe-mac] Fwd: SPE video, yes really!
+In-Reply-To: <e75321bd0602011605t318ec55cle42907a53c7ea039@mail.gmail.com>
+References: <e75321bd0602011605t318ec55cle42907a53c7ea039@mail.gmail.com>
+Message-ID: <2078a7ad0602011621v43d60426v1fe01d8e3e00277@mail.gmail.com>
+
+Hi all,
+
+Dimitri Pater (http://www.serpia.org) brought this under my attention:
+http://showmedo.com:8081/videoListPage?listKey=PythonDevelopmentWithSPE
+
+This is a wonderful contribution!
+
+A big thanks to Ian O, who made it, and to showmedo.com for hosting it!
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Thu Feb  2 02:12:54 2006
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Wed, 1 Feb 2006 19:12:54 -0600
+Subject: [spe-mac] Fwd: SPE video, yes really!
+In-Reply-To: <2078a7ad0602011621v43d60426v1fe01d8e3e00277@mail.gmail.com>
+References: <e75321bd0602011605t318ec55cle42907a53c7ea039@mail.gmail.com> <2078a7ad0602011621v43d60426v1fe01d8e3e00277@mail.gmail.com>
+Message-ID: <31068C4B-196C-4E21-BA3C-3C00A1E7AD1E@sbcglobal.net>
+
+Stani,
+
+Thanks so much for porting SPE to the Mac, I hope my small  
+contribution towards the Mac Mini helped. After seeing the video, I  
+was wondering if there is any chance you'll compile a fully  
+standalone version (i.e. containing all of the wx and etc. support  
+libraries) for people like me, who have neither the time nor (in many  
+cases) the ability to track down compile/link/etc problems.
+
+Thanks again for the port,
+Ken McDonald
+
+On 1-Feb-06, at 6:21 PM, SPE Stani's Python Editor wrote:
+
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate  
+> _______________________________________________
+> Hi all,
+>
+> Dimitri Pater (http://www.serpia.org) brought this under my attention:
+> http://showmedo.com:8081/videoListPage? 
+> listKey=PythonDevelopmentWithSPE
+>
+> This is a wonderful contribution!
+>
+> A big thanks to Ian O, who made it, and to showmedo.com for hosting  
+> it!
+>
+> Stani
+>
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/screenshots
+> http://pythonide.stani.be/manual/html/manual.html
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+
+
+From rudolphv at gmail.com  Thu Feb  2 08:22:14 2006
+From: rudolphv at gmail.com (Rudolph van der Merwe)
+Date: Thu, 2 Feb 2006 09:22:14 +0200
+Subject: [spe-mac] Bugs in latest Mac version
+Message-ID: <97670e910602012322y6daf60bet83e751e7e0db9ab1@mail.gmail.com>
+
+When I start up the latest version (0.8.2.a) of SPE for Mac I get the
+following warnings on the console:
+
+Launching application...
+[Debug] 09:19:42: Invalid menu string '/usr/bin/gnome-terminal --title
+SPE --working-directory="%(path)s" &'
+[Debug] 09:19:42: Invalid menu string '/usr/bin/konsole --caption SPE
+--workdir "%(path)s" &'
+[Debug] 09:19:42: Invalid menu string '/usr/bin/gnome-terminal --title
+SPE --working-directory="%(path)s" -e '%(python)s "%(file)s"
+%(arguments)s' &'
+[Debug] 09:19:42: Invalid menu string '/usr/bin/konsole --noclose
+--caption SPE --workdir "%(path)s" -e %(python)s "%(file)s"
+%(arguments)s &'
+[Debug] 09:19:42: Invalid menu string '/usr/bin/gnome-terminal --title
+SPE --working-directory="%(path)s" -e '%(python)s "%(file)s"
+%(arguments)s' &'
+[Debug] 09:19:42: Invalid menu string '/usr/bin/konsole --caption SPE
+--workdir "%(path)s" -e %(python)s "%(file)s" %(arguments)s &'
+
+R.
+
+
+--
+Rudolph van der Merwe
+
+
+From zenerbufen at gmail.com  Sun Feb  5 21:11:26 2006
+From: zenerbufen at gmail.com (D)
+Date: Sun, 5 Feb 2006 13:11:26 -0700
+Subject: [spe-mac] A few bugs in mac version.
+Message-ID: <a9236cbd0602051211s20fb8c06x151c9249eafda9f6@mail.gmail.com>
+
+First I would like to say thank you for the editor, it is very nice :)
+Each version just gets better than the last!
+
+There are however still a few bugs I hope this can helps to find them.
+I am not good at gui programing myself.
+
+1) When run in multiple document windows/pallet mode (mac style) there
+is a few problems
+
+a) Can't load image file from
+'/Apps/_spe/defaults/skins\default\import.png': file does not exist.
+I assume this is because some slashes are going the wrong way.
+
+b)Next window previous window icons on the floating pallet do not
+appear to do anything.
+
+c) The main window (not document window) with the toolbar icons is to
+tall and when it try to shrink it it can't shrink far enough and
+remains way to tall. The smallest it will go is about 2 inches tall
+and it should go to 1/2 an inch tall.
+
+d)It does not remember the size or locations of windows.
+
+2) Calltips, this is when you type the . and a menu pops up, yes? When
+I try to turn this off the little menu still pops up, But this time in
+ a different font. Also it would be nice to  be able to turn this off
+for numbers, it is annoying to have it pop up with all the attributes
+of the int class whenever I try to type in a floating decimal.
+
+3) In the shell when the text is hi-lighted and then you click on it
+it will crash. I know this is a problem with wxpython but you put a
+work around in for the document window, that would be nice in the
+shell also.
+
+I have a ibook g4 with OS X 10.4.3, python 2.3.5, wxpython 2.5.3.1, SPE 0.8.2.a
+
+
+From mmilczyn at techfak.uni-bielefeld.de  Sat Feb 11 14:11:02 2006
+From: mmilczyn at techfak.uni-bielefeld.de (Matthias Milczynski)
+Date: Sat, 11 Feb 2006 14:11:02 +0100
+Subject: [spe-mac] (no subject)
+Message-ID: <3E016C40-C2E8-47F1-8B0B-9B6AECDC9619@techfak.uni-bielefeld.de>
+
+Hello,
+
+I would like to use SPE with vpython, that I installed with fink  
+(unfortunately there is no other possibility yet). My vpython stuff  
+is located in /sw/lib/python2.4/site-packages/visual, but I run SPE  
+with /usr/local/bin/pythonw2.4. When I try to run any vpython script  
+I encounter the following error:
+
+///////////////////////////////////////////////////////////////
+
+Traceback (most recent call last):
+   File "bounce.py", line 1, in ?
+     from visual import *
+   File "/sw/lib/python2.4/site-packages/visual/__init__.py", line  
+15, in ?
+     import array_backend
+   File "/sw/lib/python2.4/site-packages/visual/array_backend.py",  
+line 1, in ?
+     import cvisual
+ImportError: Failure linking new module: /sw/lib/python2.4/site- 
+packages/cvisualmodule.so: Symbol not found: _PyObject_IsInstance
+   Referenced from: /sw/lib/python2.4/site-packages/cvisualmodule.so
+   Expected in: /Library/Frameworks/Python.framework/Versions/2.4/ 
+Resources/Python.app/Contents/MacOS/Python
+
+
+///////////////////////////////////////////////////////////////
+
+Can anybody help me with this?
+
+Thanks a lot!!
+
+Matthias
+
+
+From spe.stani.be at gmail.com  Sat Feb 11 17:58:37 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sat, 11 Feb 2006 17:58:37 +0100
+Subject: [spe-mac] (no subject)
+In-Reply-To: <3E016C40-C2E8-47F1-8B0B-9B6AECDC9619@techfak.uni-bielefeld.de>
+References: <3E016C40-C2E8-47F1-8B0B-9B6AECDC9619@techfak.uni-bielefeld.de>
+Message-ID: <2078a7ad0602110858s24fd64bdm75713047996756df@mail.gmail.com>
+
+Sorry, I can't. I hope a more experienced Mac user will be so kind to
+help you. Otherwise you could try the pythonmac sig mailing list.
+
+Stani
+
+On 2/11/06, Matthias Milczynski <mmilczyn at techfak.uni-bielefeld.de> wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate _______________________________________________
+> Hello,
+>
+> I would like to use SPE with vpython, that I installed with fink
+> (unfortunately there is no other possibility yet). My vpython stuff
+> is located in /sw/lib/python2.4/site-packages/visual, but I run SPE
+> with /usr/local/bin/pythonw2.4. When I try to run any vpython script
+> I encounter the following error:
+>
+> ///////////////////////////////////////////////////////////////
+>
+> Traceback (most recent call last):
+>    File "bounce.py", line 1, in ?
+>      from visual import *
+>    File "/sw/lib/python2.4/site-packages/visual/__init__.py", line
+> 15, in ?
+>      import array_backend
+>    File "/sw/lib/python2.4/site-packages/visual/array_backend.py",
+> line 1, in ?
+>      import cvisual
+> ImportError: Failure linking new module: /sw/lib/python2.4/site-
+> packages/cvisualmodule.so: Symbol not found: _PyObject_IsInstance
+>    Referenced from: /sw/lib/python2.4/site-packages/cvisualmodule.so
+>    Expected in: /Library/Frameworks/Python.framework/Versions/2.4/
+> Resources/Python.app/Contents/MacOS/Python
+>
+>
+> ///////////////////////////////////////////////////////////////
+>
+> Can anybody help me with this?
+>
+> Thanks a lot!!
+>
+> Matthias
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From zenerbufen at gmail.com  Tue Feb 14 18:08:26 2006
+From: zenerbufen at gmail.com (D)
+Date: Tue, 14 Feb 2006 09:08:26 -0800
+Subject: [spe-mac] (no subject)
+In-Reply-To: <2078a7ad0602110858s24fd64bdm75713047996756df@mail.gmail.com>
+References: <3E016C40-C2E8-47F1-8B0B-9B6AECDC9619@techfak.uni-bielefeld.de>
+	 <2078a7ad0602110858s24fd64bdm75713047996756df@mail.gmail.com>
+Message-ID: <a9236cbd0602140908x48f2366h722c641c1532ed50@mail.gmail.com>
+
+> > Hello,
+> >
+> > I would like to use SPE with vpython, that I installed with fink
+> > (unfortunately there is no other possibility yet). My vpython stuff
+> > is located in /sw/lib/python2.4/site-packages/visual, but I run SPE
+> > with /usr/local/bin/pythonw2.4. When I try to run any vpython script
+> > I encounter the following error:
+> >
+
+You will need to use the fink version of python to run SPE or get
+vpython to install under the macintosh python. This *could* be as easy
+as moving the /sw/lib/python2.4/site-packages/visual  files from
+inside the /sw directory into /Library/Python/2.4/sitepackages
+
+If the program uses c compiled library this may not work if they are
+compiled for a different version of python from what you have as our
+framework install. Your best bet would be to move SPE into your fink
+/sw/ tree and use the fink python.
+
+
+From spe.stani.be at gmail.com  Sun Feb 19 17:47:42 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 19 Feb 2006 17:47:42 +0100
+Subject: [spe-mac] Re: SPE video, yes really!
+In-Reply-To: <2078a7ad0602011621v43d60426v1fe01d8e3e00277@mail.gmail.com>
+References: <e75321bd0602011605t318ec55cle42907a53c7ea039@mail.gmail.com>
+	 <2078a7ad0602011621v43d60426v1fe01d8e3e00277@mail.gmail.com>
+Message-ID: <2078a7ad0602190847u7d37f368i1196007fd02e2e0a@mail.gmail.com>
+
+Erratum:
+The videos area available at the url:
+http://showmedo.com/videoListPage?listKey=PythonDevelopmentWithSPE.
+
+A big thanks to Ian Oszvald!!
+
+Stani
+
+On 2/2/06, SPE Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+> Hi all,
+>
+> Dimitri Pater (http://www.serpia.org) brought this under my attention:
+> http://showmedo.com:8081/videoListPage?listKey=PythonDevelopmentWithSPE
+>
+> This is a wonderful contribution!
+>
+> A big thanks to Ian O, who made it, and to showmedo.com for hosting it!
+>
+> Stani
+>
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/screenshots
+> http://pythonide.stani.be/manual/html/manual.html
+>
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+

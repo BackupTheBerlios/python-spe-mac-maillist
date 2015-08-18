@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] NotebookCtrl Widget Problem On Mac FIXED!!
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20NotebookCtrl%20Widget%20Problem%20On%20Mac%20FIXED%21%21&In-Reply-To=%3C2078a7ad0511301215j398c0bf6k8f7b78dfd997ff35%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000139.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] NotebookCtrl Widget Problem On Mac FIXED!!</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20NotebookCtrl%20Widget%20Problem%20On%20Mac%20FIXED%21%21&In-Reply-To=%3C2078a7ad0511301215j398c0bf6k8f7b78dfd997ff35%40mail.gmail.com%3E"
+       TITLE="[spe-mac] NotebookCtrl Widget Problem On Mac FIXED!!">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Wed Nov 30 21:15:31 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000139.html">[spe-mac] How about an Announcement on pythonmac-sig at pythin org?
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#141">[ date ]</a>
+              <a href="thread.html#141">[ thread ]</a>
+              <a href="subject.html#141">[ subject ]</a>
+              <a href="author.html#141">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Andrea,
+
+Thanks to SPE Mac users who sponsered SPE with a Mini Mac, I was able to
+debug your control with winpdb debugger. So now the light is green to get
+your control into SPE.
+
+After plunging in the code, I managed to get the control working. The
+problem is that wxMac doesn't seem to support the wx.DefaultSize (-1,-1)
+which is always transformed in (0,0). So setting the size to like
+wx.Size(28,28)
+solves the issue. I'll email you privately with the patch.
+
+I'm not sure if it is 100% stable. I found some bugs, which I also will send
+to you.
+
+For those who like to see the screenshot:
+<A HREF="http://pythonide.stani.be/images/NotebookCtrl.png">http://pythonide.stani.be/images/NotebookCtrl.png</A>
+
+Best regards,
+Stani
+
+--
+<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+<A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051130/241b3a97/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051130/241b3a97/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000139.html">[spe-mac] How about an Announcement on pythonmac-sig at pythin org?
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#141">[ date ]</a>
+              <a href="thread.html#141">[ thread ]</a>
+              <a href="subject.html#141">[ subject ]</a>
+              <a href="author.html#141">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

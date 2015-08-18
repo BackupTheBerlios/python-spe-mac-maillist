@@ -1,0 +1,210 @@
+From bogus@does.not.exist.com  Wed Mar 14 16:09:10 2012
+From: bogus@does.not.exist.com ()
+Date: Wed, 14 Mar 2012 15:09:10 -0000
+Subject: No subject
+Message-ID: <mailman.0.1331737750.10278.python-spe-mac@lists.berlios.de>
+
+site-packages/_spe directory. Can you check that? How did you install the
+new version.
+
+Please post on the spe-mac mailing list. I cc'd it for now.
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+------=_Part_17624_24218716.1137331139844
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+On 1/15/06, <b class=3D"gmail_sendername">Rudolph van der Merwe</b> &lt;<a =
+href=3D"mailto:rudolph at vdmerwe.net">rudolph at vdmerwe.net</a>&gt; wrote:<div>=
+<span class=3D"gmail_quote"></span><blockquote class=3D"gmail_quote" style=
+=3D"border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; p=
+adding-left: 1ex;">
+Stani,<br><br>There seems to be some issues with getting SPE 0.8.1.d runnin=
+g on Mac<br>OS X. For some reason, the _spe/defaults.cfg file is missing. T=
+he main<br>script also cannot find a bunch of *.png graphical elements. See
+<br>attached my debug.txt file.</blockquote><div><br>
+I just checked the archive and it is all there. There should be no
+problem. From the error I see, it looks like you forgot to remove first
+your old site-packages/_spe directory. Can you check that? How did you
+install the new version.<br>
+<br>
+Please post on the spe-mac mailing list. I cc'd it for now.<br>
+
+<br>
+
+Stani<br>
+</div></div><br>-- <br><a href=3D"http://pythonide.stani.be">http://pythoni=
+de.stani.be</a><br><a href=3D"http://pythonide.stani.be/screenshots">http:/=
+/pythonide.stani.be/screenshots</a><br><a href=3D"http://pythonide.stani.be=
+/manual/html/manual.html">
+http://pythonide.stani.be/manual/html/manual.html</a>
+
+------=_Part_17624_24218716.1137331139844--
+
+
+From bogus@does.not.exist.com  Wed Mar 14 16:09:10 2012
+From: bogus@does.not.exist.com ()
+Date: Wed, 14 Mar 2012 15:09:10 -0000
+Subject: No subject
+Message-ID: <mailman.1.1331737750.10278.python-spe-mac@lists.berlios.de>
+
+when it is inserted in a NotebookCtrl, it forces itself in the view. This
+quite annoying, so I was forced to find a solution with the less glitches a=
+s
+possible.
+
+then finally the
+> normal list of functions, etc. in the left pane. I managed to catch a
+> screen
+> shot - attached.
+
+-       Finally the window fixes itself, and works properly.
+
+
+Fixed (as far as possible). (This was the same wx.SplitterWindow issue as
+described as above.)
+
+I'm using an 867MHz G4 TiBook, 10.4.4, with 1 GByte of RAM. I'm using
+> ActivePython 2.4.2, and using wxPython 2.6.2.1.
+
+
+Well without my minimac I would *never* have been able to fix these issues.
+
+I'm still checking out things before updating the svn and probably do the
+SPE 0.8.2.a release.
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+------=_Part_13303_2015181.1138232203403
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Hi Richard and Rudolph,<br>
+<br>
+On 25 Jan 2006 09:09:39 EST, <b class=3D"gmail_sendername">Richard E. Brown=
+</b> &lt;<a href=3D"mailto:Richard.E.Brown at dartware.com" target=3D"_blank" =
+onclick=3D"return top.js.OpenExtLink(window,event,this)">Richard.E.Brown at da=
+rtware.com
+</a>&gt; wrote:<div><span class=3D"gmail_quote"></span><blockquote class=3D=
+"gmail_quote" style=3D"border-left: 1px solid rgb(204, 204, 204); margin: 0=
+pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+--- Rudolph van der Merwe wrote:<br>I'm experiencing quite slow scrolling a=
+nd window updating in the main<br>editor window of SPE. Is this normal?</bl=
+ockquote><div><br>
+Rudolph can you confirm if the &quot;window updating&quot; is the one Richa=
+rd
+describes below or do you have other issues? If you work with large
+files, it is better to set &quot;check realtime with&quot; to none in
+Preferences&gt;Editor if typing would get slow.<br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">I'm run=
+ning SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+<br>(OS X 10.4.4)</blockquote><div><br>
+&nbsp;Ha, I wished I had one of these ;-)</div><br><blockquote class=3D"gma=
+il_quote" style=3D"border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0=
+pt 0pt 0.8ex; padding-left: 1ex;">--- end of quote ---<br><br>I have been w=
+aiting 'til we had a good version before mentioning this,=20
+</blockquote><div><br>
+Please don't wait!&nbsp; <br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">and I<b=
+r>think it's a good time now.<br><br>I think there are two items here.<br>
+<br>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I've noticed that the scrolling i=
+n SPE was slow on my TiBook - to the point
+<br>that it feels a little sluggish. I just tried 0.8.1.d on my Windows lap=
+top<br>(similar speed) and it was pretty snappy.</blockquote><div><br>
+Can you check if this is a wxPython issue, by copying&amp;pasting the
+same file in the wxPython demo and see if it behaves the same. I
+wouldn't know what would cause it too be slow. I'm afraid it is a wxMac
+issue.<br>
+<br>
+I guess snappy is the opposite of sluggish? It might prove it is a wxMac is=
+sue. Stefan, any thoughts about this?<br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">2)&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The newest SPE (SVN 149) had very peculiar w=
+indow updating on my Mac (I<br>
+
+didn't try it on the Windows box). </blockquote><blockquote class=3D"gmail_=
+quote" style=3D"border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt =
+0pt 0.8ex; padding-left: 1ex;">The various panes would open very large, the=
+n
+<br>shrink to their proper size each time a new file opened. Here's what I =
+saw:<br><br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On initial launch, the py=
+thon terminal session openedin the full window; then
+<br>shrunk down to the bottom third as normal.</blockquote><div><br>The
+main window is a splitterwindow, it normally only updates its size at
+an on Idle event. I forced it using the UpdateSize method and it seems
+to be fixed now. (I'll update soon to the SVN.)<br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">-&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There's an error &quot;Error opening workspa=
+ce file : No section: 'openfiles'&quot;
+<br>displayed there.</blockquote><div><br>
+Fixed, now only displayed in statusbar if SPE is in debugging mode.<br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">-&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Opening a source file showed the entire sour=
+ce file filling the top pane (left
+<br>to right edges), then the split bar dividing the top pane, then a secti=
+on of a<br>file hierarchy in the left pane (don't know what that was) </blo=
+ckquote><div><br>
+The browser is back in town! It is the last tab of the sidebar. I
+strongly recommend everyone to read the new SPE tutorial of Dimitri:
+<a href=3D"http://www.serpia.org/spe">http://www.serpia.org/spe</a> The bro=
+wser is explained there.<br>
+<br>
+Anyway, the browser before (wxPython 2.6.1 ) was buggy and was left
+out. From wxPython 2.6.2 it seems functional, but appearantly it has a
+bug that when it is inserted in a NotebookCtrl, it forces itself in the
+view. This quite annoying, so I was forced to find a solution with the
+less glitches as possible.<br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">then fi=
+nally the
+<br>normal list of functions, etc. in the left pane. I managed to catch a s=
+creen<br>shot - attached.</blockquote><blockquote class=3D"gmail_quote" sty=
+le=3D"border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex;=
+ padding-left: 1ex;">
+-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finally the window fixes itself, and =
+works properly.</blockquote><div><br>
+Fixed (as far as possible). (This was the same wx.SplitterWindow issue as d=
+escribed as above.) <br>
+</div><br><blockquote class=3D"gmail_quote" style=3D"border-left: 1px solid=
+ rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">I'm usi=
+ng an 867MHz G4 TiBook, 10.4.4, with 1 GByte of RAM. I'm using
+<br>ActivePython 2.4.2, and using wxPython <a href=3D"http://2.6.2.1" targe=
+t=3D"_blank" onclick=3D"return top.js.OpenExtLink(window,event,this)">2.6.2=
+.1</a>.</blockquote><div><br>
+Well without my minimac I would *never* have been able to fix these issues.=
+<br>
+</div><br>I'm still checking out things before updating the svn and probabl=
+y do the SPE 0.8.2.a release.<br>
+<br>
+Stani<br>
+</div>
+<br>-- <br><a href=3D"http://pythonide.stani.be" target=3D"_blank" onclick=
+=3D"return top.js.OpenExtLink(window,event,this)">http://pythonide.stani.be=
+</a><br><a href=3D"http://pythonide.stani.be/screenshots" target=3D"_blank"=
+ onclick=3D"return top.js.OpenExtLink(window,event,this)">
+http://pythonide.stani.be/screenshots</a><br><a href=3D"http://pythonide.st=
+ani.be/manual/html/manual.html" target=3D"_blank" onclick=3D"return top.js.=
+OpenExtLink(window,event,this)">
+http://pythonide.stani.be/manual/html/manual.html</a>
+
+------=_Part_13303_2015181.1138232203403--
+
+

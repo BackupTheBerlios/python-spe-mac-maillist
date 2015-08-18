@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] bug 004639 still actual?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20bug%20004639%20still%20actual%3F&In-Reply-To=%3C2078a7ad0511221528v4a4f6b7g6c443b6460469173%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000105.html">
+   <LINK REL="Next"  HREF="000106.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] bug 004639 still actual?</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20bug%20004639%20still%20actual%3F&In-Reply-To=%3C2078a7ad0511221528v4a4f6b7g6c443b6460469173%40mail.gmail.com%3E"
+       TITLE="[spe-mac] bug 004639 still actual?">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Wed Nov 23 00:28:32 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000105.html">[spe-mac] SPE on Mac: todo list
+</A></li>
+        <LI>Next message: <A HREF="000106.html">[spe-mac] Comments on current development state
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#100">[ date ]</a>
+              <a href="thread.html#100">[ thread ]</a>
+              <a href="subject.html#100">[ subject ]</a>
+              <a href="author.html#100">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Hraban,
+
+Is bug 004639 still present? If yes, I'd like to close it.
+<A HREF="http://developer.berlios.de/bugs/?func=detailbug&amp;bug_id=4639&amp;group_id=4161">http://developer.berlios.de/bugs/?func=detailbug&amp;bug_id=4639&amp;group_id=4161</A>
+
+I could already fix quite some Mac bugs, but unfortunately SVN seems down,
+so I commit later. The segfaulting of the class browser is solved now.
+Realtime updating of the sidebar works smoothly now, whatever you try
+(multiple classes with same name, etc..) Moreover I couldn't crash SPE on
+the Mac anymore. But I hope someone will.
+
+Stani
+
+On 11/17/05, Henning Hraban Ramm &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">hraban at fiee.net</A>&gt; wrote:
+&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate______________________________________________">http://pythonide.stani.be/blog/sm_donate______________________________________________</A>_
+</I>&gt;<i> &gt; question:
+</I>&gt;<i> &gt; Can anyone confirm that, who has made a python installation which
+</I>&gt;<i> &gt; is not packaged by apple? If so the path construction must be
+</I>&gt;<i> &gt; changed/switched accordingly to the kind of python installation
+</I>&gt;<i> &gt; used on the mac.
+</I>&gt;<i>
+</I>&gt;<i> On 10.4 Apple's lib dir is
+</I>&gt;<i> /System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/
+</I>&gt;<i> and site-packages is at
+</I>&gt;<i> /Library/Python/2.3/site-packages/
+</I>&gt;<i>
+</I>&gt;<i> lib dir from my Python 2.4 (from Bob Ippolito's site) is at
+</I>&gt;<i> /Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/
+</I>&gt;<i> with site-packages below
+</I>&gt;<i>
+</I>&gt;<i> In both installations, bin is at Versions/(Version)/bin
+</I>&gt;<i> Instead of the version number you can also use &quot;Current&quot; (a symlink
+</I>&gt;<i> to the current version).
+</I>&gt;<i>
+</I>&gt;<i> Thus, my $PATH contains /Library/Frameworks/Python.framework/Versions/
+</I>&gt;<i> Current/bin/
+</I>&gt;<i>
+</I>&gt;<i> Gr&#252;&#223;lis vom Hraban!
+</I>&gt;<i> ---
+</I>&gt;<i> <A HREF="http://www.fiee.net/texnique/">http://www.fiee.net/texnique/</A>
+</I>&gt;<i> <A HREF="http://contextgarden.net">http://contextgarden.net</A>
+</I>&gt;<i> <A HREF="http://www.cacert.org">http://www.cacert.org</A> (I'm an assurer)
+</I>&gt;<i>
+</I>&gt;<i> Python-spe-mac mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">Python-spe-mac at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/python-spe-mac">http://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;<i>
+</I>
+
+
+--
+<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+<A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051123/5a0148cb/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051123/5a0148cb/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000105.html">[spe-mac] SPE on Mac: todo list
+</A></li>
+	<LI>Next message: <A HREF="000106.html">[spe-mac] Comments on current development state
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#100">[ date ]</a>
+              <a href="thread.html#100">[ thread ]</a>
+              <a href="subject.html#100">[ subject ]</a>
+              <a href="author.html#100">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

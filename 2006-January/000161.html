@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] deprecation warning
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20deprecation%20warning&In-Reply-To=%3C285AF4DE-87DC-4E7B-BF04-FEAEB85AEA71%40fiee.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000160.html">
+   <LINK REL="Next"  HREF="000162.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] deprecation warning</H1>
+    <B>Henning Hraban Ramm</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20deprecation%20warning&In-Reply-To=%3C285AF4DE-87DC-4E7B-BF04-FEAEB85AEA71%40fiee.net%3E"
+       TITLE="[spe-mac] deprecation warning">hraban at fiee.net
+       </A><BR>
+    <I>Thu Jan 19 00:18:51 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000160.html">[spe-mac] Good news: browser in sidebar doesn't crash on wxPython 2.6.2
+</A></li>
+        <LI>Next message: <A HREF="000162.html">[spe-mac] Possible bug with eol (end of line) guide?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#161">[ date ]</a>
+              <a href="thread.html#161">[ thread ]</a>
+              <a href="subject.html#161">[ subject ]</a>
+              <a href="author.html#161">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>This should be an easy fix:
+
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site- 
+packages/_spe/dialogs/separatorDialog.py:119: DeprecationWarning:  
+asTuple is deprecated, use `Get` instead
+   return ('#%s%s%s'%tuple(map(lambda x:sm.zfill(hex(x)[2:], 
+2),c.asTuple()))).upper()
+
+(Can't remember when that happened, though.)
+
+
+Greetlings from Lake Constance!
+Hraban
+---
+<A HREF="http://www.fiee.net">http://www.fiee.net</A>
+<A HREF="http://www.cacert.org">http://www.cacert.org</A> (I'm an assurer)
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000160.html">[spe-mac] Good news: browser in sidebar doesn't crash on wxPython 2.6.2
+</A></li>
+	<LI>Next message: <A HREF="000162.html">[spe-mac] Possible bug with eol (end of line) guide?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#161">[ date ]</a>
+              <a href="thread.html#161">[ thread ]</a>
+              <a href="subject.html#161">[ subject ]</a>
+              <a href="author.html#161">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

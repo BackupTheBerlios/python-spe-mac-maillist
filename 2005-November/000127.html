@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20bugs%3A%20blender%20crash%20on%20SPE%20exit%3B%20SPE%20opens%20argv%20of%0A%20blender%20as%20files&In-Reply-To=%3C4387ADF0.3060000%40merz-akademie.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000126.html">
+   <LINK REL="Next"  HREF="000128.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files</H1>
+    <B>Kay Fricke</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20bugs%3A%20blender%20crash%20on%20SPE%20exit%3B%20SPE%20opens%20argv%20of%0A%20blender%20as%20files&In-Reply-To=%3C4387ADF0.3060000%40merz-akademie.de%3E"
+       TITLE="[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files">kay.fricke at merz-akademie.de
+       </A><BR>
+    <I>Sat Nov 26 01:36:00 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000126.html">[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+</A></li>
+        <LI>Next message: <A HREF="000128.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127">[ date ]</a>
+              <a href="thread.html#127">[ thread ]</a>
+              <a href="subject.html#127">[ subject ]</a>
+              <a href="author.html#127">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Kay Fricke wrote:
+&gt;<i> _______________________________________________
+</I>&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate">http://pythonide.stani.be/blog/sm_donate</A> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Hi Stani,
+</I>&gt;<i> 
+</I>&gt;<i> Bug 1: Blender Crashes with Segmentation Fault when SPE is quit
+</I>&gt;<i> 
+</I>&gt;<i> because neither SPE debug nor Blender debug helped, I used gdb to trace 
+</I>&gt;<i> the problem.
+</I>&gt;<i> 
+</I>
+I updated and checked this with all the new versions (former bug report 
+was with old blender, spe and python):
+blender 2.40, python 2.4.1, wxPython 2.6.1.0 and the current svn version
+
+things are a bit different.
+
+launching from blender works fine, quit is also okay, as far as the spe 
+window gets destroyd and the focus is back to blender.
+
+but I'm not able to relaunch spe, neither to execute any python script.
+
+accessing Help, in the apple menue, shows me still the Menue from the 
+python execution, namely the links to Python and wxPython docs.
+trying to activate them, crashes blender.
+
+as it seems, wx does not quit, and keeps python alive somehow, but 
+crashes on access and takes blender with it.
+
+here is the trace:
+
+#0  0x00000000 in ?? ()
+Cannot access memory at address 0x0
+Cannot access memory at address 0x0
+#1  0x06b7815c in wxMenuBase::SendEvent(int, int) ()
+#2  0x06ab8fc4 in 
+wxMacAppCommandEventHandler(OpaqueEventHandlerCallRef*, OpaqueEventRef*, 
+void*) ()
+#3  0x06ab9174 in wxMacAppEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#4  0x92881fa0 in DispatchEventToHandlers ()
+#5  0x92882214 in SendEventToEventTargetInternal ()
+#6  0x928946bc in SendEventToEventTarget ()
+#7  0x928a96b4 in SendHICommandEvent(unsigned long, HICommand const*, 
+unsigned long, unsigned long, unsigned char, OpaqueEventTargetRef*, 
+OpaqueEventTargetRef*, OpaqueEventRef**) ()
+#8  0x92941874 in SendMenuItemSelectedEvent ()
+#9  0x92943450 in FinishMenuSelection(MenuData*, MenuResult*, 
+MenuResult*, unsigned long, unsigned long, unsigned long) ()
+#10 0x9290d764 in MenuSelectCore(Point, double, unsigned long, 
+OpaqueMenuRef**, unsigned short*) ()
+#11 0x92933b64 in MenuSelect ()
+#12 0x06b00fa8 in 
+wxMacTopLevelMouseEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#13 0x06ab91f4 in wxMacAppEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#14 0x92881fa0 in DispatchEventToHandlers ()
+#15 0x92882214 in SendEventToEventTargetInternal ()
+#16 0x928946bc in SendEventToEventTarget ()
+#17 0x929c3538 in HandleMouseEvent(OpaqueEventRef*) ()
+#18 0x92892c5c in 
+ToolboxEventDispatcherHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#19 0x9288205c in DispatchEventToHandlers ()
+#20 0x92882214 in SendEventToEventTargetInternal ()
+#21 0x928946bc in SendEventToEventTarget ()
+#22 0x001ae698 in GHOST_SystemCarbon::processEvents(bool) ()
+#23 0x0000ce14 in winlay_process_events ()
+#24 0x00005a14 in wait_for_event ()
+#25 0x00005b34 in screen_qread ()
+#26 0x0000b5cc in screenmain ()
+#27 0x00003cc4 in main ()
+#28 0x0000279c in _start (argc=8, argv=0xbffffdf4, envp=0xbffffe18) at 
+/SourceCache/Csu/Csu-57/crt.c:272
+#29 0x0000263c in start ()
+
+
+Bug 2: is not occuring no argv files are open ...
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000126.html">[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+</A></li>
+	<LI>Next message: <A HREF="000128.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127">[ date ]</a>
+              <a href="thread.html#127">[ thread ]</a>
+              <a href="subject.html#127">[ subject ]</a>
+              <a href="author.html#127">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

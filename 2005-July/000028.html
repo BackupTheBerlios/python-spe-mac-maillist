@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE 0.7.4.r please update and check
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.r%20please%20update%20and%20check&In-Reply-To=%3C2320749.1122564115686.JavaMail.jaguar451%40mac.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000026.html">
+   <LINK REL="Next"  HREF="000029.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE 0.7.4.r please update and check</H1>
+    <B>jaguar451 at mac.com</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.r%20please%20update%20and%20check&In-Reply-To=%3C2320749.1122564115686.JavaMail.jaguar451%40mac.com%3E"
+       TITLE="[spe-mac] SPE 0.7.4.r please update and check">jaguar451 at mac.com
+       </A><BR>
+    <I>Thu Jul 28 17:21:55 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000026.html">[spe-mac] SPE 0.7.4.r please update and check
+</A></li>
+        <LI>Next message: <A HREF="000029.html">[spe-mac] SPE 0.7.4.t released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;&gt;<i> &gt;Which change?
+</I>
+I'm at work and don't have access to the email, but someone (stephen?) mentioned making a change to the preferencesDialog.py file -- moving the adding of key values to the ComboBox a few lines up to put it before the values are referenced.
+
+And there was a different email with a change to the Menu.py file to put come Mac specific code in the __init__ method as opposed to where it was.... Allowed access of 'Preferences' from under the application menu.
+
+&gt;&gt;<i> BTW this how I like to see error reports.
+</I>
+FYI, for folks on UNIXes, you might want to change your debug instructions from &quot;python SPE.py --debug &gt; debug.txt&quot; to &quot;python SPE.py --debug &gt; debug.txt 2&gt;&amp;1&quot; 
+
+Without that '2&gt;&amp;1', items written to STDOUT go to the file debug.txt, and items written to STDERR (the stack trace) goes to the console, which is why you might be getting disjoint info.
+
+Might be the same on Windows (I know '2&gt;&amp;1' works on windows in a command prompt, but can't test directly with SPE, as not an approved software package for use at work....)
+
+
+
+On Thursday, July 28, 2005, at 07:52AM, Stani &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">s_t_a_n_i at gmx.net</A>&gt; wrote:
+
+&gt;<i>
+</I>&gt;<i><A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">jaguar451 at mac.com</A> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i>Hey, that's what the preferences dialog looks like.... ;-) 
+</I>&gt;&gt;<i>
+</I>&gt;<i>Wow, that's really good news! This means we are getting closer to a 
+</I>&gt;<i>stable release for Mac.
+</I>&gt;<i>
+</I>&gt;&gt;<i>(aka, after I made the below change, I could see the prefernces dialog.)
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;<i>Which change?
+</I>&gt;<i>
+</I>&gt;&gt;<i>Thanks.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Of course, I then change the preferences to use 'single with tabs (mac), and SPE doesn't startup with that option:
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>STDERR / STDOUT (BTW, any way to include python version in the platform &amp; wxPython version info:
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i>
+</I>&gt;<i>Ok, Python version added.
+</I>&gt;<i>
+</I>&gt;&gt;<i>SPE v0.7.4.r (c)2003-2005 www.stani.be
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>If spe fails to start:
+</I>&gt;&gt;<i> - type &quot;python SPE.py --debug &gt; debug.txt&quot; at the command prompt
+</I>&gt;&gt;<i> - send debug.txt with some info to <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">s_t_a_n_i at yahoo.com</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Blender support disabled (run SPE inside Blender to enable).
+</I>&gt;&gt;<i>Spe is running in debugging mode.
+</I>&gt;&gt;<i>Configuration:
+</I>&gt;&gt;<i>- platform  : darwin
+</I>&gt;&gt;<i>- wxPython  : 2.6.1.0.
+</I>&gt;&gt;<i>- interface : single with tabs (mac)
+</I>&gt;&gt;<i>- encoding  : mac-roman
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>Launching application...
+</I>&gt;&gt;<i>Traceback (most recent call last):
+</I>&gt;&gt;<i>  File &quot;SPE.py&quot;, line 168, in ?
+</I>&gt;&gt;<i>    style           = style)
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py&quot;, line 940, in __init__
+</I>&gt;&gt;<i>    wx.App.__init__(self,redirect=not debug)
+</I>&gt;&gt;<i>  File &quot;//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py&quot;, line 7473, in __init__
+</I>&gt;&gt;<i>    self._BootstrapApp()
+</I>&gt;&gt;<i>  File &quot;//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py&quot;, line 7125, in _BootstrapApp
+</I>&gt;&gt;<i>    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py&quot;, line 944, in OnInit
+</I>&gt;&gt;<i>    self.parentFrame = self.ParentFrame(self,
+</I>&gt;&gt;<i>AttributeError: 'App' object has no attribute 'ParentFrame'
+</I>&gt;&gt;<i>~             
+</I>&gt;&gt;<i>
+</I>&gt;<i>This interface is not implemented yet, so I commented it out. Good you 
+</I>&gt;<i>mention it. BTW this how I like to see error reports. You can still 
+</I>&gt;<i>choose the old interface for mac 'single with tabs (mac, linux, 
+</I>&gt;<i>windows)', but I wouldn't recommend it unless you are really tab 
+</I>&gt;<i>addicted (tabs are un-mac if I understood well from mac users feedback). 
+</I>&gt;<i>Now I'm developping the new one 'single with palette (mac default)', 
+</I>&gt;<i>which is now the default for mac. Instead of a toolbar, there will be a 
+</I>&gt;<i>tool palette (Photoshop like) to make it look more like a real, native 
+</I>&gt;<i>mac app. This will be released in the 's' version. Of course I'm very 
+</I>&gt;<i>curious if this works and I hope Mac users will be happy with that. I 
+</I>&gt;<i>announce the release on this list.
+</I>&gt;<i>
+</I>&gt;<i>Stani
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>_______________________________________________
+</I>&gt;<i>Python-spe-mac mailing list
+</I>&gt;<i><A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">Python-spe-mac at lists.berlios.de</A>
+</I>&gt;<i><A HREF="http://lists.berlios.de/mailman/listinfo/python-spe-mac">http://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000026.html">[spe-mac] SPE 0.7.4.r please update and check
+</A></li>
+	<LI>Next message: <A HREF="000029.html">[spe-mac] SPE 0.7.4.t released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

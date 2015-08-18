@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] Patch for preferences
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Patch%20for%20preferences&In-Reply-To=%3C42E672E5.4070400%40gmx.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000004.html">
+   <LINK REL="Next"  HREF="000006.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] Patch for preferences</H1>
+    <B>Stani</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Patch%20for%20preferences&In-Reply-To=%3C42E672E5.4070400%40gmx.net%3E"
+       TITLE="[spe-mac] Patch for preferences">s_t_a_n_i at gmx.net
+       </A><BR>
+    <I>Tue Jul 26 19:29:09 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000004.html">[spe-mac] priorities
+</A></li>
+        <LI>Next message: <A HREF="000006.html">[spe-mac] Old package
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>How it should distribruted is something which is completely up to you. 
+Of course it would be nice if some of you volunteer as packagers. At the 
+moment I'm releasing almost daily just zipping the files in order to not 
+to waste too much time for it. From the moment SPE is stable, I'd love 
+to see a SPE installer for the Mac.
+Please overwrite the file '_spe/dialogs/preferencesDialog.py' with this 
+one. It has print statements to see which control causes the error.
+ &gt;&gt;&gt; python spe.py --debug &gt;debug.txt
+Please send me the error log (debug.txt).
+Ciao,
+Stani
+
+Kenneth McDonald wrote:
+
+&gt;<i> As a Mac user (and a technical one), I'd really appreciate a Mac 
+</I>&gt;<i> installer, rather
+</I>&gt;<i> than a darwinports installer. darwinports is much better than fink, 
+</I>&gt;<i> but even so,
+</I>&gt;<i> I won't use it unless it is absolutely critical that I install a piece 
+</I>&gt;<i> of software--things
+</I>&gt;<i> just go wrong too often.
+</I>&gt;<i>
+</I>&gt;<i> What would be absolutely the best is simply a standalone Mac application,
+</I>&gt;<i> distributed as a compressed archive. Unless there really is some 
+</I>&gt;<i> configuration
+</I>&gt;<i> that must be done at install time, this offers the ultimate in simplicity.
+</I>&gt;<i>
+</I>&gt;<i> Thanks to both Brian and Stani for their work.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Ken
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Jul 26, 2005, at 11:39 AM, <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">bmyers at bco.com</A> &lt;mailto:<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">bmyers at bco.com</A>&gt; 
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> I'll try to get it setup tonight. There are three ways to distribute open
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> source software on the Mac that I know of: Fink, DarwinPorts, and a Mac
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> installer package. The Mac installer package is probably the easiest 
+</I>&gt;&gt;<i> of the
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> bunch, but DarwinPorts has the most software.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I'll see if DarwinPorts is up to date on wxWindows tonight.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Brian
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/9688fc45/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/9688fc45/attachment.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: preferencesDialog.py
+Type: text/x-python
+Size: 21486 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/9688fc45/attachment.py">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/9688fc45/attachment.py</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000004.html">[spe-mac] priorities
+</A></li>
+	<LI>Next message: <A HREF="000006.html">[spe-mac] Old package
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

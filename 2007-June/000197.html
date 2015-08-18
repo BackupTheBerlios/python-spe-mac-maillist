@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] unittest.main() throws AttributeError
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2007-June/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20unittest.main%28%29%20throws%20AttributeError&In-Reply-To=%3C46804BB4.8070105%40mit.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000198.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] unittest.main() throws AttributeError</H1>
+    <B>Tony S. Yu</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20unittest.main%28%29%20throws%20AttributeError&In-Reply-To=%3C46804BB4.8070105%40mit.edu%3E"
+       TITLE="[spe-mac] unittest.main() throws AttributeError">tonyyu at MIT.EDU
+       </A><BR>
+    <I>Tue Jun 26 01:11:48 CEST 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000198.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#197">[ date ]</a>
+              <a href="thread.html#197">[ thread ]</a>
+              <a href="subject.html#197">[ subject ]</a>
+              <a href="author.html#197">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I'm pretty new to both OS X and SPE, so please forgive me if this is a 
+stupid question or if I'm missing any information.
+
+I just installed SPE on my macbook using the SVN repositories, and I'm 
+running into a really weird problem. When I run unittest.main() from a 
+script, I get:
+
+    Traceback (most recent call last):
+    ...
+    File 
+&quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, 
+line 532, in loadTestsFromName
+    parent, obj = obj, getattr(obj, part)
+    AttributeError: 'module' object has no attribute ''
+
+The attribute at the end seems to be an empty string. If I comment out 
+unittest.main() from my script, everything run s fine.
+
+The weird thing is: if I execute my script from a terminal, everything 
+runs fine.
+
+BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9, and 
+the latest SPE from SVN.
+
+Thanks in advance,
+-Tony
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000198.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#197">[ date ]</a>
+              <a href="thread.html#197">[ thread ]</a>
+              <a href="subject.html#197">[ subject ]</a>
+              <a href="author.html#197">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

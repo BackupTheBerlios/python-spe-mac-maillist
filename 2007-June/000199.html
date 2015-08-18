@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] unittest.main() throws AttributeError
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2007-June/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20unittest.main%28%29%20throws%20AttributeError&In-Reply-To=%3C46809442.6080606%40mit.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000198.html">
+   <LINK REL="Next"  HREF="000200.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] unittest.main() throws AttributeError</H1>
+    <B>Tony S. Yu</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20unittest.main%28%29%20throws%20AttributeError&In-Reply-To=%3C46809442.6080606%40mit.edu%3E"
+       TITLE="[spe-mac] unittest.main() throws AttributeError">tonyyu at MIT.EDU
+       </A><BR>
+    <I>Tue Jun 26 06:21:22 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000198.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+        <LI>Next message: <A HREF="000200.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#199">[ date ]</a>
+              <a href="thread.html#199">[ thread ]</a>
+              <a href="subject.html#199">[ subject ]</a>
+              <a href="author.html#199">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks for your reply! Unfortunately, I'm even more confused now:
+
+My script runs through the debugger without a hitch!
+
+After comparing the debugger run to the traceback I get back from SPE, I 
+noticed that the debugger doesn't reach half of the methods in the 
+traceback (attached).  When the debugger gets to the parseArgs() method 
+(see traceback) of unittest, a conditional statement recognizes that 
+unittest.main() has been called without arguments and returns to the 
+__init__ method of unittest.main(); thus, the createTests() method (see 
+traceback), which appears later in the parseArgs() method, is never 
+executed when I run debugger.
+
+Any ideas? Thanks,
+-Tony
+
+Stani's Python Editor wrote:
+&gt;<i> What happens if you run it through the debugger? Ctrl+F9 or Alt+F9
+</I>&gt;<i> Stani
+</I>&gt;<i>
+</I>&gt;<i> Tony S. Yu schreef:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> I'm pretty new to both OS X and SPE, so please forgive me if this is a 
+</I>&gt;&gt;<i> stupid question or if I'm missing any information.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I just installed SPE on my macbook using the SVN repositories, and I'm 
+</I>&gt;&gt;<i> running into a really weird problem. When I run unittest.main() from a 
+</I>&gt;&gt;<i> script, I get:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     Traceback (most recent call last):
+</I>&gt;&gt;<i>     ...
+</I>&gt;&gt;<i>     File 
+</I>&gt;&gt;<i> &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, 
+</I>&gt;&gt;<i> line 532, in loadTestsFromName
+</I>&gt;&gt;<i>     parent, obj = obj, getattr(obj, part)
+</I>&gt;&gt;<i>     AttributeError: 'module' object has no attribute ''
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The attribute at the end seems to be an empty string. If I comment out 
+</I>&gt;&gt;<i> unittest.main() from my script, everything run s fine.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The weird thing is: if I execute my script from a terminal, everything 
+</I>&gt;&gt;<i> runs fine.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9, and 
+</I>&gt;&gt;<i> the latest SPE from SVN.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks in advance,
+</I>&gt;&gt;<i> -Tony
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">https://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">https://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;<i>   
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20070626/eb458ccd/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20070626/eb458ccd/attachment.html</A>&gt;
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: traceback.txt
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20070626/eb458ccd/attachment.txt">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20070626/eb458ccd/attachment.txt</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000198.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+	<LI>Next message: <A HREF="000200.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#199">[ date ]</a>
+              <a href="thread.html#199">[ thread ]</a>
+              <a href="subject.html#199">[ subject ]</a>
+              <a href="author.html#199">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

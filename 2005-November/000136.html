@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE 0.8.0.a released!
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.8.0.a%20released%21&In-Reply-To=%3C2078a7ad0511281317nfe24f4btb544fb9320364629%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000132.html">
+   <LINK REL="Next"  HREF="000140.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE 0.8.0.a released!</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.8.0.a%20released%21&In-Reply-To=%3C2078a7ad0511281317nfe24f4btb544fb9320364629%40mail.gmail.com%3E"
+       TITLE="[spe-mac] SPE 0.8.0.a released!">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Mon Nov 28 22:17:58 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000132.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+        <LI>Next message: <A HREF="000140.html">Patch to fix &quot;Tools / Browse folder&quot; not working bug, was Re: [spe-mac] SPE 0.8.0.a released!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>It works for me on Tiger. How can I open a folder from Python in MacOS X? I
+do it with webbrowser.start. It seems to work on all platforms.
+
+Stani
+
+On 11/27/05, Cheng Zhang &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">czhang.cmu at gmail.com</A>&gt; wrote:
+&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate______________________________________________">http://pythonide.stani.be/blog/sm_donate______________________________________________</A>_
+</I>&gt;<i> I can't use the menu &quot;Tools / Browse folder&quot; after syncing to rev#85,
+</I>&gt;<i> revert back to rev#84 also have the same problem.
+</I>&gt;<i>
+</I>&gt;<i> The stack trace is:
+</I>&gt;<i> Traceback (most recent call last):
+</I>&gt;<i>    File &quot;/Users/czhang/project/oss/spe/trunk/_spe/Menu.py&quot;, line 369,
+</I>&gt;<i> in menu_browse_folder
+</I>&gt;<i>      self.parentPanel.browse_folder()
+</I>&gt;<i>    File &quot;/Users/czhang/project/oss/spe/trunk/_spe/Parent.py&quot;, line
+</I>&gt;<i> 558, in browse_folder
+</I>&gt;<i>      webbrowser.open(dirname(fileName))
+</I>&gt;<i>    File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/
+</I>&gt;<i> python2.4/webbrowser.py&quot;, line 43, in open
+</I>&gt;<i>      get().open(url, new, autoraise)
+</I>&gt;<i>    File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/
+</I>&gt;<i> python2.4/webbrowser.py&quot;, line 315, in open
+</I>&gt;<i>      ic.launchurl(url)
+</I>&gt;<i>    File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/
+</I>&gt;<i> python2.4/plat-mac/ic.py&quot;, line 235, in launchurl
+</I>&gt;<i>      return _dft_ic.launchurl(url, hint)
+</I>&gt;<i>    File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/
+</I>&gt;<i> python2.4/plat-mac/ic.py&quot;, line 202, in launchurl
+</I>&gt;<i>      self.ic.ICLaunchURL(hint, url, 0, len(url))
+</I>&gt;<i> MacOS.Error: (-673, 'no URL found')
+</I>&gt;<i>
+</I>&gt;<i> Is such info enough?
+</I>&gt;<i>
+</I>&gt;<i> - Cheng
+</I>&gt;<i>
+</I>&gt;<i> On Nov 27, 2005, at 1:56 PM, SPE Stani's Python Editor wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; Subversion 85+ is committed.
+</I>&gt;<i>
+</I>&gt;<i> Python-spe-mac mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">Python-spe-mac at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/python-spe-mac">http://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;<i>
+</I>
+
+
+--
+<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+<A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051128/5d7afa82/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051128/5d7afa82/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000132.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+	<LI>Next message: <A HREF="000140.html">Patch to fix &quot;Tools / Browse folder&quot; not working bug, was Re: [spe-mac] SPE 0.8.0.a released!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

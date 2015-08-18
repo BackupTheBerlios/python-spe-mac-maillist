@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE on Mac: todo list
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%20on%20Mac%3A%20todo%20list&In-Reply-To=%3CDB1A743A-3FE0-4258-882D-20FC94A42E8A%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000101.html">
+   <LINK REL="Next"  HREF="000103.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE on Mac: todo list</H1>
+    <B>Cheng Zhang</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%20on%20Mac%3A%20todo%20list&In-Reply-To=%3CDB1A743A-3FE0-4258-882D-20FC94A42E8A%40gmail.com%3E"
+       TITLE="[spe-mac] SPE on Mac: todo list">czhang.cmu at gmail.com
+       </A><BR>
+    <I>Wed Nov 23 02:26:20 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000101.html">[spe-mac] SPE on Mac: todo list
+</A></li>
+        <LI>Next message: <A HREF="000103.html">[spe-mac] SPE on Mac: todo list
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#102">[ date ]</a>
+              <a href="thread.html#102">[ thread ]</a>
+              <a href="subject.html#102">[ subject ]</a>
+              <a href="author.html#102">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I confirmed that the default font (at least for the text editor) is  
+very small for me as well.
+Worse yet, just find out that I can't open the Preferences dialog via  
+menu &quot;Python/Preferences...&quot;. The exception is:
+------
+Traceback (most recent call last):
+   File &quot;/Users/czhang/project/oss/spe/trunk/_spe/Menu.py&quot;, line 327,  
+in menu_preferences
+     self.parentPanel.preferences()
+   File &quot;/Users/czhang/project/oss/spe/trunk/_spe/Parent.py&quot;, line  
+288, in preferences
+     prefs=preferencesDialog.Create(self,-1,'')
+   File &quot;/Users/czhang/project/oss/spe/trunk/_spe/dialogs/ 
+preferencesDialog.py&quot;, line 99, in __init__
+     self.__set_properties()
+   File &quot;/Users/czhang/project/oss/spe/trunk/_spe/dialogs/ 
+preferencesDialog.py&quot;, line 131, in __set_properties
+     self.Signature.SetSelection(-1)
+   File &quot;//Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/site-packages/wx-2.6-mac-unicode/wx/_controls.py&quot;, line  
+673, in SetSelection
+     return _controls_.ComboBox_SetSelection(*args, **kwargs)
+wx._core.PyAssertionError: C++ assertion &quot;wxAssertFailure&quot; failed  
+in ../src/mac/carbon/choice.cpp(217): wxChoice::GetString(): invalid  
+index
+------
+Looks like another wxPython bug, so I cross-post it to dev list as well.
+I will submit this as a bug shortly after.
+
+- Cheng
+
+On Nov 22, 2005, at 7:32 AM, SPE Stani's Python Editor wrote:
+
+&gt;<i> For me the characters were very small. Is that because of my screen  
+</I>&gt;<i> resolution?
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000101.html">[spe-mac] SPE on Mac: todo list
+</A></li>
+	<LI>Next message: <A HREF="000103.html">[spe-mac] SPE on Mac: todo list
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#102">[ date ]</a>
+              <a href="thread.html#102">[ thread ]</a>
+              <a href="subject.html#102">[ subject ]</a>
+              <a href="author.html#102">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

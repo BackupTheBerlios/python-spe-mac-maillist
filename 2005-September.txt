@@ -1,0 +1,322 @@
+From lemon at battlefoundry.net  Sat Sep 10 02:58:41 2005
+From: lemon at battlefoundry.net (Bertrand Lemon)
+Date: Fri, 9 Sep 2005 19:58:41 -0500
+Subject: [spe-mac] GUI interfaces won't work.
+Message-ID: <07B6F5B5-2196-11DA-BCCB-000A95C1A12A@battlefoundry.net>
+
+So this is my first look at SPE, and I can easily forsee this being my 
+one and only editor - that is, if I can get it to work. Here's the 
+problem I'm having.
+
+I'm trying to construct GUI's right now, but when I do Tools > design a 
+gui with wxGlade, nothing happens. Over in the terminal, it gives the 
+readout...
+
+2005-09-09 19:20:22.961 open[673] LSOpenFromURLSpec() returned -1 for 
+application /Applications/SPE-OSX/wxGladeOSX.app path (null).
+2005-09-09 19:20:22.963 open[673] Couldn't launch application:  
+/Applications/SPE-OSX/wxGladeOSX.app
+
+Likewise, Tools > design a gui with XRC does nothing as well, and gives 
+a similar readout:
+
+2005-09-09 19:50:28.107 open[679] LSOpenFromURLSpec() returned -1 for 
+application /Applications/SPE-OSX/XRCed.app path (null).
+2005-09-09 19:50:28.108 open[679] Couldn't launch application:  
+/Applications/SPE-OSX/XRCed.app
+
+SPE is supposed to come packaged with wxGlade and XRC, but perhaps 
+that's just the Mac version. In any case, I can't get the referenced 
+wxGladeOSX.app, because the site that's supposed to be hosting it  
+(http://www.wordtech-software.com/wxglade.htm) is down. Unfortunately, 
+as I'm writing this, SourceForge is down as well, so downloading XRC is 
+equally impossible. So the question:
+
+1. If I do manage to find a copy of wxGladeOSX.app, should I create 
+~/Applications/SPE-OSX/, and place it in there, will that make it work?
+
+2. If yes, could someone point me to a place where I could download 
+this app?
+
+Thanks in advance,
+
+			-Lemon
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: text/enriched
+Size: 1583 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050909/0911dfd0/attachment.bin>
+
+From csomor at advancedconcepts.ch  Sat Sep 10 07:47:37 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Sat, 10 Sep 2005 07:47:37 +0200
+Subject: [spe-mac] GUI interfaces won't work.
+Message-ID: <834A07D804766B43A535AC6861D6D8673696F0@advanced-3ynlwj.advancedconcepts.ch>
+
+Hi
+ 
+looking at the "Console" (MacSpeak, "Terminal" for everybody else ;-)
+output I assume it should be a /Applications not at ~/Applications,
+that't the place where they are in my version as well.
+ 
+I've put my 'old' wxGlade Download from Kevin's site onto my idisk :
+ 
+http://idisk.mac.com/csomor-Public/wxGladeOSX-0.3.5.1.zip
+ 
+XRCEd should be part of your wxPython osx-docs-demos download, just move
+it to the SPE-OSX folder.
+ 
+HTH
+ 
+Stefan
+ 
+ 
+
+
+  _____  
+
+	From: python-spe-mac-admin at berlios.de
+[mailto:python-spe-mac-admin at berlios.de] On Behalf Of Bertrand Lemon
+	Sent: Samstag, 10. September 2005 02:59
+	To: python-spe-mac at lists.berlios.de
+	Subject: [spe-mac] GUI interfaces won't work.
+	
+	
+
+	So this is my first look at SPE, and I can easily forsee this
+being my one and only editor - that is, if I can get it to work. Here's
+the problem I'm having. 
+
+
+	I'm trying to construct GUI's right now, but when I do Tools >
+design a gui with wxGlade, nothing happens. Over in the terminal, it
+gives the readout... 
+
+
+	2005-09-09 19:20:22.961 open[673] LSOpenFromURLSpec() returned
+-1 for application /Applications/SPE-OSX/wxGladeOSX.app path (null). 
+
+	2005-09-09 19:20:22.963 open[673] Couldn't launch application:
+/Applications/SPE-OSX/wxGladeOSX.app 
+
+
+	Likewise, Tools > design a gui with XRC does nothing as well,
+and gives a similar readout: 
+
+
+	2005-09-09 19:50:28.107 open[679] LSOpenFromURLSpec() returned
+-1 for application /Applications/SPE-OSX/XRCed.app path (null). 
+
+	2005-09-09 19:50:28.108 open[679] Couldn't launch application:
+/Applications/SPE-OSX/XRCed.app 
+
+
+	SPE is supposed to come packaged with wxGlade and XRC, but
+perhaps that's just the Mac version. In any case, I can't get the
+referenced wxGladeOSX.app, because the site that's supposed to be
+hosting it (http://www.wordtech-software.com/wxglade.htm) is down.
+Unfortunately, as I'm writing this, SourceForge is down as well, so
+downloading XRC is equally impossible. So the question: 
+
+
+	1. If I do manage to find a copy of wxGladeOSX.app, should I
+create ~/Applications/SPE-OSX/, and place it in there, will that make it
+work? 
+
+
+	2. If yes, could someone point me to a place where I could
+download this app? 
+
+
+	Thanks in advance, 
+
+
+	                        -Lemon
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050910/cd07344f/attachment.html>
+
+From lemon at battlefoundry.net  Sat Sep 10 11:05:47 2005
+From: lemon at battlefoundry.net (Bertrand Lemon)
+Date: Sat, 10 Sep 2005 04:05:47 -0500
+Subject: [spe-mac] GUI interfaces won't work.
+In-Reply-To: <834A07D804766B43A535AC6861D6D8673696F0@advanced-3ynlwj.advancedconcepts.ch>
+References: <834A07D804766B43A535AC6861D6D8673696F0@advanced-3ynlwj.advancedconcepts.ch>
+Message-ID: <13807A68-21DA-11DA-BD32-000A95C1A12A@battlefoundry.net>
+
+
+On Sep 10, 2005, at 12:47 AM, Stefan Csomor wrote:
+
+> Hi
+> ?
+> looking at the "Console" (MacSpeak, "Terminal" for everybody else ;-) 
+> output I assume it should be a /Applications not at ~/Applications, 
+> that't the place where they are in my version as well.
+
+Er, yeah /Applications is what I meant. What I meant was: the download 
+I got from the SPE site had an install applet which  put everything 
+into Library/Python/2.3/_spe. An Applications/ SPE-OSX folder was never 
+made.
+
+Looking over it now I see that the previously mentioned site (wordtech 
+software) seems to have hosted an OSX built .app version of SPE. Are 
+most people using that? I've been running off the source code download 
+(using PythonLauncher to run SPE.py), as I haven't yet developed the 
+Pythonic confidence to try to compile anything yet.
+
+> I've put my 'old' wxGlade Download from Kevin's site onto my idisk :
+
+I appreciate that greatly.
+
+Downloading now, and we'll see if it solves the problems.
+
+				-lemon
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: text/enriched
+Size: 1345 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050910/e2f75956/attachment.bin>
+
+From csomor at advancedconcepts.ch  Sat Sep 10 12:09:03 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Sat, 10 Sep 2005 12:09:03 +0200
+Subject: [spe-mac] GUI interfaces won't work.
+Message-ID: <834A07D804766B43A535AC6861D6D8673696F6@advanced-3ynlwj.advancedconcepts.ch>
+
+Hi
+ 
+ok, I'll copy an archive of the SPE-OSX download from Kevin at
+ 
+http://idisk.mac.com/csomor-Public/SPE-OSX.dmg
+ 
+it contains wxGlade and XRCEd, Drag the Disk into the Applications
+Folder
+ 
+for updating you can then eg go into the SPE-OSX folder (Put that into
+/Applications) , do a context click on the SPE-OSX icon, choose 'Show
+Package...' then dive into Contents/Resources and replace the folders
+there with the new download version
+ 
+HTH
+ 
+Stefan
+
+
+  _____  
+
+	From: python-spe-mac-admin at berlios.de
+[mailto:python-spe-mac-admin at berlios.de] On Behalf Of Bertrand Lemon
+	Sent: Samstag, 10. September 2005 11:06
+	To: python-spe-mac at berlios.de
+	Subject: Re: [spe-mac] GUI interfaces won't work.
+	
+	
+
+
+
+	On Sep 10, 2005, at 12:47 AM, Stefan Csomor wrote: 
+
+
+	Hi 
+
+	
+
+	looking at the "Console" (MacSpeak, "Terminal" for everybody
+else ;-) output I assume it should be a /Applications not at
+~/Applications, that't the place where they are in my version as well. 
+
+
+	Er, yeah /Applications is what I meant. What I meant was: the
+download I got from the SPE site had an install applet which put
+everything into Library/Python/2.3/_spe. An Applications/ SPE-OSX folder
+was never made. 
+
+
+	Looking over it now I see that the previously mentioned site
+(wordtech software) seems to have hosted an OSX built .app version of
+SPE. Are most people using that? I've been running off the source code
+download (using PythonLauncher to run SPE.py), as I haven't yet
+developed the Pythonic confidence to try to compile anything yet. 
+
+
+	I've put my 'old' wxGlade Download from Kevin's site onto my
+idisk : 
+
+
+	I appreciate that greatly. 
+
+
+	Downloading now, and we'll see if it solves the problems. 
+
+
+	                                -lemon
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050910/cb71a56d/attachment.html>
+
+From lemon at battlefoundry.net  Sat Sep 10 13:30:59 2005
+From: lemon at battlefoundry.net (Bertrand Lemon)
+Date: Sat, 10 Sep 2005 06:30:59 -0500
+Subject: [spe-mac] GUI interfaces won't work.
+In-Reply-To: <834A07D804766B43A535AC6861D6D8673696F6@advanced-3ynlwj.advancedconcepts.ch>
+References: <834A07D804766B43A535AC6861D6D8673696F6@advanced-3ynlwj.advancedconcepts.ch>
+Message-ID: <5C553C64-21EE-11DA-BC02-000A95C1A12A@battlefoundry.net>
+
+> Hi
+> ?
+> ok, I'll copy an archive of the SPE-OSX download from Kevin at
+> ?
+> http://idisk.mac.com/csomor-Public/SPE-OSX.dmg
+> ?
+> it contains wxGlade and XRCEd, Drag the Disk into the Applications 
+> Folder
+
+Again, a thousand thank you. I haven't yet given it a thorough look, 
+but it is up and running, and without the severe type lag and 
+philisophical "creating .py files with a .py file" difficulty I was 
+having previously, so I'm a good deal happier.
+
+Incidentally, you might want to scrutinize that other wxGlade link. It 
+was 9.2M (twice the size of the other package, which included SPE, 
+Kiki, XRCed and wxGlade itself, and was prone to crashing quite a bit.
+
+Again - thanks.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: text/enriched
+Size: 1127 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050910/63887270/attachment.bin>
+
+From csomor at advancedconcepts.ch  Sat Sep 10 13:14:25 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Sat, 10 Sep 2005 13:14:25 +0200
+Subject: [spe-mac] GUI interfaces won't work.
+Message-ID: <834A07D804766B43A535AC6861D6D8673696F7@advanced-3ynlwj.advancedconcepts.ch>
+
+Hi
+ 
+Incidentally, you might want to scrutinize that other wxGlade link. It
+was 9.2M (twice the size of the other package, which included SPE, Kiki,
+XRCed and wxGlade itself, and was prone to crashing quite a bit.  
+ 
+yes, the wxGlade zip package contains the wxlibrary unicode debug
+version as a dylib itself (7.4MB) , which the SPE-OSX variante doesn't
+have.
+ 
+Glad it is starting to work out
+ 
+Best,
+ 
+Stefan
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050910/c63f3897/attachment.html>
+

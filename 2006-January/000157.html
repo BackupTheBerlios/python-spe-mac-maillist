@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.8.1.d%20%28redirected%20output%2Ccolumn/row%20view%2Cubuntu%20support%29&In-Reply-To=%3C2078a7ad0601142135v3436f442i95516bce517c6c35%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000156.html">
+   <LINK REL="Next"  HREF="000158.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.8.1.d%20%28redirected%20output%2Ccolumn/row%20view%2Cubuntu%20support%29&In-Reply-To=%3C2078a7ad0601142135v3436f442i95516bce517c6c35%40mail.gmail.com%3E"
+       TITLE="[spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Sun Jan 15 06:35:28 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000156.html">[spe-mac] Editor window font anti-aliasing
+</A></li>
+        <LI>Next message: <A HREF="000158.html">[spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#157">[ date ]</a>
+              <a href="thread.html#157">[ thread ]</a>
+              <a href="subject.html#157">[ subject ]</a>
+              <a href="author.html#157">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>SPE 0.8.1.d [Release]&lt;<A HREF="http://www.stani.be/python/spe/blog/categorylist_html?cat_id=1">http://www.stani.be/python/spe/blog/categorylist_html?cat_id=1</A>&gt;
+
+
+ SPE gets rid of terminal windows when executing scripts. The output is
+shown nicely formatted with colors and hyperlinks to jump to the source
+code. Files can be run as such with or without dialog box to pass arguments.
+For those who prefer 'running scripts externally in terminals' is still
+available.
+
+(See <A HREF="http://pythonide.stani.be/manual/html/manual4_html_5029fe9c.gif">http://pythonide.stani.be/manual/html/manual4_html_5029fe9c.gif</A>)
+
+.
+
+On MacOS X and Linux SPE can now show files simultaneously as columns or
+rows for comparitive editing. You can select which files are shown, by Ctrl
+clicking them.
+
+(See <A HREF="http://pythonide.stani.be/manual/html/manual4_html_1cde0f5.jpg">http://pythonide.stani.be/manual/html/manual4_html_1cde0f5.jpg</A>)
+
+.
+
+SPE was for the first time tested on and improved for Ubuntu (and hopefully
+so for Linux in general). I adapted SPE such that it can ran out of the box
+of an archive (zip or tar.gz). This has the advantage that Linux (but also
+Mac and Windows) don't have to install SPE anymore but can just run it out
+of a folder or USB stick, provided the right version of wxPython (2.6) is
+installed on the system as it is always the case with Ubuntu boxes. If you
+want to install SPE in this way, use the -no_setup.zip distribution, but
+don't forget to uninstall your previous version of SPE first.
+  *New features*:
+
+   - new run system with redirected output
+   - column and row view modes
+   - SPE can run just from a folder (provided wxPython 2.6 is present)
+
+  *Improved features*:
+
+   - file tabs (by Andrea Gavana)
+   - warning before executing whole file
+   - various improvements for Ubuntu/GTK
+   - 'find in files' in multiple paths when separated by ';' (Nick Trout)
+   - browser file order by relative path instead of base (Nick Trout)
+
+  *Fixes*:
+
+   - global todo fix (by Benjamin Hess)
+   - realtime id fix
+   - utf8 encoding recognition
+   - Windows 98 run fix (by Fuzzyman)
+   - fix for execute in shell (except,else,elif)
+   - passing arguments to running files (by Karl-Heinz Glahe)
+
+  *Manual*:
+
+   - Quick install without setup (Windows, Linux and MacOS X)
+   - Running files
+   - FAQ updated with what if SPE doesn't start up
+   - FAQ updated with 'Advertisements on website'
+
+  *Contributors*:
+
+   - Andrea Gavana, <A HREF="http://xoomer.virgilio.it/infinity77">http://xoomer.virgilio.it/infinity77</A>
+   - Benjamin Hess
+   - Fuzzyman, <A HREF="http://www.voidspace.org.uk">http://www.voidspace.org.uk</A>
+   - Karl-Heinz Glahe
+   - Nick Trout
+
+  *Donations*:
+
+These generous donors get an one year abonnement on the SPE manual (&gt;=
+100euro):
+
+   - Bernard Stern, <A HREF="http://www.prairiegames.com,">http://www.prairiegames.com,</A> (160 euro)
+   - Donald French (100 euro)
+
+These donors can ask for the manual:
+
+   - Gerard Blais (25 euro)
+   - Daniel Vittet (20 euro)
+   - Kyle Odom (15 euro)
+   - Delia Fecoriu (10 GBP)
+   - Princess Pearls (10 euro)
+
+The development of SPE is driven by donations.
+  *Request*:
+
+   - SPE is looking for an Google Analytics invitation. Anyone?
+
+.
+
+SVN 134
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060115/c5a02d63/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060115/c5a02d63/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000156.html">[spe-mac] Editor window font anti-aliasing
+</A></li>
+	<LI>Next message: <A HREF="000158.html">[spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#157">[ date ]</a>
+              <a href="thread.html#157">[ thread ]</a>
+              <a href="subject.html#157">[ subject ]</a>
+              <a href="author.html#157">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

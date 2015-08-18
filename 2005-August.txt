@@ -1,0 +1,1457 @@
+From spe.stani.be at gmail.com  Wed Aug  3 04:46:11 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Wed, 03 Aug 2005 04:46:11 +0200
+Subject: [spe-mac] Test: smdi.py
+In-Reply-To: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+Message-ID: <42F02FF3.5070008@gmail.com>
+
+Hi all,
+Please test if this file runs well on Mac (not other os):
+
+    * The only purpose of this file is to provide a single document
+      interface with tab functionality to switch between files.
+    * Start the application and open with file>new some child windows.
+      Look when you close if some errors happen
+    * Don't test it as an editor. The application on itself has no use.
+    * Don't test shortcuts.
+    * Send also screenshot of full desktop with Parent and some Child
+      windows as png or gif (one is enough not to spoil this mailing
+      list, so who is first?!)
+
+Thanks,
+Stani
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050803/80ed20f6/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi.py
+Type: text/x-python
+Size: 39884 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050803/80ed20f6/attachment.py>
+
+From hraban at fiee.net  Wed Aug  3 11:01:39 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Wed, 3 Aug 2005 11:01:39 +0200
+Subject: [spe-mac] Test: smdi.py
+In-Reply-To: <42F02FF3.5070008@gmail.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F02FF3.5070008@gmail.com>
+Message-ID: <4F6BA6FC-E3F4-4243-8257-5BE5EB46C62E@fiee.net>
+
+A non-text attachment was scrubbed...
+Name: smdi.png
+Type: image/png
+Size: 25859 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050803/3f31b177/attachment.png>
+-------------- next part --------------
+
+Am 2005-08-03 um 04:46 schrieb SPE - Stani's Python Editor:
+
+> Please test if this file runs well on Mac (not other os):
+> The only purpose of this file is to provide a single document  
+> interface with tab functionality to switch between files.
+> Start the application and open with file>new some child windows.  
+> Look when you close if some errors happen
+> Don't test it as an editor. The application on itself has no use.
+> Don't test shortcuts.
+> Send also screenshot of full desktop with Parent and some Child  
+> windows as png or gif (one is enough not to spoil this mailing  
+> list, so who is first?!)
+
+Hi Stani!
+
+It doesn't throw any exceptions, but unfortunately it doesn't do what  
+it should either:
+You can make and close children at will, but if you click on the  
+tabs, nothing happens. Changing to the window via Windows menu works.
+Parent comes up in some default size (see screenshot), children are  
+maximized.
+
+Greetlings,
+Hraban
+
+From spe.stani.be at gmail.com  Wed Aug  3 22:29:19 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Wed, 03 Aug 2005 22:29:19 +0200
+Subject: [spe-mac] Test: smdi.py
+In-Reply-To: <4F6BA6FC-E3F4-4243-8257-5BE5EB46C62E@fiee.net>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F02FF3.5070008@gmail.com> <4F6BA6FC-E3F4-4243-8257-5BE5EB46C62E@fiee.net>
+Message-ID: <42F1291F.4010908@gmail.com>
+
+Hi Hraban,
+Looking to the screenshot, I have the following questions:
+- are there two parent windows (one with toolbar and one with tabs)?!
+- it is weird that nothing happens when you click on the tabs, not even 
+an error. Can you please execute this smdi.py (has only some more print 
+statements) and send me the log file(debug.txt):
+python spe.py --debug.txt>debug.txt
+- maybe some of you could plunge into the code and try to find out why a 
+window is not raised: The windows should be raised by 
+TabUnix.onFrameTab  which calls Tabs.raiseTab, which raises the actual 
+MdiTabsChildFrame (of which the Raise method is overwritten by its 
+Activate method). The bug should be obvious, which is a little bit 
+frustrating, as I can not test it on a Mac.
+
+Thanks,
+Stani
+
+> Am 2005-08-03 um 04:46 schrieb SPE - Stani's Python Editor:
+>
+>> Please test if this file runs well on Mac (not other os):
+>> The only purpose of this file is to provide a single document  
+>> interface with tab functionality to switch between files.
+>> Start the application and open with file>new some child windows.  
+>> Look when you close if some errors happen
+>> Don't test it as an editor. The application on itself has no use.
+>> Don't test shortcuts.
+>> Send also screenshot of full desktop with Parent and some Child  
+>> windows as png or gif (one is enough not to spoil this mailing  list, 
+>> so who is first?!)
+>
+>
+> Hi Stani!
+>
+> It doesn't throw any exceptions, but unfortunately it doesn't do what  
+> it should either:
+> You can make and close children at will, but if you click on the  
+> tabs, nothing happens. Changing to the window via Windows menu works.
+> Parent comes up in some default size (see screenshot), children are  
+> maximized.
+>
+> Greetlings,
+> Hraban
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi.py
+Type: text/x-python
+Size: 39954 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050803/30f0623e/attachment.py>
+
+From spe.stani.be at gmail.com  Thu Aug  4 05:44:23 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Thu, 04 Aug 2005 05:44:23 +0200
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+Message-ID: <42F18F17.9080903@gmail.com>
+
+Hi all,
+Now I implemented all the document interfaces I wanted. Now it should be 
+possible to run SPE on any platform how you prefer it single versus 
+multiple document interface. So SPE can adapt itself as a kameleon. It 
+would be nice if this would work smoothly, so let's get all the bugs out!
+
+1) For the mac tab lovers, this is my own implementation for those who 
+prefer a multiple document interface probably like safari. Please test 
+if this file runs well on Mac (not other os):
+
+    * Start the application and open with file>new some child windows.
+      Look when you close if some errors happen
+    * Don't test it as an editor. The application on itself has no use.
+    * Don't test shortcuts.
+    * Send also screenshot of full desktop with Parent and some Child
+      windows as png or gif
+    * This test is not about the toolpalette
+
+2) I REALLY need your help to solve the single document interface, which 
+remained unsolved by lack of feedback. As I don't have a mac, I can't 
+debug it and it should not be too difficult for you. I quote from my 
+previous mail:
+
+> Looking to the screenshot, I have the following questions:
+> - are there two parent windows (one with toolbar and one with tabs)?!
+> - it is weird that nothing happens when you click on the tabs, not 
+> even an error. Can you please execute this smdi.py (has only some more 
+> print statements) and send me the log file(debug.txt):
+> python spe.py --debug.txt>debug.txt --> I REALLY NEED THIS TO SEE WHY 
+> THE TABS ARE NOT WORKING!!!!!
+> - maybe some of you could plunge into the code and try to find out why 
+> a window is not raised: The windows should be raised by 
+> TabUnix.onFrameTab  which calls Tabs.raiseTab, which raises the actual 
+> MdiTabsChildFrame (of which the Raise method is overwritten by its 
+> Activate method). The bug should be obvious, which is a little bit 
+> frustrating, as I can not test it on a Mac. 
+
+To switch between document interfaces 1 and 2 in smdi.py SPE comment and 
+uncomment one of the last lines:
+if __name__=='__main__':
+    #__test__(debug=1,mdi=MDI_TABS_WIN)#single document interface for mac
+    __test__(debug=1,mdi=MDI_SPLIT_ALL)#multiple document interface for mac
+
+In general this smdi is more stable as the previous version, I removed 
+some code which might provoque segmentation faults and the like.
+
+Thanks,
+Stani
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/5eff6799/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi.py
+Type: text/x-python
+Size: 44318 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/5eff6799/attachment.py>
+
+From bbum at apple.com  Thu Aug  4 05:39:56 2005
+From: bbum at apple.com (Bill Bumgarner)
+Date: Wed, 3 Aug 2005 20:39:56 -0700
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <42F18F17.9080903@gmail.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com>
+Message-ID: <0920B1AC-CFF2-40F6-B530-49453D940692@apple.com>
+
+Are the changes being comitted somewhere?
+
+Will SPE work with the "out of the box" Tiger wx* stack?
+
+
+From spe.stani.be at gmail.com  Thu Aug  4 06:08:52 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Thu, 04 Aug 2005 06:08:52 +0200
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <0920B1AC-CFF2-40F6-B530-49453D940692@apple.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com> <0920B1AC-CFF2-40F6-B530-49453D940692@apple.com>
+Message-ID: <42F194D4.9040107@gmail.com>
+
+Bill Bumgarner wrote:
+
+> Are the changes being comitted somewhere?
+
+I'm not sure if I understand you. I'm now trying to implement SPE on the 
+Mac in the best way possible. smdi.py is the framework for document 
+interfaces on which SPE is built. It can run independently as a useless 
+program, but very helpful to debug. If smdi.py is bugfree, than already 
+the most of the cross-platform bugs are solved. If your question is 
+about subversion, than I have to answer not yet. I have no experience 
+with SVN at the moment and I prefer now to devote my time on developping 
+SPE. When SPE is stable, I want to learn SVN to make the collaboration 
+more easy.
+
+>
+> Will SPE work with the "out of the box" Tiger wx* stack?
+
+It depends if Tiger ships with wxPython2.6.1 (maybe also 2.5.4.1+), yes, 
+otherwise no. But if I understood well, SPE can be packed with py2app to 
+run independently as an application. Actually it would be nice if SPE is 
+stable for mac that it ships with OsX.
+Stani
+
+
+
+From bbum at apple.com  Thu Aug  4 06:15:49 2005
+From: bbum at apple.com (Bill Bumgarner)
+Date: Wed, 3 Aug 2005 21:15:49 -0700
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <42F194D4.9040107@gmail.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com> <0920B1AC-CFF2-40F6-B530-49453D940692@apple.com> <42F194D4.9040107@gmail.com>
+Message-ID: <0B323F2D-0AA9-4523-AA15-56D3355CA945@apple.com>
+
+On Aug 3, 2005, at 9:08 PM, SPE - Stani's Python Editor wrote:
+> Bill Bumgarner wrote:
+>> Are the changes being comitted somewhere?
+> I'm not sure if I understand you. I'm now trying to implement SPE  
+> on the Mac in the best way possible. smdi.py is the framework for  
+> document interfaces on which SPE is built. It can run independently  
+> as a useless program, but very helpful to debug. If smdi.py is  
+> bugfree, than already the most of the cross-platform bugs are  
+> solved. If your question is about subversion, than I have to answer  
+> not yet. I have no experience with SVN at the moment and I prefer  
+> now to devote my time on developping SPE. When SPE is stable, I  
+> want to learn SVN to make the collaboration more easy.
+
+Yeah -- I was more or less asking if there was a repository somewhere  
+via which one can check out SPE and do 'svn update' to track your  
+development.
+
+Subversion is remarkably forgiving given that you can easily rename  
+and/or move stuff around after the fact, unlike CVS.   For initial  
+development, about all you need to know is 'svn add file' and 'svn  
+commit file'.   I would encourage you to take a few minutes to pick  
+it up if only such that the rest of us can track your work a bit more  
+easily and, possibly/hopefully, contribute a patch or two. :-)
+
+Let me know if you have any questions about Subversion -- I'd be  
+happy to help.
+
+>> Will SPE work with the "out of the box" Tiger wx* stack?
+>
+> It depends if Tiger ships with wxPython2.6.1 (maybe also 2.5.4.1+),  
+> yes, otherwise no. But if I understood well, SPE can be packed with  
+> py2app to run independently as an application. Actually it would be  
+> nice if SPE is stable for mac that it ships with OsX.
+
+OK.
+
+If SPE uses the python distutils stuff, then py2app will happen  
+automatically with a little tweaking here and there.  I think I can  
+figure that part out assuming the underlying bits and pieces are  
+fairly straightforward.
+
+b.bum
+
+
+From hraban at fiee.net  Thu Aug  4 12:38:25 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Thu, 4 Aug 2005 12:38:25 +0200
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <0B323F2D-0AA9-4523-AA15-56D3355CA945@apple.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com> <0920B1AC-CFF2-40F6-B530-49453D940692@apple.com> <42F194D4.9040107@gmail.com> <0B323F2D-0AA9-4523-AA15-56D3355CA945@apple.com>
+Message-ID: <9A37EE18-AD55-428E-86E0-18F309ED09EE@fiee.net>
+
+Am 2005-08-04 um 06:15 schrieb Bill Bumgarner:
+>> It depends if Tiger ships with wxPython2.6.1 (maybe also 2.5.4.1 
+>> +), yes, otherwise no. But if I understood well, SPE can be packed  
+>> with py2app to run independently as an application. Actually it  
+>> would be nice if SPE is stable for mac that it ships with OsX.
+
+Tiger ships with Python 2.3.5 and wx 2.5.3 - that is rather broken,  
+and every Mac-Python guru tells you it makes no sense to NOT upgrade  
+to Python 2.4.x and wx 2.6.x.
+
+BTW sorry that I didn't answer yet - I've to work night shifts  
+(again) at the moment and some other projects running (struggling  
+with LilyPond music typesetting and its integration into ConTeXt...)
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+
+
+
+
+From hraban at fiee.net  Thu Aug  4 12:48:24 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Thu, 4 Aug 2005 12:48:24 +0200
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <42F18F17.9080903@gmail.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com>
+Message-ID: <14543A23-796C-49D5-90F9-8FDA9D3A5A48@fiee.net>
+
+Am 2005-08-04 um 05:44 schrieb SPE - Stani's Python Editor:
+
+> 1) For the mac tab lovers, this is my own implementation for those  
+> who prefer a multiple document interface probably like safari.  
+> Please test if this file runs well on Mac (not other os):
+
+Now it works!
+You see a very small visual-only issue in the "empty" screenshot:
+There's some garbage of the last tab after closing all children; it  
+disappears at a resize.
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi.png
+Type: image/png
+Size: 32326 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/886f820e/attachment.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi-empty.png
+Type: image/png
+Size: 16802 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/886f820e/attachment-0001.png>
+-------------- next part --------------
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+
+
+
+From spe.stani.be at gmail.com  Thu Aug  4 15:17:04 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Thu, 04 Aug 2005 15:17:04 +0200
+Subject: Debug: single document interface (was Re: [spe-mac] Test: multiple
+ document interface on mac)
+In-Reply-To: <14543A23-796C-49D5-90F9-8FDA9D3A5A48@fiee.net>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com> <14543A23-796C-49D5-90F9-8FDA9D3A5A48@fiee.net>
+Message-ID: <42F21550.8030203@gmail.com>
+
+Henning Hraban Ramm wrote:
+
+>> 1) For the mac tab lovers, this is my own implementation for those  
+>> who prefer a multiple document interface probably like safari.  
+>> Please test if this file runs well on Mac (not other os):
+>
+>
+> Now it works!
+
+Ha good! But I want the single document interface also to work before 
+proceeding. Please run this smdi.py I have to repeat... I REALLY need 
+your help to solve the single document interface. As I don't have a mac, 
+I can't debug it and it should not be too difficult for you. I quote 
+from my previous mail:
+
+> Looking to the screenshot, I have the following questions:
+> - are there two parent windows (one with toolbar and one with tabs)?!
+> - it is weird that nothing happens when you click on the tabs, not 
+> even an error. Can you please execute this smdi.py (has only some more 
+> print statements) and send me the log file(debug.txt):
+> python spe.py --debug.txt>debug.txt --> I REALLY NEED THIS TO SEE WHY 
+> THE TABS ARE NOT WORKING!!!!!
+> - maybe some of you could plunge into the code and try to find out why 
+> a window is not raised: The windows should be raised by 
+> TabUnix.onFrameTab  which calls Tabs.raiseTab, which raises the actual 
+> MdiTabsChildFrame (of which the Raise method is overwritten by its 
+> Activate method). The bug should be obvious, which is a little bit 
+> frustrating, as I can not test it on a Mac. 
+
+> You see a very small visual-only issue in the "empty" screenshot:
+> There's some garbage of the last tab after closing all children; it  
+> disappears at a resize.
+
+I can live with that. An option would be to start a new file if all are 
+closed.
+
+Thanks, now I hope we can solve the single document interface as well. 
+If that's ready it should be time for a poll, what should be the default 
+interface for a mac (always changable in preferences of course): single 
+or multiple documeninterface, toolbar or toolpalette. To me it looks 
+that single document interface with tool palette, would be the most Mac 
+minded.
+
+Stani
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi.py
+Type: text/x-python
+Size: 44380 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/2c1f1f8f/attachment.py>
+
+From spe.stani.be at gmail.com  Thu Aug  4 15:26:29 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Thu, 04 Aug 2005 15:26:29 +0200
+Subject: [spe-mac] Test: multiple document interface on mac
+In-Reply-To: <0B323F2D-0AA9-4523-AA15-56D3355CA945@apple.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com> <42F18F17.9080903@gmail.com> <0920B1AC-CFF2-40F6-B530-49453D940692@apple.com> <42F194D4.9040107@gmail.com> <0B323F2D-0AA9-4523-AA15-56D3355CA945@apple.com>
+Message-ID: <42F21785.8010002@gmail.com>
+
+Bill Bumgarner wrote:
+
+> Yeah -- I was more or less asking if there was a repository somewhere  
+> via which one can check out SPE and do 'svn update' to track your  
+> development.
+>
+> Subversion is remarkably forgiving given that you can easily rename  
+> and/or move stuff around after the fact, unlike CVS.   For initial  
+> development, about all you need to know is 'svn add file' and 'svn  
+> commit file'.   I would encourage you to take a few minutes to pick  
+> it up if only such that the rest of us can track your work a bit more  
+> easily and, possibly/hopefully, contribute a patch or two. :-)
+>
+> Let me know if you have any questions about Subversion -- I'd be  
+> happy to help.
+
+Ok, I'll have a look at it now, but don't promise anything yet. ;-)
+
+>>> Will SPE work with the "out of the box" Tiger wx* stack?
+>>
+>>
+>> It depends if Tiger ships with wxPython2.6.1 (maybe also 2.5.4.1+),  
+>> yes, otherwise no. But if I understood well, SPE can be packed with  
+>> py2app to run independently as an application. Actually it would be  
+>> nice if SPE is stable for mac that it ships with OsX.
+>
+>
+> OK.
+>
+> If SPE uses the python distutils stuff, then py2app will happen  
+> automatically with a little tweaking here and there.  I think I can  
+> figure that part out assuming the underlying bits and pieces are  
+> fairly straightforward.
+
+So, let's get SPE stable soon and debug the single document interface, 
+see my previous post with smdi.py
+
+Stani
+
+
+From spe.stani.be at gmail.com  Mon Aug  1 08:43:50 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Mon, 01 Aug 2005 08:43:50 +0200
+Subject: [spe-mac] SPE 0.7.4.y released
+In-Reply-To: <42EA7800.3070908@asylumwear.com>
+References: <42EA7800.3070908@asylumwear.com>
+Message-ID: <42EDC4A6.1030408@gmail.com>
+
+See http://www.stani.be/python/spe/blog
+Stani
+
+
+From Richard.E.Brown at DARTWARE.COM  Sat Aug  6 20:14:22 2005
+From: Richard.E.Brown at DARTWARE.COM (Richard E. Brown)
+Date: 06 Aug 2005 14:14:22 EDT
+Subject: [spe-mac] Let's help Stani buy a Mac
+Message-ID: <1949740@blitz.dartware.com>
+
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050806/857ae071/attachment.ksh>
+
+From spe.stani.be at gmail.com  Thu Aug 11 19:54:55 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Thu, 11 Aug 2005 19:54:55 +0200
+Subject: [spe-mac] SPE site down  (please help)
+In-Reply-To: <42FB7E34.9000802@cybergalvez.com>
+References: <42FB7E34.9000802@cybergalvez.com>
+Message-ID: <42FB90EF.4010206@gmail.com>
+
+Dear all,
+
+Some of you contacted to warn me that my site is down. Thanks for your 
+concerns. Unfortunately the *.stani.be site drove the machine's load up 
+to 27 at the Zettai server. This made my site crash and I had to restart 
+it frequently. For Zettai, who sponsors SPE in free hosting, this was 
+alarming and they decided to shut down my site. Altough I'm experienced 
+with Python, I'm not that familiar with Zope. Anyone who could help me 
+monitoring what is wrong or even point me to how I could solve the 
+problem, would save my days.
+
+I'm currently trying to convince Zettai to see if there is a way to 
+continue the SPE website. I have no reasons to complain about them, the 
+opposite: they always provided me with an excellent service, so I can 
+recommend them to anyone. Honnestly I think that their analysis that 
+something is alarmlingly wrong is very justified.
+
+The SPE website uses CoreBlog and I don't think that can be the problem. 
+My personal portfolio site www.stani.be uses a lot of Python scripting, 
+but has low visitors. So in a way I would be surprised if it's that. 
+When the problem occurred, I installed cache managers, but appearantly 
+that didn't solve anything.
+
+Recently I have put a lot of effort to develop SPE, especially 
+concerning Mac Os X, new website and integrating the debugger. Of course 
+this will postpone the release of SPE. The reason is that first this 
+will take me time and energy to see what is wrong and to get it back 
+online. The second reason is that the google ads displayed on my page 
+give me a very small income. I'm donating much of my freetime into this 
+project and as donations are seldom and small, any extra income is 
+welcome. It's at the moment the only way to generate some revenue with 
+open source, as far as I know. This income is mainly generated when 
+there is a new release, so I feel it is only reasonable as a developper 
+not too lose that opportunity. A company which would sponsor SPE is till 
+now still a utopia, or not?
+
+But if some zope expert could help me with solving this problem, please 
+contact me. I hope Zettai will continue hosting SPE, otherwise I'll have 
+to look for another provider and than everything really gets delayed. 
+Also soon I'll have three art shows simultaneously in France, Belgium 
+and Germany, so than I have to be away for a while.
+
+Stani
+
+PS 1: Please post all replies to python-spe-users at berlios.de
+
+PS 2: Just in case, if someone still wants to donate: 
+http://spe.pycs.net/stories/8.html For Mac users or sympathisants, there 
+is still a fund raising campaign that I can buy a mini mac, to support 
+SPE fully on mac. Pay by iban (europe) or Paypal (s_t_a_n_i at 
+yahoo.com) and mention 'mini-mac'
+
+PS 3: This was the data of the zettai server. For me it is Chinese, the 
+only hint I got was "keep your scripts under control", but I don't know 
+where to start.
+
+last pid: 81099;  load averages: 28.25, 27.70, 27.54                          up 21+18:18:23  10:46:04
+247 processes: 30 running, 212 sleeping, 5 zombie
+CPU states:  9.5% user,  2.7% nice, 87.7% system,  0.0% interrupt,  0.0% idle
+Mem: 2238M Active, 754M Inact, 355M Wired, 162M Cache, 199M Buf, 8796K Free
+Swap: 4608M Total, 237M Used, 4370M Free, 5% Inuse
+
+  PID USERNAME   PRI NICE  SIZE    RES STATE  C   TIME   WCPU    CPU COMMAND
+13770 stanim      64   0 12876K  5832K RUN    0  34:10  9.03%  9.03% convert
+99357 stanim      64   0 12876K  5716K RUN    1 136:02  8.64%  8.64% convert
+13540 stanim      64   0 12876K  5832K RUN    1  34:20  8.45%  8.45% convert
+50033 stanim      64   0 12876K  5696K RUN    1 297:50  8.20%  8.20% convert
+99367 stanim      63   0 12876K  5716K RUN    1 133:59  7.76%  7.76% convert
+70132 stanim      64   0 12876K  5864K RUN    0   4:10  7.76%  7.76% convert
+51343 stanim      64   0 12876K  5696K RUN    0 295:10  7.71%  7.71% convert
+80250 stanim      64   0 12876K  5716K RUN    0 184:59  7.67%  7.67% convert
+42537 stanim      64   0 12876K  5720K RUN    0  84:38  7.67%  7.67% convert
+80862 stanim      64   0 12876K  5868K RUN    1   0:07  7.92%  7.67% convert
+ 8252 stanim      64   0 12876K  5832K RUN    1  37:49  7.62%  7.62% convert
+42308 stanim      64   0 12876K  5720K RUN    0  86:38  7.37%  7.37% convert
+58343 stanim      64   0 12876K  5864K RUN    0   8:54  7.18%  7.18% convert
+13274 stanim      64   0 12876K  5832K RUN    1  34:29  7.13%  7.13% convert
+57570 stanim      64   0 12876K  5864K RUN    1  10:02  7.08%  7.08% convert
+27253 stanim      64   0 12876K  5720K RUN    0 101:48  7.03%  7.03% convert
+99355 stanim      64   0 12876K  5716K RUN    1 136:57  6.98%  6.98% convert
+56385 stanim      64   0 12876K  5864K RUN    0  10:01  6.88%  6.88% convert
+58206 stanim      64   0 12876K  5864K RUN    0   9:02  6.40%  6.40% convert
+25648 stanim      64   0 12876K  5720K RUN    1 104:47  6.10%  6.10% convert
+68223 stanim       2   0 67712K 58788K poll   0   0:43  0.00%  0.00% python
+99354 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+99356 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+99366 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+42307 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+13539 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+42536 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+ 8251 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+80249 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+13769 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+80861 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+25647 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+27252 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+13273 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+56380 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+58194 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+57569 stanim      10   0   628K   268K wait   1   0:00  0.00%  0.00% sh
+51342 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+58342 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+70131 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+50032 stanim      10   0   628K   268K wait   0   0:00  0.00%  0.00% sh
+49121 stanim       2   0  1104K   700K sbwait 0   0:00  0.00%  0.00% tcsh
+49117 stanim       2   0  5292K  1704K select 0   0:00  0.00%  0.00% sshd
+49046 stanim       2   0  2188K  1108K select 0   0:00  0.00%  0.00% sftp-serve
+49043 stanim      18   0  1104K   692K pause  0   0:00  0.00%  0.00% tcsh
+49038 stanim       2   0  5292K  1708K select 0   0:00  0.00%  0.00% sshd
+
+
+
+
+Jose Galvez wrote:
+
+> SPE - Stani's Python Editor wrote:
+>
+>> See http://www.stani.be/python/spe/blog
+>> Stani
+>> _______________________________________________
+>> Python-spe-users mailing list
+>> Python-spe-users at lists.berlios.de
+>> http://lists.berlios.de/mailman/listinfo/python-spe-users
+>>
+>>
+>>
+> Stani, is your server down?  I tried to log on to get the latest 
+> version of spe and got a 502 error
+>
+>
+> ===============================================================
+>
+>
+> Proxy Error
+>
+> The proxy server received an invalid response from an upstream server.
+>
+> The proxy server could not handle the request /GET /python/spe/blog 
+> <http://www.stani.be/python/spe/blog>/.
+>
+> Reason: *Could not connect to remote machine: Connection refused*
+>
+> ------------------------------------------------------------------------
+> Apache/1.3.33 Server at www.stani.be Port 80
+> =======================================================
+>
+>
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-users
+>
+
+
+
+From spe.stani.be at gmail.com  Fri Aug 12 00:17:43 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Fri, 12 Aug 2005 00:17:43 +0200
+Subject: [spe-mac] Re: SPE site down  (please help)
+In-Reply-To: <42FB9972.2000801@cybergalvez.com>
+References: <42FB7E34.9000802@cybergalvez.com> <42FB90EF.4010206@gmail.com> <42FB9972.2000801@cybergalvez.com>
+Message-ID: <42FBCE87.5050801@gmail.com>
+
+Dear all,
+The website is up again. Appearantly the screenshots went crazy, so I 
+replaced it with a more simple page.
+Stani
+
+Jose Galvez wrote:
+
+> Dear Stani,
+>
+> I am very sorry to hear that you zope site went down.  I really hope 
+> that some Zope expert can come to your aid (unfortunately I don't do 
+> much zope).  If it would help I could provide you with some space to 
+> host a simple site download page at the university where I work, 
+> unfortunately because of university regs I can't really set up your 
+> complete zope site so I would also understand if you didn't take me up 
+> on the offer.
+> Jose
+>
+> SPE - Stani's Python Editor wrote:
+>
+>> Dear all,
+>>
+>> Some of you contacted to warn me that my site is down. Thanks for 
+>> your concerns. Unfortunately the *.stani.be site drove the machine's 
+>> load up to 27 at the Zettai server. This made my site crash and I had 
+>> to restart it frequently. For Zettai, who sponsors SPE in free 
+>> hosting, this was alarming and they decided to shut down my site. 
+>> Altough I'm experienced with Python, I'm not that familiar with Zope. 
+>> Anyone who could help me monitoring what is wrong or even point me to 
+>> how I could solve the problem, would save my days.
+>>
+>> I'm currently trying to convince Zettai to see if there is a way to 
+>> continue the SPE website. I have no reasons to complain about them, 
+>> the opposite: they always provided me with an excellent service, so I 
+>> can recommend them to anyone. Honnestly I think that their analysis 
+>> that something is alarmlingly wrong is very justified.
+>>
+>> The SPE website uses CoreBlog and I don't think that can be the 
+>> problem. My personal portfolio site www.stani.be uses a lot of Python 
+>> scripting, but has low visitors. So in a way I would be surprised if 
+>> it's that. When the problem occurred, I installed cache managers, but 
+>> appearantly that didn't solve anything.
+>>
+>> Recently I have put a lot of effort to develop SPE, especially 
+>> concerning Mac Os X, new website and integrating the debugger. Of 
+>> course this will postpone the release of SPE. The reason is that 
+>> first this will take me time and energy to see what is wrong and to 
+>> get it back online. The second reason is that the google ads 
+>> displayed on my page give me a very small income. I'm donating much 
+>> of my freetime into this project and as donations are seldom and 
+>> small, any extra income is welcome. It's at the moment the only way 
+>> to generate some revenue with open source, as far as I know. This 
+>> income is mainly generated when there is a new release, so I feel it 
+>> is only reasonable as a developper not too lose that opportunity. A 
+>> company which would sponsor SPE is till now still a utopia, or not?
+>>
+>> But if some zope expert could help me with solving this problem, 
+>> please contact me. I hope Zettai will continue hosting SPE, otherwise 
+>> I'll have to look for another provider and than everything really 
+>> gets delayed. Also soon I'll have three art shows simultaneously in 
+>> France, Belgium and Germany, so than I have to be away for a while.
+>>
+>> Stani
+>>
+>> PS 1: Please post all replies to python-spe-users at berlios.de
+>>
+>> PS 2: Just in case, if someone still wants to donate: 
+>> http://spe.pycs.net/stories/8.html For Mac users or sympathisants, 
+>> there is still a fund raising campaign that I can buy a mini mac, to 
+>> support SPE fully on mac. Pay by iban (europe) or Paypal (s_t_a_n_i 
+>> at yahoo.com) and mention 'mini-mac'
+>
+
+
+
+From Richard.E.Brown at dartware.com  Fri Aug 12 02:30:49 2005
+From: Richard.E.Brown at dartware.com (Richard E. Brown)
+Date: 11 Aug 2005 20:30:49 EDT
+Subject: [spe-mac] SPE site down  (please help)
+Message-ID: <1955912@blitz.dartware.com>
+
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050811/c4849a4f/attachment.ksh>
+
+From spe.stani.be at gmail.com  Sun Aug 14 22:16:51 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Sun, 14 Aug 2005 22:16:51 +0200
+Subject: [spe-mac] SPE 0.7.5.b will be released any moment.
+Message-ID: <42FFA6B3.4010102@gmail.com>
+
+Hi,
+
+I'm now finishing the download page and after that I will release the 
+new version of SPE. I just wanted you to know first. So you'll get the 
+release soon, it can be any moment from now, but please patient till it 
+appears. I'm always looking for people who can do some easy bugfixing, 
+if you have a bit of wxPython experience please contact me.
+
+I feel sorry for mac users that I can't make a nice app installer. It 
+has one simple reason: I don't have access to a mac. I really appreciate 
+the fund raising that some mac users started. If more people would join 
+the boat, I could buy a mini mac and give you as well full support on 
+Mac Os X.
+
+Of course donations in general are also welcome, as this allows me to 
+spend a bit more time on SPE as normal, which you will only enjoy.
+
+Thanks if you consider this seriously.
+
+Stani
+
+
+From spe.stani.be at gmail.com  Wed Aug 17 18:27:32 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Wed, 17 Aug 2005 18:27:32 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <1949740@blitz.dartware.com>
+References: <1949740@blitz.dartware.com>
+Message-ID: <43036574.7040204@gmail.com>
+
+>
+>
+> Thought I could kick in another 50 euros since donations were so slim 
+> before.
+>
+> Brian
+>
+Thanks a lot Brian! I updated the homepage statistics. Hopefully SPE for 
+Mac will become a reality.
+Stani
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050817/64c4e3ad/attachment.html>
+
+From hraban at fiee.net  Wed Aug 17 19:12:25 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Wed, 17 Aug 2005 19:12:25 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <1949740@blitz.dartware.com>
+References: <1949740@blitz.dartware.com>
+Message-ID: <C208E3A4-D517-46DE-97E0-EABFB53C606A@fiee.net>
+
+> PS If ten more people contribute 50 Euros each, that would give  
+> Stani the funds
+> necessary to buy a good development and testing system. Please help  
+> with this.
+
+My 50 ? will arrive in september - no money left in august, must pay  
+my taxes...
+
+Greetlings, Hraban
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Wed Aug 17 19:15:27 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Wed, 17 Aug 2005 12:15:27 -0500
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <43036574.7040204@gmail.com>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com>
+Message-ID: <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net>
+
+I just installed SPE on windows, and once I figure out how to get it  
+started, will know if I want to donate to the Mac. So far I've tried  
+double-clicking on likely-looking .py files and also tried invoking  
+python on the same files from the command line. If someone could tell  
+me what the right way to start SPE is, I'd appreciate it.
+
+Thanks,
+Ken
+
+
+On Aug 17, 2005, at 11:27 AM, SPE - Stani's Python Editor wrote:
+
+>> Thought I could kick in another 50 euros since donations were so  
+>> slim before.
+>>
+>> Brian
+>>
+> Thanks a lot Brian! I updated the homepage statistics. Hopefully  
+> SPE for Mac will become a reality.
+> Stani
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050817/431285ba/attachment.html>
+
+From spe.stani.be at gmail.com  Wed Aug 17 20:40:19 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Wed, 17 Aug 2005 20:40:19 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net>
+Message-ID: <43038493.5050306@gmail.com>
+
+Kenneth McDonald wrote:
+
+> I just installed SPE on windows, and once I figure out how to get it 
+> started, will know if I want to donate to the Mac. So far I've tried 
+> double-clicking on likely-looking .py files and also tried invoking 
+> python on the same files from the command line. If someone could tell 
+> me what the right way to start SPE is, I'd appreciate it.
+>
+> Thanks,
+> Ken
+>
+>
+> On Aug 17, 2005, at 11:27 AM, SPE - Stani's Python Editor wrote:
+>
+>>> Thought I could kick in another 50 euros since donations were so 
+>>> slim before.
+>>>
+>>> Brian
+>>>
+>> Thanks a lot Brian! I updated the homepage statistics. Hopefully SPE 
+>> for Mac will become a reality.
+>> Stani
+>>
+>
+Hi Kenneth,
+I'll reply you privately about windows, otherwise this will go off 
+topic. But in general for Mac users, to start SPE (no idea if latest 
+versions work, did not get feedback about that): go to the site-packages 
+dir and start the file SPE.py in the _spe folder. Install spe with 
+'python setup.py install'
+Thanks for considering the donation anyway,
+Stani
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050817/d4deba41/attachment.html>
+
+From spe.stani.be at gmail.com  Wed Aug 17 20:42:44 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Wed, 17 Aug 2005 20:42:44 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <C208E3A4-D517-46DE-97E0-EABFB53C606A@fiee.net>
+References: <1949740@blitz.dartware.com> <C208E3A4-D517-46DE-97E0-EABFB53C606A@fiee.net>
+Message-ID: <43038524.7090501@gmail.com>
+
+Henning Hraban Ramm wrote:
+
+>> PS If ten more people contribute 50 Euros each, that would give  
+>> Stani the funds
+>> necessary to buy a good development and testing system. Please help  
+>> with this.
+>
+>
+> My 50 ? will arrive in september - no money left in august, must pay  
+> my taxes...
+>
+> Greetlings, Hraban
+> _______________________________________________
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+Great! For now it still looks like it will be needed and let's hope 
+prices for Mac get down a bit.
+Stani
+
+
+From spe.stani.be at gmail.com  Thu Aug 18 03:39:32 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Thu, 18 Aug 2005 03:39:32 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net>
+Message-ID: <4303E6D4.9000008@gmail.com>
+
+Hi Ken and Stefano,
+Thanks both for your donations! Finally a snow ball effect today? This 
+brings the total amount of received donations up to 466 euro. More with 
+the promised amount of Henning, this brings the total amount on 513 
+euro. This means that now only 237 euro is missing. (All amounts are 
+minus the Paypal fee, so it's really an advantage to pay through IBAN if 
+you are in Europe.) Maybe this will stimulate other people as it's not 
+unrealistic anymore. Feel free to choose yourself what it would be worth 
+for you. It can be anything, but I'd recommend at least 10 euro. It's a 
+pitty that no sponsering is available from Macintosh for this, as it is 
+only in their benefit. I'll update the homepage, but now I'm just too 
+busy with a deadline. However I couldn't wait to share this news.
+So I hope to be able to develop SPE for you in september, if some more 
+donations drop in. Probably than also I need someone who can give me a 
+speed course about mac, eg how to upgrade wxPython, to make an app, etc...
+Thanks a lot!
+Stani
+
+
+
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Thu Aug 18 03:37:41 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Wed, 17 Aug 2005 20:37:41 -0500
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <4303E6D4.9000008@gmail.com>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net> <4303E6D4.9000008@gmail.com>
+Message-ID: <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net>
+
+Stani,
+
+Don't feel you have to take my donation solely as motivation for a  
+Mac version. Sure, a Mac version would be great, but a stable Windows  
+version and no Mac version would be preferable to less stable  
+implementations on both platforms. Take your time, get it right, and  
+don't try to do everything at once.
+
+
+Cheers,
+Ken
+
+On Aug 17, 2005, at 8:39 PM, SPE - Stani's Python Editor wrote:
+
+> Hi Ken and Stefano,
+> Thanks both for your donations! Finally a snow ball effect today?  
+> This brings the total amount of received donations up to 466 euro.  
+> More with the promised amount of Henning, this brings the total  
+> amount on 513 euro. This means that now only 237 euro is missing.  
+> (All amounts are minus the Paypal fee, so it's really an advantage  
+> to pay through IBAN if you are in Europe.) Maybe this will  
+> stimulate other people as it's not unrealistic anymore. Feel free  
+> to choose yourself what it would be worth for you. It can be  
+> anything, but I'd recommend at least 10 euro. It's a pitty that no  
+> sponsering is available from Macintosh for this, as it is only in  
+> their benefit. I'll update the homepage, but now I'm just too busy  
+> with a deadline. However I couldn't wait to share this news.
+> So I hope to be able to develop SPE for you in september, if some  
+> more donations drop in. Probably than also I need someone who can  
+> give me a speed course about mac, eg how to upgrade wxPython, to  
+> make an app, etc...
+> Thanks a lot!
+> Stani
+>
+>
+>
+> _______________________________________________
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+From hraban at fiee.net  Thu Aug 18 08:55:52 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Thu, 18 Aug 2005 08:55:52 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net> <4303E6D4.9000008@gmail.com> <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net>
+Message-ID: <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net>
+
+Am 2005-08-18 um 03:37 schrieb Kenneth McDonald:
+
+> Don't feel you have to take my donation solely as motivation for a  
+> Mac version. Sure, a Mac version would be great, but a stable  
+> Windows version and no Mac version would be preferable to less  
+> stable implementations on both platforms. Take your time, get it  
+> right, and don't try to do everything at once.
+
+Too true - I use SPE mostly at work on a WinXP machine, but my  
+employer will not pay for anything that seems to be free - i.e. I  
+should use the provided MS VisualStudio, and not some Open Source  
+stuff...  ;-)
+But anyway I'd like to use SPE on my Mac at home, too - even if I'll  
+try PyObjC's Xcode integration soon.
+
+>> Probably than also I need someone who can give me a speed course  
+>> about mac, eg how to upgrade wxPython, to make an app, etc...
+
+You should subscribe to pythonmac-sig mailing list: http:// 
+mail.python.org/mailman/listinfo/pythonmac-sig
+The Mac-Python gurus, esp. Bob Ippolito (http://undefined.org/ 
+python/), are active there.
+
+MacOS X 10.4 ("Tiger") ships with Python 2.3.x and wxPython 2.5.3 -  
+just forget that and install 2.4.1 (Bob's or ActiveState's) and  
+latest wxPython.
+At best never touch the pre-installed stuff (don't delete it, the OS  
+may need it).
+
+If you setup your Mac, make sure you install the BSD subsystem (all  
+the useful command line stuff) and Developer Tools (compiler, make etc.)
+
+Ok, I'll repeat that in time. ;-)
+
+
+Greetlings, Hraban
+---
+http://www.fiee.net
+http://contextgarden.net
+
+
+
+From spe.stani.be at gmail.com  Sun Aug 21 02:46:46 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Sun, 21 Aug 2005 02:46:46 +0200
+Subject: [spe-mac] macpython gurus
+In-Reply-To: <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net> <4303E6D4.9000008@gmail.com> <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net> <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net>
+Message-ID: <4307CEF6.6020209@gmail.com>
+
+>
+>
+>>> Probably than also I need someone who can give me a speed course  
+>>> about mac, eg how to upgrade wxPython, to make an app, etc...
+>>
+>
+> You should subscribe to pythonmac-sig mailing list: http:// 
+> mail.python.org/mailman/listinfo/pythonmac-sig
+
+I will.
+
+> The Mac-Python gurus, esp. Bob Ippolito (http://undefined.org/ 
+> python/), are active there.
+>
+> MacOS X 10.4 ("Tiger") ships with Python 2.3.x and wxPython 2.5.3 -  
+> just forget that and install 2.4.1 (Bob's or ActiveState's) and  
+> latest wxPython.
+> At best never touch the pre-installed stuff (don't delete it, the OS  
+> may need it).
+>
+> If you setup your Mac, make sure you install the BSD subsystem (all  
+> the useful command line stuff) and Developer Tools (compiler, make etc.)
+>
+> Ok, I'll repeat that in time. ;-)
+>
+>
+> Greetlings, Hraban 
+
+
+I'm just wondering who is the lead developper of MacPython. Is it Jack 
+Jansens or Bob Ippolito? Jack Janssens actually lives in Amsterdam, so 
+that's on bike distance. And if I understand it right, than Stefan, 
+you're the guy behind wxMac? Wow, it's great to have you as a supporter 
+and even as a donator! I hope once I bought the Mac, I can fire all more 
+intelligent questions on you. How big is the macPython community?
+Stani
+
+
+
+From spe.stani.be at gmail.com  Sun Aug 21 03:05:18 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Sun, 21 Aug 2005 03:05:18 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net> <4303E6D4.9000008@gmail.com> <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net> <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net>
+Message-ID: <4307D34E.8060109@gmail.com>
+
+Henning Hraban Ramm wrote:
+
+> Am 2005-08-18 um 03:37 schrieb Kenneth McDonald:
+>
+>> Don't feel you have to take my donation solely as motivation for a  
+>> Mac version. Sure, a Mac version would be great, but a stable  
+>> Windows version and no Mac version would be preferable to less  
+>> stable implementations on both platforms. Take your time, get it  
+>> right, and don't try to do everything at once.
+>
+>
+> Too true - I use SPE mostly at work on a WinXP machine, but my  
+> employer will not pay for anything that seems to be free - i.e. I  
+> should use the provided MS VisualStudio, and not some Open Source  
+> stuff...  ;-)
+> But anyway I'd like to use SPE on my Mac at home, too - even if I'll  
+> try PyObjC's Xcode integration soon.
+
+
+I also would like to see SPE stable. However I believe that testing SPE 
+on the Mac, will only increase its stability (rather than seeing it as a 
+new feature), as wxMac seems to be more sensitive to mistakes. This 
+gives in a way the advantage that errors are more fastly discovered. I 
+noticed that with some sizer issues. I think if SPE runs well on Windows 
+and Mac, probably it is true for all platforms.
+
+The problems with donations till now, is that people start thinking 
+about donating after the features they like are implemented. However 
+donations are low. That's why I appreciate the donations for the Mac. 
+For the first time users are donating to get something done, before it 
+is implemented. This made me think I should start a bounty system, where 
+I people could bid on features they would like to see implemented. It's 
+not that I want to start earning money with SPE, but on the other hand 
+it's also a pitty if things could work better if it is stimulated in 
+another way. As you might now, developing a project like this asks a lot 
+of time. For example a lot of users ask for a project manager, but would 
+they be willing to pay for it? Also if SPE would give in some cash in 
+one way or another, I could really spend more time on developping it,as 
+it means I have to do less other jobs.
+
+After I will have bought the Mac, I will do some serious bugfixing 
+effort to make SPE stable on all platforms or as much as possible. (So 
+the sooner I have the money for the Mac, hint, hint, ;-) ...) But of 
+course I have the most fun by implementing some new cool features. Also 
+I think of organising SPE maybe more like Firefox with downloadable 
+extensions (which should also be easy for users to create), rather than 
+a full suite which it is now.
+
+These were just some thoughts,
+Stani
+
+
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Sun Aug 21 05:45:49 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Sat, 20 Aug 2005 22:45:49 -0500
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <4307D34E.8060109@gmail.com>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net> <4303E6D4.9000008@gmail.com> <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net> <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net> <4307D34E.8060109@gmail.com>
+Message-ID: <5D4A9F1B-5937-41D8-88A0-A0FE63F35B99@sbcglobal.net>
+
+
+On Aug 20, 2005, at 8:05 PM, SPE - Stani's Python Editor wrote:
+
+> But of course I have the most fun by implementing some new cool  
+> features.
+
+I understand that, I have to fight it myself :-)  Unfortunately, this  
+is serious problem with free software development. (Of course, it's  
+also  serious problem in commercial software, but maybe not quite so  
+much so.)
+
+> Also I think of organising SPE maybe more like Firefox with  
+> downloadable extensions (which should also be easy for users to  
+> create), rather than a full suite which it is now.
+
+Yes, I think that's a very good idea. It will likely make the core  
+much more stable, plus force a clean design between the core and the  
+plugins.
+
+Cheers,
+Ken
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050820/33ed2a4b/attachment.html>
+
+From zenerbufen at gmail.com  Sun Aug 21 09:09:38 2005
+From: zenerbufen at gmail.com (D)
+Date: Sun, 21 Aug 2005 00:09:38 -0700
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <5D4A9F1B-5937-41D8-88A0-A0FE63F35B99@sbcglobal.net>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com>
+	 <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net>
+	 <4303E6D4.9000008@gmail.com>
+	 <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net>
+	 <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net>
+	 <4307D34E.8060109@gmail.com>
+	 <5D4A9F1B-5937-41D8-88A0-A0FE63F35B99@sbcglobal.net>
+Message-ID: <a9236cbd0508210009544d2093@mail.gmail.com>
+
+> Also I think of organising SPE maybe more like Firefox with downloadable
+> extensions (which should also be easy for users to create), rather than a
+> full suite which it is now. 
+> Yes, I think that's a very good idea. It will likely make the core much more
+> stable, plus force a clean design between the core and the plugins.
+
+One problem i've seen is the plugins don't get updated and the core
+changes and the plugins don't work any more. If the features are built
+into core they have to keep working with the rest.
+
+I guess it depends on how its managed. 
+
+-D
+
+
+From csomor at advancedconcepts.ch  Sun Aug 21 09:18:46 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Sun, 21 Aug 2005 09:18:46 +0200
+Subject: [spe-mac] macpython gurus
+Message-ID: <834A07D804766B43A535AC6861D6D867369642@advanced-3ynlwj.advancedconcepts.ch>
+
+Hi  
+
+> And if I understand it right, than Stefan, 
+> you're the guy behind wxMac? Wow, it's great to have you as a 
+> supporter and even as a donator! I hope once I bought the Mac, I can 
+> fire all more intelligent questions on you.
+
+Yes, everything that is not tied to command line tools and configure ;-)
+I still have those manuals unread on my shelfs, and since things always
+have to be done by yesterday, I still stick to the IDEs and build
+procedures I know about...
+
+> How big is the macPython community?
+
+I honestly don't know about that, neither about the part that prefers to
+do PyObjC.
+
+Best Regards,
+
+Stefan
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Sun Aug 21 10:10:36 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Sun, 21 Aug 2005 03:10:36 -0500
+Subject: [spe-mac] Let's help Stani buy a Mac
+In-Reply-To: <a9236cbd0508210009544d2093@mail.gmail.com>
+References: <1949740@blitz.dartware.com> <43036574.7040204@gmail.com> <984CB9D5-AFBB-44FE-AA5A-22BF25E3EC12@sbcglobal.net> <4303E6D4.9000008@gmail.com> <362C766A-2168-4CCE-A341-2C063AF86EE9@sbcglobal.net> <F9EA6CF0-0F5D-4A1C-B425-6A0E9BB0A248@fiee.net> <4307D34E.8060109@gmail.com> <5D4A9F1B-5937-41D8-88A0-A0FE63F35B99@sbcglobal.net> <a9236cbd0508210009544d2093@mail.gmail.com>
+Message-ID: <45ABC8EF-B45C-49B0-BAFE-7D622008D20A@sbcglobal.net>
+
+
+On Aug 21, 2005, at 2:09 AM, D wrote:
+
+> One problem i've seen is the plugins don't get updated and the core
+> changes and the plugins don't work any more. If the features are built
+> into core they have to keep working with the rest.
+>
+
+Yes, but that's better than the alternative, which is to end up with  
+a vast,
+unmanageable, and error-ridden core. For example, while I understand
+Stani's desire for a Python editor that operates with Blender, that  
+feature
+should not be part of the core. If SPE becomes a widely used Python
+editor, that (and any similarly specialized features) will simply not be
+used by the general population, will add unnecessary complexity to
+the interface, and will detract from improving and maintaining the core.
+
+The flip side is that a plugin that is extremely useful to a large  
+number
+of people will probably be well-maintained, and quite possibly  
+integrated
+into the core. It's an evolutionary process.
+
+As you can tell, I'm a big believer in simpler code. In virtually every
+position I've worked in where I had to go into other people's old
+code, I've started by ripping out large amount of useless or unnecessary
+features, in some cases reducing by codebase by 80%. (I'm not saying
+SPE falls into this category!) This was a particular problem at the
+Human Genome Project. Once that was done, I could then get to
+work on making genuine improvements to reliability and functionality.
+
+"Reliability and simplicity" shouldn't be a mantra for software  
+development,
+it should be _the_ mantra. Until you've got that as a base, anything you
+construct on top will be shaky and ultimate unusable.
+
+Just had to get this rant off my chest, I do it periodically :-)
+
+Ken
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050821/cbb958b7/attachment.html>
+
+From csomor at advancedconcepts.ch  Sun Aug 21 11:06:54 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Sun, 21 Aug 2005 11:06:54 +0200
+Subject: [spe-mac] Let's help Stani buy a Mac
+Message-ID: <834A07D804766B43A535AC6861D6D867369644@advanced-3ynlwj.advancedconcepts.ch>
+
++100 from me :-) think "RISC" also for software, furthermore composition
+of pieces forces to do clean orthogonal concepts, if every evolution
+depends on you, then you are the critical path or even the bottleneck of
+a software project (I have my share on these experiences :-( , divide
+and conquer pays off in software as well 
+ 
+Just my 0.02$
+ 
+Stefan
+
+
+  _____  
+
+	From: python-spe-mac-admin at berlios.de
+[mailto:python-spe-mac-admin at berlios.de] On Behalf Of Kenneth McDonald
+	Sent: Sonntag, 21. August 2005 10:11
+	To: python-spe-mac at berlios.de
+	Subject: Re: [spe-mac] Let's help Stani buy a Mac
+	
+	
+
+	On Aug 21, 2005, at 2:09 AM, D wrote:
+
+
+		One problem i've seen is the plugins don't get updated
+and the core
+
+		changes and the plugins don't work any more. If the
+features are built
+
+		into core they have to keep working with the rest.
+
+
+
+	Yes, but that's better than the alternative, which is to end up
+with a vast, 
+	unmanageable, and error-ridden core. For example, while I
+understand
+	Stani's desire for a Python editor that operates with Blender,
+that feature
+	should not be part of the core. If SPE becomes a widely used
+Python
+	editor, that (and any similarly specialized features) will
+simply not be
+	used by the general population, will add unnecessary complexity
+to
+	the interface, and will detract from improving and maintaining
+the core.
+
+	The flip side is that a plugin that is extremely useful to a
+large number
+	of people will probably be well-maintained, and quite possibly
+integrated
+	into the core. It's an evolutionary process.
+
+	As you can tell, I'm a big believer in simpler code. In
+virtually every
+	position I've worked in where I had to go into other people's
+old
+	code, I've started by ripping out large amount of useless or
+unnecessary
+	features, in some cases reducing by codebase by 80%. (I'm not
+saying
+	SPE falls into this category!) This was a particular problem at
+the
+	Human Genome Project. Once that was done, I could then get to
+	work on making genuine improvements to reliability and
+functionality.
+
+	"Reliability and simplicity" shouldn't be a mantra for software
+development,
+	it should be _the_ mantra. Until you've got that as a base,
+anything you
+	construct on top will be shaky and ultimate unusable.
+
+	Just had to get this rant off my chest, I do it periodically :-)
+
+	Ken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050821/32a561cc/attachment.html>
+
+From spe.stani.be at gmail.com  Mon Aug 22 23:18:21 2005
+From: spe.stani.be at gmail.com (SPE - Stani's Python Editor)
+Date: Mon, 22 Aug 2005 23:18:21 +0200
+Subject: [spe-mac] SPE 0.7.5.c ready!!
+In-Reply-To: <1124742289.10694.3.camel@Laptop-Ubuntu>
+References: <6f80c1520508211323137f88e3@mail.gmail.com>	 <4308E894.4000401@gmail.com> <1124742289.10694.3.camel@Laptop-Ubuntu>
+Message-ID: <430A411D.4040407@gmail.com>
+
+Hi,
+
+I need some help with OpenSSL. I am strugling a bit with pyOpenSSL. All 
+it takes are probably just smart answers on some stupid questions. Anyone?
+
+But, as usual members of the SPE mailing list get first notice about the 
+new release:
+
+The next version is ready, it contains:
+- better windows installers for python2.3 and 2.4
+- a lot of bugfixes (eg call tips and autocompletion)
+- local files are now recognized by the debugger and pychecker
+- the documentation got a boost thanks to Dimitri Pater 
+(http://www.serpia.com), thanks!
+- and more...
+
+Half good news for Mac users, the moment that I will buy a Mac is coming 
+closer but I still need a bit more than 200 euros. The faster you 
+donate, the faster you will get SPE gracefully on Mac.
+
+I try to release it tonight, but dont shoot me if it is tomorrow.
+
+Please consider contributing to SPE. Bugfixing is the best way to know 
+its code. I will give you full assistance. Are you native english 
+speaking? Please read the manual and take out all the stupid mistakes. 
+Do you speak another language. Please translate the manual. For a lot of 
+languages people are already translating (even including Chinese!), so 
+probably you can just join, to share the cake. Do you have other talents 
+(web design, zope, images, photoshop, ...), contact me. Do you have not 
+any talent, ok, grab your wallet and donate some money!
+
+All the best,
+
+Stani
+
+PS If you donate for mac, please mention it.
+
+

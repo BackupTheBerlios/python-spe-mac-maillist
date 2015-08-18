@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20SPE%200.7.4.w%20released%20%28Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.u%20released%29&In-Reply-To=%3C9582400.1122620349494.JavaMail.jaguar451%40mac.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000031.html">
+   <LINK REL="Next"  HREF="000041.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)</H1>
+    <B>jaguar451 at mac.com</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20SPE%200.7.4.w%20released%20%28Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.u%20released%29&In-Reply-To=%3C9582400.1122620349494.JavaMail.jaguar451%40mac.com%3E"
+       TITLE="SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)">jaguar451 at mac.com
+       </A><BR>
+    <I>Fri Jul 29 08:59:09 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000031.html">[spe-mac] SPE 0.7.4.u released
+</A></li>
+        <LI>Next message: <A HREF="000041.html">[spe-mac] Bug reporting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> Can I suggest others try it and report their results?
+</I>
+Had a blackout + real life intrude on testing time.... ;-)
+
+Using 0.7.4.x, quick hits:
+
+A PDF of a screenshot at <A HREF="http://homepage.mac.com/kkrull/FileSharing6.html">http://homepage.mac.com/kkrull/FileSharing6.html</A> :
+
+ 1) There are two 'Windows' menu items -- I assume that there should only be one.
+
+ 2) On startup, I have 'Unnamed' &amp; 'Unnamed -- SPE 0.7.4.x' windows (see the SPE_windows_OS X.pdf file at the above URL.) If I set my preference to 'Single with tabs (Mac, Windows, Linux), when I open a second file, an additional window is opened, so I have three (untitled, untitled, SPE 0.7.4.x.) Single_with_tabs_not_single.pdf at above URL.
+
+    2.1) when I create new files, they all have the same name.
+
+    2.2) As far as tabs being an OS X thing, I'm not a Mac head by any stretch of the imagination, and I like tab. Safari uses them... Other editors have them -- maybe time for a poll.... ;-)
+
+ 3) On menu, second from left, says 'Python' instead of 'SPE' (although I believe that this can only be set as part of an OS X APP package, but in case another way...
+
+ 4) When a dialog is launched from the Palette, it is partially hidden behind the Palette. Also the preferences Palette. (spe_pref_part_hidden.pdf at the above location -- build in screen capture utility only goes to PDF, and don't have another utility setup right now.)
+
+ 5) cmd` &amp; cmd~ no longer write to the edit window, but also don't cycle through the windows. cmd (left arrow) doesn't go to the beginning of the line, cmd &lt;right arrow&gt; to the end of the line.
+
+ 6) On install, I delete the ~/.spe directory, the /site-packages _spe &amp; sm directories, yet when I do a File | Open in SPE, it remembers my last location. Handy, but shouldn't this pref be reset when I do the above?
+
+ 7) Under Links | Enthought... (<A HREF="http://www.enthought.com/python/">http://www.enthought.com/python/</A>) The main listed distro has a wxPython version too old for this version of SPE -- if the beta version linked at the bottom doesn't have a compatible wxPython, might want to remove the link....
+
+ 8) Help | Keyboard Shortcuts are Windows shortcuts....
+
+ 9) Minor Feature Request: would be nice to have an 'Open Recent' option on the File menu that remembers the last x (10?) files that you've opened.
+
+10) In the UML view, if you have methods that have long names and/or many parameter, the class is much wider than the screen and the horizontal scrollbar doesn't scale correctly. (spe_uml.pdf) (Please, no comments on my code/design -- just playing around with my first Python app and tried to find something 'fun'.)
+
+11) Pressing F1 doesn't bring up local help tips (as mentioned in the status bar at the bottom of SPE.)
+
+12) When I have a file open (source code view), I need to double-click on a class/method in the Explorer view to jump to it -- as designed? (or should it be single click?)
+
+13) When running from inside SPE, the scriptname isn't set.
+
+Create the following in a new file. Save it.:
+
+if __name__ == &quot;__main__&quot;:
+    print &quot;hello&quot;
+
+Run it:
+Running '&lt;path/filename&gt;' ...
+hello
+Script '&lt;source&gt;' returned exit code 0
+
+I assume that the above '&lt;source&gt;' should be the filename
+
+14) If one creates a new file, doesn't save it, and tries to run it, if you say 'no' to save, the previously run file is run, not the selected new file. (not a recommended thing to do, of course, but....)
+
+15) When my indenting was off by a character,  the error message was off by one line (running from the command line returned the correct line number (see message below -- it says 116, when run in command line, it is 115. (and not sure why it mentioned the 'scriptutils.py' file. (sorry if this is a PyCrust thing...)    
+
+ Running '/Users/kkrull/work/learning/python/NWN/nwnCharacterCombatInfo.py' ...
+Traceback (most recent call last):
+  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/scriptutils.py&quot;, line 40, in run
+    codeObject = compile(source.replace('\r\n','\n')+&quot;\n&quot;, fileName, &quot;exec&quot;)
+IndentationError: unindent does not match any outer indentation level (&lt;source&gt;, line 116)
+Exception raised while running script  &lt;source&gt;
+
+ 16) ctrl-c copies text in the SPE python shell, cmd-c expected on Mac (PyCrust run standalone recognizes cmd-c)
+
+ 17) In the python shell, one can type anywhere, new output from a run it put wherever the cursor is located. As expected? (when doing this, can delete/overwrite items, and undo doesn't undo changes.) Other shells (PyCrust stand alone) only allow text to be added on the last line. 
+
+
+Sorry, I know I should do seperate bug reports, but time....
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000031.html">[spe-mac] SPE 0.7.4.u released
+</A></li>
+	<LI>Next message: <A HREF="000041.html">[spe-mac] Bug reporting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] mac installation instructions (please review)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20mac%20installation%20instructions%20%28please%20review%29&In-Reply-To=%3C2078a7ad0511250925v616a986arcbe42aecb8d0181c%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000112.html">
+   <LINK REL="Next"  HREF="000126.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] mac installation instructions (please review)</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20mac%20installation%20instructions%20%28please%20review%29&In-Reply-To=%3C2078a7ad0511250925v616a986arcbe42aecb8d0181c%40mail.gmail.com%3E"
+       TITLE="[spe-mac] mac installation instructions (please review)">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Fri Nov 25 18:25:09 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000112.html">[spe-mac] Mac questions (please help)
+</A></li>
+        <LI>Next message: <A HREF="000126.html">[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>These are the instructions I wrote for the manual. Please let me know your
+remarks, both on content and english:
+Introduction
+
+Mac Os X provides itself wxPython. Unfortunately there is a big chance that
+this version is outdated. Therefore following instructions 'Python' and
+'wxPython' will explain you how to install wxPython yourself. You only have
+to follow them in case the python and wxPython versions of your Os X are not
+matching SPE's requirements, otherwise only follow the 'SPE' instruction.
+
+At the moment of this writing the latest version of Os X is Tiger (10.4). It
+ships with Python 2.3 and wxPython 2.5. For SPE you'll need wxPython 2.6 and
+at least Python 2.3 In order not to interfere with the installed system,
+this manual will explain you how to install Python2.4 with wxPython2.6 In
+general it is always better to use a later version of Python as mostly it is
+more stable and faster.
+Python
+
+Activestate provides nicely wrapped installers for Python for Mac Os X.
+Download it and launch the installer. Choose the latest Python version for
+Mac Os X from:
+
+<A HREF="http://www.activestate.com/Products/Download/Download.plex?id=ActivePython">http://www.activestate.com/Products/Download/Download.plex?id=ActivePython</A>
+
+In order to let this python version precede, edit the following line your
+'.bash_profile'. This file is located in your home directory. If it doesn't
+exist, create an empty text file with this name in your home folder. Don't
+skip this step or your installation will fail! Close afterwards all terminal
+windows (to make sure that the PATH variable is exported).
+
+export PATH = &quot;/usr/local/bin:$PATH:/Developer/Tools:/Library/Frameworks/Python.framework/Versions/Current/bin/&quot;
+
+ WxPython
+
+Download the latest binary built for the Python version you installed from:
+
+<A HREF="http://www.wxpython.org/download.php#binaries">http://www.wxpython.org/download.php#binaries</A>
+
+   -
+
+   You can install packages for OsX 10.3 also on 10.4 The
+wxPython.orgwebsites mentions: &quot;
+   *Eventhough the Panther packages below were built on an OSX
+10.3system they will still work on Tiger provided you also have this
+package
+   installed.*&quot; You can safely ignore this message.
+
+Launch the installer.
+SPE
+
+At the moment SPE is not yet available as an application. Download the
+source distribution tar.gz instead. Unpack it to a certain path and open a
+new terminal in that path. In the terminal enter the following command:
+
+python setup.py install
+
+ This installs SPE in the site-packages directory of your default Python
+installation. You can now create aliases for the terminal by adding these
+lines in your '.bash_profile':
+
+alias spe='pythonw
+/Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py'
+alias winpdb='pythonw
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/plugins/winpdb/winpdb.py
+-t'
+alias debug_spe='pythonw
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/plugins/winpdb/winpdb.py
+-t -c /Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py
+--debug'
+
+
+
+ Starting SPE is now as easy as typing 'spe' in the terminal. You can also
+type 'spe &#8211;debug' to run SPE in debugging mode.
+Uninstall
+
+Remove the '_spe' folder from your python site-packages directory, eg:
+
+
+ /Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages
+
+
+ One needs also to remove
+/Library/Frameworks/Python.framework/Versions/2.4/bin/spe manually.
+
+
+
+--
+<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+<A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/e5f6cbb8/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/e5f6cbb8/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000112.html">[spe-mac] Mac questions (please help)
+</A></li>
+	<LI>Next message: <A HREF="000126.html">[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

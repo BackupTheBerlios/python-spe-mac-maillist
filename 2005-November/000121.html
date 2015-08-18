@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] Comments on current development state
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Comments%20on%20current%20development%20state&In-Reply-To=%3C3915deaad1c45e9e8f76b5fa0bfcdc06%40pobox.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000107.html">
+   <LINK REL="Next"  HREF="000122.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] Comments on current development state</H1>
+    <B>Rick Thomas</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Comments%20on%20current%20development%20state&In-Reply-To=%3C3915deaad1c45e9e8f76b5fa0bfcdc06%40pobox.com%3E"
+       TITLE="[spe-mac] Comments on current development state">rbthomas55 at pobox.com
+       </A><BR>
+    <I>Fri Nov 25 21:48:31 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000107.html">[spe-mac] Comments on current development state
+</A></li>
+        <LI>Next message: <A HREF="000122.html">[spe-mac] Comments on current development state
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121">[ date ]</a>
+              <a href="thread.html#121">[ thread ]</a>
+              <a href="subject.html#121">[ subject ]</a>
+              <a href="author.html#121">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Nov 25, 2005, at 10:17 AM, SPE Stani's Python Editor wrote:
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 25 Nov 2005 09:01:36 EST, Richard E. Brown 
+</I>&gt;<i> &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">Richard.E.Brown at dartware.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> 2b) If I copy/paste the command line, I get an error using tcsh:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -----------
+</I>&gt;&gt;<i> richb% pythonw SPE.py --debug &gt; debug.txt 2&gt;&amp;1
+</I>&gt;&gt;<i> tcsh: Ambiguous output redirect.
+</I>&gt;&gt;<i> -----------
+</I>&gt;<i>  This is an issue I have absolute no knowledge about. I'll post this 
+</I>&gt;<i> question on the spe-dev mailing list, unless one of you knows how to 
+</I>&gt;<i> redirect the output in an not ambiguous way.
+</I>&gt;<i>  &#160;
+</I>
+
+Rich &amp; Stani,
+
+Here's one I can help with!
+
+There are two shells available in the MacOS version of UNIX: tcsh and 
+bash.  To the expert they differ in myriad important and useful ways, 
+but to the casual user they are essentially the same -- you type a 
+command name and it's arguments in that order and it executes the 
+command.  One of the differences is in how they do redirection of 
+standard-error.  That's the &quot;2&gt;&amp;1&quot; part of the above command line.  
+This is written in the bash dialect, and you are using the tcsh 
+dialect.  The version of the command line for tcsh would be:
+
+	pythonw SPE.py --debug &gt;&amp; debug.txt
+
+The bigger problem of &quot;which shell should I use?&quot; is a largely 
+&quot;religious&quot; issue.  There are strong partisans on all sides.  
+(Amazingly, bash and tcsh are just the tip of the iceberg.  There are 
+dozens of shells out there.  Fortunately most have a small user 
+community.)  Most people who know both say that bash is better for 
+programming and tcsh is better for interactive use, but to me it's 
+mostly a matter of what you're used to.  If you're not used to either, 
+I'd pick bash because it's what's standard in Linux.  But on the other 
+hand, tcsh is what's standard in MacOS-X, so there are arguments on 
+both sides.
+
+Bottom line:  Read The Fine Manuals -- &quot;man tsch&quot; and &quot;man bash&quot; -- and 
+decide for yourself which you prefer.
+
+In MacOSX you must use the &quot;netinfo manager&quot; gui utility to change your 
+default shell.  Here's a step-by-step:
+
+	*) open Netinfo Manager (it's in the Utilities folder which is in the 
+Applications folder)
+	*) in the second column is a list of object classes.  Click on users.
+	*) in the third column will appear a list of users.  Click on your 
+user name.  In the lower panel will appear a list of attributes.  They 
+will be greyed out.
+	*) click the lock icon at the bottom left.  Type your password in the 
+popup window as requested.  The attributes will no longer be greyed 
+out.
+	*) scroll the lower panel to &quot;shell&quot;.  Double click in the &quot;value&quot; 
+part of that line.
+	*) replace the letters &quot;tcsh&quot; with &quot;bash&quot; or vice versa as necessary.
+	*) click the lock to grey out the lower panel again.
+	*) quit netinfo manager.
+The next time you open a terminal window, you will be using your new 
+shell.  (Or maybe you'll have to log out and log back in again -- I 
+forget.)
+
+Warning!  Netinfo manager is *very* powerful magic.  Be extremely 
+careful what you do with it.  It's possible to dig yourself a hole that 
+you can't get out of.
+
+Make Love; make Peace; make Music; make good free software!
+
+Rick
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000107.html">[spe-mac] Comments on current development state
+</A></li>
+	<LI>Next message: <A HREF="000122.html">[spe-mac] Comments on current development state
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121">[ date ]</a>
+              <a href="thread.html#121">[ thread ]</a>
+              <a href="subject.html#121">[ subject ]</a>
+              <a href="author.html#121">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

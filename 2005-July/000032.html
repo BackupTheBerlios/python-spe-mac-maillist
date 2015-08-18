@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE 0.7.4.u released
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.u%20released&In-Reply-To=%3C834A07D804766B43A535AC6861D6D867369558%40mail.advancedconcepts.ch%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000030.html">
+   <LINK REL="Next"  HREF="000033.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE 0.7.4.u released</H1>
+    <B>Stefan Csomor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.u%20released&In-Reply-To=%3C834A07D804766B43A535AC6861D6D867369558%40mail.advancedconcepts.ch%3E"
+       TITLE="[spe-mac] SPE 0.7.4.u released">csomor at advancedconcepts.ch
+       </A><BR>
+    <I>Thu Jul 28 21:09:47 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000030.html">[spe-mac] SPE 0.7.4.t released
+</A></li>
+        <LI>Next message: <A HREF="000033.html">SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi
+ 
+yep, works flawlessly :-)
+ 
+Best,
+ 
+Stefan
+
+
+  _____  
+
+	From: Stani [mailto:<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">s_t_a_n_i at gmx.net</A>] 
+	Sent: Donnerstag, 28. Juli 2005 21:34
+	To: Stefan Csomor; <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">python-spe-mac at berlios.de</A>
+	Subject: Re: [spe-mac] SPE 0.7.4.u released
+	
+	
+	Hi Stefan,
+	Will this work as well in __fill (source file attached)? I
+thought this could be more clean.
+	    def __fill(self):
+	        #mdi
+	        keys = smdi.DI.keys()
+	        keys.remove('&lt;default&gt;')
+	        keys.sort()
+	        for key in keys:
+	            self.Mdi.Append(key)
+	
+	You can test it by overwriting _spe/dialogs/preferencesDialog.py
+	
+	Stani
+	
+	Stefan Csomor wrote:
+	
+
+		Hi
+		
+		Ok, now I see where you were heading to, sorry, I didn't
+see the
+		&lt;default&gt; 
+		
+		the problem is that in __fill you are calling .Clear on
+the combobox
+		which essentially eradicates the workaround introduced.
+Because it sets
+		the Selection value back to -1 again.
+		
+		So to walk along your way you should do in __fill first
+a 
+		
+		former = self.Mdi.GetSelection()
+		self.Mdi.Clear()
+		...
+		
+		and at the end a 
+		
+		self.Mdi.SetSelection( former )
+		
+		This works fine as well
+		
+		Best,
+		
+		Stefan
+		
+		  
+
+			-----Original Message-----
+			From: Stani [mailto:<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">s_t_a_n_i at gmx.net</A>] 
+			Sent: Donnerstag, 28. Juli 2005 18:56
+			To: Jesse Noller; <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">hraban at fiee.net</A>;
+<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">yoyonghernan at gmail.com</A>; 
+			<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">mlacunza at gmail.com</A>; <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">redarmy at gmail.com</A>;
+<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">bmyers at bco.com</A>; 
+			<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">jaguar451 at mac.com</A>; <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">kkrull at mac.com</A>; Stefan Csomor
+			Subject: [spe-mac] SPE 0.7.4.u released
+			
+			  Stefan Csomor wrote:
+			
+			 &gt; Hi
+			 &gt;
+			 &gt; - about and prefs menu items are wired
+correctly  &gt;  &gt; - 
+			the preferences dialog still has the same
+problem, I've 
+			described the reason for the crash and the
+workaround in the 
+			previous mail, in your new code, please put the
+call for 
+			self.__fill in front of the
+self.__set_properties
+			
+			Hi Stefan,
+			As I am always looking not to break the wxGlade
+code, I added 
+			'&lt;default&gt;' temporarily to the combobox. As it
+doesn't work, 
+			I try to follow your suggestion. In the u
+release, 
+			self.__fill is the first line of
+self.__set_properties Hope 
+			that helps.
+			Thanks a lot for your clear hint,
+			Stani
+			
+			
+			    
+
+		
+		
+		  
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/183affbf/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/183affbf/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000030.html">[spe-mac] SPE 0.7.4.t released
+</A></li>
+	<LI>Next message: <A HREF="000033.html">SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

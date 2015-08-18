@@ -1,0 +1,3393 @@
+From spe.stani.be at gmail.com  Fri Nov  4 19:12:34 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 4 Nov 2005 19:12:34 +0100
+Subject: [spe-mac] Follow the discussion spe-dev
+Message-ID: <2078a7ad0511041012wef95deeu4ab2d187f22b1310@mail.gmail.com>
+
+Hi,
+I started working on the Mac port. Trying to figure out which things
+are SPE bugs or simply just wxMac bugs (like eg. the GenericDirCtrl is
+crashing, also in wxPython demo).  I would like to discuss the
+development of SPE on the spe-dev mailing list. But step by step we
+are tackling things.
+I remember getting very useful feedback from this list before and I
+definitely need some of you as well on spe-dev. So please take a
+moment and subscribe yourself. Actually I need more mac people on the
+spe-dev list, otherwise it will slow down the whole proces
+significantly and I have to cross-post as well here, which I want to
+avoid.
+Anyway, I'm still impressed by the financial support you gave to make
+this all possible. I'll do my best too.
+Thanks,
+Stani
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From tarkawebfoot at charter.net  Sat Nov  5 03:24:49 2005
+From: tarkawebfoot at charter.net (Brian Myers)
+Date: Fri, 4 Nov 2005 18:24:49 -0800
+Subject: [spe-mac] Follow the discussion spe-dev
+In-Reply-To: <2078a7ad0511041012wef95deeu4ab2d187f22b1310@mail.gmail.com>
+References: <2078a7ad0511041012wef95deeu4ab2d187f22b1310@mail.gmail.com>
+Message-ID: <D775AC2C-0A10-47C2-ABE2-A2913F28C59A@charter.net>
+
+Well, ok, I guess I can't find the link to subscribe to spe-dev. Can  
+you point me in the right direction?
+
+On Nov 4, 2005, at 10:12 AM, SPE Stani's Python Editor wrote:
+
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate  
+> _______________________________________________
+> Hi,
+> I started working on the Mac port. Trying to figure out which things
+> are SPE bugs or simply just wxMac bugs (like eg. the GenericDirCtrl is
+> crashing, also in wxPython demo).  I would like to discuss the
+> development of SPE on the spe-dev mailing list. But step by step we
+> are tackling things.
+> I remember getting very useful feedback from this list before and I
+> definitely need some of you as well on spe-dev. So please take a
+> moment and subscribe yourself. Actually I need more mac people on the
+> spe-dev list, otherwise it will slow down the whole proces
+> significantly and I have to cross-post as well here, which I want to
+> avoid.
+> Anyway, I'm still impressed by the financial support you gave to make
+> this all possible. I'll do my best too.
+> Thanks,
+> Stani
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+From czhang.cmu at gmail.com  Sat Nov  5 03:49:58 2005
+From: czhang.cmu at gmail.com (Cheng Zhang)
+Date: Sat, 5 Nov 2005 10:49:58 +0800
+Subject: [spe-mac] Follow the discussion spe-dev
+In-Reply-To: <D775AC2C-0A10-47C2-ABE2-A2913F28C59A@charter.net>
+References: <2078a7ad0511041012wef95deeu4ab2d187f22b1310@mail.gmail.com> <D775AC2C-0A10-47C2-ABE2-A2913F28C59A@charter.net>
+Message-ID: <C3D98CBC-6755-4FCA-BCA4-D2E3932A3759@gmail.com>
+
+It's http://lists.berlios.de/mailman/listinfo/python-spe-dev.
+Welcome!
+
+On Nov 5, 2005, at 10:24 AM, Brian Myers wrote:
+
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate  
+> _______________________________________________
+> Well, ok, I guess I can't find the link to subscribe to spe-dev.  
+> Can you point me in the right direction?
+
+
+
+From spe.stani.be at gmail.com  Wed Nov 16 21:42:15 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 16 Nov 2005 21:42:15 +0100
+Subject: [spe-mac] my mac arrived & some support welcome
+Message-ID: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+
+Hi,
+Good news! I came back from a week in Paris and my new mini mac has
+finally arrived. So what I need to do know is to get wxPython2.6 on
+it. What's the best way. Appearantly it is not wise to remove the
+existing wxPython 2.5.3.1 which is on it.
+Of course I have also some basic questions how to use python on the mac.
+Is there any volunteer who could assist me through chat
+(skype,messenger,ichat?). In that way I won't loose too much time with
+it.
+Thanks in advice!
+Stani
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From kay.fricke at merz-akademie.de  Wed Nov 16 21:45:02 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Wed, 16 Nov 2005 21:45:02 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+Message-ID: <437B9A4E.2000300@merz-akademie.de>
+
+Hi to all,
+
+I've just worked my way into making spe work together with blender on 
+Mac OSX.
+I had a few difficulties starting it, and setting the Pythonpath didn't 
+solved anything.
+So I changed a few things in the blend file, to make it work.
+
+Its just a quick hack, but should work for a standard Python 
+installation on the Mac.
+
+There was a problem with construction of the site-packages path.
+
+Find attached a blend file which works fine for me.
+If i find the time, i'll post a more elegant and flexible construction 
+of the path to the site-packages.
+
+best regards
+
+kay
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: speMac.blend
+Type: application/octet-stream
+Size: 44416 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051116/6bf43c55/attachment.obj>
+
+From spe.stani.be at gmail.com  Wed Nov 16 21:51:16 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 16 Nov 2005 21:51:16 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <437B9A4E.2000300@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+Message-ID: <2078a7ad0511161251l7dfb7455xd91f59ed102c01d@mail.gmail.com>
+
+Great, I'll look into it and check if it also works on Windows.
+Stani
+
+On 11/16/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+> Hi to all,
+>
+> I've just worked my way into making spe work together with blender on
+> Mac OSX.
+> I had a few difficulties starting it, and setting the Pythonpath didn't
+> solved anything.
+> So I changed a few things in the blend file, to make it work.
+>
+> Its just a quick hack, but should work for a standard Python
+> installation on the Mac.
+>
+> There was a problem with construction of the site-packages path.
+>
+> Find attached a blend file which works fine for me.
+> If i find the time, i'll post a more elegant and flexible construction
+> of the path to the site-packages.
+>
+> best regards
+>
+> kay
+>
+>
+>
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From kay.fricke at merz-akademie.de  Wed Nov 16 21:51:27 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Wed, 16 Nov 2005 21:51:27 +0100
+Subject: [spe-mac] my mac arrived & some support welcome
+In-Reply-To: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+References: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+Message-ID: <437B9BCF.6030700@merz-akademie.de>
+
+I might be not the best shot, because i'm also somehow a bit new to this 
+environment, but if you lack other support, i might give some help with it:
+
+r0str0t is my username on ichat (aim-account)
+
+I'm online currently
+
+so have a try ...
+
+best regards
+
+kay
+
+SPE Stani's Python Editor wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate _______________________________________________
+> Hi,
+> Good news! I came back from a week in Paris and my new mini mac has
+> finally arrived. So what I need to do know is to get wxPython2.6 on
+> it. What's the best way. Appearantly it is not wise to remove the
+> existing wxPython 2.5.3.1 which is on it.
+> Of course I have also some basic questions how to use python on the mac.
+> Is there any volunteer who could assist me through chat
+> (skype,messenger,ichat?). In that way I won't loose too much time with
+> it.
+> Thanks in advice!
+> Stani
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> 
+
+
+
+From kay.fricke at merz-akademie.de  Wed Nov 16 22:01:44 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Wed, 16 Nov 2005 22:01:44 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <2078a7ad0511161251l7dfb7455xd91f59ed102c01d@mail.gmail.com>
+References: <437B9A4E.2000300@merz-akademie.de> <2078a7ad0511161251l7dfb7455xd91f59ed102c01d@mail.gmail.com>
+Message-ID: <437B9E38.4080705@merz-akademie.de>
+
+Hi Stani,
+
+guess it won't, cause it's just setting the site-packages path for MacOS 
+as a string, not as a os.path.join.
+very dirty hacking.
+
+kay
+
+SPE Stani's Python Editor wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate _______________________________________________
+> Great, I'll look into it and check if it also works on Windows.
+> Stani
+> 
+> On 11/16/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+> 
+>>Hi to all,
+>>
+>>I've just worked my way into making spe work together with blender on
+>>Mac OSX.
+>>I had a few difficulties starting it, and setting the Pythonpath didn't
+>>solved anything.
+>>So I changed a few things in the blend file, to make it work.
+>>
+>>Its just a quick hack, but should work for a standard Python
+>>installation on the Mac.
+>>
+>>There was a problem with construction of the site-packages path.
+>>
+>>Find attached a blend file which works fine for me.
+>>If i find the time, i'll post a more elegant and flexible construction
+>>of the path to the site-packages.
+>>
+>>best regards
+>>
+>>kay
+>>
+>>
+>>
+> 
+> 
+> 
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> 
+
+
+
+From hraban at fiee.net  Wed Nov 16 22:20:32 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Wed, 16 Nov 2005 22:20:32 +0100
+Subject: [spe-mac] my mac arrived & some support welcome
+In-Reply-To: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+References: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+Message-ID: <61754951-05C9-4C7D-8B0B-E30E695961CC@fiee.net>
+
+Am 2005-11-16 um 21:42 schrieb SPE Stani's Python Editor:
+> Good news! I came back from a week in Paris and my new mini mac has
+> finally arrived. So what I need to do know is to get wxPython2.6 on
+> it. What's the best way. Appearantly it is not wise to remove the
+> existing wxPython 2.5.3.1 which is on it.
+> Of course I have also some basic questions how to use python on the  
+> mac.
+> Is there any volunteer who could assist me through chat
+> (skype,messenger,ichat?). In that way I won't loose too much time with
+> it.
+
+I'm online as hraban at mac.com
+
+I'd suggest to fetch ActivePython 2.4.2 and the latest wxPython -  
+don't touch the system installed stuff! Simply put your Python before  
+system's in your path.
+
+Greetlings, Hraban
+
+
+From hraban at fiee.net  Wed Nov 16 22:23:44 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Wed, 16 Nov 2005 22:23:44 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <437B9E38.4080705@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de> <2078a7ad0511161251l7dfb7455xd91f59ed102c01d@mail.gmail.com> <437B9E38.4080705@merz-akademie.de>
+Message-ID: <3ABD0CA8-7515-4984-9CB6-974AB85D29D2@fiee.net>
+
+Am 2005-11-16 um 22:01 schrieb Kay Fricke:
+> guess it won't, cause it's just setting the site-packages path for  
+> MacOS as a string, not as a os.path.join.
+> very dirty hacking.
+
+Forward slashes are ubiquitous. ;-)
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+From rbthomas55 at pobox.com  Wed Nov 16 22:46:53 2005
+From: rbthomas55 at pobox.com (Rick Thomas)
+Date: Wed, 16 Nov 2005 16:46:53 -0500
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <437B9A4E.2000300@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+Message-ID: <48a7cc36168b70672b835d086f5e043e@pobox.com>
+
+Thanks Kay!
+
+If you can find the time, would it be possible for you to post a 
+step-by-step description of what you did -- starting with a "plain 
+vanilla" MacOS-X installation?
+
+Hopefully, it is mostly a series of things of the form:
+
+	"Follow the excellent directions at ... to install ... , except that 
+at step ..., you need to do ..."
+
+and ending with:
+
+	"Have fun using your new SPE/Blender combination!"
+
+ADVThanksANCE!
+
+
+Rick
+
+On Nov 16, 2005, at 3:45 PM, Kay Fricke wrote:
+
+> Hi to all,
+>
+> I've just worked my way into making spe work together with blender on 
+> Mac OSX.
+> I had a few difficulties starting it, and setting the Pythonpath 
+> didn't solved anything.
+> So I changed a few things in the blend file, to make it work.
+>
+> Its just a quick hack, but should work for a standard Python 
+> installation on the Mac.
+>
+> There was a problem with construction of the site-packages path.
+>
+> Find attached a blend file which works fine for me.
+> If i find the time, i'll post a more elegant and flexible construction 
+> of the path to the site-packages.
+>
+> best regards
+>
+> kay
+> <speMac.blend>
+
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Wed Nov 16 23:21:33 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Wed, 16 Nov 2005 16:21:33 -0600
+Subject: [spe-mac] my mac arrived & some support welcome
+In-Reply-To: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+References: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+Message-ID: <BCCCD2C9-2635-435C-A2F0-C6B62F159E48@sbcglobal.net>
+
+Paris, ah, I envy you.
+
+If you're comfortable with makefiles, compilers, and all that,  
+probably the best way would be to compile wxPython into a different  
+folder. I've always been pissed off by the fact that Apple never felt  
+it appropriate to put in a /usr/local structure, so I'd probably put  
+in /usr/local/lib and link against it from there.
+
+Once you have something working, _please_ distributes as a full,  
+complete, statically linked binary. Memory is cheap, and there's  
+really no reason why people should jump through the hoops Apple's non- 
+standard directory structure imposes. (Actually, I think most things  
+should be distributed in this form anyway.)
+
+You're from Belgium? Where? My wife and I were just through  
+Amsterdam, Bruges, Ypres, and Paris a couple of months ago. Except  
+for the high cost of housing, man, I wish I lived in Europe. (Paris  
+especially). So much to see, so much to do.
+
+Good luck,
+Ken
+
+
+On 16-Nov-05, at 2:42 PM, SPE Stani's Python Editor wrote:
+
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate  
+> _______________________________________________
+> Hi,
+> Good news! I came back from a week in Paris and my new mini mac has
+> finally arrived. So what I need to do know is to get wxPython2.6 on
+> it. What's the best way. Appearantly it is not wise to remove the
+> existing wxPython 2.5.3.1 which is on it.
+> Of course I have also some basic questions how to use python on the  
+> mac.
+> Is there any volunteer who could assist me through chat
+> (skype,messenger,ichat?). In that way I won't loose too much time with
+> it.
+> Thanks in advice!
+> Stani
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+
+
+From kay.fricke at merz-akademie.de  Thu Nov 17 11:51:24 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Thu, 17 Nov 2005 11:51:24 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <48a7cc36168b70672b835d086f5e043e@pobox.com>
+References: <437B9A4E.2000300@merz-akademie.de> <48a7cc36168b70672b835d086f5e043e@pobox.com>
+Message-ID: <437C60AC.7000407@merz-akademie.de>
+
+Hi Rick, Hi all,
+
+the machine i'm working on has a standard MacOS (10.3.9) Python 2.3 
+Framework installation, which is installed under: 
+/System/Library/Frameworks/Python.framework/Versions/2.3/
+and the sitepackages:
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/site-packages/
+or
+/Library/Python/2.3/
+
+It may be that things are different under OSX 10.4 or when you have 
+installed another Python distribution (not the apple package).
+
+to install spe use:
+ >python setup.py install
+
+for wxpython 2.6 you can use the Mac installer.
+
+Spe alone starts only with the pythonw command, not python. The whole 
+command line is:
+ >pythonw /Library/Python/2.3/_spe/SPE.py
+
+this works fine with no further changes to the environment var's.
+
+With blender, using blender 2.37a, Spe is not starting from the 
+spe.blend file, even when you set the environment variable PYTHONPATH 
+and start blender from a terminal.
+It will complain about not finding wx.
+
+So change the path construction in the spe.blend file, to point to the 
+Mac Location of the site-packages. Or use my speMac.blend file which you 
+can find attached to my first mail.
+
+and like magic, spe starts from within blender.
+
+oh, and not to forget:
+
+"Have fun using your new SPE/Blender combination!"
+
+please note that as I said earlier, my speMac.blend really is a fast 
+hack, just setting the site-packages path with a string, lacking a path 
+constructor, and switch for different os'es like win/mac/linux.
+If I find the time, I'll give that a try within the next days.
+
+comment:
+It looks like, when the Mac-Python installation packaged by apple is 
+used, the path layout is different from the standard python layout.
+
+question:
+Can anyone confirm that, who has made a python installation which is not 
+packaged by apple? If so the path construction must be changed/switched 
+accordingly to the kind of python installation used on the mac.
+
+best regards
+
+kay
+
+Rick Thomas wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate 
+> _______________________________________________
+> Thanks Kay!
+> 
+> If you can find the time, would it be possible for you to post a 
+> step-by-step description of what you did -- starting with a "plain 
+> vanilla" MacOS-X installation?
+> 
+> Hopefully, it is mostly a series of things of the form:
+> 
+>     "Follow the excellent directions at ... to install ... , except that 
+> at step ..., you need to do ..."
+> 
+> and ending with:
+> 
+>     "Have fun using your new SPE/Blender combination!"
+> 
+> ADVThanksANCE!
+> 
+> 
+> Rick
+> 
+> On Nov 16, 2005, at 3:45 PM, Kay Fricke wrote:
+> 
+>> Hi to all,
+>>
+>> I've just worked my way into making spe work together with blender on 
+>> Mac OSX.
+>> I had a few difficulties starting it, and setting the Pythonpath 
+>> didn't solved anything.
+>> So I changed a few things in the blend file, to make it work.
+>>
+>> Its just a quick hack, but should work for a standard Python 
+>> installation on the Mac.
+>>
+>> There was a problem with construction of the site-packages path.
+>>
+>> Find attached a blend file which works fine for me.
+>> If i find the time, i'll post a more elegant and flexible construction 
+>> of the path to the site-packages.
+>>
+>> best regards
+>>
+>> kay
+>> <speMac.blend>
+> 
+> 
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> 
+
+
+
+From czhang.cmu at gmail.com  Thu Nov 17 14:51:27 2005
+From: czhang.cmu at gmail.com (Cheng Zhang)
+Date: Thu, 17 Nov 2005 21:51:27 +0800
+Subject: [spe-mac] my mac arrived & some support welcome
+In-Reply-To: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+References: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+Message-ID: <391162C1-5703-4E2D-9FCF-68B3ECCEE3EB@gmail.com>
+
+That's good news. Now you may play with GenericDirCtrl on Mac  
+yourself a little bit now. :-)
+I'm online as my gmail account (czhang.cmu_AT_gmail.com) via iChat,  
+if you need.
+Looking forward to some advances on SPE/Mac front.
+Thanks.
+
+On Nov 17, 2005, at 4:42 AM, SPE Stani's Python Editor wrote:
+
+> Hi,
+> Good news! I came back from a week in Paris and my new mini mac has
+> finally arrived. So what I need to do know is to get wxPython2.6 on
+> it. What's the best way. Appearantly it is not wise to remove the
+> existing wxPython 2.5.3.1 which is on it.
+> Of course I have also some basic questions how to use python on the  
+> mac.
+> Is there any volunteer who could assist me through chat
+> (skype,messenger,ichat?). In that way I won't loose too much time with
+> it.
+> Thanks in advice!
+> Stani
+>
+
+
+
+
+From hraban at fiee.net  Thu Nov 17 18:09:14 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Thu, 17 Nov 2005 18:09:14 +0100
+Subject: [spe-mac] Python paths on OS X 10.4 (was: spe-blender-file...)
+In-Reply-To: <437C60AC.7000407@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de> <48a7cc36168b70672b835d086f5e043e@pobox.com> <437C60AC.7000407@merz-akademie.de>
+Message-ID: <5BCD81D4-CE6D-4712-80E0-CFFE5198A022@fiee.net>
+
+> question:
+> Can anyone confirm that, who has made a python installation which  
+> is not packaged by apple? If so the path construction must be  
+> changed/switched accordingly to the kind of python installation  
+> used on the mac.
+
+On 10.4 Apple's lib dir is
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/
+and site-packages is at
+/Library/Python/2.3/site-packages/
+
+lib dir from my Python 2.4 (from Bob Ippolito's site) is at
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/
+with site-packages below
+
+In both installations, bin is at Versions/(Version)/bin
+Instead of the version number you can also use "Current" (a symlink  
+to the current version).
+
+Thus, my $PATH contains /Library/Frameworks/Python.framework/Versions/ 
+Current/bin/
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+From spe.stani.be at gmail.com  Mon Nov 21 20:33:25 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Mon, 21 Nov 2005 20:33:25 +0100
+Subject: [spe-mac] my mac arrived & some support welcome
+In-Reply-To: <BCCCD2C9-2635-435C-A2F0-C6B62F159E48@sbcglobal.net>
+References: <2078a7ad0511161242x24c56d1q1fce94a290e042d2@mail.gmail.com>
+	 <BCCCD2C9-2635-435C-A2F0-C6B62F159E48@sbcglobal.net>
+Message-ID: <2078a7ad0511211133lff86fai65589a8975c702c1@mail.gmail.com>
+
+Dear all,
+
+Unfortunately I became sick the day after my last post. I guess I took
+Paris flu as a souvenir. I feel better and started working on SPE, on
+which I'll report in another mail.
+
+Let me answer your suggestions about my mac mini...
+
+[Ken]
+> Paris, ah, I envy you.
+Thanks, I had a nice time
+>
+> If you're comfortable with makefiles, compilers, and all that,
+> probably the best way would be to compile wxPython into a different
+> folder. I've always been pissed off by the fact that Apple never felt
+> it appropriate to put in a /usr/local structure, so I'd probably put
+> in /usr/local/lib and link against it from there.
+Unfortunately I'm not familiar with compiling. I hope to take a more
+newbie approach.
+>
+> Once you have something working, _please_ distributes as a full,
+> complete, statically linked binary. Memory is cheap, and there's
+> really no reason why people should jump through the hoops Apple's non-
+> standard directory structure imposes. (Actually, I think most things
+> should be distributed in this form anyway.)
+I guess you mean py2app? That's the purpose on long run. First I want
+to concentrate to get something working.
+>
+> You're from Belgium? Where? My wife and I were just through
+> Amsterdam, Bruges, Ypres, and Paris a couple of months ago. Except
+> for the high cost of housing, man, I wish I lived in Europe. (Paris
+> especially). So much to see, so much to do.
+I'm from Belgium, but live in Amsterdam. So next time, ring my bell.
+
+[Hraban]
+> I'd suggest to fetch ActivePython 2.4.2 and the latest wxPython -
+> don't touch the system installed stuff! Simply put your Python before
+> system's in your path.
+This approach pleases me, as for now I prefer not to touch the
+installed system. I still have too much questions of how to just
+handle a mac, so I refrain from fidling around. So Hraban, I guess
+I'll bother you ;-)
+
+Stani
+
+
+From spe.stani.be at gmail.com  Tue Nov 22 00:32:36 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Tue, 22 Nov 2005 00:32:36 +0100
+Subject: [spe-mac] SPE on Mac: todo list
+Message-ID: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+
+Hi All,
+
+As announced on the spe-dev mailing list, I worked hard on SPE's stability.
+
+Thanks to Hrabans help, I was able to install easily ActivePython
+2.4.2 and wxPython2.6 on the Mac. I was able to start the latest SPE
+(subversion 70, to be released soon) without any problem. So if even I
+as totally mac newbie can do it, you can do it as well ;-)
+
+Now, I'd like to collect all basic (!) mac-specific issues (bugs &
+features) centrally on a wiki. Please follow the instructions at:
+http://openfacts.berlios.de/index-en.phtml?title=Stani%27s_Python_Tools
+
+For me the characters were very small. Is that because of my screen resolution?
+
+For those of you who have subversion, please checkout the latest
+version and start SPE with:
+pythonw SPE.py
+
+Thanks,
+Stani
+
+
+From spe.stani.be at gmail.com  Wed Nov 23 00:28:32 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 23 Nov 2005 00:28:32 +0100
+Subject: [spe-mac] bug 004639 still actual?
+Message-ID: <2078a7ad0511221528v4a4f6b7g6c443b6460469173@mail.gmail.com>
+
+Hi Hraban,
+
+Is bug 004639 still present? If yes, I'd like to close it.
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4639&group_id=4161
+
+I could already fix quite some Mac bugs, but unfortunately SVN seems down,
+so I commit later. The segfaulting of the class browser is solved now.
+Realtime updating of the sidebar works smoothly now, whatever you try
+(multiple classes with same name, etc..) Moreover I couldn't crash SPE on
+the Mac anymore. But I hope someone will.
+
+Stani
+
+On 11/17/05, Henning Hraban Ramm <hraban at fiee.net> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> > question:
+> > Can anyone confirm that, who has made a python installation which
+> > is not packaged by apple? If so the path construction must be
+> > changed/switched accordingly to the kind of python installation
+> > used on the mac.
+>
+> On 10.4 Apple's lib dir is
+> /System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/
+> and site-packages is at
+> /Library/Python/2.3/site-packages/
+>
+> lib dir from my Python 2.4 (from Bob Ippolito's site) is at
+> /Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/
+> with site-packages below
+>
+> In both installations, bin is at Versions/(Version)/bin
+> Instead of the version number you can also use "Current" (a symlink
+> to the current version).
+>
+> Thus, my $PATH contains /Library/Frameworks/Python.framework/Versions/
+> Current/bin/
+>
+> Gr??lis vom Hraban!
+> ---
+> http://www.fiee.net/texnique/
+> http://contextgarden.net
+> http://www.cacert.org (I'm an assurer)
+>
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051123/5a0148cb/attachment.html>
+
+From czhang.cmu at gmail.com  Wed Nov 23 02:07:25 2005
+From: czhang.cmu at gmail.com (Cheng Zhang)
+Date: Wed, 23 Nov 2005 09:07:25 +0800
+Subject: [spe-mac] SPE on Mac: todo list
+In-Reply-To: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+References: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+Message-ID: <5DD17439-2562-4DD2-BF8C-B25AFEB87C0D@gmail.com>
+
+Command 'pythonw SPE.py' doesn't work (at least for me), if one don't  
+install the latest subversion checkout to Python's site-packages  
+directory.
+To launch it directly over the latest subversion checkout, command  
+'pythonw _spe/SPE.py' will do. Of 'coz your current working directory  
+does matter, in former case, you are in the '_spe' sub-directory; in  
+latter case, you are in the parent directory of '_spe'.
+
+- Cheng
+
+On Nov 22, 2005, at 7:32 AM, SPE Stani's Python Editor wrote:
+
+> For those of you who have subversion, please checkout the latest
+> version and start SPE with:
+> pythonw SPE.py
+
+
+
+From czhang.cmu at gmail.com  Wed Nov 23 02:26:20 2005
+From: czhang.cmu at gmail.com (Cheng Zhang)
+Date: Wed, 23 Nov 2005 09:26:20 +0800
+Subject: [spe-mac] SPE on Mac: todo list
+In-Reply-To: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+References: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+Message-ID: <DB1A743A-3FE0-4258-882D-20FC94A42E8A@gmail.com>
+
+I confirmed that the default font (at least for the text editor) is  
+very small for me as well.
+Worse yet, just find out that I can't open the Preferences dialog via  
+menu "Python/Preferences...". The exception is:
+------
+Traceback (most recent call last):
+   File "/Users/czhang/project/oss/spe/trunk/_spe/Menu.py", line 327,  
+in menu_preferences
+     self.parentPanel.preferences()
+   File "/Users/czhang/project/oss/spe/trunk/_spe/Parent.py", line  
+288, in preferences
+     prefs=preferencesDialog.Create(self,-1,'')
+   File "/Users/czhang/project/oss/spe/trunk/_spe/dialogs/ 
+preferencesDialog.py", line 99, in __init__
+     self.__set_properties()
+   File "/Users/czhang/project/oss/spe/trunk/_spe/dialogs/ 
+preferencesDialog.py", line 131, in __set_properties
+     self.Signature.SetSelection(-1)
+   File "//Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/site-packages/wx-2.6-mac-unicode/wx/_controls.py", line  
+673, in SetSelection
+     return _controls_.ComboBox_SetSelection(*args, **kwargs)
+wx._core.PyAssertionError: C++ assertion "wxAssertFailure" failed  
+in ../src/mac/carbon/choice.cpp(217): wxChoice::GetString(): invalid  
+index
+------
+Looks like another wxPython bug, so I cross-post it to dev list as well.
+I will submit this as a bug shortly after.
+
+- Cheng
+
+On Nov 22, 2005, at 7:32 AM, SPE Stani's Python Editor wrote:
+
+> For me the characters were very small. Is that because of my screen  
+> resolution?
+
+
+
+From tarkawebfoot at charter.net  Wed Nov 23 09:01:46 2005
+From: tarkawebfoot at charter.net (Brian Myers)
+Date: Wed, 23 Nov 2005 00:01:46 -0800
+Subject: [spe-mac] SPE on Mac: todo list
+In-Reply-To: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+References: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+Message-ID: <6C5E5AD5-FC84-4737-8FB0-439C04841193@charter.net>
+
+Hey, I'm trying to post a bug and the bug tracker won't let me log  
+on. I shouldn't need to create a new, separate account for this; I  
+should be able to use this account, shouldn't I?
+
+The bug, BTW, is
+
+1) Select a block of text
+2) Single click inside the selection block
+3) Single click outside the selection block
+
+SPE goes into an infinite loop and must be killed with Force Quit.
+
+This actually looks more like a wxWindows bug. Let me know if I  
+should or should not post this.
+
+Brian
+
+On Nov 21, 2005, at 3:32 PM, SPE Stani's Python Editor wrote:
+
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate  
+> _______________________________________________
+> Hi All,
+>
+> As announced on the spe-dev mailing list, I worked hard on SPE's  
+> stability.
+>
+> Thanks to Hrabans help, I was able to install easily ActivePython
+> 2.4.2 and wxPython2.6 on the Mac. I was able to start the latest SPE
+> (subversion 70, to be released soon) without any problem. So if even I
+> as totally mac newbie can do it, you can do it as well ;-)
+>
+> Now, I'd like to collect all basic (!) mac-specific issues (bugs &
+> features) centrally on a wiki. Please follow the instructions at:
+> http://openfacts.berlios.de/index-en.phtml?title=Stani% 
+> 27s_Python_Tools
+>
+> For me the characters were very small. Is that because of my screen  
+> resolution?
+>
+> For those of you who have subversion, please checkout the latest
+> version and start SPE with:
+> pythonw SPE.py
+>
+> Thanks,
+> Stani
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+
+From spe.stani.be at gmail.com  Wed Nov 23 18:16:21 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 23 Nov 2005 18:16:21 +0100
+Subject: [spe-mac] SPE on Mac: todo list
+In-Reply-To: <6C5E5AD5-FC84-4737-8FB0-439C04841193@charter.net>
+References: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+	 <6C5E5AD5-FC84-4737-8FB0-439C04841193@charter.net>
+Message-ID: <2078a7ad0511230916g3fe1d389ofdfd10ba4c4847ef@mail.gmail.com>
+
+This is a wxMac bug, as it is reproducable on the wxPython Demo
+StyledTextControl. The bug is even worse:
+1) Select a block of text
+2) Single click inside the selection block
+You don't need even step 3! Please post this at the wxMac/wxPython Mailing
+list.
+Stani
+
+On 11/23/05, Brian Myers <tarkawebfoot at charter.net> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> Hey, I'm trying to post a bug and the bug tracker won't let me log
+> on. I shouldn't need to create a new, separate account for this; I
+> should be able to use this account, shouldn't I?
+>
+> The bug, BTW, is
+>
+> 1) Select a block of text
+> 2) Single click inside the selection block
+> 3) Single click outside the selection block
+>
+> SPE goes into an infinite loop and must be killed with Force Quit.
+>
+> This actually looks more like a wxWindows bug. Let me know if I
+> should or should not post this.
+>
+> Brian
+>
+> On Nov 21, 2005, at 3:32 PM, SPE Stani's Python Editor wrote:
+>
+> > _______________________________________________
+> > http://pythonide.stani.be
+> > http://pythonide.stani.be/manual/html/manual.html
+> > http://pythonide.stani.be/blog/sm_donate
+> > _______________________________________________
+> > Hi All,
+> >
+> > As announced on the spe-dev mailing list, I worked hard on SPE's
+> > stability.
+> >
+> > Thanks to Hrabans help, I was able to install easily ActivePython
+> > 2.4.2 and wxPython2.6 on the Mac. I was able to start the latest SPE
+> > (subversion 70, to be released soon) without any problem. So if even I
+> > as totally mac newbie can do it, you can do it as well ;-)
+> >
+> > Now, I'd like to collect all basic (!) mac-specific issues (bugs &
+> > features) centrally on a wiki. Please follow the instructions at:
+> > http://openfacts.berlios.de/index-en.phtml?title=Stani%
+> > 27s_Python_Tools
+> >
+> > For me the characters were very small. Is that because of my screen
+> > resolution?
+> >
+> > For those of you who have subversion, please checkout the latest
+> > version and start SPE with:
+> > pythonw SPE.py
+> >
+> > Thanks,
+> > Stani
+> > Python-spe-mac mailing list
+> > Python-spe-mac at lists.berlios.de
+> > http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051123/754d55c1/attachment.html>
+
+From spe.stani.be at gmail.com  Wed Nov 23 18:17:47 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 23 Nov 2005 18:17:47 +0100
+Subject: [spe-mac] SPE on Mac: todo list
+In-Reply-To: <2078a7ad0511230916g3fe1d389ofdfd10ba4c4847ef@mail.gmail.com>
+References: <2078a7ad0511211532l24a6a789qe5440156b0460851@mail.gmail.com>
+	 <6C5E5AD5-FC84-4737-8FB0-439C04841193@charter.net>
+	 <2078a7ad0511230916g3fe1d389ofdfd10ba4c4847ef@mail.gmail.com>
+Message-ID: <2078a7ad0511230917o5116495bj3578af32ae3d543f@mail.gmail.com>
+
+I mean bug tracker.
+
+On 11/23/05, SPE Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+>
+> This is a wxMac bug, as it is reproducable on the wxPython Demo
+> StyledTextControl. The bug is even worse:
+> 1) Select a block of text
+> 2) Single click inside the selection block
+> You don't need even step 3! Please post this at the wxMac/wxPython Mailing
+> list.
+> Stani
+>
+> On 11/23/05, Brian Myers <tarkawebfoot at charter.net> wrote:
+> >
+> > _______________________________________________
+> > http://pythonide.stani.be
+> > http://pythonide.stani.be/manual/html/manual.html
+> > http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> > Hey, I'm trying to post a bug and the bug tracker won't let me log
+> > on. I shouldn't need to create a new, separate account for this; I
+> > should be able to use this account, shouldn't I?
+> >
+> > The bug, BTW, is
+> >
+> > 1) Select a block of text
+> > 2) Single click inside the selection block
+> > 3) Single click outside the selection block
+> >
+> > SPE goes into an infinite loop and must be killed with Force Quit.
+> >
+> > This actually looks more like a wxWindows bug. Let me know if I
+> > should or should not post this.
+> >
+> > Brian
+> >
+> > On Nov 21, 2005, at 3:32 PM, SPE Stani's Python Editor wrote:
+> >
+> > > _______________________________________________
+> > > http://pythonide.stani.be
+> > > http://pythonide.stani.be/manual/html/manual.html
+> > > http://pythonide.stani.be/blog/sm_donate
+> > > _______________________________________________
+> > > Hi All,
+> > >
+> > > As announced on the spe-dev mailing list, I worked hard on SPE's
+> > > stability.
+> > >
+> > > Thanks to Hrabans help, I was able to install easily ActivePython
+> > > 2.4.2 and wxPython2.6 on the Mac. I was able to start the latest SPE
+> > > (subversion 70, to be released soon) without any problem. So if even I
+> > > as totally mac newbie can do it, you can do it as well ;-)
+> > >
+> > > Now, I'd like to collect all basic (!) mac-specific issues (bugs &
+> > > features) centrally on a wiki. Please follow the instructions at:
+> > > http://openfacts.berlios.de/index-en.phtml?title=Stani%<http://openfacts.berlios.de/index-en.phtml?title=Stani%25>
+> > > 27s_Python_Tools
+> > >
+> > > For me the characters were very small. Is that because of my screen
+> > > resolution?
+> > >
+> > > For those of you who have subversion, please checkout the latest
+> > > version and start SPE with:
+> > > pythonw SPE.py
+> > >
+> > > Thanks,
+> > > Stani
+> > > Python-spe-mac mailing list
+> > > Python-spe-mac at lists.berlios.de
+> > > http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> > Python-spe-mac mailing list
+> > Python-spe-mac at lists.berlios.de
+> > http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> >
+>
+>
+>
+> --
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051123/5502b45d/attachment.html>
+
+From Richard.E.Brown at dartware.com  Fri Nov 25 15:01:36 2005
+From: Richard.E.Brown at dartware.com (Richard E. Brown)
+Date: 25 Nov 2005 09:01:36 EST
+Subject: [spe-mac] Comments on current development state
+Message-ID: <2059728@blitz.dartware.com>
+
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/003aada7/attachment.ksh>
+
+From spe.stani.be at gmail.com  Fri Nov 25 16:17:39 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 16:17:39 +0100
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <2059728@blitz.dartware.com>
+References: <2059728@blitz.dartware.com>
+Message-ID: <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com>
+
+On 25 Nov 2005 09:01:36 EST, Richard E. Brown <Richard.E.Brown at dartware.com>
+wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> Stani (and others):
+>
+> Congratulations on the progress you've been making.
+>
+> I have run into a number of little problems with the current release,
+> separate
+> from the bugs you're nailing at a furious rate. I mention them because my
+> company works on the motto, "We promise not to fix it if we don't know
+> it's
+> broke..."
+
+
+Well Richard, thank you, finally I get some feedback.  I hope everyone on
+this list who had subversions tries out the latest release. SPE runs
+smoothly on my mac, so I hope to share that. I still believe some bugs might
+be hidden and it's up to you all to help reveal them for me.
+
+I should also state that I'm not real experienced at Unix/open source
+> programming, although I've been writing driver level code for other OS's
+> for 20
+> years. So I'm a different kind of newbie from Stani - I'd probably run
+> into
+> these problems on any platform.
+>
+> I'm using MacOS X (10.4.3), and have just installed ActivePython 2.4.2,
+> wxPython
+> 2.6.1.0,
+
+
+That's the same configuration as I have and which I would recommend for
+everyone as it seems to me not so wise to change the installed system.
+
+and the latest checked out source from the svn server. On to my
+> comments:
+>
+> 1)      It's not an SPE problem, but the SSL certificate used on
+> berlios.de isn't
+> recognized by the Safari or Firefox browser on MacOSX. Of course,
+> everything
+> works fine, but it gives an uncertain feel to people who are new to the
+> project.
+> (It would even be better to have a simple "http" page, because it doesn't
+> introduce the doubt of "Should I trust this stuff?")
+>
+> 2)      When starting SPE.py from the command line, it gives a hint about
+> getting
+> debug info if it won't start. (see #4 below for the text) There are a
+> couple
+> problems:
+>
+> 2a) I think the command line should be "pythonw", at least on MacOS X
+
+
+I agree, I'll fix that. However this is different on Windows, as with
+pythonw there is no console output.
+
+2b) If I copy/paste the command line, I get an error using tcsh:
+>
+> -----------
+> richb% pythonw SPE.py --debug > debug.txt 2>&1
+> tcsh: Ambiguous output redirect.
+> -----------
+
+
+This is an issue I have absolute no knowledge about. I'll post this question
+on the spe-dev mailing list, unless one of you knows how to redirect the
+output in an not ambiguous way.
+
+3)      The page at:
+http://www.stani.be/python/spe/page_download_berlioshas a bad
+> path for the svn checkout commands. For example:
+>
+>         svn checkout http://svn.berlios.de/svnroot/repos/python/trunk
+>
+> should be
+>
+>         svn checkout http://svn.berlios.de/svnroot/repos/python/spe/trunk
+
+
+I know, maybe I have to write my  own page for subversion. Unfortunately,
+there is no way I can edit this page.
+
+4)      I get an error when I try to run the current source. I checked out
+> the source
+> from svn, cd'd to the _spe directory, then typed this command:
+>
+> -----------
+> richb% pythonw SPE.py
+>
+> SPE v0.8.0._ (c)2003-2005 www.stani.be
+>
+> If spe fails to start:
+> - type "python SPE.py --debug > debug.txt 2>&1" at the command prompt
+> - send debug.txt with some info to spe.stani.be[at]gmail.com
+>
+> If spe is unstable, try this interface from the preferences:
+>   "multiple with sash & tabs (mac,windows,linux)"
+>
+> Traceback (most recent call last):
+>   File "SPE.py", line 29, in ?
+>     import Menu,Parent,Child
+>   File "/Users/richb/Desktop/NewStuff/src/SPE/_spe/Menu.py", line 5, in ?
+>     import _spe.info as info
+> ImportError: No module named _spe.info
+> richb%
+> -----------
+
+
+SPE requires you put in your site-packages directory. Otherwise it won't
+work. So for ActivePython2.4.2 this is:
+ /Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/
+Let me know if you get the same error when spe is there. What I do is create
+an alias in my .bash_profile:
+
+export
+PATH="/usr/local/bin:$PATH:/Developer/Tools:/Library/Frameworks/Python.framework/Versions/Current/bin/"
+alias spe='pythonw
+/Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py'
+
+alias winpdb='pythonw
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/plugins/winpdb/winpdb.py
+-t'
+alias spe_debug='pythonw
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/plugins/winpdb/winpdb.py
+-t -c
+/Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py
+--debug'
+
+In this way you can use: spe, winpdb, spe_debug always from the shell. As a
+Mac newbie, I don't know if it is possible to make a desktop alias similar
+to these bash aliases.
+
+I guess I should make add a section in the manual with instructions how to
+install SPE on Mac OsX
+
+
+5)      If I cd .., and invoke the spe shell script (which simply imports
+> _spe.SPE),
+> I also get an error:
+>
+> -----------
+> richb% ./spe
+> Traceback (most recent call last):
+>   File "./spe", line 3, in ?
+>     import _spe.SPE
+>   File "/Users/richb/Desktop/NewStuff/src/SPE/_spe/SPE.py", line 4, in ?
+>     wxversion.ensureMinimal(WX_VERSION)
+>   File
+>
+> "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/w
+> xversion.py", line 174, in ensureMinimal
+>     raise VersionError("wxversion.ensureMinimal() must be called before
+> wxPython
+> is imported")
+> wxversion.VersionError: wxversion.ensureMinimal() must be called before
+> wxPython
+> is imported
+> richb%
+> -----------
+
+
+I can confirm this. I'll try to fix it.
+
+6)      So how do I get the current version of SPE to run?
+
+
+See nr.4 Please do let me know asap if you can get SPE to run.
+
+Best regards on the day after the American Thanksgiving Holiday,
+
+
+Well, let SPE be my present. Try to open it!
+
+Stani
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/e0b9c85e/attachment.html>
+
+From Richard.E.Brown at DARTWARE.COM  Fri Nov 25 16:42:35 2005
+From: Richard.E.Brown at DARTWARE.COM (Richard E. Brown)
+Date: 25 Nov 2005 10:42:35 EST
+Subject: [spe-mac] Comments on current development state
+Message-ID: <2059745@blitz.dartware.com>
+
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/1e3484af/attachment.ksh>
+
+From kay.fricke at merz-akademie.de  Fri Nov 25 17:07:08 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Fri, 25 Nov 2005 17:07:08 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <437B9A4E.2000300@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+Message-ID: <438736AC.8050105@merz-akademie.de>
+
+Hi All, Hi Stani,
+
+I'm trying to make the speMac.blend (in fact the spe-editor script for 
+blender) more a general solution for any flavor of Python and OS.
+
+I'm running into the difficulty of determing the kind of install and os, 
+and the code is getting longer and less elegant.
+
+the solution I'm currently thinking of is to use the PYTHONPATH and/or 
+PYTHON environment var, for the construction of the modules path and the 
+location of wx.pth. Caveat is that this needs to be set.
+
+the other option would be to use regular expression and scan through 
+sys.path and get the site-packages path from there.
+This wouldn't fail if the environment is not set.
+
+A combination of the two ways, i think, would be failsafe, so if no 
+PYTHONPATH is found, do the regex over sys.path list.
+
+Any opinions Mates?
+
+greetz kay
+
+
+
+From spe.stani.be at gmail.com  Fri Nov 25 17:08:37 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 17:08:37 +0100
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <2059745@blitz.dartware.com>
+References: <2059745@blitz.dartware.com>
+Message-ID: <2078a7ad0511250808j3ce4ae6bw22d0fd56fc4435bc@mail.gmail.com>
+
+Hi Rich,
+
+Great! I fixed the two things (pythonw and spe script) I said and will now
+write a chapter about how to install spe on the Mac. So there is a new
+subversion, so you can check it out.
+
+Also only run some code snippets inside SPE. To run serious programs use:
+Tools>Run in terminal
+or
+Tools>Debug with winpdb
+
+Look at the statusbar, it will warn you when you type errors! (new feature)
+
+Stani
+
+On 25 Nov 2005 10:42:35 EST, Richard E. Brown <Richard.E.Brown at dartware.com>
+wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> Stani:
+>
+> --- You wrote:
+> Well, let SPE be my present. Try to open it!
+> --- end of quote ---
+>
+> Ta Da!
+>
+> Yes, it launches and I'm actually running and debugging a program! Thanks!
+>
+> Rich Brown
+> Hanover, NH USA
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/7fd0a122/attachment.html>
+
+From spe.stani.be at gmail.com  Fri Nov 25 17:12:06 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 17:12:06 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <438736AC.8050105@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+	 <438736AC.8050105@merz-akademie.de>
+Message-ID: <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>
+
+Hi Kay,
+
+Well, I was thinking about this two and I think that maybe it's better to
+offer two blender files, which means one for mac seperately. The standard
+spe.blend works with all python flavors on windows and linux(?), so if you
+make just one which works on Mac that's ok for me.
+
+Stani
+
+On 11/25/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> Hi All, Hi Stani,
+>
+> I'm trying to make the speMac.blend (in fact the spe-editor script for
+> blender) more a general solution for any flavor of Python and OS.
+>
+> I'm running into the difficulty of determing the kind of install and os,
+> and the code is getting longer and less elegant.
+>
+> the solution I'm currently thinking of is to use the PYTHONPATH and/or
+> PYTHON environment var, for the construction of the modules path and the
+> location of wx.pth. Caveat is that this needs to be set.
+>
+> the other option would be to use regular expression and scan through
+> sys.path and get the site-packages path from there.
+> This wouldn't fail if the environment is not set.
+>
+> A combination of the two ways, i think, would be failsafe, so if no
+> PYTHONPATH is found, do the regex over sys.path list.
+>
+> Any opinions Mates?
+>
+> greetz kay
+>
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/cf0d03a4/attachment.html>
+
+From spe.stani.be at gmail.com  Fri Nov 25 17:19:10 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 17:19:10 +0100
+Subject: [spe-mac] Mac questions (please help)
+Message-ID: <2078a7ad0511250819x8c64212k1c57aab806f755@mail.gmail.com>
+
+The following questions are specifically about Mac. Probably you might know,
+which I as a Mac newbie don't. So here we go...
+
+* Child.py: How do I close a terminal window with apple script?
+
+ For the Tools menu 'Run in terminal and exit', I wrote the following code
+which works fine but I would prefer if the window closes. Anybody know why?
+os.system("""osascript -e 'tell application "Terminal"' -e 'activate' -e 'do
+script with command "cd %(path)s;pythonw %(file)s;logout"' -e 'end
+tell'"""%params)
+
+So the apple script is:
+
+tell application "Terminal"
+ activate
+ do script with command "cd %(path)s;pythonw %(file)s;logout"
+ -> what should be put here to close the window?
+end tell
+
+* SPE.py: How to redirect the shell on Mac? (reported by Rich):
+
+If I copy/paste the command line, I get an error using tcsh:
+
+-----------
+richb% pythonw SPE.py --debug > debug.txt 2>&1
+tcsh: Ambiguous output redirect.
+-----------
+
+* I'm wondering if is possible make desktop/finder aliases like
+.bash_profile aliases:
+
+alias spe='pythonw
+/Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py'
+
+
+Of course I could make a python script (as I did: SPE_DEBUG.py) and make an
+alias to that, but I was just curious.
+
+Thanks in advance,
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/904fece6/attachment.html>
+
+From spe.stani.be at gmail.com  Fri Nov 25 18:25:09 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 18:25:09 +0100
+Subject: [spe-mac] mac installation instructions (please review)
+Message-ID: <2078a7ad0511250925v616a986arcbe42aecb8d0181c@mail.gmail.com>
+
+These are the instructions I wrote for the manual. Please let me know your
+remarks, both on content and english:
+Introduction
+
+Mac Os X provides itself wxPython. Unfortunately there is a big chance that
+this version is outdated. Therefore following instructions 'Python' and
+'wxPython' will explain you how to install wxPython yourself. You only have
+to follow them in case the python and wxPython versions of your Os X are not
+matching SPE's requirements, otherwise only follow the 'SPE' instruction.
+
+At the moment of this writing the latest version of Os X is Tiger (10.4). It
+ships with Python 2.3 and wxPython 2.5. For SPE you'll need wxPython 2.6 and
+at least Python 2.3 In order not to interfere with the installed system,
+this manual will explain you how to install Python2.4 with wxPython2.6 In
+general it is always better to use a later version of Python as mostly it is
+more stable and faster.
+Python
+
+Activestate provides nicely wrapped installers for Python for Mac Os X.
+Download it and launch the installer. Choose the latest Python version for
+Mac Os X from:
+
+http://www.activestate.com/Products/Download/Download.plex?id=ActivePython
+
+In order to let this python version precede, edit the following line your
+'.bash_profile'. This file is located in your home directory. If it doesn't
+exist, create an empty text file with this name in your home folder. Don't
+skip this step or your installation will fail! Close afterwards all terminal
+windows (to make sure that the PATH variable is exported).
+
+export PATH = "/usr/local/bin:$PATH:/Developer/Tools:/Library/Frameworks/Python.framework/Versions/Current/bin/"
+
+ WxPython
+
+Download the latest binary built for the Python version you installed from:
+
+http://www.wxpython.org/download.php#binaries
+
+   -
+
+   You can install packages for OsX 10.3 also on 10.4 The
+wxPython.orgwebsites mentions: "
+   *Eventhough the Panther packages below were built on an OSX
+10.3system they will still work on Tiger provided you also have this
+package
+   installed.*" You can safely ignore this message.
+
+Launch the installer.
+SPE
+
+At the moment SPE is not yet available as an application. Download the
+source distribution tar.gz instead. Unpack it to a certain path and open a
+new terminal in that path. In the terminal enter the following command:
+
+python setup.py install
+
+ This installs SPE in the site-packages directory of your default Python
+installation. You can now create aliases for the terminal by adding these
+lines in your '.bash_profile':
+
+alias spe='pythonw
+/Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py'
+alias winpdb='pythonw
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/plugins/winpdb/winpdb.py
+-t'
+alias debug_spe='pythonw
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/plugins/winpdb/winpdb.py
+-t -c /Library/Frameworks/Python.framework/Versions/Current/lib/python2.4/site-packages/_spe/SPE.py
+--debug'
+
+
+
+ Starting SPE is now as easy as typing 'spe' in the terminal. You can also
+type 'spe ?debug' to run SPE in debugging mode.
+Uninstall
+
+Remove the '_spe' folder from your python site-packages directory, eg:
+
+
+ /Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages
+
+
+ One needs also to remove
+/Library/Frameworks/Python.framework/Versions/2.4/bin/spe manually.
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/e5f6cbb8/attachment.html>
+
+From kay.fricke at merz-akademie.de  Fri Nov 25 20:26:06 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Fri, 25 Nov 2005 20:26:06 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>
+References: <437B9A4E.2000300@merz-akademie.de>	 <438736AC.8050105@merz-akademie.de> <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>
+Message-ID: <4387654E.7060608@merz-akademie.de>
+
+hey Stani,
+
+meanwhile I tried to implement the suggestion made.
+I attached the code for inspection.
+
+the recognition works fine ... so far. except for PYTHONPATH, as stated 
+in the comment, it needs some regex too. Or I just skip that, and stick 
+with the sys.path.
+
+I tried it with blender 2.37 works perfect. With blender 2.40 SPE 
+wouldn't work, but only due to wxversion problems ...
+That Bug is reproducable with the old script too ...
+
+ >debug output:
+Traceback (most recent call last):
+   File "spe editor", line 14, in ?
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/SPE.py", 
+line 4, in ?
+     wxversion.ensureMinimal(WX_VERSION)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wxversion.py", 
+line 174, in ensureMinimal
+     raise VersionError("wxversion.ensureMinimal() must be called before 
+wxPython is imported")
+wxversion.VersionError: wxversion.ensureMinimal() must be called before 
+wxPython is imported
+
+
+with blender 2.37 python 2.3 is used, so the old SPE Release kicks in, 
+thats 0.7.5.f, which I have installed under 2.3.
+My Blender 2.40 version comes from 
+http://blendertestbuilds.de/index.php?dir=Testbuilds/Blender/MacOSX/BrianH/
+and is the Blender-18-Nov-2005-OSX.dmg build.
+That version uses python 2.4.0 and so the current _spe checkout from 
+subversion.
+
+hope this helps ...
+
+greetz kay
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: spe-editor.py
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/d71c43c2/attachment.ksh>
+
+From spe.stani.be at gmail.com  Fri Nov 25 20:33:38 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 20:33:38 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <4387654E.7060608@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+	 <438736AC.8050105@merz-akademie.de>
+	 <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>
+	 <4387654E.7060608@merz-akademie.de>
+Message-ID: <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+
+Hi Kay,
+
+
+On 11/25/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+>
+> hey Stani,
+>
+> meanwhile I tried to implement the suggestion made.
+> I attached the code for inspection.
+
+
+Thanks.
+
+the recognition works fine ... so far. except for PYTHONPATH, as stated
+> in the comment, it needs some regex too. Or I just skip that, and stick
+> with the sys.path.
+>
+> I tried it with blender 2.37 works perfect.
+
+
+Great.
+
+With blender 2.40 SPE
+> wouldn't work, but only due to wxversion problems ...
+> That Bug is reproducable with the old script too ...
+>
+> >debug output:
+> Traceback (most recent call last):
+>    File "spe editor", line 14, in ?
+>    File
+>
+> "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/SPE.py",
+> line 4, in ?
+>      wxversion.ensureMinimal(WX_VERSION)
+>    File
+>
+> "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wxversion.py",
+> line 174, in ensureMinimal
+>      raise VersionError("wxversion.ensureMinimal() must be called before
+> wxPython is imported")
+> wxversion.VersionError: wxversion.ensureMinimal() must be called before
+> wxPython is imported
+>
+>
+> with blender 2.37 python 2.3 is used, so the old SPE Release kicks in,
+> thats 0.7.5.f, which I have installed under 2.3.
+> My Blender 2.40 version comes from
+>
+> http://blendertestbuilds.de/index.php?dir=Testbuilds/Blender/MacOSX/BrianH/
+> and is the Blender-18-Nov-2005-OSX.dmg build.
+> That version uses python 2.4.0 and so the current _spe checkout from
+> subversion.
+
+
+Which subversion did you use? I think I fixed that now. It is related to
+another bug. The first lines in _spe/__init__.py should be:
+##import info
+##INFO=info.copy()
+##INFO['description']=\
+##"""This is the main spe application."""
+##__doc__=INFO['doc']%INFO
+
+But please check out again. I do commits *very* often. I'll do one again in
+some minutes ;-)
+
+Send me your .blend file. I'll trust you. I don't have blender yet installed
+on my mac mini and I prefer to work on other issues of SPE.
+Stani
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/bec61fc0/attachment.html>
+
+From kay.fricke at merz-akademie.de  Fri Nov 25 20:43:05 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Fri, 25 Nov 2005 20:43:05 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+References: <437B9A4E.2000300@merz-akademie.de>	 <438736AC.8050105@merz-akademie.de>	 <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>	 <4387654E.7060608@merz-akademie.de> <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+Message-ID: <43876949.10307@merz-akademie.de>
+
+Hi Stani,
+
+did the update and revision is 81, __init__.py has the lines but the bug 
+remains the same ...
+
+same output as before ...
+
+for .blend File, I'll again name it speMac.blend and will stick with the 
+  sys.path thing and get rid of the PYTHONPATH.
+
+I'll rework that if there is any necessity for it.
+
+file comes in a minute ...
+
+greetz kay
+
+SPE Stani's Python Editor wrote:
+> Hi Kay,
+> 
+> 
+> On 11/25/05, *Kay Fricke* <kay.fricke at merz-akademie.de 
+> <mailto:kay.fricke at merz-akademie.de>> wrote:
+> 
+>     hey Stani,
+> 
+>     meanwhile I tried to implement the suggestion made.
+>     I attached the code for inspection.
+> 
+> 
+> Thanks.
+> 
+>     the recognition works fine ... so far. except for PYTHONPATH, as stated
+>     in the comment, it needs some regex too. Or I just skip that, and stick
+>     with the sys.path.
+> 
+>     I tried it with blender 2.37 works perfect. 
+> 
+> 
+> Great.
+> 
+>     With blender 2.40 SPE
+>     wouldn't work, but only due to wxversion problems ...
+>     That Bug is reproducable with the old script too ...
+> 
+>      >debug output:
+>     Traceback (most recent call last):
+>        File "spe editor", line 14, in ?
+>        File
+>     "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/SPE.py",
+> 
+>     line 4, in ?
+>          wxversion.ensureMinimal(WX_VERSION)
+>        File
+>     "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wxversion.py",
+>     line 174, in ensureMinimal
+>          raise VersionError(" wxversion.ensureMinimal() must be called
+>     before
+>     wxPython is imported")
+>     wxversion.VersionError: wxversion.ensureMinimal() must be called before
+>     wxPython is imported
+> 
+> 
+>     with blender 2.37 python 2.3 is used, so the old SPE Release kicks in,
+>     thats 0.7.5.f, which I have installed under 2.3.
+>     My Blender 2.40 version comes from
+>     http://blendertestbuilds.de/index.php?dir=Testbuilds/Blender/MacOSX/BrianH/
+>     <http://blendertestbuilds.de/index.php?dir=Testbuilds/Blender/MacOSX/BrianH/>
+>     and is the Blender-18-Nov-2005-OSX.dmg build.
+>     That version uses python 2.4.0 and so the current _spe checkout from
+>     subversion.
+> 
+> 
+> Which subversion did you use? I think I fixed that now. It is related to 
+> another bug. The first lines in _spe/__init__.py should be:
+> ##import info
+> ##INFO=info.copy()
+> ##INFO['description']=\
+> ##"""This is the main spe application."""
+> ##__doc__=INFO['doc']%INFO
+> 
+> But please check out again. I do commits *very* often. I'll do one again 
+> in some minutes ;-)
+> 
+> Send me your .blend file. I'll trust you. I don't have blender yet 
+> installed on my mac mini and I prefer to work on other issues of SPE.
+> Stani
+> 
+> 
+
+
+
+From kay.fricke at merz-akademie.de  Fri Nov 25 20:54:18 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Fri, 25 Nov 2005 20:54:18 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+References: <437B9A4E.2000300@merz-akademie.de>	 <438736AC.8050105@merz-akademie.de>	 <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>	 <4387654E.7060608@merz-akademie.de> <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+Message-ID: <43876BEA.9090302@merz-akademie.de>
+
+Hi Stani,
+
+here the new speMac.blend.
+its without the PYTHONPATH checking, only getting site-packages form 
+sys.path.
+
+works so far.
+
+Only thing that happens to me today, is that blender crashes when i quit 
+  spe. have to investigate that ...
+I'll let you know if its reoccurring.
+
+greetz ... kay
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: speMac.blend
+Type: application/octet-stream
+Size: 45236 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/fcb1747a/attachment.obj>
+
+From spe.stani.be at gmail.com  Fri Nov 25 20:56:24 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 20:56:24 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <43876949.10307@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+	 <438736AC.8050105@merz-akademie.de>
+	 <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>
+	 <4387654E.7060608@merz-akademie.de>
+	 <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+	 <43876949.10307@merz-akademie.de>
+Message-ID: <2078a7ad0511251156p577a2b37t77ce628d0c595d6@mail.gmail.com>
+
+What happens if you do 'import _spe.SPE' in a normal python shell, not in
+Blender. Does it work then?
+Stani
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/989243f7/attachment.html>
+
+From spe.stani.be at gmail.com  Fri Nov 25 21:05:35 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 21:05:35 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <43876BEA.9090302@merz-akademie.de>
+References: <437B9A4E.2000300@merz-akademie.de>
+	 <438736AC.8050105@merz-akademie.de>
+	 <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>
+	 <4387654E.7060608@merz-akademie.de>
+	 <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>
+	 <43876BEA.9090302@merz-akademie.de>
+Message-ID: <2078a7ad0511251205m27eeeadtb1b01a60f09e6878@mail.gmail.com>
+
+On 11/25/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+>
+> Hi Stani,
+>
+> here the new speMac.blend.
+
+
+Thanks it's in SVN 82 together with other changes.
+
+its without the PYTHONPATH checking, only getting site-packages form
+> sys.path.
+>
+> works so far.
+
+
+Thanks! Maybe in the future this is more something for spe-dev mailing list
+if you don't mind.
+
+Only thing that happens to me today, is that blender crashes when i quit
+>   spe. have to investigate that ...
+> I'll let you know if its reoccurring.
+
+
+Please do, especially if you know why and even better how to fix it!
+
+Stani
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/eb9bf6a1/attachment.html>
+
+From kay.fricke at merz-akademie.de  Fri Nov 25 21:18:05 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Fri, 25 Nov 2005 21:18:05 +0100
+Subject: [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+In-Reply-To: <2078a7ad0511251156p577a2b37t77ce628d0c595d6@mail.gmail.com>
+References: <437B9A4E.2000300@merz-akademie.de>	 <438736AC.8050105@merz-akademie.de>	 <2078a7ad0511250812g3e62a587pa097fdc482c003df@mail.gmail.com>	 <4387654E.7060608@merz-akademie.de>	 <2078a7ad0511251133n21a17a6eo8960691e499a17fc@mail.gmail.com>	 <43876949.10307@merz-akademie.de> <2078a7ad0511251156p577a2b37t77ce628d0c595d6@mail.gmail.com>
+Message-ID: <4387717D.8080405@merz-akademie.de>
+
+SPE Stani's Python Editor wrote:
+> What happens if you do 'import _spe.SPE' in a normal python shell, not 
+> in Blender. Does it work then?
+> Stani
+> 
+
+pythonw spe-editor.py works perfect. with 2.4.0 ...
+so i guess this is a blender issue ... ?
+I'll check out the blender bug list ...
+
+kay
+
+
+From rbthomas55 at pobox.com  Fri Nov 25 21:48:31 2005
+From: rbthomas55 at pobox.com (Rick Thomas)
+Date: Fri, 25 Nov 2005 15:48:31 -0500
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com>
+References: <2059728@blitz.dartware.com>
+ <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com>
+Message-ID: <3915deaad1c45e9e8f76b5fa0bfcdc06@pobox.com>
+
+On Nov 25, 2005, at 10:17 AM, SPE Stani's Python Editor wrote:
+
+>
+>
+> On 25 Nov 2005 09:01:36 EST, Richard E. Brown 
+> <Richard.E.Brown at dartware.com> wrote:
+>
+>> 2b) If I copy/paste the command line, I get an error using tcsh:
+>>
+>> -----------
+>> richb% pythonw SPE.py --debug > debug.txt 2>&1
+>> tcsh: Ambiguous output redirect.
+>> -----------
+>  This is an issue I have absolute no knowledge about. I'll post this 
+> question on the spe-dev mailing list, unless one of you knows how to 
+> redirect the output in an not ambiguous way.
+>  ?
+
+
+Rich & Stani,
+
+Here's one I can help with!
+
+There are two shells available in the MacOS version of UNIX: tcsh and 
+bash.  To the expert they differ in myriad important and useful ways, 
+but to the casual user they are essentially the same -- you type a 
+command name and it's arguments in that order and it executes the 
+command.  One of the differences is in how they do redirection of 
+standard-error.  That's the "2>&1" part of the above command line.  
+This is written in the bash dialect, and you are using the tcsh 
+dialect.  The version of the command line for tcsh would be:
+
+	pythonw SPE.py --debug >& debug.txt
+
+The bigger problem of "which shell should I use?" is a largely 
+"religious" issue.  There are strong partisans on all sides.  
+(Amazingly, bash and tcsh are just the tip of the iceberg.  There are 
+dozens of shells out there.  Fortunately most have a small user 
+community.)  Most people who know both say that bash is better for 
+programming and tcsh is better for interactive use, but to me it's 
+mostly a matter of what you're used to.  If you're not used to either, 
+I'd pick bash because it's what's standard in Linux.  But on the other 
+hand, tcsh is what's standard in MacOS-X, so there are arguments on 
+both sides.
+
+Bottom line:  Read The Fine Manuals -- "man tsch" and "man bash" -- and 
+decide for yourself which you prefer.
+
+In MacOSX you must use the "netinfo manager" gui utility to change your 
+default shell.  Here's a step-by-step:
+
+	*) open Netinfo Manager (it's in the Utilities folder which is in the 
+Applications folder)
+	*) in the second column is a list of object classes.  Click on users.
+	*) in the third column will appear a list of users.  Click on your 
+user name.  In the lower panel will appear a list of attributes.  They 
+will be greyed out.
+	*) click the lock icon at the bottom left.  Type your password in the 
+popup window as requested.  The attributes will no longer be greyed 
+out.
+	*) scroll the lower panel to "shell".  Double click in the "value" 
+part of that line.
+	*) replace the letters "tcsh" with "bash" or vice versa as necessary.
+	*) click the lock to grey out the lower panel again.
+	*) quit netinfo manager.
+The next time you open a terminal window, you will be using your new 
+shell.  (Or maybe you'll have to log out and log back in again -- I 
+forget.)
+
+Warning!  Netinfo manager is *very* powerful magic.  Be extremely 
+careful what you do with it.  It's possible to dig yourself a hole that 
+you can't get out of.
+
+Make Love; make Peace; make Music; make good free software!
+
+Rick
+
+
+From spe.stani.be at gmail.com  Fri Nov 25 21:53:57 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 21:53:57 +0100
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <3915deaad1c45e9e8f76b5fa0bfcdc06@pobox.com>
+References: <2059728@blitz.dartware.com>
+	 <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com>
+	 <3915deaad1c45e9e8f76b5fa0bfcdc06@pobox.com>
+Message-ID: <2078a7ad0511251253w4beb496fu7a8d9cde8823d311@mail.gmail.com>
+
+Hi Rick,
+Thanks! I had the right comment already figured with the help of Hraban. So
+the SVN is already updated. However all the information about the shells is
+new to me and therefore interesting. Let me know if you have any difficulty
+with running SPE.
+Thanks,
+Stani
+
+On 11/25/05, Rick Thomas <rbthomas55 at pobox.com> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+>
+> On Nov 25, 2005, at 10:17 AM, SPE Stani's Python Editor wrote:
+>
+> >
+> >
+> > On 25 Nov 2005 09:01:36 EST, Richard E. Brown
+> > <Richard.E.Brown at dartware.com> wrote:
+> >
+> >> 2b) If I copy/paste the command line, I get an error using tcsh:
+> >>
+> >> -----------
+> >> richb% pythonw SPE.py --debug > debug.txt 2>&1
+> >> tcsh: Ambiguous output redirect.
+> >> -----------
+> >  This is an issue I have absolute no knowledge about. I'll post this
+> > question on the spe-dev mailing list, unless one of you knows how to
+> > redirect the output in an not ambiguous way.
+> >
+>
+>
+> Rich & Stani,
+>
+> Here's one I can help with!
+>
+> There are two shells available in the MacOS version of UNIX: tcsh and
+> bash.  To the expert they differ in myriad important and useful ways,
+> but to the casual user they are essentially the same -- you type a
+> command name and it's arguments in that order and it executes the
+> command.  One of the differences is in how they do redirection of
+> standard-error.  That's the "2>&1" part of the above command line.
+> This is written in the bash dialect, and you are using the tcsh
+> dialect.  The version of the command line for tcsh would be:
+>
+>         pythonw SPE.py --debug >& debug.txt
+>
+> The bigger problem of "which shell should I use?" is a largely
+> "religious" issue.  There are strong partisans on all sides.
+> (Amazingly, bash and tcsh are just the tip of the iceberg.  There are
+> dozens of shells out there.  Fortunately most have a small user
+> community.)  Most people who know both say that bash is better for
+> programming and tcsh is better for interactive use, but to me it's
+> mostly a matter of what you're used to.  If you're not used to either,
+> I'd pick bash because it's what's standard in Linux.  But on the other
+> hand, tcsh is what's standard in MacOS-X, so there are arguments on
+> both sides.
+>
+> Bottom line:  Read The Fine Manuals -- "man tsch" and "man bash" -- and
+> decide for yourself which you prefer.
+>
+> In MacOSX you must use the "netinfo manager" gui utility to change your
+> default shell.  Here's a step-by-step:
+>
+>         *) open Netinfo Manager (it's in the Utilities folder which is in
+> the
+> Applications folder)
+>         *) in the second column is a list of object classes.  Click on
+> users.
+>         *) in the third column will appear a list of users.  Click on your
+> user name.  In the lower panel will appear a list of attributes.  They
+> will be greyed out.
+>         *) click the lock icon at the bottom left.  Type your password in
+> the
+> popup window as requested.  The attributes will no longer be greyed
+> out.
+>         *) scroll the lower panel to "shell".  Double click in the "value"
+> part of that line.
+>         *) replace the letters "tcsh" with "bash" or vice versa as
+> necessary.
+>         *) click the lock to grey out the lower panel again.
+>         *) quit netinfo manager.
+> The next time you open a terminal window, you will be using your new
+> shell.  (Or maybe you'll have to log out and log back in again -- I
+> forget.)
+>
+> Warning!  Netinfo manager is *very* powerful magic.  Be extremely
+> careful what you do with it.  It's possible to dig yourself a hole that
+> you can't get out of.
+>
+> Make Love; make Peace; make Music; make good free software!
+>
+> Rick
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/9e5ef8e5/attachment.html>
+
+From spe at tijdweb.nl  Fri Nov 25 22:02:01 2005
+From: spe at tijdweb.nl (Toin Bloo)
+Date: Fri, 25 Nov 2005 22:02:01 +0100
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <2078a7ad0511251253w4beb496fu7a8d9cde8823d311@mail.gmail.com>
+References: <2059728@blitz.dartware.com> <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com> <3915deaad1c45e9e8f76b5fa0bfcdc06@pobox.com> <2078a7ad0511251253w4beb496fu7a8d9cde8823d311@mail.gmail.com>
+Message-ID: <32370ae2eace6c590ec523d22872a8e7@tijdweb.nl>
+
+After opening terminal.app I get bash in Mac OS X 10.3,
+isn't tcsh what comes standard in 10.4?
+
+
+> I'd pick bash because it's what's standard in Linux.??But on the other
+> hand, tcsh is what's standard in MacOS-X, so there are arguments on
+> both sides.
+
+
+
+From spe.stani.be at gmail.com  Fri Nov 25 22:05:59 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 25 Nov 2005 22:05:59 +0100
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <32370ae2eace6c590ec523d22872a8e7@tijdweb.nl>
+References: <2059728@blitz.dartware.com>
+	 <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com>
+	 <3915deaad1c45e9e8f76b5fa0bfcdc06@pobox.com>
+	 <2078a7ad0511251253w4beb496fu7a8d9cde8823d311@mail.gmail.com>
+	 <32370ae2eace6c590ec523d22872a8e7@tijdweb.nl>
+Message-ID: <2078a7ad0511251305rd6de977h91a0bc3908f4d9e1@mail.gmail.com>
+
+No bash is also standard in 10.4 Try this out:
+$python
+>>> import os
+>>> print os.environ['SHELL']
+'bin/bash'
+
+Stani
+
+On 11/25/05, Toin Bloo <spe at tijdweb.nl> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> After opening terminal.app I get bash in Mac OS X 10.3,
+> isn't tcsh what comes standard in 10.4?
+>
+>
+> > I'd pick bash because it's what's standard in Linux.But on the other
+> > hand, tcsh is what's standard in MacOS-X, so there are arguments on
+> > both sides.
+>
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/9db11fd7/attachment.html>
+
+From hraban at fiee.net  Sat Nov 26 00:29:19 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Sat, 26 Nov 2005 00:29:19 +0100
+Subject: [spe-mac] Comments on current development state
+In-Reply-To: <32370ae2eace6c590ec523d22872a8e7@tijdweb.nl>
+References: <2059728@blitz.dartware.com> <2078a7ad0511250717p38824be2pb3db3659c697a45b@mail.gmail.com> <3915deaad1c45e9e8f76b5fa0bfcdc06@pobox.com> <2078a7ad0511251253w4beb496fu7a8d9cde8823d311@mail.gmail.com> <32370ae2eace6c590ec523d22872a8e7@tijdweb.nl>
+Message-ID: <C6B6D345-510A-44BD-83FD-76EC3E78A286@fiee.net>
+
+Am 2005-11-25 um 22:02 schrieb Toin Bloo:
+> After opening terminal.app I get bash in Mac OS X 10.3,
+> isn't tcsh what comes standard in 10.4?
+
+tcsh was default in 10.2, but bash since 10.3
+(and I think that was a good decision ;-)
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+From kay.fricke at merz-akademie.de  Sat Nov 26 00:53:43 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Sat, 26 Nov 2005 00:53:43 +0100
+Subject: [spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+Message-ID: <4387A407.2050601@merz-akademie.de>
+
+Hi Stani,
+
+Bug 1: Blender Crashes with Segmentation Fault when SPE is quit
+
+because neither SPE debug nor Blender debug helped, I used gdb to trace 
+the problem.
+
+here is the output of the debugger from the crash:
+
+Program received signal EXC_BAD_ACCESS, Could not access memory.
+0x09141644 in wxStyledTextCtrl::SendMsg(int, long, long) ()
+
+the complete trace:
+
+#0  0x09141644 in wxStyledTextCtrl::SendMsg(int, long, long) ()
+#1  0x08e8f3a4 in _wrap_StyledTextCtrl_SetSTCFocus (args=0x94c, 
+kwargs=0x0) at contrib/stc/mac/stc_wrap.cpp:12396
+#2  0x95f4a8d0 in PyObject_Call ()
+#3  0x95fa9df0 in PyEval_GetFuncDesc ()
+#4  0x95fa6d44 in PyEval_EvalCode ()
+#5  0x95fa7e30 in PyEval_EvalCodeEx ()
+#6  0x95fa97dc in PyEval_GetFuncDesc ()
+#7  0x95fa9580 in PyEval_GetFuncDesc ()
+#8  0x95fa6c64 in PyEval_EvalCode ()
+#9  0x95fa7e30 in PyEval_EvalCodeEx ()
+#10 0x95fa97dc in PyEval_GetFuncDesc ()
+#11 0x95fa9580 in PyEval_GetFuncDesc ()
+#12 0x95fa6c64 in PyEval_EvalCode ()
+#13 0x95fa9728 in PyEval_GetFuncDesc ()
+#14 0x95fa9580 in PyEval_GetFuncDesc ()
+#15 0x95fa6c64 in PyEval_EvalCode ()
+#16 0x95fa9728 in PyEval_GetFuncDesc ()
+#17 0x95fa9580 in PyEval_GetFuncDesc ()
+#18 0x95fa6c64 in PyEval_EvalCode ()
+#19 0x95fa9728 in PyEval_GetFuncDesc ()
+#20 0x95fa9580 in PyEval_GetFuncDesc ()
+#21 0x95fa6c64 in PyEval_EvalCode ()
+#22 0x95fa7e30 in PyEval_EvalCodeEx ()
+#23 0x95fa97dc in PyEval_GetFuncDesc ()
+#24 0x95fa9580 in PyEval_GetFuncDesc ()
+#25 0x95fa6c64 in PyEval_EvalCode ()
+#26 0x95fa7e30 in PyEval_EvalCodeEx ()
+#27 0x95f5f354 in PyFunction_SetClosure ()
+#28 0x95f4a8d0 in PyObject_Call ()
+#29 0x95f529e8 in PyMethod_New ()
+#30 0x95f4a8d0 in PyObject_Call ()
+#31 0x95fa91ec in PyEval_CallObjectWithKeywords ()
+#32 0x0630e1b0 in wxPyCallback::EventThunker(wxEvent&) (this=0xa051000, 
+event=@0xbfffcb10) at src/helpers.cpp:1610
+#33 0x06f13c34 in 
+wxEvtHandler::ProcessEventIfMatches(wxEventTableEntryBase const&, 
+wxEvtHandler*, wxEvent&) ()
+#34 0x06f141e4 in wxEvtHandler::SearchDynamicEventTable(wxEvent&) ()
+#35 0x06f13de8 in wxEvtHandler::ProcessEvent(wxEvent&) ()
+#36 0x06f7a42c in 
+wxMacWindowControlEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#37 0x06f7ab98 in wxMacWindowEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#38 0x92881fa0 in DispatchEventToHandlers ()
+#39 0x92882214 in SendEventToEventTargetInternal ()
+#40 0x92886694 in SendEventToEventTargetWithOptions ()
+#41 0x928b8ffc in SendControlDefSetFocusPart(HIView*, short, unsigned 
+char, short*) ()
+#42 0x928cde44 in HIView::SetFocusPartInternal(short, unsigned char, 
+unsigned char, short*, short) ()
+#43 0x928cd3e0 in HIView::SetFocusPart(short, unsigned char) ()
+#44 0x92966f9c in ClearKeyboardFocus ()
+#45 0x92999ad0 in _ClearKeyboardFocusWithExtremePrejudice ()
+#46 0x928a91e0 in HIView::Destruct() ()
+#47 0x901c0cd0 in CFRelease ()
+#48 0x06f1bc7c in wxMacControl::Dispose() ()
+#49 0x06f7b6d0 in wxWindow::~wxWindow() ()
+#50 0x06fb4714 in wxControlBase::~wxControlBase() ()
+#51 0x06f3d2bc in wxControl::~wxControl() ()
+#52 0x0914160c in wxStyledTextCtrl::~wxStyledTextCtrl() ()
+#53 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#54 0x06f7b650 in wxWindow::~wxWindow() ()
+#55 0x06fb4714 in wxControlBase::~wxControlBase() ()
+#56 0x06f3d2bc in wxControl::~wxControl() ()
+#57 0x06fae1e4 in wxBookCtrlBase::~wxBookCtrlBase() ()
+#58 0x06f5e234 in wxNotebook::~wxNotebook() ()
+#59 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#60 0x06f7b650 in wxWindow::~wxWindow() ()
+#61 0x07031540 in wxSplitterWindow::~wxSplitterWindow() ()
+#62 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#63 0x06f7b650 in wxWindow::~wxWindow() ()
+#64 0x0702a764 in wxPanel::~wxPanel() ()
+#65 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#66 0x06f7b650 in wxWindow::~wxWindow() ()
+#67 0x06fb4714 in wxControlBase::~wxControlBase() ()
+#68 0x06f3d2bc in wxControl::~wxControl() ()
+#69 0x06fae1e4 in wxBookCtrlBase::~wxBookCtrlBase() ()
+#70 0x06f5e234 in wxNotebook::~wxNotebook() ()
+#71 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#72 0x06f7b650 in wxWindow::~wxWindow() ()
+#73 0x07031540 in wxSplitterWindow::~wxSplitterWindow() ()
+#74 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#75 0x06f7b650 in wxWindow::~wxWindow() ()
+#76 0x07009f00 in wxTopLevelWindowBase::~wxTopLevelWindowBase() ()
+#77 0x06f78514 in wxTopLevelWindowMac::~wxTopLevelWindowMac() ()
+#78 0x06fcb8b4 in wxFrameBase::~wxFrameBase() ()
+#79 0x06f5265c in wxFrame::~wxFrame() ()
+#80 0x06fab5dc in wxAppBase::DeletePendingObjects() ()
+#81 0x06f304a8 in wxApp::MacDoOneEvent() ()
+#82 0x06f30020 in wxApp::MainLoop() ()
+#83 0x0630a1c8 in wxPyApp::MainLoop() (this=0x7d6f240) at 
+src/helpers.cpp:150
+#84 0x0634d860 in _wrap_PyApp_MainLoop (args=0x94c, kwargs=0x0) at 
+src/mac/_core_wrap.cpp:23096
+#85 0x95f4a8d0 in PyObject_Call ()
+#86 0x95fa9df0 in PyEval_GetFuncDesc ()
+#87 0x95fa6d44 in PyEval_EvalCode ()
+#88 0x95fa7e30 in PyEval_EvalCodeEx ()
+#89 0x95f5f354 in PyFunction_SetClosure ()
+#90 0x95f4a8d0 in PyObject_Call ()
+#91 0x95f529e8 in PyMethod_New ()
+#92 0x95f4a8d0 in PyObject_Call ()
+#93 0x95fa9ba8 in PyEval_GetFuncDesc ()
+#94 0x95fa9598 in PyEval_GetFuncDesc ()
+#95 0x95fa6c64 in PyEval_EvalCode ()
+#96 0x95fa9728 in PyEval_GetFuncDesc ()
+#97 0x95fa9580 in PyEval_GetFuncDesc ()
+#98 0x95fa6c64 in PyEval_EvalCode ()
+#99 0x95fa7e30 in PyEval_EvalCodeEx ()
+#100 0x95fa4734 in PyEval_EvalCode ()
+#101 0x95fbe100 in PyImport_ExecCodeModuleEx ()
+#102 0x95fbe808 in PyImport_ExecCodeModuleEx ()
+#103 0x95fbf784 in PyImport_ExecCodeModuleEx ()
+#104 0x95fc08c4 in PyImport_ImportModuleEx ()
+#105 0x95fc02e0 in PyImport_ImportModuleEx ()
+#106 0x95fbfe40 in PyImport_ImportModule ()
+#107 0x95fbffd4 in PyImport_ImportModuleEx ()
+#108 0x001edc88 in blender_import ()
+#109 0x95f4a8d0 in PyObject_Call ()
+#110 0x95fa91ec in PyEval_CallObjectWithKeywords ()
+#111 0x95fa6984 in PyEval_EvalCode ()
+#112 0x95fa7e30 in PyEval_EvalCodeEx ()
+#113 0x95fa4734 in PyEval_EvalCode ()
+#114 0x001ebd88 in BPY_txt_do_python_Text ()
+#115 0x00058a50 in run_python_script ()
+#116 0x000594cc in winqreadtextspace ()
+#117 0x000060fc in scrarea_dispatch_events ()
+#118 0x00007558 in screen_dispatch_events ()
+#119 0x00007c7c in screenmain ()
+#120 0x00003fec in main ()
+#121 0x00002e38 in _start (argc=8, argv=0xbffffd34, envp=0xbffffd58) at 
+/SourceCache/Csu/Csu-47/crt.c:267
+#122 0x8fe1a278 in __dyld__dyld_start ()
+
+so it seems its wx that causes the crash ...
+neither spe nor blender are the problem, but the wx module
+
+If I shall post that to the wx bugtracker, please gimme a hint where to 
+find it ...
+
+
+Bug 2:
+
+If I use command line options, like -d or a combination like -d -w -p 10 
+10 800 600 when I start blender, every single argv
+(from blender -d output):
+
+argv[1] = -d
+argv[2] = -w
+argv[3] = -p
+argv[4] = 10
+argv[5] = 10
+argv[6] = 800
+argv[7] = 600
+
+will be opened as a file in spe, when I launch it from inside blender, 
+plus the workspace files.
+
+thats irritating but not very harmful.
+
+
+greetz kay
+
+
+From kay.fricke at merz-akademie.de  Sat Nov 26 01:36:00 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Sat, 26 Nov 2005 01:36:00 +0100
+Subject: [spe-mac] bugs: blender crash on SPE exit; SPE opens argv of
+ blender as files
+In-Reply-To: <4387A407.2050601@merz-akademie.de>
+References: <4387A407.2050601@merz-akademie.de>
+Message-ID: <4387ADF0.3060000@merz-akademie.de>
+
+Kay Fricke wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate 
+> _______________________________________________
+> Hi Stani,
+> 
+> Bug 1: Blender Crashes with Segmentation Fault when SPE is quit
+> 
+> because neither SPE debug nor Blender debug helped, I used gdb to trace 
+> the problem.
+> 
+
+I updated and checked this with all the new versions (former bug report 
+was with old blender, spe and python):
+blender 2.40, python 2.4.1, wxPython 2.6.1.0 and the current svn version
+
+things are a bit different.
+
+launching from blender works fine, quit is also okay, as far as the spe 
+window gets destroyd and the focus is back to blender.
+
+but I'm not able to relaunch spe, neither to execute any python script.
+
+accessing Help, in the apple menue, shows me still the Menue from the 
+python execution, namely the links to Python and wxPython docs.
+trying to activate them, crashes blender.
+
+as it seems, wx does not quit, and keeps python alive somehow, but 
+crashes on access and takes blender with it.
+
+here is the trace:
+
+#0  0x00000000 in ?? ()
+Cannot access memory at address 0x0
+Cannot access memory at address 0x0
+#1  0x06b7815c in wxMenuBase::SendEvent(int, int) ()
+#2  0x06ab8fc4 in 
+wxMacAppCommandEventHandler(OpaqueEventHandlerCallRef*, OpaqueEventRef*, 
+void*) ()
+#3  0x06ab9174 in wxMacAppEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#4  0x92881fa0 in DispatchEventToHandlers ()
+#5  0x92882214 in SendEventToEventTargetInternal ()
+#6  0x928946bc in SendEventToEventTarget ()
+#7  0x928a96b4 in SendHICommandEvent(unsigned long, HICommand const*, 
+unsigned long, unsigned long, unsigned char, OpaqueEventTargetRef*, 
+OpaqueEventTargetRef*, OpaqueEventRef**) ()
+#8  0x92941874 in SendMenuItemSelectedEvent ()
+#9  0x92943450 in FinishMenuSelection(MenuData*, MenuResult*, 
+MenuResult*, unsigned long, unsigned long, unsigned long) ()
+#10 0x9290d764 in MenuSelectCore(Point, double, unsigned long, 
+OpaqueMenuRef**, unsigned short*) ()
+#11 0x92933b64 in MenuSelect ()
+#12 0x06b00fa8 in 
+wxMacTopLevelMouseEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#13 0x06ab91f4 in wxMacAppEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#14 0x92881fa0 in DispatchEventToHandlers ()
+#15 0x92882214 in SendEventToEventTargetInternal ()
+#16 0x928946bc in SendEventToEventTarget ()
+#17 0x929c3538 in HandleMouseEvent(OpaqueEventRef*) ()
+#18 0x92892c5c in 
+ToolboxEventDispatcherHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#19 0x9288205c in DispatchEventToHandlers ()
+#20 0x92882214 in SendEventToEventTargetInternal ()
+#21 0x928946bc in SendEventToEventTarget ()
+#22 0x001ae698 in GHOST_SystemCarbon::processEvents(bool) ()
+#23 0x0000ce14 in winlay_process_events ()
+#24 0x00005a14 in wait_for_event ()
+#25 0x00005b34 in screen_qread ()
+#26 0x0000b5cc in screenmain ()
+#27 0x00003cc4 in main ()
+#28 0x0000279c in _start (argc=8, argv=0xbffffdf4, envp=0xbffffe18) at 
+/SourceCache/Csu/Csu-57/crt.c:272
+#29 0x0000263c in start ()
+
+
+Bug 2: is not occuring no argv files are open ...
+
+
+From spe.stani.be at gmail.com  Sat Nov 26 23:45:03 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sat, 26 Nov 2005 23:45:03 +0100
+Subject: [spe-mac] SPE 0.8.0.a released!
+Message-ID: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com>
+
+Dear SPE users,
+
+Let me pre-announce SPE 0.8.0.a This is a major step forward for all
+platforms, especially for MacOS X.
+
+This new release brings you basic project management through workspaces
+(thanks to Thurston Stone), an improved sidebar and pydoc viewer. This is
+the first release which is also developed and tested on the Mac. If SPE is
+stable enough, I'll try to build SPE as an application for the Mac. This
+version aims stability, so please help to report and fix all bugs!
+
+The advertisements on SPE's websites generate a moderate, but necesssary
+income. From now on if you donate, you can ask me by email an ad-free, nice
+pdf version of the manual. I hope this will be a stimulation.
+
+:**New features**:
+
+- stability
+- workspaces to manage your projects
+- documentation viewer (pydoc)
+- smart indentation: dedent after break, return, etc...
+- realtime updating of sidebar: explore, todo &amp; index
+- check source realtime for syntax errors (optional)
+- backup files (.py.bak) are now optional
+
+:**Bug fixes**:
+
+- all these mac bugs are fixed:
+
+ + SPE crashes on close
+ + preferences dialog: combobox bug
+ + debug dialog: combobox bug
+ + wxGlade won't launch
+ + winPdb won't launch
+ + 2x window menu bug
+ + context menu bug
+ + open &amp; run in terminal emulator
+ + pythonw debug message
+ + spe script bug
+ + exception when closing file
+ + PyChecker
+
+:**Installation**:
+
+See http://pythonide.stani.be/manual/html/manual2.html There is now an
+update section for MacOS X!
+
+:**Contributors**:
+
+- Thurston Stone (workspaces)
+- Glenn Washburn (patches)
+- Henning Hraban Ramm (Mac support)
+- Kay Fricke (Mac support)
+- Stefan Csomor (wxMac support)
+- and many more...
+
+:**Donations**:
+
+Special thanks to Richard Brown of Dartware for starting the fund raising
+campaign of the mini-mac for SPE. A lot of the donations below are done
+specifically for this purpose. Impressive that the smallest user base of SPE
+generated generously the largest donations ever. Many thanks. Maybe it's
+time now for Window and Linux users to catch up!
+
+- Dartware (250 euro)
+- Rick Thomas (161 euro)
+- Brian Myers (100 euro)
+- Advanced Concepts AG (50 euro)
+- Ernesto Costa (50 euro)
+- Henning Hraban Ramm (50 euro)
+- Peter Koppatz (50 euro)
+- Kevin Murphy (50 euro)
+- Stefano Morandi (50 euro)
+- Kenneth McDonald (40 euro)
+- Barrett Smith (25 euro)
+- Irakli Nadareishvili (20 euro)
+- Jonathan Roadley-Battin (20 euro)
+- Brendan Simons (15 euro)
+- Edwin Ellis (15 euro)
+- Ian Ozsvald (15 euro)
+- Michael Smith (15 euro)
+- Eduardo Gonzalez (10 euro)
+- Phil Hargett (10 euro)
+- David Diskin (5 euro)
+
+Thanks for this generous support!
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051126/767c15f8/attachment.html>
+
+From kay.fricke at merz-akademie.de  Sun Nov 27 03:03:38 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Sun, 27 Nov 2005 03:03:38 +0100
+Subject: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com>
+References: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com>
+Message-ID: <438913FA.9090402@merz-akademie.de>
+
+Hi Stani,
+
+Great to hear the plans ... and thanx very much for the credits.
+
+so here comes straight a bit info about from my testing tour:
+
+1.) Worskpace Issue
+If you try to save a workspace without any file open, spe crashes ...
+True its a dumb idea to do that, but this error should be catched, and 
+gracefully handled with a dialog that explains something.
+
+2.) Tools Menue
+- Kiki is not launching:
+
+2005-11-27 02:12:54.199 open[781] LSOpenFromURLSpec() returned -1 for 
+application /Applications/SPE-OSX/KikiOSX.app path (null).
+2005-11-27 02:12:54.199 open[781] Couldn't launch application: 
+/Applications/SPE-OSX/KikiOSX.app
+
+3.) Tooltips for the Buttons
+- Showing the Windows keyboard shortcuts (ctrl-Z for undo, alt-F4 for 
+quit etc.)
+
+4.) Tabs
+- In the Find Tab the Results, i guess ListCtrl, is so big that it 
+overlays the tab buttons, (my screen is 1024x768), so i have to resize 
+the panel to change to another tab
+
+- Notes Tab, or also in Sidebar
+typed Text is only fully visible after a return, only a few pixels of 
+the cursor are blinking
+
+- Tooltips for the Tab-Buttons would be a nice to have
+
+5.) Show/Hide Shell
+- doesn't change the view
+
+6.) Blender and Spe
+(I think we delay this issues until all other things are stable, so this 
+is just for book)
+- Still blender python hangs when spe is quit.
+   Same problem as reported.
+
+- the Menue Functions and Buttons for blender don't work, neither 
+'Redraw Blender Window' nor 'Open in Blender', and 'Reference in Blender'
+
+- Workspace is different from that of the lone standing spe
+   - After launch in blender, workspace for lonestanding is empty
+   - relaunch in blender shows the files edited under blender start
+
+- Blender Tab, the leftmost Scroll List is not selectable
+
+
+Sorry that its just that unordered issue list, next time i'll try to be 
+a bit more orderly ...
+
+greetz to all, and have a nice sunday
+
+kay
+
+
+From spe.stani.be at gmail.com  Sun Nov 27 06:56:11 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 27 Nov 2005 06:56:11 +0100
+Subject: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <438913FA.9090402@merz-akademie.de>
+References: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com>
+	 <438913FA.9090402@merz-akademie.de>
+Message-ID: <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com>
+
+Subversion 85+ is committed.
+
+On 11/27/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+>
+> Hi Stani,
+>
+> Great to hear the plans ... and thanx very much for the credits.
+
+
+As I want to speed up the development and not getting too much feedback on
+the subversion, I tought it was time for a release ;-) Moreover this version
+is anyway better than any previous one.
+
+so here comes straight a bit info about from my testing tour:
+>
+> 1.) Worskpace Issue
+> If you try to save a workspace without any file open, spe crashes ...
+> True its a dumb idea to do that, but this error should be catched, and
+> gracefully handled with a dialog that explains something.
+
+
+Can you send me the error log. I agree with you, but I couldn't reproduce
+the error on Windows XP SP2 or MacOS X 10.4. So then I know what to fix.
+
+2.) Tools Menue
+> - Kiki is not launching:
+>
+> 2005-11-27 02:12:54.199 open[781] LSOpenFromURLSpec() returned -1 for
+> application /Applications/SPE-OSX/KikiOSX.app path (null).
+> 2005-11-27 02:12:54.199 open[781] Couldn't launch application:
+> /Applications/SPE-OSX/KikiOSX.app
+
+
+Fixed in subversion.
+
+3.) Tooltips for the Buttons
+> - Showing the Windows keyboard shortcuts (ctrl-Z for undo, alt-F4 for
+> quit etc.)
+
+
+I now fixed to replace Ctrl with Cmd (is this ok?), but with what should I
+replace Alt?  In subversion, _spe/Menu.py:
+def _(x):
+    if '|' in x and info.DARWIN:
+        return x.replace('Ctrl','Cmd')
+    else:
+        return x
+
+
+4.) Tabs
+> - In the Find Tab the Results, i guess ListCtrl, is so big that it
+> overlays the tab buttons, (my screen is 1024x768), so i have to resize
+> the panel to change to another tab
+
+
+My screen too ;-) Confirmed, will fix it.
+
+- Notes Tab, or also in Sidebar
+> typed Text is only fully visible after a return, only a few pixels of
+> the cursor are blinking
+
+
+Confirmed, will try to fix it, but it is weird.
+
+- Tooltips for the Tab-Buttons would be a nice to have
+
+
+This is not possible afaik.
+
+5.) Show/Hide Shell
+> - doesn't change the view
+
+
+Confirmed, will fix.
+
+6.) Blender and Spe
+> (I think we delay this issues until all other things are stable, so this
+> is just for book)
+
+
+Yes, Blender support is postponed, as Blender 2.40 is not stable itself
+(especially concerning sys.path). You can put them in the bug tracker. Put
+them in category 'Plugin'.
+
+- Still blender python hangs when spe is quit.
+>    Same problem as reported.
+>
+> - the Menue Functions and Buttons for blender don't work, neither
+> 'Redraw Blender Window' nor 'Open in Blender', and 'Reference in Blender'
+>
+> - Workspace is different from that of the lone standing spe
+>    - After launch in blender, workspace for lonestanding is empty
+>    - relaunch in blender shows the files edited under blender start
+>
+> - Blender Tab, the leftmost Scroll List is not selectable
+>
+>
+> Sorry that its just that unordered issue list, next time i'll try to be
+> a bit more orderly ...
+
+
+That's ok. I'm happy with all feedback.
+
+greetz to all, and have a nice sunday
+
+
+You too!
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051127/205faeae/attachment.html>
+
+From kay.fricke at merz-akademie.de  Sun Nov 27 11:14:00 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Sun, 27 Nov 2005 11:14:00 +0100
+Subject: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com>
+References: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com>	 <438913FA.9090402@merz-akademie.de> <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com>
+Message-ID: <438986E8.7060707@merz-akademie.de>
+
+SPE Stani's Python Editor wrote:
+> Subversion 85+ is committed.
+> 
+> On 11/27/05, *Kay Fricke* <kay.fricke at merz-akademie.de 
+> <mailto:kay.fricke at merz-akademie.de>> wrote:
+> 
+>     Hi Stani,
+> 
+>     Great to hear the plans ... and thanx very much for the credits.
+> 
+> 
+> As I want to speed up the development and not getting too much feedback 
+> on the subversion, I tought it was time for a release ;-) Moreover this 
+> version is anyway better than any previous one.
+> 
+>     so here comes straight a bit info about from my testing tour:
+> 
+>     1.) Worskpace Issue
+>     If you try to save a workspace without any file open, spe crashes ...
+>     True its a dumb idea to do that, but this error should be catched, and
+>     gracefully handled with a dialog that explains something.
+> 
+> 
+> Can you send me the error log. I agree with you, but I couldn't 
+> reproduce the error on Windows XP SP2 or MacOS X 10.4. So then I know 
+> what to fix.
+> 
+
+seems to be fixed with the current version, not reproducable anymore ...
+
+>     2.) Tools Menue
+>     - Kiki is not launching:
+> 
+>     2005-11-27 02:12:54.199 open[781] LSOpenFromURLSpec() returned -1 for
+>     application /Applications/SPE-OSX/KikiOSX.app path (null).
+>     2005-11-27 02:12:54.199 open[781] Couldn't launch application:
+>     /Applications/SPE-OSX/KikiOSX.app
+> 
+> 
+> Fixed in subversion.
+> 
+>     3.) Tooltips for the Buttons
+>     - Showing the Windows keyboard shortcuts (ctrl-Z for undo, alt-F4 for
+>     quit etc.)
+> 
+> 
+> I now fixed to replace Ctrl with Cmd (is this ok?), but with what should 
+> I replace Alt?  In subversion, _spe/Menu.py:
+> def _(x):
+>     if '|' in x and info.DARWIN:
+>         return x.replace('Ctrl','Cmd')
+>     else:
+>         return x
+> 
+the Tooltips show alt-F4 for quit, which is Cmd-Q on the make. Thats 
+right in the Menues, only Toolstips for the buttons in the Toolbar are 
+still Win-Style.
+
+maybe also an Issue:
+- a few F-Keys seem to be reserved for Finder Behaviours, here its F9 
+and F11
+
+> 
+>     4.) Tabs
+>     - In the Find Tab the Results, i guess ListCtrl, is so big that it
+>     overlays the tab buttons, (my screen is 1024x768), so i have to resize
+>     the panel to change to another tab
+> 
+> 
+> My screen too ;-) Confirmed, will fix it.
+> 
+>     - Notes Tab, or also in Sidebar
+>     typed Text is only fully visible after a return, only a few pixels of
+>     the cursor are blinking
+> 
+> 
+> Confirmed, will try to fix it, but it is weird.
+> 
+>     - Tooltips for the Tab-Buttons would be a nice to have
+> 
+> 
+> This is not possible afaik.
+> 
+>     5.) Show/Hide Shell
+>     - doesn't change the view
+> 
+> 
+> Confirmed, will fix.
+> 
+>     6.) Blender and Spe
+>     (I think we delay this issues until all other things are stable, so
+>     this
+>     is just for book)
+> 
+> 
+> Yes, Blender support is postponed, as Blender 2.40 is not stable itself 
+> (especially concerning sys.path). You can put them in the bug tracker. 
+> Put them in category 'Plugin'.
+> 
+>     - Still blender python hangs when spe is quit.
+>        Same problem as reported.
+> 
+>     - the Menue Functions and Buttons for blender don't work, neither
+>     'Redraw Blender Window' nor 'Open in Blender', and 'Reference in
+>     Blender'
+> 
+>     - Workspace is different from that of the lone standing spe
+>        - After launch in blender, workspace for lonestanding is empty
+>        - relaunch in blender shows the files edited under blender start
+> 
+>     - Blender Tab, the leftmost Scroll List is not selectable
+> 
+
+I'll test that anyways, 'cause its my main goal at the moment, to do 
+some Blender Scripting with Spe on the mac ... :D so I'll update here 
+with alll the new blender-builds I get.
+
+
+>     Sorry that its just that unordered issue list, next time i'll try to be
+>     a bit more orderly ...
+> 
+> 
+> That's ok. I'm happy with all feedback.
+> 
+>     greetz to all, and have a nice sunday
+> 
+> 
+> You too!
+> 
+> Stani
+> 
+
+have nice 1. advent ...
+
+kay
+
+
+
+From czhang.cmu at gmail.com  Sun Nov 27 11:14:48 2005
+From: czhang.cmu at gmail.com (Cheng Zhang)
+Date: Sun, 27 Nov 2005 18:14:48 +0800
+Subject: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com>
+References: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com> <438913FA.9090402@merz-akademie.de> <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com>
+Message-ID: <1FCCBF59-68EF-4C3D-9908-CFB5076ACDA0@gmail.com>
+
+I can't use the menu "Tools / Browse folder" after syncing to rev#85,  
+revert back to rev#84 also have the same problem.
+
+The stack trace is:
+Traceback (most recent call last):
+   File "/Users/czhang/project/oss/spe/trunk/_spe/Menu.py", line 369,  
+in menu_browse_folder
+     self.parentPanel.browse_folder()
+   File "/Users/czhang/project/oss/spe/trunk/_spe/Parent.py", line  
+558, in browse_folder
+     webbrowser.open(dirname(fileName))
+   File "/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/webbrowser.py", line 43, in open
+     get().open(url, new, autoraise)
+   File "/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/webbrowser.py", line 315, in open
+     ic.launchurl(url)
+   File "/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/plat-mac/ic.py", line 235, in launchurl
+     return _dft_ic.launchurl(url, hint)
+   File "/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/plat-mac/ic.py", line 202, in launchurl
+     self.ic.ICLaunchURL(hint, url, 0, len(url))
+MacOS.Error: (-673, 'no URL found')
+
+Is such info enough?
+
+- Cheng
+
+On Nov 27, 2005, at 1:56 PM, SPE Stani's Python Editor wrote:
+
+> Subversion 85+ is committed.
+
+
+
+From Richard.E.Brown at DARTWARE.COM  Sun Nov 27 15:36:27 2005
+From: Richard.E.Brown at DARTWARE.COM (Richard E. Brown)
+Date: 27 Nov 2005 09:36:27 EST
+Subject: [spe-mac] SPE 0.8.0.a released!
+Message-ID: <2060180@blitz.dartware.com>
+
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051127/199c4549/attachment.ksh>
+
+From Richard.E.Brown at DARTWARE.COM  Mon Nov 28 04:27:02 2005
+From: Richard.E.Brown at DARTWARE.COM (Richard E. Brown)
+Date: 27 Nov 2005 22:27:02 EST
+Subject: [spe-mac] SPE 0.8.0.a released!
+Message-ID: <2060276@blitz.dartware.com>
+
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051127/5510f510/attachment.ksh>
+
+From spe.stani.be at gmail.com  Mon Nov 28 21:48:28 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Mon, 28 Nov 2005 21:48:28 +0100
+Subject: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <2060276@blitz.dartware.com>
+References: <2060276@blitz.dartware.com>
+Message-ID: <2078a7ad0511281248kce767delc59f9f1d280679e9@mail.gmail.com>
+
+Actually I have to discover how to label releases in SVN. Is there anyone
+using TortoiseSVN who can explain me quickly? But to answer your question
+the first one, so if SPE 0.8.0.a starts with 81, it's 81.
+Thanks,
+Stani
+
+On 27 Nov 2005 22:27:02 EST, Richard E. Brown <Richard.E.Brown at dartware.com>
+wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> Stani:
+>
+> Is there a way to tell which build of SPE is in use? They're all labeled
+> version
+> 0.8.0.a, but is it build 81, 82, 97, etc? Many thanks!
+>
+> Rich Brown
+> Hanover NH USA
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051128/55dae749/attachment.html>
+
+From spe.stani.be at gmail.com  Mon Nov 28 22:17:58 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Mon, 28 Nov 2005 22:17:58 +0100
+Subject: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <1FCCBF59-68EF-4C3D-9908-CFB5076ACDA0@gmail.com>
+References: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com>
+	 <438913FA.9090402@merz-akademie.de>
+	 <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com>
+	 <1FCCBF59-68EF-4C3D-9908-CFB5076ACDA0@gmail.com>
+Message-ID: <2078a7ad0511281317nfe24f4btb544fb9320364629@mail.gmail.com>
+
+It works for me on Tiger. How can I open a folder from Python in MacOS X? I
+do it with webbrowser.start. It seems to work on all platforms.
+
+Stani
+
+On 11/27/05, Cheng Zhang <czhang.cmu at gmail.com> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> I can't use the menu "Tools / Browse folder" after syncing to rev#85,
+> revert back to rev#84 also have the same problem.
+>
+> The stack trace is:
+> Traceback (most recent call last):
+>    File "/Users/czhang/project/oss/spe/trunk/_spe/Menu.py", line 369,
+> in menu_browse_folder
+>      self.parentPanel.browse_folder()
+>    File "/Users/czhang/project/oss/spe/trunk/_spe/Parent.py", line
+> 558, in browse_folder
+>      webbrowser.open(dirname(fileName))
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/webbrowser.py", line 43, in open
+>      get().open(url, new, autoraise)
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/webbrowser.py", line 315, in open
+>      ic.launchurl(url)
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/plat-mac/ic.py", line 235, in launchurl
+>      return _dft_ic.launchurl(url, hint)
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/plat-mac/ic.py", line 202, in launchurl
+>      self.ic.ICLaunchURL(hint, url, 0, len(url))
+> MacOS.Error: (-673, 'no URL found')
+>
+> Is such info enough?
+>
+> - Cheng
+>
+> On Nov 27, 2005, at 1:56 PM, SPE Stani's Python Editor wrote:
+>
+> > Subversion 85+ is committed.
+>
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051128/5d7afa82/attachment.html>
+
+From spe.stani.be at gmail.com  Tue Nov 29 01:01:44 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Tue, 29 Nov 2005 01:01:44 +0100
+Subject: [spe-mac] SPE 0.8.0.b released!
+Message-ID: <2078a7ad0511281601q19f1252ep5aee66c11bd32118@mail.gmail.com>
+
+Another pre-announcement of SPE 'Kay release' 0.8.0.b
+
+This release fixes the Windows installer and a lot of bugs, especially for
+Mac.
+
+:**Improved features**:
+
+- find in files
+
+:**Bug fixes**:
+
+- Find dialog focus
+- Workspace bugs (closing files)
+- Installer (Windows)
+- Sticky notes (Mac)
+- Find in files tab (mac)
+- Toolbar keyboard shortcut display (Mac)
+- Kiki: regex console (Mac)
+
+:**Installation**:
+
+See http://pythonide.stani.be/manual/html/manual2.html There is now an
+update section for MacOS X!
+
+:**Contributors**:
+
+- Thurston Stone (workspaces)
+
+:*Todo*:
+
+- Show/hide shell (Mac)
+- Tools > Browse folder (Mac) -> Does anybody know how to do this from
+python? webbrowser.start works for me on Tiger, but not for everyone.
+
+SVN 87
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051129/d284c222/attachment.html>
+
+From kay.fricke at merz-akademie.de  Tue Nov 29 18:45:52 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Tue, 29 Nov 2005 18:45:52 +0100
+Subject: [spe-mac] Wow, the kay release
+Message-ID: <438C93D0.1030505@merz-akademie.de>
+
+Dear Stani,
+
+thank you for that very nice present.
+and its working so very fine ...
+
+found just a few things to do, on my first sighting
+
+And in the next days I'll test and test and test and test ...
+
+today i have to take care of my head, cookin a bit soulfood and relax ...
+
+greetz to all
+
+kay
+
+
+From kay.fricke at merz-akademie.de  Wed Nov 30 12:42:25 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Wed, 30 Nov 2005 12:42:25 +0100
+Subject: [spe-mac] How about an Announcement on pythonmac-sig at pythin org?
+Message-ID: <438D9021.5010507@merz-akademie.de>
+
+Hi Stani,
+
+I already recommended the SPE IDE as my favorite to one thread asking 
+about Python IDE's on the mac.
+
+Shall I, or will you, make an announcement on the List about the new Mac 
+Porting efforts of Spe?
+
+greetz
+
+kay
+
+
+From czhang.cmu at gmail.com  Wed Nov 30 17:08:45 2005
+From: czhang.cmu at gmail.com (Cheng Zhang)
+Date: Thu, 1 Dec 2005 00:08:45 +0800
+Subject: Patch to fix "Tools / Browse folder" not working bug, was Re: [spe-mac] SPE 0.8.0.a released!
+In-Reply-To: <2078a7ad0511281317nfe24f4btb544fb9320364629@mail.gmail.com>
+References: <2078a7ad0511261445g55f1357eu8c0b5b12a56627cf@mail.gmail.com> <438913FA.9090402@merz-akademie.de> <2078a7ad0511262156o4b2c032cia403a8fdd9f861a1@mail.gmail.com> <1FCCBF59-68EF-4C3D-9908-CFB5076ACDA0@gmail.com> <2078a7ad0511281317nfe24f4btb544fb9320364629@mail.gmail.com>
+Message-ID: <D2F910A9-0CAF-4FE5-90B0-7B5CC6726E3B@gmail.com>
+
+Mine is Tiger as well (10.4.3). :-)
+Actually, I know why I had the problem but you didn't. I used this  
+function when no file was opened. When there is at least a file  
+opened, the "Tools / Browse folder" works fine. So I made such fix:
+------
+Index: _spe/Parent.py
+===================================================================
+--- _spe/Parent.py      (revision 87)
++++ _spe/Parent.py      (working copy)
+@@ -556,7 +556,10 @@
+          """Browse folder"""
+          fileName=self.app.childActive.fileName
+          if fileName[0]=='/': fileName = 'file://'+fileName
+-        webbrowser.open(dirname(fileName))
++        try:
++            webbrowser.open(dirname(fileName))
++        except Exception:
++            webbrowser.open('file://'+os.getcwd())
+      def run(self):
+          """Run file"""
+------
+
+- Cheng
+
+On Nov 29, 2005, at 5:17 AM, SPE Stani's Python Editor wrote:
+
+> It works for me on Tiger. How can I open a folder from Python in  
+> MacOS X? I do it with webbrowser.start. It seems to work on all  
+> platforms.
+>
+> Stani
+>
+> On 11/27/05, Cheng Zhang <czhang.cmu at gmail.com> wrote:  
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate  
+> _______________________________________________
+> I can't use the menu "Tools / Browse folder" after syncing to rev#85,
+> revert back to rev#84 also have the same problem.
+>
+> The stack trace is:
+> Traceback (most recent call last):
+>    File "/Users/czhang/project/oss/spe/trunk/_spe/Menu.py", line 369,
+> in menu_browse_folder
+>      self.parentPanel.browse_folder()
+>    File "/Users/czhang/project/oss/spe/trunk/_spe/Parent.py", line
+> 558, in browse_folder
+>      webbrowser.open(dirname(fileName))
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/webbrowser.py", line 43, in open
+>      get().open(url, new, autoraise)
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/webbrowser.py", line 315, in open
+>      ic.launchurl(url)
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/plat-mac/ic.py", line 235, in launchurl
+>      return _dft_ic.launchurl(url, hint)
+>    File "/Library/Frameworks/Python.framework/Versions/2.4/lib/
+> python2.4/plat-mac/ic.py", line 202, in launchurl
+>      self.ic.ICLaunchURL(hint, url, 0, len(url))
+> MacOS.Error: (-673, 'no URL found')
+>
+> Is such info enough?
+>
+> - Cheng
+>
+
+
+
+
+From spe.stani.be at gmail.com  Wed Nov 30 21:15:31 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 30 Nov 2005 21:15:31 +0100
+Subject: [spe-mac] NotebookCtrl Widget Problem On Mac FIXED!!
+Message-ID: <2078a7ad0511301215j398c0bf6k8f7b78dfd997ff35@mail.gmail.com>
+
+Hi Andrea,
+
+Thanks to SPE Mac users who sponsered SPE with a Mini Mac, I was able to
+debug your control with winpdb debugger. So now the light is green to get
+your control into SPE.
+
+After plunging in the code, I managed to get the control working. The
+problem is that wxMac doesn't seem to support the wx.DefaultSize (-1,-1)
+which is always transformed in (0,0). So setting the size to like
+wx.Size(28,28)
+solves the issue. I'll email you privately with the patch.
+
+I'm not sure if it is 100% stable. I found some bugs, which I also will send
+to you.
+
+For those who like to see the screenshot:
+http://pythonide.stani.be/images/NotebookCtrl.png
+
+Best regards,
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051130/241b3a97/attachment.html>
+

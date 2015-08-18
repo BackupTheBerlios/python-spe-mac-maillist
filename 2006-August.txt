@@ -1,0 +1,55 @@
+From redefined.horizons at gmail.com  Tue Aug 15 01:30:27 2006
+From: redefined.horizons at gmail.com (Redefined Horizons)
+Date: Mon, 14 Aug 2006 16:30:27 -0700
+Subject: [spe-mac] Plug-In Model
+Message-ID: <e24752a10608141630lef6b1f6r39e4d34dccf5a6f3@mail.gmail.com>
+
+Just discovered and downloaded SPE, and I can't wait to use it. I'm
+also glad to see that someone has put togehter a Debian package for
+the program. I just have one question about the IDE.
+
+Does SPE have a plug-in model that allows for easy extension?
+
+Thanks,
+
+Scott Huey
+
+
+From spe.stani.be at gmail.com  Fri Aug 18 20:00:50 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 18 Aug 2006 20:00:50 +0200
+Subject: [spe-mac] Plug-In Model
+In-Reply-To: <e24752a10608141630lef6b1f6r39e4d34dccf5a6f3@mail.gmail.com>
+References: <e24752a10608141630lef6b1f6r39e4d34dccf5a6f3@mail.gmail.com>
+Message-ID: <2078a7ad0608181100p48dcc9em6797d2cbd801b03@mail.gmail.com>
+
+Not yet, unfortunately. If you know wxPython it is quite easy to extend.
+
+Stani
+
+On 8/15/06, Redefined Horizons <redefined.horizons at gmail.com> wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate _______________________________________________
+> Just discovered and downloaded SPE, and I can't wait to use it. I'm
+> also glad to see that someone has put togehter a Debian package for
+> the program. I just have one question about the IDE.
+>
+> Does SPE have a plug-in model that allows for easy extension?
+>
+> Thanks,
+>
+> Scott Huey
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://bat.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+-- 
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+

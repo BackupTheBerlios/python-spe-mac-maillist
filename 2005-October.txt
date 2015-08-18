@@ -1,0 +1,68 @@
+From spe.stani.be at gmail.com  Thu Oct 20 21:30:15 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 20 Oct 2005 21:30:15 +0200
+Subject: [spe-mac] Fund raising for SPE on Mac Os X is great success!!
+Message-ID: <2078a7ad0510201230o97509d8lb847d33880361536@mail.gmail.com>
+
+Hi,
+
+I'd like to thank everyone who contributed, especially Richard Brown from
+Dartware <http://www.dartware.com/> and Rick Thomas. I'm highly impressed
+that the smallest user base of SPE collected the largest donation ever to
+SPE. Now it's my turn to impress the SPE Mac users.
+
+As such the light is green for SPE on the Mac. First I will buy a Mac and
+get used to it. Then I will optimize SPE for the Mac and try to release
+simultaneously. Be patient as this will take some time. The next releases (
+0.7) will be based on work I did before. But from 0.8 releases SPE will also
+be tested & developed on Mac.
+
+Please subscribe to the mailing list as a
+developer<https://lists.berlios.de/mailman/listinfo/python-spe-dev>,
+user <https://lists.berlios.de/mailman/listinfo/python-spe-users> and/or mac
+user <https://lists.berlios.de/mailman/listinfo/python-spe-mac>. Of course
+donations <http://www.stani.be/python/spe/blog/sm_donate> are still welcome.
+
+
+Stani
+
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051020/7b7fa1c0/attachment.html>
+
+From spe.stani.be at gmail.com  Thu Oct 27 08:37:34 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 27 Oct 2005 08:37:34 +0200
+Subject: [spe-mac] ANN: SPE 0.7.5.d soon released!
+Message-ID: <2078a7ad0510262337u4cd4fc7ck43be556ac0aa7dfa@mail.gmail.com>
+
+I'm currently packaging the new SPE. The release is a matter of minutes.
+Next releases (0.8.*) will focus on the Mac in honour of the fund raising
+for the purchase of a Mac. Read more on the homepage<http://pythonide.stani.be/>
+.
+
+  *New features*:
+
+   - UML export to bitmap (bmp, gif, jpg, pcx, png, pnm, tif, xbm, xpm),
+   to vector drawing (eps) or to printer (pdf).
+   - Dialog box for passing arguments and options to debugger.
+   - Unicode support (specify encoding in source file)
+
+  **
+
+ You can read more on the SPE news blog.
+
+It would be nice if some (experienced) Mac users would subscribe to the
+developers mailing list to speed up the Mac port for SPE. I expect my new
+Mac any moment.
+
+Stani
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051027/644d9667/attachment.html>
+

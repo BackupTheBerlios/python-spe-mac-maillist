@@ -1,0 +1,716 @@
+From kay.fricke at merz-akademie.de  Thu Dec  1 13:48:53 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Thu, 01 Dec 2005 13:48:53 +0100
+Subject: [spe-mac] Rev. 88 Crashes on startup with open Files
+Message-ID: <438EF135.2020701@merz-akademie.de>
+
+Hi Stani,
+
+the Revision 88 which I just updated to, is crashing starting with open 
+files on startup, works okay when the workspace is removed, but 
+reoccures when workspace is saved and spe reopened:
+
+Create: MdiSplit: <class 'sm.wxp.smdi.MdiSplitChildFrame'> 
+SimpleVehicle.py /Users/marie/Documents/kay-dld/PyOpenSteer/SimpleVehicle.py
+Create: Sdi:   <class 'sm.wxp.smdi.MdiSplitChildFrame'>.tabs
+Traceback (most recent call last):
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/SPE.py", 
+line 200, in ?
+     style           = style)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 1156, in __init__
+     wx.App.__init__(self,redirect=not debug)
+   File 
+"//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", 
+line 7473, in __init__
+     self._BootstrapApp()
+   File 
+"//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", 
+line 7125, in _BootstrapApp
+     return _core_.PyApp__BootstrapApp(*args, **kwargs)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 1175, in OnInit
+     style   = self.style,
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 714, in __init__
+     Parent.__init__(self,app=app,page=page,**options)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 508, in __init__
+     parentFrame     = self,
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 247, in __init__
+     self.__finish__()
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 512, in __finish__
+     Framework.__finish__(self)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 343, in __finish__
+     self.panel.__finish__()
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", 
+line 129, in __finish__
+     self.__frame__()
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", 
+line 175, in __frame__
+     self.__remember__(openFiles=self._openFiles)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", 
+line 195, in __remember__
+     self.loadWorkspace()
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", 
+line 328, in loadWorkspace
+     verbose     = True)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", 
+line 783, in openList
+     child=self.new(name=fileName,source=source,maximize=maximize)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", 
+line 385, in new
+     maximize    = maximize)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 1019, in __init__
+     extra       = extra,
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 796, in __init__
+     extra       = extra,
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 247, in __init__
+     self.__finish__()
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 806, in __finish__
+     Framework.__finish__(self)
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sm/wxp/smdi.py", 
+line 343, in __finish__
+     self.panel.__finish__()
+   File 
+"/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Child.py", 
+line 103, in __finish__
+     frame.setTitle(page=self.name,extra=self._fileName,colour=wx.WHITE)
+TypeError: setTitle() got an unexpected keyword argument 'colour'
+
+
+
+
+From spe.stani.be at gmail.com  Thu Dec  1 14:59:38 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 1 Dec 2005 14:59:38 +0100
+Subject: [spe-mac] SVN89:Kay fix+encoding+browse folder
+Message-ID: <2078a7ad0512010559y7692ca23k49d0c789b0374a49@mail.gmail.com>
+
+The bug reported by Kay was because of a stupid typo (color instead of
+colour). I also applied patches for encoding and browse folder (Cheng).
+Please test,test,test,...
+Stani
+
+On 12/1/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> Hi Stani,
+>
+> the Revision 88 which I just updated to, is crashing starting with open
+> files on startup, works okay when the workspace is removed, but
+> reoccures when workspace is saved and spe reopened:
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051201/cd8b0dc5/attachment.html>
+
+From spe.stani.be at gmail.com  Thu Dec  1 15:55:40 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 1 Dec 2005 15:55:40 +0100
+Subject: [spe-mac] How about an Announcement on pythonmac-sig at pythin org?
+In-Reply-To: <438D9021.5010507@merz-akademie.de>
+References: <438D9021.5010507@merz-akademie.de>
+Message-ID: <2078a7ad0512010655y720b9306k7bbe927d51bf25f3@mail.gmail.com>
+
+Hi Kay,
+I will announce on the mac lists, but I wanted to be sure that most
+obvious bugs are ironed out. I really appreciate anyone promoting SPE 
+on blogs, newsgroups, ... Spread the word!
+Thanks,
+Stani
+
+On 11/30/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate _______________________________________________
+> Hi Stani,
+>
+> I already recommended the SPE IDE as my favorite to one thread asking
+> about Python IDE's on the mac.
+>
+> Shall I, or will you, make an announcement on the List about the new Mac
+> Porting efforts of Spe?
+>
+> greetz
+>
+> kay
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From kay.fricke at merz-akademie.de  Thu Dec  1 15:56:23 2005
+From: kay.fricke at merz-akademie.de (Kay Fricke)
+Date: Thu, 01 Dec 2005 15:56:23 +0100
+Subject: [spe-mac] SVN89:Kay fix+encoding+browse folder
+In-Reply-To: <2078a7ad0512010559y7692ca23k49d0c789b0374a49@mail.gmail.com>
+References: <2078a7ad0512010559y7692ca23k49d0c789b0374a49@mail.gmail.com>
+Message-ID: <438F0F17.4080004@merz-akademie.de>
+
+SPE Stani's Python Editor wrote:
+> The bug reported by Kay was because of a stupid typo (color instead of 
+> colour). I also applied patches for encoding and browse folder (Cheng).
+> Please test,test,test,...
+> Stani
+> 
+> On 12/1/05, *Kay Fricke* <kay.fricke at merz-akademie.de 
+> <mailto:kay.fricke at merz-akademie.de>> wrote:
+> 
+>     _______________________________________________
+>     http://pythonide.stani.be
+>     http://pythonide.stani.be/manual/html/manual.html
+>     <http://pythonide.stani.be/manual/html/manual.html>
+>     http://pythonide.stani.be/blog/sm_donate
+>     _______________________________________________
+>     Hi Stani,
+> 
+>     the Revision 88 which I just updated to, is crashing starting with open
+>     files on startup, works okay when the workspace is removed, but
+>     reoccures when workspace is saved and spe reopened:
+> 
+> 
+Still the color typo in Child.py present at current update rev.91 ...
+
+
+From spe.stani.be at gmail.com  Thu Dec  1 16:05:29 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 1 Dec 2005 16:05:29 +0100
+Subject: [spe-mac] SVN89:Kay fix+encoding+browse folder
+In-Reply-To: <438F0F17.4080004@merz-akademie.de>
+References: <2078a7ad0512010559y7692ca23k49d0c789b0374a49@mail.gmail.com>
+	 <438F0F17.4080004@merz-akademie.de>
+Message-ID: <2078a7ad0512010705h63fb53a1n16e9d27b8c531104@mail.gmail.com>
+
+On 12/1/05, Kay Fricke <kay.fricke at merz-akademie.de> wrote:
+>
+> _______________________________________________
+>
+> Still the color typo in Child.py present at current update rev.91 ...
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+Really?! Where? Can you specify? Please post development issues to spe-dev.
+Thanks,
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051201/7f3c4903/attachment.html>
+
+From spe.stani.be at gmail.com  Sat Dec  3 18:17:39 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sat, 3 Dec 2005 18:17:39 +0100
+Subject: [spe-mac] SPE 0.8.0.c released!
+Message-ID: <2078a7ad0512030917m26b67c0atc72e04534b473d4@mail.gmail.com>
+
+NEW RELEASE
+Another pre-announcement to the SPE mailing lists... This release is
+for those, who like close buttons on the tabs. This is a beta release,
+to test if there are problems with this new tab feature. I tested it
+on Mac & Windows and hope this will work well. The code for the tabs
+was developped by Andrea Gavana and partly bugfixed by me.
+
+CALL FOR HELP!!
+I'm having problems implementing the encoding in the right way for
+SPE. If anyone of you could help me to solve this issue once and for
+ever, it would be very nice. This bug still prevents a lot of users to
+choose for SPE. Don't help me, but help them ;-)
+Contact me if you know the solution. For more info look at the bottom.
+I have some nasty test files to verify your patches ;-)
+
+DETAILS
+:**Improved features**:
+
+- Better tabs with close button and colors (white belongs to workspace)
+
+:**Bug fixes**:
+
+- encoding according to PEP
+- browse folder
+- win98 support for 'run in terminal'
+
+:**Installation**:
+
+- See http://pythonide.stani.be/manual/html/manual2.html
+- There is now an update section for MacOS X!
+
+:**Contributors**:
+
+- Andrea Gavana (enhanced tabs)
+
+:**Todo**:
+
+- Show/hide shell (Mac)
+- Drag and drop tabs
+
+:**Development**:
+
+- http://developer.berlios.de/mail/?group_id=4161
+
+SVN 91
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+--
+CALL FOR HELP (continued)
+These codes deal with the encoding (1&2) and at the bottom (3) you'll
+find a bug report...
+
+1
+getEncoding in Child.py  (about line 1117):
+    def getEncoding(self,source):
+        if source.startswith(u'\xef\xbb\xbf'):
+            self.encoding = "utf8"
+            return
+        first2lines         = "".join(source.split("\n")[:2])
+        encode_hit          = RE_ENCODING.search(first2lines)
+        if encode_hit:
+            #find in source
+            self.encoding   = encode_hit.group(1)
+        else:
+            #get default values
+            if self.parentPanel.defaultEncoding == '<default>':
+                #wx.GetDefaultPyEncoding() when SPE was launched
+                self.encoding   = INFO['encoding']
+            else:
+                #as in preferences
+                self.encoding   = self.parentPanel.defaultEncoding
+        if self.encoding == 'ascii':
+            #avoid obvious trap
+            try:
+                str(source)
+            except:
+                self.setStatus('Warning: SPE uses "utf8" instead of
+"ascii" codec.')
+                self.encoding   = 'utf8'
+        self.encoding = str(self.encoding)
+
+2
+updateExplore in Child.py (about line 813):
+            encode_hit  = False
+            if line < 3:
+                if line == 0 and l.startswith(u'\xef\xbb\xbf'):
+                    self.encoding = "utf8"
+                    encode_hit = True
+                else:
+                    enc = RE_ENCODING.search(l)
+                    if enc:
+                        self.encoding = str(enc.group(1))
+                        encode_hit = True
+
+3
+SPE v0.8.0.c (c)2003-2005 www.stani.be
+
+Spe is running in debugging mode with this configuration:
+- platform  : linux2
+- python    : 2.3.5
+- wxPython  : 2.6.1.0.
+- interface : <default>
+- encoding  : ISO8859-1
+
+Launching application...
+
+<-cut->
+
+Opening
+/home/michele/mnt/LINUX-UNIPEX/sviluppo/FreeImagePy/FreeImagePy/FreeImagePy.py
+Create: MdiSplit: <class 'sm.wxp.smdi.MdiSplitChildFrame'>
+FreeImagePy.py /home/michele/mnt/LINUX-UNIPEX/sviluppo/FreeImagePy/FreeImage
+Py/FreeImagePy.py
+Create: Sdi:   <class 'sm.wxp.smdi.MdiSplitChildFrame'>.tabs
+Traceback (most recent call last):
+  File "SPE.py", line 200, in ?
+    style           = style)
+  File "/home/michele/tmp/spe/trunk/_spe/sm/wxp/smdi.py", line 1197, in
+__init__
+    wx.App.__init__(self,redirect=not debug)
+
+<-cut->
+
+ File "/home/michele/tmp/spe/trunk/_spe/Child.py", line 105, in __finish__
+    self.__source__(self._fileName,self._source)
+  File "/home/michele/tmp/spe/trunk/_spe/Child.py", line 227, in __source__
+    self.revert(source)
+  File "/home/michele/tmp/spe/trunk/_spe/Child.py", line 1025, in revert
+    self.getEncoding(source)
+  File "/home/michele/tmp/spe/trunk/_spe/Child.py", line 1110, in
+getEncoding
+    if source.startswith(u'\xef\xbb\xbf'):
+UnicodeDecodeError: 'ascii' codec can't decode byte 0x92 in position
+21184: ordinal not in range(128)
+
+
+If I delete my ~/.spe directory, spe work well. I think that I have a
+char into my FreeImagePy file that doesn't like to spe, but the "old"
+version 0.8.0a worked well with the same souces.
+
+The same appear if I delete .spe directory and try to open the same file.
+
+
+Michele
+
+
+From spe.stani.be at gmail.com  Sun Dec 11 22:42:51 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 11 Dec 2005 22:42:51 +0100
+Subject: [spe-mac] Re: [spe-dev] SVN 94: Show/hide shell for Mac FIXED
+In-Reply-To: <0D4077E4-AC01-45BE-9787-06960D9258C7@tijdweb.nl>
+References: <2078a7ad0512102014j37c35842g9e356b568585df33@mail.gmail.com>
+	 <0D4077E4-AC01-45BE-9787-06960D9258C7@tijdweb.nl>
+Message-ID: <2078a7ad0512111342s30c0389dwa8473b505b873d3a@mail.gmail.com>
+
+Ok, one vote to hide shell by default. You can always show/hide it through
+the menu, keyboard shortcut F12 or the toolbar. Please Mac users bring out
+your vote. The majority will win!
+
+Stani
+
+On 12/11/05, T. Bloo <t.bloo at tijdweb.nl> wrote:
+>
+> hidden
+>
+>
+> On 11-dec-2005, at 5:14, SPE Stani's Python Editor wrote:
+>
+> > A question for Mac users, do you want
+> > to have the shell hidden by default or should it be shown?
+>
+> Stani
+>
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051211/d13d0eb7/attachment.html>
+
+From hraban at fiee.net  Mon Dec 12 17:57:24 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Mon, 12 Dec 2005 17:57:24 +0100
+Subject: [spe-mac] Re: [spe-dev] SVN 94: Show/hide shell for Mac FIXED
+In-Reply-To: <2078a7ad0512111342s30c0389dwa8473b505b873d3a@mail.gmail.com>
+References: <2078a7ad0512102014j37c35842g9e356b568585df33@mail.gmail.com> <0D4077E4-AC01-45BE-9787-06960D9258C7@tijdweb.nl> <2078a7ad0512111342s30c0389dwa8473b505b873d3a@mail.gmail.com>
+Message-ID: <B644456D-3609-40DE-A80E-424D6EEAEDA6@fiee.net>
+
+Am 2005-12-11 um 22:42 schrieb SPE Stani's Python Editor:
+
+> Ok, one vote to hide shell by default. You can always show/hide it  
+> through the menu, keyboard shortcut F12 or the toolbar. Please Mac  
+> users bring out your vote. The majority will win!
+
+I vote for "show".
+
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net
+http://contextgarden.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+From spe.stani.be at gmail.com  Mon Dec 12 23:30:42 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Mon, 12 Dec 2005 23:30:42 +0100
+Subject: [spe-mac] SPE 0.8.1.a will soon be released!
+Message-ID: <2078a7ad0512121430p2e5f909fn218bdf761f9706dc@mail.gmail.com>
+
+Hi,
+Another pre-announcement... I'm going now to release!
+Stani
+
+SPE 0.8.1.a This release is the result of a complete rewrite of the run
+system. It's now possible to run multi-threaded applications (like wxPython,
+gtk, ...) with SPE and still control them through the debugger. Also
+selected text can be executed in the shell.
+
+Read more at http://pythonide.stani.be/manual/html/manual3.html (see
+1.3Running files)..
+  *New features*:
+
+   - launch the debugger at any time at a running script
+   - launch the debugger at unhandled exceptions when running your script
+   - execute selected lines as code snippets in the shell
+
+  *Improved features*:
+
+   - redesigned toolbar
+
+  *Bug fixes*:
+
+   - Show/hide shell (Mac)
+
+  *Installation*:
+
+   - See http://pythonide.stani.be/manual/html/manual2.html
+   - There is now an update section for MacOS X!
+
+  *Contributors*:
+
+   - Nir Aides (debug support)
+   - Thurston Stone (bug report)
+
+  *Todo*:
+
+   - Drag and drop tabs
+   - Show/Hide toolbar
+
+  *Development*:
+
+   - http://developer.berlios.de/mail/?group_id=4161
+
+ *Donations (finally)*:
+
+   - Widhaya Trisarnwadhana
+
+SVN 97
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051212/4c9adc4c/attachment.html>
+
+From spe.stani.be at gmail.com  Fri Dec 16 20:21:18 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Fri, 16 Dec 2005 20:21:18 +0100
+Subject: [spe-mac] python 2.3
+Message-ID: <2078a7ad0512161121k38b5f4fbr3cce63fb19bff82@mail.gmail.com>
+
+Hi,
+Can anyone who uses Python2.3 email me privately?
+Thanks,
+Stani
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From spe.stani.be at gmail.com  Wed Dec 21 15:40:35 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 21 Dec 2005 15:40:35 +0100
+Subject: [spe-mac] SPE 0.8.1.c: Christmas release coming soon...
+Message-ID: <2078a7ad0512210640m55c06bd9kc8202742f4a2f209@mail.gmail.com>
+
+Can be released any moment ...
+
+SPE 0.8.1.c Christmas release
+ [Release] <http://pythonide.stani.be/blog/categorylist_html?cat_id=1>
+
+ Coming soon...
+
+This new release is for under your Christmas tree. (If you want more
+presents, just donate to SPE and receive the manual in your mailbox ;-)
+
+There are so many changes and fixes. The new cool features not to be missed
+are the realtime error underlinging and the tooltips for the file tabs,
+which gives you a preview of the file by the docstring.
+
+Mac users should upgrade as this fixed the most critical bug of SPE on Mac,
+the click inside selection crash.
+
+So just open the package and discover the present...
+  *New features*:
+
+   - errors are underlined in red as you type (as preference)
+   - tooltips on tabs showing path and docstring
+   - drag and drop for script tabs
+   - Edit>Show docstring (Ctrl+Shift+Space)
+   - middle click pastes selected text
+   - single instance application (enable it as preference)
+
+  *Improved features*:
+
+   - file tabs (thanks to Andrea Gavana's NotebookCtrl)
+   - add single click toggle for explore (not for Mac)
+   - better code completion and docstring
+   - dialog popup to confirm save before executing whole file
+   - if signature not specified opens a choose file dialog
+   - selected text is now always copied to the find dialog
+
+  *Fixes*:
+
+   - clicking inside selection=deselect(no mac crash anymore)
+   - launching debugger
+   - removed unnecessary print statement
+   - find in files clear behavior (by Thurston Stone)
+   - ask to save before running a modified file
+   - changed text 'save before run' to 'save before execute'
+   - run with sys.executable (movable python)
+   - info.PYTHON_EXEC to pythonw for Mac
+   - __name__ in shell is now "__main__" for executing scripts
+   - Kiki dialog box (by Andrea Gavana)
+   - import sys when right version wxPython is not found
+
+*Changes*:
+
+   - auto reload change file is off by default
+
+  *Contributors*:
+
+   - Andrea Gavana
+   - Thurston Stone
+   - Theo de Ridder (for a lot of suggestions &amp; critical feedback)
+
+  *Donations*:
+
+   - Ramon Diaz-Uriarte, http://ligarto.org/rdiaz (15 euro)
+   - Dmeetry Raizman, Symula Inc, http://www.symula.com (20 dollar)
+
+Both donators received the SPE manual. Donate to support SPE's
+development!<http://www.stani.be/python/spe/blog/sm_donate>
+  *Installation*:
+
+   - See http://pythonide.stani.be/manual/html/manual2.html
+   - There is now an update section for MacOS X!
+
+  *Development*:
+
+   - http://developer.berlios.de/mail/?group_id=4161
+
+ --
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051221/74d874ca/attachment.html>
+
+From spe.stani.be at gmail.com  Wed Dec 21 15:41:26 2005
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 21 Dec 2005 15:41:26 +0100
+Subject: [spe-mac] Fwd: SPE 0.8.1.c: Christmas release coming soon...
+In-Reply-To: <2078a7ad0512210640m55c06bd9kc8202742f4a2f209@mail.gmail.com>
+References: <2078a7ad0512210640m55c06bd9kc8202742f4a2f209@mail.gmail.com>
+Message-ID: <2078a7ad0512210641r36145f0cn1b64bfcaa601782d@mail.gmail.com>
+
+Can be released any moment ...
+
+SPE 0.8.1.c Christmas release
+ [Release] <http://pythonide.stani.be/blog/categorylist_html?cat_id=1>
+
+ Coming soon...
+
+This new release is for under your Christmas tree. (If you want more
+presents, just donate to SPE and receive the manual in your mailbox ;-)
+
+There are so many changes and fixes. The new cool features not to be missed
+are the realtime error underlinging and the tooltips for the file tabs,
+which gives you a preview of the file by the docstring.
+
+Mac users should upgrade as this fixed the most critical bug of SPE on Mac,
+the click inside selection crash.
+
+So just open the package and discover the present...
+  *New features*:
+
+   - errors are underlined in red as you type (as preference)
+   - tooltips on tabs showing path and docstring
+   - drag and drop for script tabs
+   - Edit>Show docstring (Ctrl+Shift+Space)
+   - middle click pastes selected text
+   - single instance application (enable it as preference)
+
+  *Improved features*:
+
+   - file tabs (thanks to Andrea Gavana's NotebookCtrl)
+   - add single click toggle for explore (not for Mac)
+   - better code completion and docstring
+   - dialog popup to confirm save before executing whole file
+   - if signature not specified opens a choose file dialog
+   - selected text is now always copied to the find dialog
+
+  *Fixes*:
+
+   - clicking inside selection=deselect(no mac crash anymore)
+   - launching debugger
+   - removed unnecessary print statement
+   - find in files clear behavior (by Thurston Stone)
+   - ask to save before running a modified file
+   - changed text 'save before run' to 'save before execute'
+   - run with sys.executable (movable python)
+   - info.PYTHON_EXEC to pythonw for Mac
+   - __name__ in shell is now "__main__" for executing scripts
+   - Kiki dialog box (by Andrea Gavana)
+   - import sys when right version wxPython is not found
+
+*Changes*:
+
+   - auto reload change file is off by default
+
+  *Contributors*:
+
+   - Andrea Gavana
+   - Thurston Stone
+   - Theo de Ridder (for a lot of suggestions &amp; critical feedback)
+
+  *Donations*:
+
+   - Ramon Diaz-Uriarte, http://ligarto.org/rdiaz (15 euro)
+   - Dmeetry Raizman, Symula Inc, http://www.symula.com (20 dollar)
+
+Both donators received the SPE manual. Donate to support SPE's
+development!<http://www.stani.be/python/spe/blog/sm_donate>
+  *Installation*:
+
+   - See http://pythonide.stani.be/manual/html/manual2.html
+   - There is now an update section for MacOS X!
+
+  *Development*:
+
+   - http://developer.berlios.de/mail/?group_id=4161
+
+ --
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051221/2345bcc6/attachment.html>
+

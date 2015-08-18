@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] Bug reporting
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Bug%20reporting&In-Reply-To=%3C42EABBCD.7070000%40gmx.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000036.html">
+   <LINK REL="Next"  HREF="000037.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] Bug reporting</H1>
+    <B>Stani Michiels</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Bug%20reporting&In-Reply-To=%3C42EABBCD.7070000%40gmx.net%3E"
+       TITLE="[spe-mac] Bug reporting">s_t_a_n_i at gmx.net
+       </A><BR>
+    <I>Sat Jul 30 01:29:17 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000036.html">SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+</A></li>
+        <LI>Next message: <A HREF="000037.html">[spe-mac] SVN Online
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#41">[ date ]</a>
+              <a href="thread.html#41">[ thread ]</a>
+              <a href="subject.html#41">[ subject ]</a>
+              <a href="author.html#41">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+BT means 'put on bug tracker' (if mac related, please choose that group).
+
+<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">jaguar451 at mac.com</A> wrote:
+
+&gt;<i>A PDF of a screenshot at <A HREF="http://homepage.mac.com/kkrull/FileSharing6.html">http://homepage.mac.com/kkrull/FileSharing6.html</A> :
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>If possible I prefer png or gif. Also when spe is stable. I need someone 
+to take screenshots in a certain way for documentation. Any volunteers.
+
+&gt;<i> 1) There are two 'Windows' menu items -- I assume that there should only be one.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I'll fix that. Didn't wxPython on Mac would provide one. BT
+
+&gt;<i> 2) On startup, I have 'Unnamed' &amp; 'Unnamed -- SPE 0.7.4.x' windows (see the SPE_windows_OS X.pdf file at the above URL.) If I set my preference to 'Single with tabs (Mac, Windows, Linux), when I open a second file, an additional window is opened, so I have three (untitled, untitled, SPE 0.7.4.x.) Single_with_tabs_not_single.pdf at above URL.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Did you restart SPE? After changing interface SPE would need to be 
+restarted.
+
+&gt;<i>    2.1) when I create new files, they all have the same name.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I'll have a look at it, but maybe it's better like this.
+
+&gt;<i>    2.2) As far as tabs being an OS X thing, I'm not a Mac head by any stretch of the imagination, and I like tab. Safari uses them... Other editors have them -- maybe time for a poll.... ;-)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Haha, everybody wants something different. I indeed would like to poll 
+tabs in these group. The option with no tabs will always be available, 
+but with tabs will take me some more effort of which I want to save 
+myself if nobody is waiting for it.
+
+&gt;<i> 3) On menu, second from left, says 'Python' instead of 'SPE' (although I believe that this can only be set as part of an OS X APP package, but in case another way...
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>That also struck me. If anybody knows how to change this, I'd be happy 
+to implement.
+
+&gt;<i> 4) When a dialog is launched from the Palette, it is partially hidden behind the Palette. Also the preferences Palette. (spe_pref_part_hidden.pdf at the above location -- build in screen capture utility only goes to PDF, and don't have another utility setup right now.)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>This wxPy behaviour. I could hide the tools Palette when a dialog is 
+launched and show it again when the dialog closes. Is that an option? BT
+
+&gt;<i> 5) cmd` &amp; cmd~ no longer write to the edit window, but also don't cycle through the windows. cmd (left arrow) doesn't go to the beginning of the line, cmd &lt;right arrow&gt; to the end of the line.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>This is on my todolist. Bug tracker.... call it mac keyboard shortcuts 
+and be as complete as possible
+
+&gt;<i> 6) On install, I delete the ~/.spe directory, the /site-packages _spe &amp; sm directories, yet when I do a File | Open in SPE, it remembers my last location. Handy, but shouldn't this pref be reset when I do the above?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>This is handled by wxPy not SPE.
+
+&gt;<i> 7) Under Links | Enthought... (<A HREF="http://www.enthought.com/python/">http://www.enthought.com/python/</A>) The main listed distro has a wxPython version too old for this version of SPE -- if the beta version linked at the bottom doesn't have a compatible wxPython, might want to remove the link....
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I know they are upgrading to wxPy2.6, but face some difficulties. I even 
+could contact them to include SPE in their distro.
+
+&gt;<i> 8) Help | Keyboard Shortcuts are Windows shortcuts....
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Right, low priority. Maybe one of you could fix this. Shouldn't be 
+difficult. (in _spe/dialogs: helpShortcutsDialog.py and shortcuts.txt) 
+Please keep it cross platform:
+to check for mac:
+if _spe.info.DARWIN:
+    ...
+
+&gt;<i> 9) Minor Feature Request: would be nice to have an 'Open Recent' option on the File menu that remembers the last x (10?) files that you've opened.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Yes, I'll implement that. Put it in feature requests...
+
+&gt;<i>10) In the UML view, if you have methods that have long names and/or many parameter, the class is much wider than the screen and the horizontal scrollbar doesn't scale correctly. (spe_uml.pdf) (Please, no comments on my code/design -- just playing around with my first Python app and tried to find something 'fun'.)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Put it in the bug tracker. In next releases I have some plans with UML.
+
+&gt;<i>11) Pressing F1 doesn't bring up local help tips (as mentioned in the status bar at the bottom of SPE.)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Put also in bug tracker.
+
+&gt;<i>12) When I have a file open (source code view), I need to double-click on a class/method in the Explorer view to jump to it -- as designed? (or should it be single click?)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Double-click is design.
+
+&gt;<i>13) When running from inside SPE, the scriptname isn't set.
+</I>&gt;<i>
+</I>&gt;<i>Create the following in a new file. Save it.:
+</I>&gt;<i>
+</I>&gt;<i>if __name__ == &quot;__main__&quot;:
+</I>&gt;<i>    print &quot;hello&quot;
+</I>&gt;<i>
+</I>&gt;<i>Run it:
+</I>&gt;<i>Running '&lt;path/filename&gt;' ...
+</I>&gt;<i>hello
+</I>&gt;<i>Script '&lt;source&gt;' returned exit code 0
+</I>&gt;<i>
+</I>&gt;<i>I assume that the above '&lt;source&gt;' should be the filename
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Bug tracker...
+
+&gt;<i>14) If one creates a new file, doesn't save it, and tries to run it, if you say 'no' to save, the previously run file is run, not the selected new file. (not a recommended thing to do, of course, but....)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>BT
+
+&gt;<i>15) When my indenting was off by a character,  the error message was off by one line (running from the command line returned the correct line number (see message below -- it says 116, when run in command line, it is 115. (and not sure why it mentioned the 'scriptutils.py' file. (sorry if this is a PyCrust thing...)    
+</I>&gt;<i>
+</I>&gt;<i> Running '/Users/kkrull/work/learning/python/NWN/nwnCharacterCombatInfo.py' ...
+</I>&gt;<i>Traceback (most recent call last):
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/scriptutils.py&quot;, line 40, in run
+</I>&gt;<i>    codeObject = compile(source.replace('\r\n','\n')+&quot;\n&quot;, fileName, &quot;exec&quot;)
+</I>&gt;<i>IndentationError: unindent does not match any outer indentation level (&lt;source&gt;, line 116)
+</I>&gt;<i>Exception raised while running script  &lt;source&gt;
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>BT
+
+&gt;<i> 16) ctrl-c copies text in the SPE python shell, cmd-c expected on Mac (PyCrust run standalone recognizes cmd-c)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>BT, although I just use pycrust, but will have a look anyway.
+
+&gt;<i> 17) In the python shell, one can type anywhere, new output from a run it put wherever the cursor is located. As expected? (when doing this, can delete/overwrite items, and undo doesn't undo changes.) Other shells (PyCrust stand alone) only allow text to be added on the last line. 
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>BT
+
+&gt;<i>
+</I>&gt;<i>Sorry, I know I should do seperate bug reports, but time....
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I hope you find now some time for it. Thanks anyway for this usefull 
+feedback. I wish I could get more feedback like this.
+
+Stani
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000036.html">SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+</A></li>
+	<LI>Next message: <A HREF="000037.html">[spe-mac] SVN Online
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#41">[ date ]</a>
+              <a href="thread.html#41">[ thread ]</a>
+              <a href="subject.html#41">[ subject ]</a>
+              <a href="author.html#41">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

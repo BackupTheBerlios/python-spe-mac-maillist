@@ -1,0 +1,2487 @@
+From s_t_a_n_i at yahoo.com  Tue Jul 26 17:15:35 2005
+From: s_t_a_n_i at yahoo.com (www.stani.be)
+Date: Tue, 26 Jul 2005 08:15:35 -0700 (PDT)
+Subject: [spe-mac] priorities
+Message-ID: <20050726151535.70322.qmail@web32608.mail.mud.yahoo.com>
+
+Hi,
+I created this list in order to speed up the debugging
+process for SPE on the Mac. I hope we can help each
+other. I would like to have a priority list for Mac.
+Currently for me it is:
+1. preferences dialog box doesn't work
+2. switching between documents is not Mac like (cmd >
+or so)
+3. notebook display
+
+I want to commit myself to make this release as stable
+as possible for the mac on the condition i have your
+support. (Although I can't wait to implement some new
+features.)
+
+Let the discussion be opened! 
+Stani
+
+
+PS If you want to unsubscribe...
+With everyone of you I had contact about SPE on Mac
+recently or in the past. If you don't want to be
+subscribed to this list, please unsubscribe silently.
+If you don't know how to do it, send me an email
+(s_t_a_n_i at yahoo.com), and I'll do it for you.
+
+__________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+http://mail.yahoo.com 
+
+
+From s_t_a_n_i at gmx.net  Tue Jul 26 18:22:09 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Tue, 26 Jul 2005 18:22:09 +0200
+Subject: [spe-mac] priorities
+Message-ID: <42E66331.9010004@gmx.net>
+
+Well, I will code the solutions for the list I
+proposed. I would like SPE to be as comfortable as
+possible for mac users. So it is not only about bugs,
+but also about design and navigation... 
+
+Everytime I post a new release with enhancements for
+the mac, I would like that a lot of you would test it
+and report if things are fixed. So please test the
+latest version (at least 0.7.4.o) and see if opening
+files still gives a segmentation fault. If it does,
+could someone put print statements to localize what
+exactly causes this error.
+
+Once SPE is acceptably stable, I also would like if
+some of you put an effort in pushing it into the OS X
+distributions. 
+
+What would be completely great if someone has
+connections with Apple that they sponsor this project
+with a mac with osX, so I could do the debugging
+myself as well. Now it is hard to develop a mac app on
+windows. Maybe a joint request would help.
+
+Stani
+
+
+
+From s_t_a_n_i at gmx.net  Tue Jul 26 18:26:45 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Tue, 26 Jul 2005 18:26:45 +0200
+Subject: [spe-mac] priorities
+Message-ID: <42E66445.4050408@gmx.net>
+
+I repost as I forgot to send original message from Stefan:
+
+Well, I will code the solutions for the list I
+proposed. I would like SPE to be as comfortable as
+possible for mac users. So it is not only about bugs,
+but also about design and navigation...
+
+Everytime I post a new release with enhancements for
+the mac, I would like that a lot of you would test it
+and report if things are fixed. So please test the
+latest version (at least 0.7.4.o) and see if opening
+files still gives a segmentation fault. If it does,
+could someone put print statements to localize what
+exactly causes this error.
+
+Once SPE is acceptably stable, I also would like if
+some of you put an effort in pushing it into the OS X
+distributions.
+
+What would be completely great if someone has
+connections with Apple that they sponsor this project
+with a mac with osX, so I could do the debugging
+myself as well. Now it is hard to develop a mac app on
+windows. Maybe a joint request would help.
+
+Stani
+
+
+
+--- Stefan Csomor <csomor at advancedconcepts.ch> wrote:
+
+ > Hi
+ >
+ > Ok, I'm willing to help although I don't have hardly
+ > any free time
+ > anymore, but you have to help me getting a rapid
+ > turnaround, how can we
+ > accomplish this
+ >
+ > Best,
+ >
+ > Stefan
+ > > -----Original Message-----
+ > > From: python-spe-mac-admin at berlios.de
+ > > [mailto:python-spe-mac-admin at berlios.de] On Behalf
+ > Of www.stani.be
+ > > Sent: Dienstag, 26. Juli 2005 16:16
+ > > To: python-spe-mac at lists.berlios.de
+ > > Subject: [spe-mac] priorities
+ > >
+ > > Hi,
+ > > I created this list in order to speed up the
+ > debugging
+ > > process for SPE on the Mac. I hope we can help
+ > each other. I
+ > > would like to have a priority list for Mac.
+ > > Currently for me it is:
+ > > 1. preferences dialog box doesn't work
+ > > 2. switching between documents is not Mac like
+ > (cmd > or so)
+ > > 3. notebook display
+ > >
+ > > I want to commit myself to make this release as
+ > stable as
+ > > possible for the mac on the condition i have your
+ > support.
+ > > (Although I can't wait to implement some new
+ > > features.)
+ > >
+ > > Let the discussion be opened!
+ > > Stani
+ > >
+ > >
+ > > PS If you want to unsubscribe...
+ > > With everyone of you I had contact about SPE on
+ > Mac recently
+ > > or in the past. If you don't want to be subscribed
+ > to this
+ > > list, please unsubscribe silently.
+ > > If you don't know how to do it, send me an email
+ > (s_t_a_n_i
+ > > at yahoo.com), and I'll do it for you.
+ > >
+ > > __________________________________________________
+ > > Do You Yahoo!?
+ > > Tired of spam?  Yahoo! Mail has the best spam
+ > protection
+ > > around http://mail.yahoo.com
+ > > _______________________________________________
+ > > Python-spe-mac mailing list
+ > > Python-spe-mac at lists.berlios.de
+ > >
+ > http://lists.berlios.de/mailman/listinfo/python-spe-mac
+ > >
+ >
+
+
+
+
+
+From bmyers at bco.com  Tue Jul 26 18:39:22 2005
+From: bmyers at bco.com (bmyers at bco.com)
+Date: Tue, 26 Jul 2005 09:39:22 -0700
+Subject: [spe-mac] priorities
+Message-ID: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com>
+
+I'll try to get it setup tonight. There are three ways to distribute open
+source software on the Mac that I know of: Fink, DarwinPorts, and a Mac
+installer package. The Mac installer package is probably the easiest of the
+bunch, but DarwinPorts has the most software.
+
+I'll see if DarwinPorts is up to date on wxWindows tonight.
+
+Brian
+
+-----Original Message-----
+From: python-spe-mac-admin at berlios.de
+[mailto:python-spe-mac-admin at berlios.de] On Behalf Of Stani
+Sent: Tuesday, July 26, 2005 9:22 AM
+To: python-spe-mac at lists.berlios.de
+Subject: RE: [spe-mac] priorities
+
+
+Well, I will code the solutions for the list I
+proposed. I would like SPE to be as comfortable as
+possible for mac users. So it is not only about bugs,
+but also about design and navigation... 
+
+Everytime I post a new release with enhancements for
+the mac, I would like that a lot of you would test it
+and report if things are fixed. So please test the
+latest version (at least 0.7.4.o) and see if opening
+files still gives a segmentation fault. If it does,
+could someone put print statements to localize what
+exactly causes this error.
+
+Once SPE is acceptably stable, I also would like if
+some of you put an effort in pushing it into the OS X distributions. 
+
+What would be completely great if someone has
+connections with Apple that they sponsor this project
+with a mac with osX, so I could do the debugging
+myself as well. Now it is hard to develop a mac app on
+windows. Maybe a joint request would help.
+
+Stani
+
+_______________________________________________
+Python-spe-mac mailing list
+Python-spe-mac at lists.berlios.de
+http://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Tue Jul 26 18:48:49 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Tue, 26 Jul 2005 11:48:49 -0500
+Subject: [spe-mac] priorities
+In-Reply-To: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com>
+References: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com>
+Message-ID: <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net>
+
+As a Mac user (and a technical one), I'd really appreciate a Mac  
+installer, rather
+than a darwinports installer. darwinports is much better than fink,  
+but even so,
+I won't use it unless it is absolutely critical that I install a  
+piece of software--things
+just go wrong too often.
+
+What would be absolutely the best is simply a standalone Mac  
+application,
+distributed as a compressed archive. Unless there really is some  
+configuration
+that must be done at install time, this offers the ultimate in  
+simplicity.
+
+Thanks to both Brian and Stani for their work.
+
+
+Ken
+
+
+On Jul 26, 2005, at 11:39 AM, bmyers at bco.com wrote:
+
+> I'll try to get it setup tonight. There are three ways to  
+> distribute open
+> source software on the Mac that I know of: Fink, DarwinPorts, and a  
+> Mac
+> installer package. The Mac installer package is probably the  
+> easiest of the
+> bunch, but DarwinPorts has the most software.
+>
+> I'll see if DarwinPorts is up to date on wxWindows tonight.
+>
+> Brian
+>
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/92716ef4/attachment.html>
+
+From s_t_a_n_i at gmx.net  Tue Jul 26 19:29:09 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Tue, 26 Jul 2005 19:29:09 +0200
+Subject: [spe-mac] Patch for preferences
+In-Reply-To: <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net>
+References: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com> <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net>
+Message-ID: <42E672E5.4070400@gmx.net>
+
+How it should distribruted is something which is completely up to you. 
+Of course it would be nice if some of you volunteer as packagers. At the 
+moment I'm releasing almost daily just zipping the files in order to not 
+to waste too much time for it. From the moment SPE is stable, I'd love 
+to see a SPE installer for the Mac.
+Please overwrite the file '_spe/dialogs/preferencesDialog.py' with this 
+one. It has print statements to see which control causes the error.
+ >>> python spe.py --debug >debug.txt
+Please send me the error log (debug.txt).
+Ciao,
+Stani
+
+Kenneth McDonald wrote:
+
+> As a Mac user (and a technical one), I'd really appreciate a Mac 
+> installer, rather
+> than a darwinports installer. darwinports is much better than fink, 
+> but even so,
+> I won't use it unless it is absolutely critical that I install a piece 
+> of software--things
+> just go wrong too often.
+>
+> What would be absolutely the best is simply a standalone Mac application,
+> distributed as a compressed archive. Unless there really is some 
+> configuration
+> that must be done at install time, this offers the ultimate in simplicity.
+>
+> Thanks to both Brian and Stani for their work.
+>
+>
+> Ken
+>
+>
+> On Jul 26, 2005, at 11:39 AM, bmyers at bco.com <mailto:bmyers at bco.com> 
+> wrote:
+>
+>> I'll try to get it setup tonight. There are three ways to distribute open
+>>
+>> source software on the Mac that I know of: Fink, DarwinPorts, and a Mac
+>>
+>> installer package. The Mac installer package is probably the easiest 
+>> of the
+>>
+>> bunch, but DarwinPorts has the most software.
+>>
+>>
+>> I'll see if DarwinPorts is up to date on wxWindows tonight.
+>>
+>>
+>> Brian
+>>
+>>
+>>
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/9688fc45/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: preferencesDialog.py
+Type: text/x-python
+Size: 21486 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050726/9688fc45/attachment.py>
+
+From s_t_a_n_i at gmx.net  Tue Jul 26 19:37:20 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Tue, 26 Jul 2005 19:37:20 +0200
+Subject: [spe-mac] Old package
+In-Reply-To: <42E672E5.4070400@gmx.net>
+References: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com> <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net> <42E672E5.4070400@gmx.net>
+Message-ID: <42E674D0.7020107@gmx.net>
+
+This the old mac spe package (0.7.3.a) of Kevin Walzer, who discontinued 
+offering python support. It might be of some use for those who want to 
+package:
+http://www.stani.be/python/spe/releases/0.7/SPE-OSX.zip
+I want to distribute the mac package through the berlios site, but at 
+the moment debugging is for me more important than packaging.
+Stani
+
+
+From kenneth.m.mcdonald at sbcglobal.net  Tue Jul 26 22:10:27 2005
+From: kenneth.m.mcdonald at sbcglobal.net (Kenneth McDonald)
+Date: Tue, 26 Jul 2005 15:10:27 -0500
+Subject: [spe-mac] How to start up on Mac?
+Message-ID: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>
+
+Trying:
+
+     python _spe/SPE.py
+
+in
+
+     .../SPE-0.7.4.o-wx26
+
+gives me:
+
+Traceback (most recent call last):
+   File "_spe/SPE.py", line 1, in ?
+     import info
+   File "/Users/ken/downloads/SPE-0.7.4.o-wx26/_spe/info.py", line 1,  
+in ?
+     import os,sys,sm.osx
+ImportError: No module named sm.osx
+
+
+and indeed, I can't find a folder or file called sm or sm.py in _spe.
+
+If I try
+
+     python SPE.py
+
+within the _spe directory, I get the same error.
+
+Note that by default, "." is on the python path so (if my  
+understanding of the SPE
+install instructions is correct), one of these should have been the  
+'correct' directory
+so that modules needed by SPE could be seen by python.
+
+
+Thanks,
+Ken
+
+
+From s_t_a_n_i at gmx.net  Wed Jul 27 01:08:35 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Wed, 27 Jul 2005 01:08:35 +0200
+Subject: [spe-mac] How to start up on Mac?
+In-Reply-To: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>
+References: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>
+Message-ID: <42E6C273.8020403@gmx.net>
+
+Ok, installation at the moment is a bit spartanic. Just copy _spe and sm 
+to your python/lib/site-packages dir after you deleted previous versions 
+of them if they would be there. When SPE is stable an installation 
+wizard will be provided.
+Stani
+
+Kenneth McDonald wrote:
+
+> Trying:
+>
+>     python _spe/SPE.py
+>
+> in
+>
+>     .../SPE-0.7.4.o-wx26
+>
+> gives me:
+>
+> Traceback (most recent call last):
+>   File "_spe/SPE.py", line 1, in ?
+>     import info
+>   File "/Users/ken/downloads/SPE-0.7.4.o-wx26/_spe/info.py", line 1,  
+> in ?
+>     import os,sys,sm.osx
+> ImportError: No module named sm.osx
+>
+>
+> and indeed, I can't find a folder or file called sm or sm.py in _spe.
+>
+> If I try
+>
+>     python SPE.py
+>
+> within the _spe directory, I get the same error.
+>
+> Note that by default, "." is on the python path so (if my  
+> understanding of the SPE
+> install instructions is correct), one of these should have been the  
+> 'correct' directory
+> so that modules needed by SPE could be seen by python.
+>
+>
+> Thanks,
+> Ken
+> _______________________________________________
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+
+
+
+From redarmy at gmail.com  Wed Jul 27 01:59:36 2005
+From: redarmy at gmail.com (=?GB2312?B?ucu66r78?=)
+Date: Wed, 27 Jul 2005 07:59:36 +0800
+Subject: [spe-mac] priorities
+In-Reply-To: <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net>
+References: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com>
+	 <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net>
+Message-ID: <2f3bc61f05072616597eebe6d9@mail.gmail.com>
+
+for python package ,maybe you can use "py2app" to create a mac installer.
+http://undefined.org/python/py2app.html
+
+
+On 7/27/05, Kenneth McDonald <kenneth.m.mcdonald at sbcglobal.net> wrote:
+> As a Mac user (and a technical one), I'd really appreciate a Mac installer,
+> rather
+> than a darwinports installer. darwinports is much better than fink, but even
+> so,
+> I won't use it unless it is absolutely critical that I install a piece of
+> software--things
+> just go wrong too often.
+> 
+> What would be absolutely the best is simply a standalone Mac application,
+> distributed as a compressed archive. Unless there really is some
+> configuration
+> that must be done at install time, this offers the ultimate in simplicity.
+> 
+> Thanks to both Brian and Stani for their work.
+> 
+> 
+> Ken
+> 
+> 
+> 
+> On Jul 26, 2005, at 11:39 AM, bmyers at bco.com wrote:
+> 
+> 
+> I'll try to get it setup tonight. There are three ways to distribute open 
+> 
+> source software on the Mac that I know of: Fink, DarwinPorts, and a Mac 
+> 
+> installer package. The Mac installer package is probably the easiest of the 
+> 
+> bunch, but DarwinPorts has the most software. 
+> 
+> 
+>  
+> 
+> I'll see if DarwinPorts is up to date on wxWindows tonight. 
+> 
+> 
+>  
+> 
+> Brian 
+> 
+> 
+>  
+> 
+>  
+
+
+-- 
+-------------------
+  Army Gu
+www.ossp.cn
+--------------------
+
+
+From redarmy at gmail.com  Wed Jul 27 02:03:31 2005
+From: redarmy at gmail.com (=?GB2312?B?ucu66r78?=)
+Date: Wed, 27 Jul 2005 08:03:31 +0800
+Subject: [spe-mac] How to start up on Mac?
+In-Reply-To: <42E6C273.8020403@gmx.net>
+References: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>
+	 <42E6C273.8020403@gmx.net>
+Message-ID: <2f3bc61f050726170341ed4e0c@mail.gmail.com>
+
+or you can use "ln -s" ,to add _spe and sm to your PYTHONPATH (&
+lib/python/site-packages/)
+
+On 7/27/05, Stani <s_t_a_n_i at gmx.net> wrote:
+> Ok, installation at the moment is a bit spartanic. Just copy _spe and sm
+> to your python/lib/site-packages dir after you deleted previous versions
+> of them if they would be there. When SPE is stable an installation
+> wizard will be provided.
+> Stani
+> 
+> Kenneth McDonald wrote:
+> 
+> > Trying:
+> >
+> >     python _spe/SPE.py
+> >
+> > in
+> >
+> >     .../SPE-0.7.4.o-wx26
+> >
+> > gives me:
+> >
+> > Traceback (most recent call last):
+> >   File "_spe/SPE.py", line 1, in ?
+> >     import info
+> >   File "/Users/ken/downloads/SPE-0.7.4.o-wx26/_spe/info.py", line 1,
+> > in ?
+> >     import os,sys,sm.osx
+> > ImportError: No module named sm.osx
+> >
+> >
+> > and indeed, I can't find a folder or file called sm or sm.py in _spe.
+> >
+> > If I try
+> >
+> >     python SPE.py
+> >
+> > within the _spe directory, I get the same error.
+> >
+> > Note that by default, "." is on the python path so (if my
+> > understanding of the SPE
+> > install instructions is correct), one of these should have been the
+> > 'correct' directory
+> > so that modules needed by SPE could be seen by python.
+> >
+> >
+> > Thanks,
+> > Ken
+> > _______________________________________________
+> > Python-spe-mac mailing list
+> > Python-spe-mac at lists.berlios.de
+> > http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> >
+> >
+> 
+> _______________________________________________
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> 
+
+
+-- 
+-------------------
+  Army Gu
+www.ossp.cn
+--------------------
+
+
+From s_t_a_n_i at gmx.net  Wed Jul 27 02:55:49 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Wed, 27 Jul 2005 02:55:49 +0200
+Subject: [spe-mac] Test: New framework (urgent)
+In-Reply-To: <2f3bc61f050726170341ed4e0c@mail.gmail.com>
+References: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>	 <42E6C273.8020403@gmx.net> <2f3bc61f050726170341ed4e0c@mail.gmail.com>
+Message-ID: <42E6DB95.2040005@gmx.net>
+
+Hi,
+I need your feedback! From now on if I put 'test:' in the subject it 
+means this post contains test files. It would be nice if some would test 
+this as fast as possible.
+
+1. Please, can someone test this file independently of SPE, just on its own:
+ >>> python smdi2.py
+
+Make some new children (File>New) and try to navigate between them with 
+standard Mac commands (cmd~,cmd>,cmd<, am I right?). If this works I 
+might implement it for SPE. Note that is not possible to close the 
+parent window.
+
+2. Preferences: can someone send me the error log with 0.7.4.o when 
+trying to open the preferences? I'm waiting for this to fix the 
+preferences bug on OS X
+
+Thanks,
+Stani
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi2.py
+Type: text/x-python
+Size: 36857 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050727/9379a637/attachment.py>
+
+From redarmy at gmail.com  Wed Jul 27 03:00:27 2005
+From: redarmy at gmail.com (=?GB2312?B?ucu66r78?=)
+Date: Wed, 27 Jul 2005 09:00:27 +0800
+Subject: [spe-mac] Test: New framework (urgent)
+In-Reply-To: <42E6DB95.2040005@gmx.net>
+References: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>
+	 <42E6C273.8020403@gmx.net> <2f3bc61f050726170341ed4e0c@mail.gmail.com>
+	 <42E6DB95.2040005@gmx.net>
+Message-ID: <2f3bc61f05072618007d2d54f@mail.gmail.com>
+
+2: 0.7.4.0,Preferences error log
+
+>Event: Sdi:   <class 'sm.wxp.smdi.SdiParentFrame'>.onFrameTab(2)
+Traceback (most recent call last):
+  File "/Users/army/Desktop/spe/_spe/Menu.py", line 301, in menu_preferences
+    self.parentPanel.preferences()
+  File "/Users/army/Desktop/spe/_spe/Parent.py", line 266, in preferences
+    prefs=preferencesDialog.Create(self,-1,'')
+  File "/Users/army/Desktop/spe/_spe/dialogs/preferencesDialog.py",
+line 97, in __init__
+    self.update()
+  File "/Users/army/Desktop/spe/_spe/dialogs/preferencesDialog.py",
+line 264, in update
+    for name in VALUES: self._update(name)
+  File "/Users/army/Desktop/spe/_spe/dialogs/preferencesDialog.py",
+line 271, in _update
+    if type(item.GetValue()) in [types.StringType,types.UnicodeType]:
+  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_controls.py",
+line 604, in GetValue
+    return _controls_.ComboBox_GetValue(*args, **kwargs)
+wx._core.PyAssertionError: C++ assertion "wxAssertFailure" failed in
+../src/mac/carbon/choice.cpp(217): wxChoice::GetString(): invalid
+index
+
+
+
+On 7/27/05, Stani <s_t_a_n_i at gmx.net> wrote:
+> Hi,
+> I need your feedback! From now on if I put 'test:' in the subject it
+> means this post contains test files. It would be nice if some would test
+> this as fast as possible.
+> 
+> 1. Please, can someone test this file independently of SPE, just on its own:
+>  >>> python smdi2.py
+> 
+> Make some new children (File>New) and try to navigate between them with
+> standard Mac commands (cmd~,cmd>,cmd<, am I right?). If this works I
+> might implement it for SPE. Note that is not possible to close the
+> parent window.
+> 
+> 2. Preferences: can someone send me the error log with 0.7.4.o when
+> trying to open the preferences? I'm waiting for this to fix the
+> preferences bug on OS X
+> 
+> Thanks,
+> Stani
+> 
+> 
+> 
+
+
+-- 
+-------------------
+  Army Gu
+www.ossp.cn
+--------------------
+
+
+From jaguar451 at mac.com  Wed Jul 27 09:28:48 2005
+From: jaguar451 at mac.com (jaguar451 at mac.com)
+Date: Wed, 27 Jul 2005 00:28:48 -0700
+Subject: [spe-mac] Test: smdi2.py
+Message-ID: <5562032.1122449328519.JavaMail.jaguar451@mac.com>
+
+"
+1. Please, can someone test this file independently of SPE, just on its own:
+ >>> python smdi2.py
+
+Make some new children (File>New) and try to navigate between them with 
+standard Mac commands (cmd~,cmd>,cmd<, am I right?). If this works I 
+might implement it for SPE. Note that is not possible to close the 
+parent window.
+"
+
+
+cmd` cycles one way through the open Windows, cmd~ cycles through the other way, so that is working.
+
+cmd<left arrow> and cmd<right arrow>  move to the beginning & end of line as expected. (cmd< and cmd> didn't do anything in any app I tried.)
+
+FWIW, a page that lists XP vs X shortcuts: http://www.xvsxp.com/keyboard/ (no idea on accuracy, though)
+
+Also, is it as designed, or are the child windows not visually "children" of the parent window? I have these free-floating text edit boxes and the one "parent" window with the toolbar buttons.... (similar in SPE -- a different window for each file (although each window contains all the toolbar controls.) In the SPE.PDF, I didn't see screenshots of multiple Windows on Windows, so I was wondering what is expected....
+
+Thanks for the work (and BTW, I can now save files.)
+
+
+
+From hraban at fiee.net  Wed Jul 27 10:18:21 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Wed, 27 Jul 2005 10:18:21 +0200
+Subject: [spe-mac] priorities
+In-Reply-To: <2f3bc61f05072616597eebe6d9@mail.gmail.com>
+References: <36A79B2B1FEECB438516594D804661121F51C8@MFD-MAIL2.bcohome.bco.com> <A84F1979-9645-43F7-9BF1-1CEDF9BA5CC6@sbcglobal.net> <2f3bc61f05072616597eebe6d9@mail.gmail.com>
+Message-ID: <07FAB18A-C18C-4BA8-9C17-80A465918CE6@fiee.net>
+
+Am 2005-07-27 um 01:59 schrieb ???:
+
+> for python package ,maybe you can use "py2app" to create a mac  
+> installer.
+> http://undefined.org/python/py2app.html
+
+Someone of us will have to do this, you can use py2app only on a Mac.
+
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+
+
+
+From hraban at fiee.net  Wed Jul 27 11:06:31 2005
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Wed, 27 Jul 2005 11:06:31 +0200
+Subject: [spe-mac] Test: New framework (urgent)
+In-Reply-To: <42E6DB95.2040005@gmx.net>
+References: <F7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1@sbcglobal.net>	 <42E6C273.8020403@gmx.net> <2f3bc61f050726170341ed4e0c@mail.gmail.com> <42E6DB95.2040005@gmx.net>
+Message-ID: <88BAA3D4-899C-446F-A734-87720F999B30@fiee.net>
+
+A non-text attachment was scrubbed...
+Name: spe-074p-debug.log
+Type: application/octet-stream
+Size: 16430 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050727/cd7e6177/attachment.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: spe-074p-error.log
+Type: application/octet-stream
+Size: 1279 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050727/cd7e6177/attachment-0001.obj>
+-------------- next part --------------
+Am 2005-07-27 um 02:55 schrieb Stani:
+> 1. Please, can someone test this file independently of SPE, just on  
+> its own:
+> >>> python smdi2.py
+>
+> Make some new children (File>New) and try to navigate between them  
+> with standard Mac commands (cmd~,cmd>,cmd<, am I right?). If this  
+> works I might implement it for SPE. Note that is not possible to  
+> close the parent window.
+
+New and Close are bound to <n> and <w> instead of <Cmd-n> and <Cmd- 
+w>, that makes testing really hard.
+smdi segfaults if I run it from SPE.
+I don't know if there are any standard Mac keys for navigating  
+between windows or tabs, nothing worked what I tried. Navigation  
+within the line is good.
+
+> 2. Preferences: can someone send me the error log with 0.7.4.o when  
+> trying to open the preferences? I'm waiting for this to fix the  
+> preferences bug on OS X
+
+Let's try if the logs make it through...
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smime.p7s
+Type: application/pkcs7-signature
+Size: 2312 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050727/cd7e6177/attachment.bin>
+
+From kkrull at mac.com  Wed Jul 27 09:00:42 2005
+From: kkrull at mac.com (Klaus Krull)
+Date: Wed, 27 Jul 2005 00:00:42 -0700
+Subject: [spe-mac] Test: smdi2.py
+Message-ID: <11854276.1122447642224.JavaMail.kkrull@mac.com>
+
+"
+1. Please, can someone test this file independently of SPE, just on its own:
+ >>> python smdi2.py
+
+Make some new children (File>New) and try to navigate between them with 
+standard Mac commands (cmd~,cmd>,cmd<, am I right?). If this works I 
+might implement it for SPE. Note that is not possible to close the 
+parent window.
+"
+
+cmd` cycles one way through the open Windows, cmd~ cycles through the other way, so that is working.
+
+cmd> & cmd< don't seem to do anything in any OS X app I tried
+
+In Safari, cmd{ and cmd} and cmd} are used to navigate between tabs -- is that what you meant?
+
+FWIW, a page that lists XP vs X shortcuts: http://www.xvsxp.com/keyboard/ (no idea on accuracy, though)
+
+Also, is it as designed, or are the child windows not visually "children" of the parent window? I have these free-floating text edit boxes and the one "parent" window with the toolbar buttons.... (similar in SPE -- a different window for each file (although each window contains all the toolbar controls.) In the SPE.PDF, I didn't see screenshots of multiple Windows on Windows, so I was wondering what is expected....
+
+Thanks for the work (and BTW, I can now save files.)
+
+
+
+From bryan at Kempville.com  Thu Jul 28 01:37:57 2005
+From: bryan at Kempville.com (Bryan Kemp)
+Date: Wed, 27 Jul 2005 18:37:57 -0500
+Subject: [spe-mac] Mac OSX version
+Message-ID: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com>
+
+All,
+I have a version of SPE that is an app. Does anyone know about this  
+version. It is 0.7.2c I think. Is this an official version? can I  
+replace the source I have with the new files?
+-Bryan
+
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 02:01:21 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 02:01:21 +0200
+Subject: [spe-mac] Mac OSX version
+In-Reply-To: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com>
+References: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com>
+Message-ID: <42E82051.2010006@gmx.net>
+
+Bryan Kemp wrote:
+
+> All,
+> I have a version of SPE that is an app. Does anyone know about this  
+> version. It is 0.7.2c I think. Is this an official version? can I  
+> replace the source I have with the new files?
+> -Bryan
+> _______________________________________________
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+I posted this earlier here:
+
+> This the old mac spe package (0.7.3.a) of Kevin Walzer, who 
+> discontinued offering python support. It might be of some use for 
+> those who want to package:
+> http://www.stani.be/python/spe/releases/0.7/SPE-OSX.zip
+> I want to distribute the mac package through the berlios site, but at 
+> the moment debugging is for me more important than packaging. 
+
+That's the latest he sended to me. You can take that as a starting point 
+by removing its _spe and sm folders and replacing it with the new one. 
+Make sure no old source files from these folders remain. I'm about to 
+release a new version of SPE, with an improved framework for the Mac I 
+hope. It's all gambling in the dark. Please test that version 0.7.4.r 
+thoroughly. Can someone say very quickly if preferences work in the 
+latest version and if not send the error log? I don't think for now it 
+makes sense to start packaging, at least the preferences should work.But 
+maybe that's already the case.  Also I'm releasing more than daily, so 
+probably it would get easily behind.
+Stani
+
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 02:40:20 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 02:40:20 +0200
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <42E82051.2010006@gmx.net>
+References: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com> <42E82051.2010006@gmx.net>
+Message-ID: <42E82974.90202@gmx.net>
+
+1. This interface of this release should be better than before:
+- cycling through windows in standard Mac way (cmd` cycles one way 
+through the open Windows, cmd~ cycles through the other way)
+- hiding of the shell is possible
+Let me know if this works
+
+2 Nobody gave feedback if preferences are now working
+
+3 Also are keyboard shortcuts working?
+
+4 Try the browser in the sidebar and check if the printed path is valid.
+
+Please try this version out asap.
+
+Thanks,
+Stani
+
+
+
+From jaguar451 at mac.com  Thu Jul 28 03:49:27 2005
+From: jaguar451 at mac.com (jaguar451 at mac.com)
+Date: Wed, 27 Jul 2005 18:49:27 -0700
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <42E82974.90202@gmx.net>
+References: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com>
+ <42E82051.2010006@gmx.net> <42E82974.90202@gmx.net>
+Message-ID: <11574702.1122515367363.JavaMail.jaguar451@mac.com>
+
+A couple of quick comment (gotta run to dinner....):
+
+.7.4.r, OS X 10.3.9, wxPython 2.6.1, Python 2.4.1
+
+ 1) cmd-N creates new
+
+ 2) cmd-` writes ` into the text window instead of going to a new Window (looks like cmd not being hooked at all inside the text editor (except for system commands, such as cmd-tab.)
+
+ 3) The opened child windows no longer have the toolbar buttons on them.
+
+ 4) 'Preferences' don't come up. Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Menu.py", line 302, in menu_preferences
+    self.parentPanel.preferences()
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", line 269, in preferences
+    prefs=preferencesDialog.Create(self,-1,'')
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py", line 97, in __init__
+    self.update()
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py", line 264, in update
+    for name in VALUES: self._update(name)
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py", line 274, in _update
+    if type(item.GetValue()) in [types.StringType,types.UnicodeType]:
+  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_controls.py", line 604, in GetValue
+    return _controls_.ComboBox_GetValue(*args, **kwargs)
+wx._core.PyAssertionError: C++ assertion "wxAssertFailure" failed in ../src/mac/carbon/choice.cpp(217): wxChoice::GetString(): invalid index
+ 
+ 5) when I try to open a file from the brower pane:
+
+Debug] 18:43:42: Doing delayed deactivation of 0xb05e00
+[Debug] 18:44:08: Doing delayed deactivation of 0xb05e00
+[Debug] 18:44:15: Doing delayed deactivation of 0xb05e00
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sidebar/Browser.py", line 38, in onClick
+    if info.DARWIN:
+NameError: global name 'info' is not defined
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sidebar/Browser.py", line 38, in onClick
+    if info.DARWIN:
+NameError: global name 'info' is not defined
+[Debug] 18:44:30: Doing delayed deactivation of 0x951000
+[Debug] 18:44:36: Doing delayed deactivation of 0x951000
+
+
+
+On Wednesday, July 27, 2005, at 05:26PM, Stani <s_t_a_n_i at gmx.net> wrote:
+
+>1. This interface of this release should be better than before:
+>- cycling through windows in standard Mac way (cmd` cycles one way 
+>through the open Windows, cmd~ cycles through the other way)
+>- hiding of the shell is possible
+>Let me know if this works
+>
+>2 Nobody gave feedback if preferences are now working
+>
+>3 Also are keyboard shortcuts working?
+>
+>4 Try the browser in the sidebar and check if the printed path is valid.
+>
+>Please try this version out asap.
+>
+>Thanks,
+>Stani
+>
+>_______________________________________________
+>Python-spe-mac mailing list
+>Python-spe-mac at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 04:13:08 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 04:13:08 +0200
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <11574702.1122515367363.JavaMail.jaguar451@mac.com>
+References: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com> <42E82051.2010006@gmx.net> <42E82974.90202@gmx.net> <11574702.1122515367363.JavaMail.jaguar451@mac.com>
+Message-ID: <42E83F34.5070508@gmx.net>
+
+jaguar451 at mac.com wrote:
+
+>A couple of quick comment (gotta run to dinner....):
+>
+>.7.4.r, OS X 10.3.9, wxPython 2.6.1, Python 2.4.1
+>
+> 1) cmd-N creates new
+>  
+>
+OK
+
+> 2) cmd-` writes ` into the text window instead of going to a new Window (looks like cmd not being hooked at all inside the text editor (except for system commands, such as cmd-tab.)
+>  
+>
+Will fix that.
+
+> 3) The opened child windows no longer have the toolbar buttons on them.
+>  
+>
+Idem
+
+> 4) 'Preferences' don't come up. Traceback (most recent call last):
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Menu.py", line 302, in menu_preferences
+>    self.parentPanel.preferences()
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py", line 269, in preferences
+>    prefs=preferencesDialog.Create(self,-1,'')
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py", line 97, in __init__
+>    self.update()
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py", line 264, in update
+>    for name in VALUES: self._update(name)
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py", line 274, in _update
+>    if type(item.GetValue()) in [types.StringType,types.UnicodeType]:
+>  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_controls.py", line 604, in GetValue
+>    return _controls_.ComboBox_GetValue(*args, **kwargs)
+>wx._core.PyAssertionError: C++ assertion "wxAssertFailure" failed in ../src/mac/carbon/choice.cpp(217): wxChoice::GetString(): invalid index
+>  
+>
+Please don't only give the error log also the stdout where the print 
+statements go. Is Mdi giving this error log? Is for a wx.Combobox the 
+method GetValue not working? Could please someone test that in a 
+simplified example?
+
+> 
+> 5) when I try to open a file from the brower pane:
+>
+>Debug] 18:43:42: Doing delayed deactivation of 0xb05e00
+>[Debug] 18:44:08: Doing delayed deactivation of 0xb05e00
+>[Debug] 18:44:15: Doing delayed deactivation of 0xb05e00
+>Traceback (most recent call last):
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sidebar/Browser.py", line 38, in onClick
+>    if info.DARWIN:
+>NameError: global name 'info' is not defined
+>Traceback (most recent call last):
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sidebar/Browser.py", line 38, in onClick
+>    if info.DARWIN:
+>NameError: global name 'info' is not defined
+>[Debug] 18:44:30: Doing delayed deactivation of 0x951000
+>[Debug] 18:44:36: Doing delayed deactivation of 0x951000
+>  
+>
+Will fix that.
+
+
+
+From jaguar451 at mac.com  Thu Jul 28 06:42:20 2005
+From: jaguar451 at mac.com (jaguar451 at mac.com)
+Date: Wed, 27 Jul 2005 21:42:20 -0700
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <42E83F34.5070508@gmx.net>
+References: <2731C8FC-A280-49DE-8B6F-B8CDAD5E44BA@Kempville.com>
+ <42E82051.2010006@gmx.net> <42E82974.90202@gmx.net>
+ <11574702.1122515367363.JavaMail.jaguar451@mac.com> <42E83F34.5070508@gmx.net>
+Message-ID: <5055253.1122525740132.JavaMail.jaguar451@mac.com>
+
+> Is Mdi giving this error log? 
+
+Can't change the MDI default, and the way it runs seems part SDI, part MDI...
+
+> Is for a wx.Combobox the method GetValue not working? Could please someone test that in a 
+> simplified example?
+
+FWIW, the wxPython demo has a wx.ComboBox demo, which seems to return the correct value (although doesn't use GetValue), BUT I can get the wxPython Demo to crash pretty quickly on my system using this sample (I haven't played around with much else -- maybe someone with more wxPython experience on Mac knows more?)
+
+
+From csomor at advancedconcepts.ch  Thu Jul 28 09:39:56 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Thu, 28 Jul 2005 09:39:56 +0200
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+Message-ID: <834A07D804766B43A535AC6861D6D867369549@mail.advancedconcepts.ch>
+
+Hi
+
+I don't know whether this is a problem just for me (Running on Tiger
+10.4.2, Python 2.4.1, latest wxPython release build for Python 2.4.1) :
+
+- as of now, the About... Menu item in the Application menu is not wired
+against the 'about' menu item of SPE (And the About menu item persists
+in the Help menu)
+- the Preferences Menu Item persists in the Edit Menu and the one in the
+Application menu is grayed out
+
+If in _spe/Menu.py , I move the #Mac Tweaks source lines from the def
+__events__ in line 201 up to the __init__ in line 148, then these things
+are wired correctly
+
+HTH
+
+Stefan
+
+> -----Original Message-----
+> From: python-spe-mac-admin at berlios.de 
+> [mailto:python-spe-mac-admin at berlios.de] On Behalf Of 
+> jaguar451 at mac.com
+> Sent: Donnerstag, 28. Juli 2005 05:42
+> To: python-spe-mac at berlios.de
+> Subject: Re: [spe-mac] SPE 0.7.4.r please update and check
+> 
+> > Is Mdi giving this error log? 
+> 
+> Can't change the MDI default, and the way it runs seems part 
+> SDI, part MDI...
+> 
+> > Is for a wx.Combobox the method GetValue not working? Could please 
+> > someone test that in a simplified example?
+> 
+> FWIW, the wxPython demo has a wx.ComboBox demo, which seems 
+> to return the correct value (although doesn't use GetValue), 
+> BUT I can get the wxPython Demo to crash pretty quickly on my 
+> system using this sample (I haven't played around with much 
+> else -- maybe someone with more wxPython experience on Mac 
+> knows more?) _______________________________________________
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+> 
+
+
+From csomor at advancedconcepts.ch  Thu Jul 28 10:07:01 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Thu, 28 Jul 2005 10:07:01 +0200
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+Message-ID: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch>
+
+Hi 
+
+The problem with the preferences dialog is the following :
+
+The mdi combobox gets set to 0 in __set_properties (called from __init__
+line 89 , but receives its range of values only afterwards (line 96 in
+__init__ ), therefore the OS remains at -1 for the selection, as at that
+time a selection of 0 would be invalid.
+
+Suggested fix : moving the key adding in front of the __set_properties
+call
+
+Best,
+
+Stefan
+
+
+From jaguar451 at mac.com  Thu Jul 28 16:06:20 2005
+From: jaguar451 at mac.com (jaguar451 at mac.com)
+Date: Thu, 28 Jul 2005 07:06:20 -0700
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch>
+References: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch>
+Message-ID: <8617941.1122559580741.JavaMail.jaguar451@mac.com>
+
+Hey, that's what the preferences dialog looks like.... ;-) (aka, after I made the below change, I could see the prefernces dialog.)
+
+Thanks.
+
+Of course, I then change the preferences to use 'single with tabs (mac), and SPE doesn't startup with that option:
+
+STDERR / STDOUT (BTW, any way to include python version in the platform & wxPython version info:
+
+SPE v0.7.4.r (c)2003-2005 www.stani.be
+
+If spe fails to start:
+ - type "python SPE.py --debug > debug.txt" at the command prompt
+ - send debug.txt with some info to s_t_a_n_i at yahoo.com
+
+Blender support disabled (run SPE inside Blender to enable).
+Spe is running in debugging mode.
+Configuration:
+- platform  : darwin
+- wxPython  : 2.6.1.0.
+- interface : single with tabs (mac)
+- encoding  : mac-roman
+
+Launching application...
+Traceback (most recent call last):
+  File "SPE.py", line 168, in ?
+    style           = style)
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py", line 940, in __init__
+    wx.App.__init__(self,redirect=not debug)
+  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", line 7473, in __init__
+    self._BootstrapApp()
+  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", line 7125, in _BootstrapApp
+    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py", line 944, in OnInit
+    self.parentFrame = self.ParentFrame(self,
+AttributeError: 'App' object has no attribute 'ParentFrame'
+~                                                            
+
+ 
+On Thursday, July 28, 2005, at 01:27AM, Stefan Csomor <csomor at advancedconcepts.ch> wrote:
+
+>Hi 
+>
+>The problem with the preferences dialog is the following :
+>
+>The mdi combobox gets set to 0 in __set_properties (called from __init__
+>line 89 , but receives its range of values only afterwards (line 96 in
+>__init__ ), therefore the OS remains at -1 for the selection, as at that
+>time a selection of 0 would be invalid.
+>
+>Suggested fix : moving the key adding in front of the __set_properties
+>call
+>
+>Best,
+>
+>Stefan
+>_______________________________________________
+>Python-spe-mac mailing list
+>Python-spe-mac at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 17:06:05 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 17:06:05 +0200
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <8617941.1122559580741.JavaMail.jaguar451@mac.com>
+References: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch> <8617941.1122559580741.JavaMail.jaguar451@mac.com>
+Message-ID: <42E8F45D.1090705@gmx.net>
+
+jaguar451 at mac.com wrote:
+
+>Hey, that's what the preferences dialog looks like.... ;-) 
+>
+Wow, that's really good news! This means we are getting closer to a 
+stable release for Mac.
+
+>(aka, after I made the below change, I could see the prefernces dialog.)
+>  
+>
+Which change?
+
+>Thanks.
+>
+>Of course, I then change the preferences to use 'single with tabs (mac), and SPE doesn't startup with that option:
+>  
+>
+>STDERR / STDOUT (BTW, any way to include python version in the platform & wxPython version info:
+>  
+>
+Ok, Python version added.
+
+>SPE v0.7.4.r (c)2003-2005 www.stani.be
+>
+>If spe fails to start:
+> - type "python SPE.py --debug > debug.txt" at the command prompt
+> - send debug.txt with some info to s_t_a_n_i at yahoo.com
+>
+>Blender support disabled (run SPE inside Blender to enable).
+>Spe is running in debugging mode.
+>Configuration:
+>- platform  : darwin
+>- wxPython  : 2.6.1.0.
+>- interface : single with tabs (mac)
+>- encoding  : mac-roman
+>
+>Launching application...
+>Traceback (most recent call last):
+>  File "SPE.py", line 168, in ?
+>    style           = style)
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py", line 940, in __init__
+>    wx.App.__init__(self,redirect=not debug)
+>  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", line 7473, in __init__
+>    self._BootstrapApp()
+>  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", line 7125, in _BootstrapApp
+>    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py", line 944, in OnInit
+>    self.parentFrame = self.ParentFrame(self,
+>AttributeError: 'App' object has no attribute 'ParentFrame'
+>~             
+>
+This interface is not implemented yet, so I commented it out. Good you 
+mention it. BTW this how I like to see error reports. You can still 
+choose the old interface for mac 'single with tabs (mac, linux, 
+windows)', but I wouldn't recommend it unless you are really tab 
+addicted (tabs are un-mac if I understood well from mac users feedback). 
+Now I'm developping the new one 'single with palette (mac default)', 
+which is now the default for mac. Instead of a toolbar, there will be a 
+tool palette (Photoshop like) to make it look more like a real, native 
+mac app. This will be released in the 's' version. Of course I'm very 
+curious if this works and I hope Mac users will be happy with that. I 
+announce the release on this list.
+
+Stani
+
+
+
+
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 17:24:34 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 17:24:34 +0200
+Subject: [spe-mac] SPE 0.7.4.s released with tool palette!
+In-Reply-To: <42E8F45D.1090705@gmx.net>
+References: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch> <8617941.1122559580741.JavaMail.jaguar451@mac.com> <42E8F45D.1090705@gmx.net>
+Message-ID: <42E8F8B2.4060209@gmx.net>
+
+Hi,
+I'm curious if the tool palette works. I added a screenshot so you know 
+how it should look like. I still have to implement the Ctrl+` 
+shortchuts, but you can cycle through the windows with the arrows on the 
+tool palette. Can someone send me (not to the list) a screenshot of spe 
+with toolbar and preferences dialog? That would be nice.
+Stani
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: palette.png
+Type: image/png
+Size: 3675 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/99abb307/attachment.png>
+
+From jaguar451 at mac.com  Thu Jul 28 17:21:55 2005
+From: jaguar451 at mac.com (jaguar451 at mac.com)
+Date: Thu, 28 Jul 2005 08:21:55 -0700
+Subject: [spe-mac] SPE 0.7.4.r please update and check
+In-Reply-To: <42E8F45D.1090705@gmx.net>
+References: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch>
+ <8617941.1122559580741.JavaMail.jaguar451@mac.com> <42E8F45D.1090705@gmx.net>
+Message-ID: <2320749.1122564115686.JavaMail.jaguar451@mac.com>
+
+>> >Which change?
+
+I'm at work and don't have access to the email, but someone (stephen?) mentioned making a change to the preferencesDialog.py file -- moving the adding of key values to the ComboBox a few lines up to put it before the values are referenced.
+
+And there was a different email with a change to the Menu.py file to put come Mac specific code in the __init__ method as opposed to where it was.... Allowed access of 'Preferences' from under the application menu.
+
+>> BTW this how I like to see error reports.
+
+FYI, for folks on UNIXes, you might want to change your debug instructions from "python SPE.py --debug > debug.txt" to "python SPE.py --debug > debug.txt 2>&1" 
+
+Without that '2>&1', items written to STDOUT go to the file debug.txt, and items written to STDERR (the stack trace) goes to the console, which is why you might be getting disjoint info.
+
+Might be the same on Windows (I know '2>&1' works on windows in a command prompt, but can't test directly with SPE, as not an approved software package for use at work....)
+
+
+
+On Thursday, July 28, 2005, at 07:52AM, Stani <s_t_a_n_i at gmx.net> wrote:
+
+>
+>jaguar451 at mac.com wrote:
+>
+>>Hey, that's what the preferences dialog looks like.... ;-) 
+>>
+>Wow, that's really good news! This means we are getting closer to a 
+>stable release for Mac.
+>
+>>(aka, after I made the below change, I could see the prefernces dialog.)
+>>  
+>>
+>Which change?
+>
+>>Thanks.
+>>
+>>Of course, I then change the preferences to use 'single with tabs (mac), and SPE doesn't startup with that option:
+>>  
+>>
+>>STDERR / STDOUT (BTW, any way to include python version in the platform & wxPython version info:
+>>  
+>>
+>Ok, Python version added.
+>
+>>SPE v0.7.4.r (c)2003-2005 www.stani.be
+>>
+>>If spe fails to start:
+>> - type "python SPE.py --debug > debug.txt" at the command prompt
+>> - send debug.txt with some info to s_t_a_n_i at yahoo.com
+>>
+>>Blender support disabled (run SPE inside Blender to enable).
+>>Spe is running in debugging mode.
+>>Configuration:
+>>- platform  : darwin
+>>- wxPython  : 2.6.1.0.
+>>- interface : single with tabs (mac)
+>>- encoding  : mac-roman
+>>
+>>Launching application...
+>>Traceback (most recent call last):
+>>  File "SPE.py", line 168, in ?
+>>    style           = style)
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py", line 940, in __init__
+>>    wx.App.__init__(self,redirect=not debug)
+>>  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", line 7473, in __init__
+>>    self._BootstrapApp()
+>>  File "//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_core.py", line 7125, in _BootstrapApp
+>>    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/wxp/smdi.py", line 944, in OnInit
+>>    self.parentFrame = self.ParentFrame(self,
+>>AttributeError: 'App' object has no attribute 'ParentFrame'
+>>~             
+>>
+>This interface is not implemented yet, so I commented it out. Good you 
+>mention it. BTW this how I like to see error reports. You can still 
+>choose the old interface for mac 'single with tabs (mac, linux, 
+>windows)', but I wouldn't recommend it unless you are really tab 
+>addicted (tabs are un-mac if I understood well from mac users feedback). 
+>Now I'm developping the new one 'single with palette (mac default)', 
+>which is now the default for mac. Instead of a toolbar, there will be a 
+>tool palette (Photoshop like) to make it look more like a real, native 
+>mac app. This will be released in the 's' version. Of course I'm very 
+>curious if this works and I hope Mac users will be happy with that. I 
+>announce the release on this list.
+>
+>Stani
+>
+>
+>
+>_______________________________________________
+>Python-spe-mac mailing list
+>Python-spe-mac at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 17:44:48 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 17:44:48 +0200
+Subject: [spe-mac] SPE 0.7.4.t released
+In-Reply-To: <2320749.1122564115686.JavaMail.jaguar451@mac.com>
+References: <834A07D804766B43A535AC6861D6D86736954A@mail.advancedconcepts.ch> <8617941.1122559580741.JavaMail.jaguar451@mac.com> <42E8F45D.1090705@gmx.net> <2320749.1122564115686.JavaMail.jaguar451@mac.com>
+Message-ID: <42E8FD70.30905@gmx.net>
+
+jaguar451 at mac.com wrote:
+
+>>>>Which change?
+>>>>        
+>>>>
+>
+>I'm at work and don't have access to the email, but someone (stephen?) mentioned making a change to the preferencesDialog.py file -- moving the adding of key values to the ComboBox a few lines up to put it before the values are referenced.
+>  
+>
+This is fixed in another way in the 0.7.4.t release.
+
+>And there was a different email with a change to the Menu.py file to put come Mac specific code in the __init__ method as opposed to where it was.... Allowed access of 'Preferences' from under the application menu.
+>  
+>
+Forgot this in s release, so implemented in t
+
+>  
+>
+>>>BTW this how I like to see error reports.
+>>>      
+>>>
+>
+>FYI, for folks on UNIXes, you might want to change your debug instructions from "python SPE.py --debug > debug.txt" to "python SPE.py --debug > debug.txt 2>&1" 
+>
+>Without that '2>&1', items written to STDOUT go to the file debug.txt, and items written to STDERR (the stack trace) goes to the console, which is why you might be getting disjoint info.
+>
+>Might be the same on Windows (I know '2>&1' works on windows in a command prompt, but can't test directly with SPE, as not an approved software package for use at work....)
+>  
+>
+I'll test this in windows and update it for next release (u). I hope we 
+make it before z ;-)
+Thanks,
+Stani
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/1f71ac08/attachment.html>
+
+From csomor at advancedconcepts.ch  Thu Jul 28 17:39:38 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Thu, 28 Jul 2005 17:39:38 +0200
+Subject: [spe-mac] SPE 0.7.4.t released
+Message-ID: <834A07D804766B43A535AC6861D6D867369550@mail.advancedconcepts.ch>
+
+Hi
+ 
+- about and prefs menu items are wired correctly
+ 
+- the preferences dialog still has the same problem, I've described the
+reason for the crash and the workaround in the previous mail, in your
+new code, please put the call for self.__fill in front of the
+self.__set_properties
+ 
+Best,
+ 
+Stefan
+
+
+  _____  
+
+	From: python-spe-mac-admin at berlios.de
+[mailto:python-spe-mac-admin at berlios.de] On Behalf Of Stani
+	Sent: Donnerstag, 28. Juli 2005 17:45
+	To: python-spe-mac at berlios.de
+	Subject: [spe-mac] SPE 0.7.4.t released
+	
+	
+	jaguar451 at mac.com wrote: 
+
+				Which change?
+				        
+
+		
+		I'm at work and don't have access to the email, but
+someone (stephen?) mentioned making a change to the preferencesDialog.py
+file -- moving the adding of key values to the ComboBox a few lines up
+to put it before the values are referenced.
+		  
+
+	This is fixed in another way in the 0.7.4.t release.
+	
+
+		And there was a different email with a change to the
+Menu.py file to put come Mac specific code in the __init__ method as
+opposed to where it was.... Allowed access of 'Preferences' from under
+the application menu.
+		  
+
+	Forgot this in s release, so implemented in t
+	
+
+		  
+
+				BTW this how I like to see error
+reports.
+				      
+
+		
+		FYI, for folks on UNIXes, you might want to change your
+debug instructions from "python SPE.py --debug > debug.txt" to "python
+SPE.py --debug > debug.txt 2>&1" 
+		
+		Without that '2>&1', items written to STDOUT go to the
+file debug.txt, and items written to STDERR (the stack trace) goes to
+the console, which is why you might be getting disjoint info.
+		
+		Might be the same on Windows (I know '2>&1' works on
+windows in a command prompt, but can't test directly with SPE, as not an
+approved software package for use at work....)
+		  
+
+	I'll test this in windows and update it for next release (u). I
+hope we make it before z ;-)
+	Thanks,
+	Stani
+	
+	
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/10696c16/attachment.html>
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 21:33:56 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 21:33:56 +0200
+Subject: [spe-mac] SPE 0.7.4.u released
+In-Reply-To: <834A07D804766B43A535AC6861D6D867369554@mail.advancedconcepts.ch>
+References: <834A07D804766B43A535AC6861D6D867369554@mail.advancedconcepts.ch>
+Message-ID: <42E93324.8000106@gmx.net>
+
+Hi Stefan,
+Will this work as well in __fill (source file attached)? I thought this 
+could be more clean.
+    def __fill(self):
+        #mdi
+        keys = smdi.DI.keys()
+        keys.remove('<default>')
+        keys.sort()
+        for key in keys:
+            self.Mdi.Append(key)
+
+You can test it by overwriting _spe/dialogs/preferencesDialog.py
+
+Stani
+
+Stefan Csomor wrote:
+
+>Hi
+>
+>Ok, now I see where you were heading to, sorry, I didn't see the
+><default> 
+>
+>the problem is that in __fill you are calling .Clear on the combobox
+>which essentially eradicates the workaround introduced. Because it sets
+>the Selection value back to -1 again.
+>
+>So to walk along your way you should do in __fill first a 
+>
+>former = self.Mdi.GetSelection()
+>self.Mdi.Clear()
+>...
+>
+>and at the end a 
+>
+>self.Mdi.SetSelection( former )
+>
+>This works fine as well
+>
+>Best,
+>
+>Stefan
+>
+>  
+>
+>>-----Original Message-----
+>>From: Stani [mailto:s_t_a_n_i at gmx.net] 
+>>Sent: Donnerstag, 28. Juli 2005 18:56
+>>To: Jesse Noller; hraban at fiee.net; yoyonghernan at gmail.com; 
+>>mlacunza at gmail.com; redarmy at gmail.com; bmyers at bco.com; 
+>>jaguar451 at mac.com; kkrull at mac.com; Stefan Csomor
+>>Subject: [spe-mac] SPE 0.7.4.u released
+>>
+>>  Stefan Csomor wrote:
+>>
+>> > Hi
+>> >
+>> > - about and prefs menu items are wired correctly  >  > - 
+>>the preferences dialog still has the same problem, I've 
+>>described the reason for the crash and the workaround in the 
+>>previous mail, in your new code, please put the call for 
+>>self.__fill in front of the self.__set_properties
+>>
+>>Hi Stefan,
+>>As I am always looking not to break the wxGlade code, I added 
+>>'<default>' temporarily to the combobox. As it doesn't work, 
+>>I try to follow your suggestion. In the u release, 
+>>self.__fill is the first line of self.__set_properties Hope 
+>>that helps.
+>>Thanks a lot for your clear hint,
+>>Stani
+>>
+>>
+>>    
+>>
+>
+>
+>  
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/f05bb116/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: preferencesDialog.py
+Type: text/x-python
+Size: 22282 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/f05bb116/attachment.py>
+
+From csomor at advancedconcepts.ch  Thu Jul 28 21:09:47 2005
+From: csomor at advancedconcepts.ch (Stefan Csomor)
+Date: Thu, 28 Jul 2005 21:09:47 +0200
+Subject: [spe-mac] SPE 0.7.4.u released
+Message-ID: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch>
+
+Hi
+ 
+yep, works flawlessly :-)
+ 
+Best,
+ 
+Stefan
+
+
+  _____  
+
+	From: Stani [mailto:s_t_a_n_i at gmx.net] 
+	Sent: Donnerstag, 28. Juli 2005 21:34
+	To: Stefan Csomor; python-spe-mac at berlios.de
+	Subject: Re: [spe-mac] SPE 0.7.4.u released
+	
+	
+	Hi Stefan,
+	Will this work as well in __fill (source file attached)? I
+thought this could be more clean.
+	    def __fill(self):
+	        #mdi
+	        keys = smdi.DI.keys()
+	        keys.remove('<default>')
+	        keys.sort()
+	        for key in keys:
+	            self.Mdi.Append(key)
+	
+	You can test it by overwriting _spe/dialogs/preferencesDialog.py
+	
+	Stani
+	
+	Stefan Csomor wrote:
+	
+
+		Hi
+		
+		Ok, now I see where you were heading to, sorry, I didn't
+see the
+		<default> 
+		
+		the problem is that in __fill you are calling .Clear on
+the combobox
+		which essentially eradicates the workaround introduced.
+Because it sets
+		the Selection value back to -1 again.
+		
+		So to walk along your way you should do in __fill first
+a 
+		
+		former = self.Mdi.GetSelection()
+		self.Mdi.Clear()
+		...
+		
+		and at the end a 
+		
+		self.Mdi.SetSelection( former )
+		
+		This works fine as well
+		
+		Best,
+		
+		Stefan
+		
+		  
+
+			-----Original Message-----
+			From: Stani [mailto:s_t_a_n_i at gmx.net] 
+			Sent: Donnerstag, 28. Juli 2005 18:56
+			To: Jesse Noller; hraban at fiee.net;
+yoyonghernan at gmail.com; 
+			mlacunza at gmail.com; redarmy at gmail.com;
+bmyers at bco.com; 
+			jaguar451 at mac.com; kkrull at mac.com; Stefan Csomor
+			Subject: [spe-mac] SPE 0.7.4.u released
+			
+			  Stefan Csomor wrote:
+			
+			 > Hi
+			 >
+			 > - about and prefs menu items are wired
+correctly  >  > - 
+			the preferences dialog still has the same
+problem, I've 
+			described the reason for the crash and the
+workaround in the 
+			previous mail, in your new code, please put the
+call for 
+			self.__fill in front of the
+self.__set_properties
+			
+			Hi Stefan,
+			As I am always looking not to break the wxGlade
+code, I added 
+			'<default>' temporarily to the combobox. As it
+doesn't work, 
+			I try to follow your suggestion. In the u
+release, 
+			self.__fill is the first line of
+self.__set_properties Hope 
+			that helps.
+			Thanks a lot for your clear hint,
+			Stani
+			
+			
+			    
+
+		
+		
+		  
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/183affbf/attachment.html>
+
+From s_t_a_n_i at gmx.net  Thu Jul 28 22:39:59 2005
+From: s_t_a_n_i at gmx.net (Stani)
+Date: Thu, 28 Jul 2005 22:39:59 +0200
+Subject: SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+In-Reply-To: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch>
+References: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch>
+Message-ID: <42E9429F.7010208@gmx.net>
+
+Releasing as w...
+Thanks,
+Stani
+
+Stefan Csomor wrote:
+
+> Hi
+>  
+> yep, works flawlessly :-)
+>  
+> Best,
+>  
+> Stefan
+>
+>     ------------------------------------------------------------------------
+>     *From:* Stani [mailto:s_t_a_n_i at gmx.net]
+>     *Sent:* Donnerstag, 28. Juli 2005 21:34
+>     *To:* Stefan Csomor; python-spe-mac at berlios.de
+>     *Subject:* Re: [spe-mac] SPE 0.7.4.u released
+>
+>     Hi Stefan,
+>     Will this work as well in __fill (source file attached)? I thought
+>     this could be more clean.
+>         def __fill(self):
+>             #mdi
+>             keys = smdi.DI.keys()
+>             keys.remove('<default>')
+>             keys.sort()
+>             for key in keys:
+>                 self.Mdi.Append(key)
+>
+>     You can test it by overwriting _spe/dialogs/preferencesDialog.py
+>
+>     Stani
+>
+>     Stefan Csomor wrote:
+>
+>>Hi
+>>
+>>Ok, now I see where you were heading to, sorry, I didn't see the
+>><default> 
+>>
+>>the problem is that in __fill you are calling .Clear on the combobox
+>>which essentially eradicates the workaround introduced. Because it sets
+>>the Selection value back to -1 again.
+>>
+>>So to walk along your way you should do in __fill first a 
+>>
+>>former = self.Mdi.GetSelection()
+>>self.Mdi.Clear()
+>>...
+>>
+>>and at the end a 
+>>
+>>self.Mdi.SetSelection( former )
+>>
+>>This works fine as well
+>>
+>>Best,
+>>
+>>Stefan
+>>
+>>  
+>>
+>>>-----Original Message-----
+>>>From: Stani [mailto:s_t_a_n_i at gmx.net] 
+>>>Sent: Donnerstag, 28. Juli 2005 18:56
+>>>To: Jesse Noller; hraban at fiee.net; yoyonghernan at gmail.com; 
+>>>mlacunza at gmail.com; redarmy at gmail.com; bmyers at bco.com; 
+>>>jaguar451 at mac.com; kkrull at mac.com; Stefan Csomor
+>>>Subject: [spe-mac] SPE 0.7.4.u released
+>>>
+>>>  Stefan Csomor wrote:
+>>>
+>>> > Hi
+>>> >
+>>> > - about and prefs menu items are wired correctly  >  > - 
+>>>the preferences dialog still has the same problem, I've 
+>>>described the reason for the crash and the workaround in the 
+>>>previous mail, in your new code, please put the call for 
+>>>self.__fill in front of the self.__set_properties
+>>>
+>>>Hi Stefan,
+>>>As I am always looking not to break the wxGlade code, I added 
+>>>'<default>' temporarily to the combobox. As it doesn't work, 
+>>>I try to follow your suggestion. In the u release, 
+>>>self.__fill is the first line of self.__set_properties Hope 
+>>>that helps.
+>>>Thanks a lot for your clear hint,
+>>>Stani
+>>>
+>>>
+>>>    
+>>>
+>>
+>>
+>>  
+>>
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/5bd787a9/attachment.html>
+
+From Alan.Sill at ttu.edu  Fri Jul 29 06:46:17 2005
+From: Alan.Sill at ttu.edu (Alan Sill)
+Date: Thu, 28 Jul 2005 23:46:17 -0500
+Subject: SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+In-Reply-To: <42E9429F.7010208@gmx.net>
+References: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch> <42E9429F.7010208@gmx.net>
+Message-ID: <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+
+Works...
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Picture 3.pdf
+Type: application/pdf
+Size: 50681 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/c32076c6/attachment.pdf>
+-------------- next part --------------
+
+
+And for the "UML" window...
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Picture 4.pdf
+Type: application/pdf
+Size: 105830 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/c32076c6/attachment-0001.pdf>
+-------------- next part --------------
+
+
+Only oddity I saw upon a few-minute inspection was that the application 
+crashes ungracefully with a "Bus error" if the last open source window 
+is closed.
+
+Alan
+
+
+On Jul 28, 2005, at 3:39 PM, Stani wrote:
+
+>  Releasing as w...
+>  Thanks,
+>  Stani
+>
+>  Stefan Csomor wrote:Hi
+>> ?
+>> yep, works flawlessly :-)
+>> ?
+>> Best,
+>> ?
+>> Stefan
+>>
+>>> From: Stani [mailto:s_t_a_n_i at gmx.net]
+>>> Sent: Donnerstag, 28. Juli 2005 21:34
+>>> To: Stefan Csomor; python-spe-mac at berlios.de
+>>> Subject: Re: [spe-mac] SPE 0.7.4.u released
+>>>
+>>>  Hi Stefan,
+>>>  Will this work as well in __fill (source file attached)? I thought 
+>>> this could be more clean.
+>>>  ??? def __fill(self):
+>>>  ??????? #mdi
+>>>  ??????? keys = smdi.DI.keys()
+>>>  ??????? keys.remove('<default>')
+>>>  ??????? keys.sort()
+>>>  ??????? for key in keys:
+>>>  ??????????? self.Mdi.Append(key)
+>>>
+>>>  You can test it by overwriting _spe/dialogs/preferencesDialog.py
+>>>
+>>>  Stani
+>>>
+>>>  Stefan Csomor wrote:
+>>>> Hi
+>>>>
+>>>> Ok, now I see where you were heading to, sorry, I didn't see the
+>>>> <default>
+>>>>
+>>>> the problem is that in __fill you are calling .Clear on the combobox
+>>>> which essentially eradicates the workaround introduced. Because it 
+>>>> sets
+>>>> the Selection value back to -1 again.
+>>>>
+>>>> So to walk along your way you should do in __fill first a
+>>>>
+>>>> former = self.Mdi.GetSelection()
+>>>> self.Mdi.Clear()
+>>>> ...
+>>>>
+>>>> and at the end a
+>>>>
+>>>> self.Mdi.SetSelection( former )
+>>>>
+>>>> This works fine as well
+>>>>
+>>>> Best,
+>>>>
+>>>> Stefan
+>>>>
+>>>>
+>>>>> -----Original Message-----
+>>>>> From: Stani [mailto:s_t_a_n_i at gmx.net]
+>>>>> Sent: Donnerstag, 28. Juli 2005 18:56
+>>>>> To: Jesse Noller; hraban at fiee.net; yoyonghernan at gmail.com;
+>>>>> mlacunza at gmail.com; redarmy at gmail.com; bmyers at bco.com;
+>>>>> jaguar451 at mac.com; kkrull at mac.com; Stefan Csomor
+>>>>> Subject: [spe-mac] SPE 0.7.4.u released
+>>>>>
+>>>>>   Stefan Csomor wrote:
+>>>>>
+>>>>>  > Hi
+>>>>>  >
+>>>>>  > - about and prefs menu items are wired correctly  >  > -
+>>>>> the preferences dialog still has the same problem, I've
+>>>>> described the reason for the crash and the workaround in the
+>>>>> previous mail, in your new code, please put the call for
+>>>>> self.__fill in front of the self.__set_properties
+>>>>>
+>>>>> Hi Stefan,
+>>>>> As I am always looking not to break the wxGlade code, I added
+>>>>> '<default>' temporarily to the combobox. As it doesn't work,
+>>>>> I try to follow your suggestion. In the u release,
+>>>>> self.__fill is the first line of self.__set_properties Hope
+>>>>> that helps.
+>>>>> Thanks a lot for your clear hint,
+>>>>> Stani
+>>>>>
+>>>>>
+>>>>>
+>>>>
+>>>>
+>>>
+>
+>
+======================================================================
+:  Alan Sill, Texas Tech University   Office: Science 117, MS 41051  :
+:  e-mail: Alan.Sill at ttu.edu    ph. 806-742-3730   fax 806-742-1182  :
+======================================================================
+
+
+From Alan.Sill at ttu.edu  Fri Jul 29 06:59:32 2005
+From: Alan.Sill at ttu.edu (Alan Sill)
+Date: Thu, 28 Jul 2005 23:59:32 -0500
+Subject: SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+In-Reply-To: <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+References: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch> <42E9429F.7010208@gmx.net> <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+Message-ID: <f487334c3fcc527fc2d76f8188200ffc@ttu.edu>
+
+And for the About and Preferences boxes :
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Picture 5.pdf
+Type: application/pdf
+Size: 38348 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/32ad8c8f/attachment.pdf>
+-------------- next part --------------
+
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Picture 6.pdf
+Type: application/pdf
+Size: 85657 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050728/32ad8c8f/attachment-0001.pdf>
+-------------- next part --------------
+
+
+Something seems funky with the close behavior of the source windows - 
+if I close with them all with red button on each window, I get an error 
+(most recent time I tried, it was a Segmentation fault), but closing 
+with command-W does not seem to produce this behavior.
+
+Can I suggest others try it and report their results?
+
+Alan
+
+
+On Jul 28, 2005, at 11:46 PM, Alan Sill wrote:
+
+> On Jul 28, 2005, at 3:39 PM, Stani wrote:
+>
+>>  Releasing as w...
+>>  Thanks,
+>>  Stani
+>>
+>>  Stefan Csomor wrote:Hi
+>>> ?
+>>> yep, works flawlessly :-)
+>>> ?
+>>> Best,
+>>> ?
+>>> Stefan
+>>>
+======================================================================
+:  Alan Sill, Texas Tech University   Office: Science 117, MS 41051  :
+:  e-mail: Alan.Sill at ttu.edu    ph. 806-742-3730   fax 806-742-1182  :
+======================================================================
+
+
+From jaguar451 at mac.com  Fri Jul 29 08:59:09 2005
+From: jaguar451 at mac.com (jaguar451 at mac.com)
+Date: Thu, 28 Jul 2005 23:59:09 -0700
+Subject: SPE 0.7.4.w released (Re: [spe-mac] SPE 0.7.4.u released)
+Message-ID: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+
+> Can I suggest others try it and report their results?
+
+Had a blackout + real life intrude on testing time.... ;-)
+
+Using 0.7.4.x, quick hits:
+
+A PDF of a screenshot at http://homepage.mac.com/kkrull/FileSharing6.html :
+
+ 1) There are two 'Windows' menu items -- I assume that there should only be one.
+
+ 2) On startup, I have 'Unnamed' & 'Unnamed -- SPE 0.7.4.x' windows (see the SPE_windows_OS X.pdf file at the above URL.) If I set my preference to 'Single with tabs (Mac, Windows, Linux), when I open a second file, an additional window is opened, so I have three (untitled, untitled, SPE 0.7.4.x.) Single_with_tabs_not_single.pdf at above URL.
+
+    2.1) when I create new files, they all have the same name.
+
+    2.2) As far as tabs being an OS X thing, I'm not a Mac head by any stretch of the imagination, and I like tab. Safari uses them... Other editors have them -- maybe time for a poll.... ;-)
+
+ 3) On menu, second from left, says 'Python' instead of 'SPE' (although I believe that this can only be set as part of an OS X APP package, but in case another way...
+
+ 4) When a dialog is launched from the Palette, it is partially hidden behind the Palette. Also the preferences Palette. (spe_pref_part_hidden.pdf at the above location -- build in screen capture utility only goes to PDF, and don't have another utility setup right now.)
+
+ 5) cmd` & cmd~ no longer write to the edit window, but also don't cycle through the windows. cmd (left arrow) doesn't go to the beginning of the line, cmd <right arrow> to the end of the line.
+
+ 6) On install, I delete the ~/.spe directory, the /site-packages _spe & sm directories, yet when I do a File | Open in SPE, it remembers my last location. Handy, but shouldn't this pref be reset when I do the above?
+
+ 7) Under Links | Enthought... (http://www.enthought.com/python/) The main listed distro has a wxPython version too old for this version of SPE -- if the beta version linked at the bottom doesn't have a compatible wxPython, might want to remove the link....
+
+ 8) Help | Keyboard Shortcuts are Windows shortcuts....
+
+ 9) Minor Feature Request: would be nice to have an 'Open Recent' option on the File menu that remembers the last x (10?) files that you've opened.
+
+10) In the UML view, if you have methods that have long names and/or many parameter, the class is much wider than the screen and the horizontal scrollbar doesn't scale correctly. (spe_uml.pdf) (Please, no comments on my code/design -- just playing around with my first Python app and tried to find something 'fun'.)
+
+11) Pressing F1 doesn't bring up local help tips (as mentioned in the status bar at the bottom of SPE.)
+
+12) When I have a file open (source code view), I need to double-click on a class/method in the Explorer view to jump to it -- as designed? (or should it be single click?)
+
+13) When running from inside SPE, the scriptname isn't set.
+
+Create the following in a new file. Save it.:
+
+if __name__ == "__main__":
+    print "hello"
+
+Run it:
+Running '<path/filename>' ...
+hello
+Script '<source>' returned exit code 0
+
+I assume that the above '<source>' should be the filename
+
+14) If one creates a new file, doesn't save it, and tries to run it, if you say 'no' to save, the previously run file is run, not the selected new file. (not a recommended thing to do, of course, but....)
+
+15) When my indenting was off by a character,  the error message was off by one line (running from the command line returned the correct line number (see message below -- it says 116, when run in command line, it is 115. (and not sure why it mentioned the 'scriptutils.py' file. (sorry if this is a PyCrust thing...)    
+
+ Running '/Users/kkrull/work/learning/python/NWN/nwnCharacterCombatInfo.py' ...
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/scriptutils.py", line 40, in run
+    codeObject = compile(source.replace('\r\n','\n')+"\n", fileName, "exec")
+IndentationError: unindent does not match any outer indentation level (<source>, line 116)
+Exception raised while running script  <source>
+
+ 16) ctrl-c copies text in the SPE python shell, cmd-c expected on Mac (PyCrust run standalone recognizes cmd-c)
+
+ 17) In the python shell, one can type anywhere, new output from a run it put wherever the cursor is located. As expected? (when doing this, can delete/overwrite items, and undo doesn't undo changes.) Other shells (PyCrust stand alone) only allow text to be added on the last line. 
+
+
+Sorry, I know I should do seperate bug reports, but time....
+
+
+
+From rigel at asylumwear.com  Fri Jul 29 20:40:00 2005
+From: rigel at asylumwear.com (Rigel)
+Date: Fri, 29 Jul 2005 11:40:00 -0700
+Subject: [spe-mac] SVN Online
+Message-ID: <42EA7800.3070908@asylumwear.com>
+
+Hello All,
+
+The SVN repository for SPE is now on line. You can grab the latest code
+using the following command.
+
+svn checkout svn://svn.berlios.de/python/spe/trunk/
+
+You can all so checkout the releases with this command:
+svn checkout svn://svn.berlios.de/python/spe/branches/SPE-x.x.x
+
+(Where the x's are the version)
+Currently there aren't any releases yet and the trunk is 7.4.x.
+
+Finally, you may browse and download parts of the source with the web
+interface in the SVN section of this site.
+
+Thanks,
+Sam Widmer
+
+
+From s_t_a_n_i at gmx.net  Sat Jul 30 00:12:30 2005
+From: s_t_a_n_i at gmx.net (Stani Michiels)
+Date: Sat, 30 Jul 2005 00:12:30 +0200
+Subject: [spe-mac] SVN Online
+In-Reply-To: <42EA7800.3070908@asylumwear.com>
+References: <42EA7800.3070908@asylumwear.com>
+Message-ID: <42EAA9CE.5050909@gmx.net>
+
+Thanks Sam!
+I hope I can work with SVN soon and some real collaboration can start.
+
+Stani
+
+Rigel wrote:
+
+>Hello All,
+>
+>The SVN repository for SPE is now on line. You can grab the latest code
+>using the following command.
+>
+>svn checkout svn://svn.berlios.de/python/spe/trunk/
+>
+>You can all so checkout the releases with this command:
+>svn checkout svn://svn.berlios.de/python/spe/branches/SPE-x.x.x
+>
+>(Where the x's are the version)
+>Currently there aren't any releases yet and the trunk is 7.4.x.
+>
+>Finally, you may browse and download parts of the source with the web
+>interface in the SVN section of this site.
+>
+>Thanks,
+>Sam Widmer
+>_______________________________________________
+>Python-spe-mac mailing list
+>Python-spe-mac at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+>
+>  
+>
+
+
+
+From s_t_a_n_i at gmx.net  Sat Jul 30 00:55:07 2005
+From: s_t_a_n_i at gmx.net (Stani Michiels)
+Date: Sat, 30 Jul 2005 00:55:07 +0200
+Subject: [spe-mac] Please trim unnecessary text from postings...
+In-Reply-To: <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+References: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch> <42E9429F.7010208@gmx.net> <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+Message-ID: <42EAB3CB.5090408@gmx.net>
+
+Hi,
+Some people requested to limit the postings to the necessary and not let 
+them grow automatically by all replies. Even tough I might have done it 
+myself, I think it is a good point.
+Thanks,
+Stani
+
+
+From s_t_a_n_i at gmx.net  Sat Jul 30 01:01:23 2005
+From: s_t_a_n_i at gmx.net (Stani Michiels)
+Date: Sat, 30 Jul 2005 01:01:23 +0200
+Subject: [spe-mac] Closing windows
+In-Reply-To: <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+References: <834A07D804766B43A535AC6861D6D867369558@mail.advancedconcepts.ch> <42E9429F.7010208@gmx.net> <38bc3170a1db9a12fa979cbace5bca6a@ttu.edu>
+Message-ID: <42EAB543.70001@gmx.net>
+
+Alan Sill wrote:
+
+> Only oddity I saw upon a few-minute inspection was that the 
+> application crashes ungracefully with a "Bus error" if the last open 
+> source window is closed.
+
+> Something seems funky with the close behavior of the source windows - 
+> if I close with them all with red button on each window, I get an 
+> error (most recent time I tried, it was a Segmentation fault), but 
+> closing with command-W does not seem to produce this behavior.
+>
+> Can I suggest others try it and report their results?
+
+Of course, please make an error report and put it on the bug tracker. It 
+doesn't happen on windows.
+Stani
+
+PS Please make the subject of postings more specific, instead of just 
+replying.
+
+
+
+
+From s_t_a_n_i at gmx.net  Sat Jul 30 01:29:17 2005
+From: s_t_a_n_i at gmx.net (Stani Michiels)
+Date: Sat, 30 Jul 2005 01:29:17 +0200
+Subject: [spe-mac] Bug reporting
+In-Reply-To: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+References: <9582400.1122620349494.JavaMail.jaguar451@mac.com>
+Message-ID: <42EABBCD.7070000@gmx.net>
+
+Hi,
+BT means 'put on bug tracker' (if mac related, please choose that group).
+
+jaguar451 at mac.com wrote:
+
+>A PDF of a screenshot at http://homepage.mac.com/kkrull/FileSharing6.html :
+>  
+>
+If possible I prefer png or gif. Also when spe is stable. I need someone 
+to take screenshots in a certain way for documentation. Any volunteers.
+
+> 1) There are two 'Windows' menu items -- I assume that there should only be one.
+>  
+>
+I'll fix that. Didn't wxPython on Mac would provide one. BT
+
+> 2) On startup, I have 'Unnamed' & 'Unnamed -- SPE 0.7.4.x' windows (see the SPE_windows_OS X.pdf file at the above URL.) If I set my preference to 'Single with tabs (Mac, Windows, Linux), when I open a second file, an additional window is opened, so I have three (untitled, untitled, SPE 0.7.4.x.) Single_with_tabs_not_single.pdf at above URL.
+>  
+>
+Did you restart SPE? After changing interface SPE would need to be 
+restarted.
+
+>    2.1) when I create new files, they all have the same name.
+>  
+>
+I'll have a look at it, but maybe it's better like this.
+
+>    2.2) As far as tabs being an OS X thing, I'm not a Mac head by any stretch of the imagination, and I like tab. Safari uses them... Other editors have them -- maybe time for a poll.... ;-)
+>  
+>
+Haha, everybody wants something different. I indeed would like to poll 
+tabs in these group. The option with no tabs will always be available, 
+but with tabs will take me some more effort of which I want to save 
+myself if nobody is waiting for it.
+
+> 3) On menu, second from left, says 'Python' instead of 'SPE' (although I believe that this can only be set as part of an OS X APP package, but in case another way...
+>  
+>
+That also struck me. If anybody knows how to change this, I'd be happy 
+to implement.
+
+> 4) When a dialog is launched from the Palette, it is partially hidden behind the Palette. Also the preferences Palette. (spe_pref_part_hidden.pdf at the above location -- build in screen capture utility only goes to PDF, and don't have another utility setup right now.)
+>  
+>
+This wxPy behaviour. I could hide the tools Palette when a dialog is 
+launched and show it again when the dialog closes. Is that an option? BT
+
+> 5) cmd` & cmd~ no longer write to the edit window, but also don't cycle through the windows. cmd (left arrow) doesn't go to the beginning of the line, cmd <right arrow> to the end of the line.
+>  
+>
+This is on my todolist. Bug tracker.... call it mac keyboard shortcuts 
+and be as complete as possible
+
+> 6) On install, I delete the ~/.spe directory, the /site-packages _spe & sm directories, yet when I do a File | Open in SPE, it remembers my last location. Handy, but shouldn't this pref be reset when I do the above?
+>  
+>
+This is handled by wxPy not SPE.
+
+> 7) Under Links | Enthought... (http://www.enthought.com/python/) The main listed distro has a wxPython version too old for this version of SPE -- if the beta version linked at the bottom doesn't have a compatible wxPython, might want to remove the link....
+>  
+>
+I know they are upgrading to wxPy2.6, but face some difficulties. I even 
+could contact them to include SPE in their distro.
+
+> 8) Help | Keyboard Shortcuts are Windows shortcuts....
+>  
+>
+Right, low priority. Maybe one of you could fix this. Shouldn't be 
+difficult. (in _spe/dialogs: helpShortcutsDialog.py and shortcuts.txt) 
+Please keep it cross platform:
+to check for mac:
+if _spe.info.DARWIN:
+    ...
+
+> 9) Minor Feature Request: would be nice to have an 'Open Recent' option on the File menu that remembers the last x (10?) files that you've opened.
+>  
+>
+Yes, I'll implement that. Put it in feature requests...
+
+>10) In the UML view, if you have methods that have long names and/or many parameter, the class is much wider than the screen and the horizontal scrollbar doesn't scale correctly. (spe_uml.pdf) (Please, no comments on my code/design -- just playing around with my first Python app and tried to find something 'fun'.)
+>  
+>
+Put it in the bug tracker. In next releases I have some plans with UML.
+
+>11) Pressing F1 doesn't bring up local help tips (as mentioned in the status bar at the bottom of SPE.)
+>  
+>
+Put also in bug tracker.
+
+>12) When I have a file open (source code view), I need to double-click on a class/method in the Explorer view to jump to it -- as designed? (or should it be single click?)
+>  
+>
+Double-click is design.
+
+>13) When running from inside SPE, the scriptname isn't set.
+>
+>Create the following in a new file. Save it.:
+>
+>if __name__ == "__main__":
+>    print "hello"
+>
+>Run it:
+>Running '<path/filename>' ...
+>hello
+>Script '<source>' returned exit code 0
+>
+>I assume that the above '<source>' should be the filename
+>  
+>
+Bug tracker...
+
+>14) If one creates a new file, doesn't save it, and tries to run it, if you say 'no' to save, the previously run file is run, not the selected new file. (not a recommended thing to do, of course, but....)
+>  
+>
+BT
+
+>15) When my indenting was off by a character,  the error message was off by one line (running from the command line returned the correct line number (see message below -- it says 116, when run in command line, it is 115. (and not sure why it mentioned the 'scriptutils.py' file. (sorry if this is a PyCrust thing...)    
+>
+> Running '/Users/kkrull/work/learning/python/NWN/nwnCharacterCombatInfo.py' ...
+>Traceback (most recent call last):
+>  File "/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/sm/scriptutils.py", line 40, in run
+>    codeObject = compile(source.replace('\r\n','\n')+"\n", fileName, "exec")
+>IndentationError: unindent does not match any outer indentation level (<source>, line 116)
+>Exception raised while running script  <source>
+>  
+>
+BT
+
+> 16) ctrl-c copies text in the SPE python shell, cmd-c expected on Mac (PyCrust run standalone recognizes cmd-c)
+>  
+>
+BT, although I just use pycrust, but will have a look anyway.
+
+> 17) In the python shell, one can type anywhere, new output from a run it put wherever the cursor is located. As expected? (when doing this, can delete/overwrite items, and undo doesn't undo changes.) Other shells (PyCrust stand alone) only allow text to be added on the last line. 
+>  
+>
+BT
+
+>
+>Sorry, I know I should do seperate bug reports, but time....
+>  
+>
+I hope you find now some time for it. Thanks anyway for this usefull 
+feedback. I wish I could get more feedback like this.
+
+Stani
+
+

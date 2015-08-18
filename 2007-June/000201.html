@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] unittest.main() throws AttributeError
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2007-June/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20unittest.main%28%29%20throws%20AttributeError&In-Reply-To=%3C46812447.1020305%40mit.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000200.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] unittest.main() throws AttributeError</H1>
+    <B>Tony S. Yu</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20unittest.main%28%29%20throws%20AttributeError&In-Reply-To=%3C46812447.1020305%40mit.edu%3E"
+       TITLE="[spe-mac] unittest.main() throws AttributeError">tonyyu at MIT.EDU
+       </A><BR>
+    <I>Tue Jun 26 16:35:51 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000200.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#201">[ date ]</a>
+              <a href="thread.html#201">[ thread ]</a>
+              <a href="subject.html#201">[ subject ]</a>
+              <a href="author.html#201">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>So it turns out that I don't know how to use winpdb. Python **does** 
+raise an exception when I run unittest.main() with winpdb, I just didn't 
+realize this when I stepped through the program. To add confusion to the 
+mix, the exception occurs in a different function (the runTests method 
+called from __init__ of unittest) and it raises a SystemExit exception 
+instead of AttributeError (which was raised in spe). This happens to me 
+in both versions of winpdb (1.1.0 from spe and 1.1.4 from the website 
+below). Just to reiterate, I don't get either of these errors when I run 
+my script from the terminal.
+
+In any case, I don't think I'll have time to fiddle with this anymore. 
+I'll just wait until I install Ubuntu on my macbook before I try running 
+SPE.
+
+Thanks anyway,
+-Tony
+
+Stani's Python Editor wrote:
+&gt;<i> Please try out the new winpdb
+</I>&gt;<i> (<A HREF="http://www.digitalpeers.com/pythondebugger/">http://www.digitalpeers.com/pythondebugger/</A>), which will be in SPE
+</I>&gt;<i> soon. If the issue still exists there, contact Nir Aides through the
+</I>&gt;<i> winpdb forums about this.
+</I>&gt;<i>
+</I>&gt;<i> Stani
+</I>&gt;<i>
+</I>&gt;<i> Tony S. Yu schreef:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> Thanks for your reply! Unfortunately, I'm even more confused now:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> My script runs through the debugger without a hitch!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> After comparing the debugger run to the traceback I get back from SPE, I
+</I>&gt;&gt;<i> noticed that the debugger doesn't reach half of the methods in the
+</I>&gt;&gt;<i> traceback (attached).  When the debugger gets to the parseArgs() method
+</I>&gt;&gt;<i> (see traceback) of unittest, a conditional statement recognizes that
+</I>&gt;&gt;<i> unittest.main() has been called without arguments and returns to the
+</I>&gt;&gt;<i> __init__ method of unittest.main(); thus, the createTests() method (see
+</I>&gt;&gt;<i> traceback), which appears later in the parseArgs() method, is never
+</I>&gt;&gt;<i> executed when I run debugger.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Any ideas? Thanks,
+</I>&gt;&gt;<i> -Tony
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Stani's Python Editor wrote:
+</I>&gt;&gt;<i>     
+</I>&gt;&gt;&gt;<i> What happens if you run it through the debugger? Ctrl+F9 or Alt+F9
+</I>&gt;&gt;&gt;<i> Stani
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Tony S. Yu schreef:
+</I>&gt;&gt;&gt;<i>  
+</I>&gt;&gt;&gt;<i>       
+</I>&gt;&gt;&gt;&gt;<i> I'm pretty new to both OS X and SPE, so please forgive me if this is
+</I>&gt;&gt;&gt;&gt;<i> a stupid question or if I'm missing any information.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> I just installed SPE on my macbook using the SVN repositories, and
+</I>&gt;&gt;&gt;&gt;<i> I'm running into a really weird problem. When I run unittest.main()
+</I>&gt;&gt;&gt;&gt;<i> from a script, I get:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>     Traceback (most recent call last):
+</I>&gt;&gt;&gt;&gt;<i>     ...
+</I>&gt;&gt;&gt;&gt;<i>     File
+</I>&gt;&gt;&gt;&gt;<i> &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;,
+</I>&gt;&gt;&gt;&gt;<i> line 532, in loadTestsFromName
+</I>&gt;&gt;&gt;&gt;<i>     parent, obj = obj, getattr(obj, part)
+</I>&gt;&gt;&gt;&gt;<i>     AttributeError: 'module' object has no attribute ''
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The attribute at the end seems to be an empty string. If I comment
+</I>&gt;&gt;&gt;&gt;<i> out unittest.main() from my script, everything run s fine.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The weird thing is: if I execute my script from a terminal,
+</I>&gt;&gt;&gt;&gt;<i> everything runs fine.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9,
+</I>&gt;&gt;&gt;&gt;<i> and the latest SPE from SVN.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Thanks in advance,
+</I>&gt;&gt;&gt;&gt;<i> -Tony
+</I>&gt;&gt;&gt;&gt;<i> -- 
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">https://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>     
+</I>&gt;&gt;&gt;&gt;<i>         
+</I>&gt;&gt;&gt;<i> -- 
+</I>&gt;&gt;&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">https://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;&gt;&gt;<i>   
+</I>&gt;&gt;&gt;<i>       
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ------------------------------------------------------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Traceback (most recent call last):
+</I>&gt;&gt;<i>  File &quot;/Users/tony/Python/fidiff/sandbox.py&quot;, line 61, in ?
+</I>&gt;&gt;<i> unittest.main()
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, line 758, in __init__
+</I>&gt;&gt;<i> self.parseArgs(argv)
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, line 785, in parseArgs
+</I>&gt;&gt;<i> self.createTests()
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, line 791, in createTests
+</I>&gt;&gt;<i> self.module)
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, line 556, in loadTestsFromNames
+</I>&gt;&gt;<i> suites = [self.loadTestsFromName(name, module) for name in names]
+</I>&gt;&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py&quot;, line 532, in loadTestsFromName
+</I>&gt;&gt;<i> parent, obj = obj, getattr(obj, part)
+</I>&gt;&gt;<i> AttributeError: 'module' object has no attribute ''
+</I>&gt;&gt;<i> Script terminated.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ------------------------------------------------------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">https://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">https://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;<i>   
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000200.html">[spe-mac] unittest.main() throws AttributeError
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#201">[ date ]</a>
+              <a href="thread.html#201">[ thread ]</a>
+              <a href="subject.html#201">[ subject ]</a>
+              <a href="author.html#201">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

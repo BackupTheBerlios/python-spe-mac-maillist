@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE 0.7.4.r please update and check
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.r%20please%20update%20and%20check&In-Reply-To=%3C42E83F34.5070508%40gmx.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000020.html">
+   <LINK REL="Next"  HREF="000022.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE 0.7.4.r please update and check</H1>
+    <B>Stani</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.7.4.r%20please%20update%20and%20check&In-Reply-To=%3C42E83F34.5070508%40gmx.net%3E"
+       TITLE="[spe-mac] SPE 0.7.4.r please update and check">s_t_a_n_i at gmx.net
+       </A><BR>
+    <I>Thu Jul 28 04:13:08 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000020.html">[spe-mac] SPE 0.7.4.r please update and check
+</A></li>
+        <LI>Next message: <A HREF="000022.html">[spe-mac] SPE 0.7.4.r please update and check
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#21">[ date ]</a>
+              <a href="thread.html#21">[ thread ]</a>
+              <a href="subject.html#21">[ subject ]</a>
+              <a href="author.html#21">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE><A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">jaguar451 at mac.com</A> wrote:
+
+&gt;<i>A couple of quick comment (gotta run to dinner....):
+</I>&gt;<i>
+</I>&gt;<i>.7.4.r, OS X 10.3.9, wxPython 2.6.1, Python 2.4.1
+</I>&gt;<i>
+</I>&gt;<i> 1) cmd-N creates new
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>OK
+
+&gt;<i> 2) cmd-` writes ` into the text window instead of going to a new Window (looks like cmd not being hooked at all inside the text editor (except for system commands, such as cmd-tab.)
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Will fix that.
+
+&gt;<i> 3) The opened child windows no longer have the toolbar buttons on them.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Idem
+
+&gt;<i> 4) 'Preferences' don't come up. Traceback (most recent call last):
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Menu.py&quot;, line 302, in menu_preferences
+</I>&gt;<i>    self.parentPanel.preferences()
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/Parent.py&quot;, line 269, in preferences
+</I>&gt;<i>    prefs=preferencesDialog.Create(self,-1,'')
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py&quot;, line 97, in __init__
+</I>&gt;<i>    self.update()
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py&quot;, line 264, in update
+</I>&gt;<i>    for name in VALUES: self._update(name)
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/dialogs/preferencesDialog.py&quot;, line 274, in _update
+</I>&gt;<i>    if type(item.GetValue()) in [types.StringType,types.UnicodeType]:
+</I>&gt;<i>  File &quot;//Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wx-2.6-mac-unicode/wx/_controls.py&quot;, line 604, in GetValue
+</I>&gt;<i>    return _controls_.ComboBox_GetValue(*args, **kwargs)
+</I>&gt;<i>wx._core.PyAssertionError: C++ assertion &quot;wxAssertFailure&quot; failed in ../src/mac/carbon/choice.cpp(217): wxChoice::GetString(): invalid index
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Please don't only give the error log also the stdout where the print 
+statements go. Is Mdi giving this error log? Is for a wx.Combobox the 
+method GetValue not working? Could please someone test that in a 
+simplified example?
+
+&gt;<i> 
+</I>&gt;<i> 5) when I try to open a file from the brower pane:
+</I>&gt;<i>
+</I>&gt;<i>Debug] 18:43:42: Doing delayed deactivation of 0xb05e00
+</I>&gt;<i>[Debug] 18:44:08: Doing delayed deactivation of 0xb05e00
+</I>&gt;<i>[Debug] 18:44:15: Doing delayed deactivation of 0xb05e00
+</I>&gt;<i>Traceback (most recent call last):
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sidebar/Browser.py&quot;, line 38, in onClick
+</I>&gt;<i>    if info.DARWIN:
+</I>&gt;<i>NameError: global name 'info' is not defined
+</I>&gt;<i>Traceback (most recent call last):
+</I>&gt;<i>  File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/sidebar/Browser.py&quot;, line 38, in onClick
+</I>&gt;<i>    if info.DARWIN:
+</I>&gt;<i>NameError: global name 'info' is not defined
+</I>&gt;<i>[Debug] 18:44:30: Doing delayed deactivation of 0x951000
+</I>&gt;<i>[Debug] 18:44:36: Doing delayed deactivation of 0x951000
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Will fix that.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000020.html">[spe-mac] SPE 0.7.4.r please update and check
+</A></li>
+	<LI>Next message: <A HREF="000022.html">[spe-mac] SPE 0.7.4.r please update and check
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#21">[ date ]</a>
+              <a href="thread.html#21">[ thread ]</a>
+              <a href="subject.html#21">[ subject ]</a>
+              <a href="author.html#21">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

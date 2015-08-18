@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] How to start up on Mac?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-July/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20How%20to%20start%20up%20on%20Mac%3F&In-Reply-To=%3CF7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1%40sbcglobal.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000014.html">
+   <LINK REL="Next"  HREF="000008.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] How to start up on Mac?</H1>
+    <B>Kenneth McDonald</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20How%20to%20start%20up%20on%20Mac%3F&In-Reply-To=%3CF7AEEC01-2D50-4AC7-A28D-B4B8BC2CF2F1%40sbcglobal.net%3E"
+       TITLE="[spe-mac] How to start up on Mac?">kenneth.m.mcdonald at sbcglobal.net
+       </A><BR>
+    <I>Tue Jul 26 22:10:27 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000014.html">[spe-mac] priorities
+</A></li>
+        <LI>Next message: <A HREF="000008.html">[spe-mac] How to start up on Mac?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Trying:
+
+     python _spe/SPE.py
+
+in
+
+     .../SPE-0.7.4.o-wx26
+
+gives me:
+
+Traceback (most recent call last):
+   File &quot;_spe/SPE.py&quot;, line 1, in ?
+     import info
+   File &quot;/Users/ken/downloads/SPE-0.7.4.o-wx26/_spe/info.py&quot;, line 1,  
+in ?
+     import os,sys,sm.osx
+ImportError: No module named sm.osx
+
+
+and indeed, I can't find a folder or file called sm or sm.py in _spe.
+
+If I try
+
+     python SPE.py
+
+within the _spe directory, I get the same error.
+
+Note that by default, &quot;.&quot; is on the python path so (if my  
+understanding of the SPE
+install instructions is correct), one of these should have been the  
+'correct' directory
+so that modules needed by SPE could be seen by python.
+
+
+Thanks,
+Ken
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000014.html">[spe-mac] priorities
+</A></li>
+	<LI>Next message: <A HREF="000008.html">[spe-mac] How to start up on Mac?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,430 @@
+From spe.stani.be at gmail.com  Sun Mar  4 16:31:08 2007
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 4 Mar 2007 16:31:08 +0100
+Subject: [spe-mac] Poll: native notebook or current custom notebook (please
+	vote!)
+Message-ID: <2078a7ad0703040731p4955902cjf0d6816d0cd0c4d@mail.gmail.com>
+
+Hi all spe mac users!
+
+I am working on the next version of SPE, for wich Jurjen has made
+several nice patches for the mac. I was wondering if anyone has
+problems with the custom notebook control that is used in SPE for the
+tabs with the different files. I discovered that Ubuntu/linux they are
+not working properly, so for linux I decided to fall back on the
+native notebook control, which unfortunately misses the following
+features:
+- no close button
+- no drag & drop
+- no tooltip
+
+Please answer these two questions:
+
+- Did you experience any issues with the file tabs?
+
+- Do you prefer to use native tabs instead of the current
+implementation (and loosing the features described above)?
+
+Even if you are not very active here or you have little time, just
+answer with yes or no. That's fine.
+
+Thanks for answering!
+
+Stani
+
+
+From spe.stani.be at gmail.com  Sun Mar  4 16:40:22 2007
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 4 Mar 2007 16:40:22 +0100
+Subject: [spe-mac] Have you been waiting for the SPE-OSX application bundle?
+Message-ID: <2078a7ad0703040740h78085b47pa174fcc5255f0fc1@mail.gmail.com>
+
+Hi all,
+I am pleased to announce that Jurjen and Andrea will start working on
+an application bundle of SPE with py2app. It is still in the very
+beginning, so no deadline set yet. However if some of you have
+experience with bundling or py2app, please give a helping hand. You'll
+make a lot of Mac user happy.
+I forward the messages of Jurjen and Andrea, as I want that the
+discussion is here so you can give feedback during the process.
+Hopefully we can create a nice script, so that afterwards the
+application bundle can be built automatically.
+Thanks,
+Stani
+
+---------- Forwarded message ----------
+From: SPE Stani's Python Editor <spe.stani.be at gmail.com>
+Date: Mar 3, 2007 11:05 PM
+Subject: Re: SPE & py2app
+To: Andrea Tomadin <tom.and at tiscalinet.it>
+Cc: "Jurjen N.E. Bos" <Jurjen.Bos at hetnet.nl>
+
+
+Cool!
+
+Now we have a Mac release team! I hope you both efforts succeed. A lot
+of people ask for a Spe package. Before someone has packaged SPE, but
+that's long ago. I can send you his latest files. If I find them.
+
+Does py2app comes with a small example? Anyway I have been working
+hard on a new way of building the spe setup.py and package. Before my
+way of packaging was not 100% correct, but I doubt if that is part of
+the problem. You should maybe first try to use py2app for a smaller
+demo.
+
+Stani
+
+On 3/3/07, Andrea Tomadin <tom.and at tiscalinet.it> wrote:
+> I thank you both for your kind attention to my question. I precise
+> that I have been using both Python and Mac since a few months only
+> (though quite intensively) so I'm a newbie to many issues.
+>
+> > What do I need to do to get py2app to run?
+>
+> I have installed the MacPython2.4 distribution and almost all the
+> packages that are found in:
+> http://www.pythonmac.org/packages/py24-fat/index.html
+> the distribution contains an Application Bundler, but I never got it
+> to work. So I downloaded py2app from
+> http://cheeseshop.python.org/pypi/py2app/
+> The installation is easy: first untar the archive and then
+> export A='/Library/Frameworks/Python.framework/Version/Current/'
+> python setup.py install --prefix=$A
+> The executables get installed in $A/bin.
+>
+> Now, a simple run. Run a Terminal session with the environment variable
+> export PYTHONPATH="$A"'/lib/python2.4/site-packages'
+> write a simple python script foo.py and issue:
+> py2applet --make-setup foo.py
+> python setup.py py2app
+> (see http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html )
+> We find a foo.app in ./dist. We can double-click it, drag to the dock
+> etc.
+> Moreover, packages found in site-packages that are used by the
+> application are copied into the bundle, so we should be able to
+> distribute it for usage even on those systems that lack some specific
+> package.
+>
+> If I do the same thing with the script doodle.py in
+> http://svn.pythonmac.org/py2app/py2app/trunk/examples/wxPython/2.4/
+> doodle/
+> I get a working GUI application.
+>
+> Then I download the SPE source and install it in the same location.
+> If I run from the Terminal
+> cd "$A"'lib/python2.4/site-packages/_spe'
+> python SPE.py
+> I get a working session of the editor, so I suppose that SPE.py is
+> the main script of the package.
+> I use it as target to py2app and everything seems to work fine, and I
+> see a lot of files from the wxPython package being copied into the
+> bundle.
+> But the execution of the bundle fails upon declaring that no
+> installation of wxPython is present in the system, and suggesting a
+> download.
+>
+> So the problem seems to me merely "formal", as the scripts after the
+> bundling cannot find the path to a wxPython package. I tried to force a
+> sys.path.insert(0, './Library ... /site-packages')
+> at the very beginning of SPE.py, but nothing changed.
+> As we saw that a running bundle of doodle.py can be build
+> effortlessly including wxPython, the present failure must be a matter
+> of redefining some import - but beats me, the code is quite long to
+> find it out!
+>
+> I apologize for the length of this message, and I would be glad to be
+> of any use for solving this issue :-)
+>
+> Andrea
+
+
+From tony at instaview.com  Sun Mar  4 16:46:30 2007
+From: tony at instaview.com (Tony)
+Date: Sun, 4 Mar 2007 10:46:30 -0500
+Subject: [spe-mac] Have you been waiting for the SPE-OSX application
+	bundle?
+In-Reply-To: <2078a7ad0703040740h78085b47pa174fcc5255f0fc1@mail.gmail.com>
+References: <2078a7ad0703040740h78085b47pa174fcc5255f0fc1@mail.gmail.com>
+Message-ID: <200703041046.30843.tony@instaview.com>
+
+
+I dont have any experience with bundling, but i can offer to help test..
+
+On Sunday 04 March 2007 10:40 am, SPE Stani's Python Editor wrote:
+> Hi all,
+> I am pleased to announce that Jurjen and Andrea will start working on
+> an application bundle of SPE with py2app. It is still in the very
+> beginning, so no deadline set yet. However if some of you have
+> experience with bundling or py2app, please give a helping hand. You'll
+> make a lot of Mac user happy.
+> I forward the messages of Jurjen and Andrea, as I want that the
+> discussion is here so you can give feedback during the process.
+> Hopefully we can create a nice script, so that afterwards the
+> application bundle can be built automatically.
+> Thanks,
+> Stani
+>
+> ---------- Forwarded message ----------
+> From: SPE Stani's Python Editor <spe.stani.be at gmail.com>
+> Date: Mar 3, 2007 11:05 PM
+> Subject: Re: SPE & py2app
+> To: Andrea Tomadin <tom.and at tiscalinet.it>
+> Cc: "Jurjen N.E. Bos" <Jurjen.Bos at hetnet.nl>
+>
+>
+> Cool!
+>
+> Now we have a Mac release team! I hope you both efforts succeed. A lot
+> of people ask for a Spe package. Before someone has packaged SPE, but
+> that's long ago. I can send you his latest files. If I find them.
+>
+> Does py2app comes with a small example? Anyway I have been working
+> hard on a new way of building the spe setup.py and package. Before my
+> way of packaging was not 100% correct, but I doubt if that is part of
+> the problem. You should maybe first try to use py2app for a smaller
+> demo.
+>
+> Stani
+>
+> On 3/3/07, Andrea Tomadin <tom.and at tiscalinet.it> wrote:
+> > I thank you both for your kind attention to my question. I precise
+> > that I have been using both Python and Mac since a few months only
+> > (though quite intensively) so I'm a newbie to many issues.
+> >
+> > > What do I need to do to get py2app to run?
+> >
+> > I have installed the MacPython2.4 distribution and almost all the
+> > packages that are found in:
+> > http://www.pythonmac.org/packages/py24-fat/index.html
+> > the distribution contains an Application Bundler, but I never got it
+> > to work. So I downloaded py2app from
+> > http://cheeseshop.python.org/pypi/py2app/
+> > The installation is easy: first untar the archive and then
+> > export A='/Library/Frameworks/Python.framework/Version/Current/'
+> > python setup.py install --prefix=$A
+> > The executables get installed in $A/bin.
+> >
+> > Now, a simple run. Run a Terminal session with the environment variable
+> > export PYTHONPATH="$A"'/lib/python2.4/site-packages'
+> > write a simple python script foo.py and issue:
+> > py2applet --make-setup foo.py
+> > python setup.py py2app
+> > (see http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html )
+> > We find a foo.app in ./dist. We can double-click it, drag to the dock
+> > etc.
+> > Moreover, packages found in site-packages that are used by the
+> > application are copied into the bundle, so we should be able to
+> > distribute it for usage even on those systems that lack some specific
+> > package.
+> >
+> > If I do the same thing with the script doodle.py in
+> > http://svn.pythonmac.org/py2app/py2app/trunk/examples/wxPython/2.4/
+> > doodle/
+> > I get a working GUI application.
+> >
+> > Then I download the SPE source and install it in the same location.
+> > If I run from the Terminal
+> > cd "$A"'lib/python2.4/site-packages/_spe'
+> > python SPE.py
+> > I get a working session of the editor, so I suppose that SPE.py is
+> > the main script of the package.
+> > I use it as target to py2app and everything seems to work fine, and I
+> > see a lot of files from the wxPython package being copied into the
+> > bundle.
+> > But the execution of the bundle fails upon declaring that no
+> > installation of wxPython is present in the system, and suggesting a
+> > download.
+> >
+> > So the problem seems to me merely "formal", as the scripts after the
+> > bundling cannot find the path to a wxPython package. I tried to force a
+> > sys.path.insert(0, './Library ... /site-packages')
+> > at the very beginning of SPE.py, but nothing changed.
+> > As we saw that a running bundle of doodle.py can be build
+> > effortlessly including wxPython, the present failure must be a matter
+> > of redefining some import - but beats me, the code is quite long to
+> > find it out!
+> >
+> > I apologize for the length of this message, and I would be glad to be
+> > of any use for solving this issue :-)
+> >
+> > Andrea
+>
+> --
+> http://pythonide.stani.be
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+
+From iayork at gmail.com  Sun Mar  4 17:35:26 2007
+From: iayork at gmail.com (Ian York)
+Date: Sun, 4 Mar 2007 11:35:26 -0500
+Subject: [spe-mac] Have you been waiting for the SPE-OSX application
+	bundle?
+In-Reply-To: <2078a7ad0703040740h78085b47pa174fcc5255f0fc1@mail.gmail.com>
+References: <2078a7ad0703040740h78085b47pa174fcc5255f0fc1@mail.gmail.com>
+Message-ID: <1f846a180703040835y13833ddbwfeb047be812413b8@mail.gmail.com>
+
+I assume you've seen the documentation at
+http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html ?  It
+includes a number of examples which I found quite useful.
+
+My main problem with py2app-bundled applications (and I should
+emphasize that I've just started to play with these and am as far from
+being an expert as you can get) is the size -- a small script ends up
+as a 37MB app, because all the frameworks are bundled up.  There's a
+"semistandalone" option that is supposed to take advantage of the
+preexisting python frameworks on a standard Max install, but in my
+first couple runs I didn't get that to work (my fault, I'm sure) and
+it still didn't reduce the size as much as I'd hoped.
+
+I'd love to see SPE as a Mac app bundle.  I haven't used most of  the
+recent versions of SPE because, as they are, they're just a bit to
+annoying to use.
+
+Ian
+
+On 3/4/07, SPE Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+> Hi all,
+> I am pleased to announce that Jurjen and Andrea will start working on
+> an application bundle of SPE with py2app. It is still in the very
+> beginning, so no deadline set yet. However if some of you have
+> experience with bundling or py2app, please give a helping hand. You'll
+> make a lot of Mac user happy.
+> I forward the messages of Jurjen and Andrea, as I want that the
+> discussion is here so you can give feedback during the process.
+> Hopefully we can create a nice script, so that afterwards the
+> application bundle can be built automatically.
+> Thanks,
+> Stani
+>
+> ---------- Forwarded message ----------
+> From: SPE Stani's Python Editor <spe.stani.be at gmail.com>
+> Date: Mar 3, 2007 11:05 PM
+> Subject: Re: SPE & py2app
+> To: Andrea Tomadin <tom.and at tiscalinet.it>
+> Cc: "Jurjen N.E. Bos" <Jurjen.Bos at hetnet.nl>
+>
+>
+> Cool!
+>
+> Now we have a Mac release team! I hope you both efforts succeed. A lot
+> of people ask for a Spe package. Before someone has packaged SPE, but
+> that's long ago. I can send you his latest files. If I find them.
+>
+> Does py2app comes with a small example? Anyway I have been working
+> hard on a new way of building the spe setup.py and package. Before my
+> way of packaging was not 100% correct, but I doubt if that is part of
+> the problem. You should maybe first try to use py2app for a smaller
+> demo.
+>
+> Stani
+>
+> On 3/3/07, Andrea Tomadin <tom.and at tiscalinet.it> wrote:
+> > I thank you both for your kind attention to my question. I precise
+> > that I have been using both Python and Mac since a few months only
+> > (though quite intensively) so I'm a newbie to many issues.
+> >
+> > > What do I need to do to get py2app to run?
+> >
+> > I have installed the MacPython2.4 distribution and almost all the
+> > packages that are found in:
+> > http://www.pythonmac.org/packages/py24-fat/index.html
+> > the distribution contains an Application Bundler, but I never got it
+> > to work. So I downloaded py2app from
+> > http://cheeseshop.python.org/pypi/py2app/
+> > The installation is easy: first untar the archive and then
+> > export A='/Library/Frameworks/Python.framework/Version/Current/'
+> > python setup.py install --prefix=$A
+> > The executables get installed in $A/bin.
+> >
+> > Now, a simple run. Run a Terminal session with the environment variable
+> > export PYTHONPATH="$A"'/lib/python2.4/site-packages'
+> > write a simple python script foo.py and issue:
+> > py2applet --make-setup foo.py
+> > python setup.py py2app
+> > (see http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html )
+> > We find a foo.app in ./dist. We can double-click it, drag to the dock
+> > etc.
+> > Moreover, packages found in site-packages that are used by the
+> > application are copied into the bundle, so we should be able to
+> > distribute it for usage even on those systems that lack some specific
+> > package.
+> >
+> > If I do the same thing with the script doodle.py in
+> > http://svn.pythonmac.org/py2app/py2app/trunk/examples/wxPython/2.4/
+> > doodle/
+> > I get a working GUI application.
+> >
+> > Then I download the SPE source and install it in the same location.
+> > If I run from the Terminal
+> > cd "$A"'lib/python2.4/site-packages/_spe'
+> > python SPE.py
+> > I get a working session of the editor, so I suppose that SPE.py is
+> > the main script of the package.
+> > I use it as target to py2app and everything seems to work fine, and I
+> > see a lot of files from the wxPython package being copied into the
+> > bundle.
+> > But the execution of the bundle fails upon declaring that no
+> > installation of wxPython is present in the system, and suggesting a
+> > download.
+> >
+> > So the problem seems to me merely "formal", as the scripts after the
+> > bundling cannot find the path to a wxPython package. I tried to force a
+> > sys.path.insert(0, './Library ... /site-packages')
+> > at the very beginning of SPE.py, but nothing changed.
+> > As we saw that a running bundle of doodle.py can be build
+> > effortlessly including wxPython, the present failure must be a matter
+> > of redefining some import - but beats me, the code is quite long to
+> > find it out!
+> >
+> > I apologize for the length of this message, and I would be glad to be
+> > of any use for solving this issue :-)
+> >
+> > Andrea
+> --
+> http://pythonide.stani.be
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+-- 
+ Ian York   (iayork at gmail.com)  <http://www.panix.com/~iayork/>
+    "-but as he was a York, I am rather inclined to suppose him a
+     very respectable Man." -Jane Austen, The History of England
+
+
+From spe.stani.be at gmail.com  Tue Mar  6 14:05:14 2007
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Tue, 6 Mar 2007 14:05:14 +0100
+Subject: [spe-mac] Please test SPE 0.8.4 from subversion (new release soon)
+Message-ID: <2078a7ad0703060505u2c22afd9xaee089b0b98f521f@mail.gmail.com>
+
+Hi all,
+
+I've been working a lot on fixing SPE and upgrading it with the latest
+plugins. The winpdb debugger no longer fails and wxGlade crashes are
+history. Is that not great? Are you eager to try it out yourself?
+Please do! Get it from subversion and test it for any critical bug, so
+I can iron it out. I have been patching a lot for Ubuntu users, who
+will be very pleased with this release, and I'd like to thank Jurjen a
+lot for his work on Mac issues. This is a definitely a release
+everyone should upgrade to, wether you use windows, mac or linux!
+
+Here is an overview what has been done:
+
+The focus in this release is bugfixing, plugin upgrades and
+compatibility with wxPython 2.8, but it still works on wxPython 2.6
+
+Upgrades:
+- WinPdb to 1.0.8 (not fail in timely manner anymore)
+- wxGlade to latest cvs (support for wxWindows2.8)
+
+New features:
+- Save as copy
+- Clear output pane
+
+Read more and comment at http://pythonide.stani.be
+
+PS. Winpdb does not work well on Mac & wxpython2.8 Nir is working on
+an update. So when it comes out it will be included with SPE.
+
+

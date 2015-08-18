@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20bugs%3A%20blender%20crash%20on%20SPE%20exit%3B%20SPE%20opens%20argv%20of%20blender%20as%20files&In-Reply-To=%3C4387A407.2050601%40merz-akademie.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000113.html">
+   <LINK REL="Next"  HREF="000127.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files</H1>
+    <B>Kay Fricke</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20bugs%3A%20blender%20crash%20on%20SPE%20exit%3B%20SPE%20opens%20argv%20of%20blender%20as%20files&In-Reply-To=%3C4387A407.2050601%40merz-akademie.de%3E"
+       TITLE="[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files">kay.fricke at merz-akademie.de
+       </A><BR>
+    <I>Sat Nov 26 00:53:43 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000113.html">[spe-mac] mac installation instructions (please review)
+</A></li>
+        <LI>Next message: <A HREF="000127.html">[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Stani,
+
+Bug 1: Blender Crashes with Segmentation Fault when SPE is quit
+
+because neither SPE debug nor Blender debug helped, I used gdb to trace 
+the problem.
+
+here is the output of the debugger from the crash:
+
+Program received signal EXC_BAD_ACCESS, Could not access memory.
+0x09141644 in wxStyledTextCtrl::SendMsg(int, long, long) ()
+
+the complete trace:
+
+#0  0x09141644 in wxStyledTextCtrl::SendMsg(int, long, long) ()
+#1  0x08e8f3a4 in _wrap_StyledTextCtrl_SetSTCFocus (args=0x94c, 
+kwargs=0x0) at contrib/stc/mac/stc_wrap.cpp:12396
+#2  0x95f4a8d0 in PyObject_Call ()
+#3  0x95fa9df0 in PyEval_GetFuncDesc ()
+#4  0x95fa6d44 in PyEval_EvalCode ()
+#5  0x95fa7e30 in PyEval_EvalCodeEx ()
+#6  0x95fa97dc in PyEval_GetFuncDesc ()
+#7  0x95fa9580 in PyEval_GetFuncDesc ()
+#8  0x95fa6c64 in PyEval_EvalCode ()
+#9  0x95fa7e30 in PyEval_EvalCodeEx ()
+#10 0x95fa97dc in PyEval_GetFuncDesc ()
+#11 0x95fa9580 in PyEval_GetFuncDesc ()
+#12 0x95fa6c64 in PyEval_EvalCode ()
+#13 0x95fa9728 in PyEval_GetFuncDesc ()
+#14 0x95fa9580 in PyEval_GetFuncDesc ()
+#15 0x95fa6c64 in PyEval_EvalCode ()
+#16 0x95fa9728 in PyEval_GetFuncDesc ()
+#17 0x95fa9580 in PyEval_GetFuncDesc ()
+#18 0x95fa6c64 in PyEval_EvalCode ()
+#19 0x95fa9728 in PyEval_GetFuncDesc ()
+#20 0x95fa9580 in PyEval_GetFuncDesc ()
+#21 0x95fa6c64 in PyEval_EvalCode ()
+#22 0x95fa7e30 in PyEval_EvalCodeEx ()
+#23 0x95fa97dc in PyEval_GetFuncDesc ()
+#24 0x95fa9580 in PyEval_GetFuncDesc ()
+#25 0x95fa6c64 in PyEval_EvalCode ()
+#26 0x95fa7e30 in PyEval_EvalCodeEx ()
+#27 0x95f5f354 in PyFunction_SetClosure ()
+#28 0x95f4a8d0 in PyObject_Call ()
+#29 0x95f529e8 in PyMethod_New ()
+#30 0x95f4a8d0 in PyObject_Call ()
+#31 0x95fa91ec in PyEval_CallObjectWithKeywords ()
+#32 0x0630e1b0 in wxPyCallback::EventThunker(wxEvent&amp;) (this=0xa051000, 
+event=@0xbfffcb10) at src/helpers.cpp:1610
+#33 0x06f13c34 in 
+wxEvtHandler::ProcessEventIfMatches(wxEventTableEntryBase const&amp;, 
+wxEvtHandler*, wxEvent&amp;) ()
+#34 0x06f141e4 in wxEvtHandler::SearchDynamicEventTable(wxEvent&amp;) ()
+#35 0x06f13de8 in wxEvtHandler::ProcessEvent(wxEvent&amp;) ()
+#36 0x06f7a42c in 
+wxMacWindowControlEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#37 0x06f7ab98 in wxMacWindowEventHandler(OpaqueEventHandlerCallRef*, 
+OpaqueEventRef*, void*) ()
+#38 0x92881fa0 in DispatchEventToHandlers ()
+#39 0x92882214 in SendEventToEventTargetInternal ()
+#40 0x92886694 in SendEventToEventTargetWithOptions ()
+#41 0x928b8ffc in SendControlDefSetFocusPart(HIView*, short, unsigned 
+char, short*) ()
+#42 0x928cde44 in HIView::SetFocusPartInternal(short, unsigned char, 
+unsigned char, short*, short) ()
+#43 0x928cd3e0 in HIView::SetFocusPart(short, unsigned char) ()
+#44 0x92966f9c in ClearKeyboardFocus ()
+#45 0x92999ad0 in _ClearKeyboardFocusWithExtremePrejudice ()
+#46 0x928a91e0 in HIView::Destruct() ()
+#47 0x901c0cd0 in CFRelease ()
+#48 0x06f1bc7c in wxMacControl::Dispose() ()
+#49 0x06f7b6d0 in wxWindow::~wxWindow() ()
+#50 0x06fb4714 in wxControlBase::~wxControlBase() ()
+#51 0x06f3d2bc in wxControl::~wxControl() ()
+#52 0x0914160c in wxStyledTextCtrl::~wxStyledTextCtrl() ()
+#53 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#54 0x06f7b650 in wxWindow::~wxWindow() ()
+#55 0x06fb4714 in wxControlBase::~wxControlBase() ()
+#56 0x06f3d2bc in wxControl::~wxControl() ()
+#57 0x06fae1e4 in wxBookCtrlBase::~wxBookCtrlBase() ()
+#58 0x06f5e234 in wxNotebook::~wxNotebook() ()
+#59 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#60 0x06f7b650 in wxWindow::~wxWindow() ()
+#61 0x07031540 in wxSplitterWindow::~wxSplitterWindow() ()
+#62 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#63 0x06f7b650 in wxWindow::~wxWindow() ()
+#64 0x0702a764 in wxPanel::~wxPanel() ()
+#65 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#66 0x06f7b650 in wxWindow::~wxWindow() ()
+#67 0x06fb4714 in wxControlBase::~wxControlBase() ()
+#68 0x06f3d2bc in wxControl::~wxControl() ()
+#69 0x06fae1e4 in wxBookCtrlBase::~wxBookCtrlBase() ()
+#70 0x06f5e234 in wxNotebook::~wxNotebook() ()
+#71 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#72 0x06f7b650 in wxWindow::~wxWindow() ()
+#73 0x07031540 in wxSplitterWindow::~wxSplitterWindow() ()
+#74 0x0700dac4 in wxWindowBase::DestroyChildren() ()
+#75 0x06f7b650 in wxWindow::~wxWindow() ()
+#76 0x07009f00 in wxTopLevelWindowBase::~wxTopLevelWindowBase() ()
+#77 0x06f78514 in wxTopLevelWindowMac::~wxTopLevelWindowMac() ()
+#78 0x06fcb8b4 in wxFrameBase::~wxFrameBase() ()
+#79 0x06f5265c in wxFrame::~wxFrame() ()
+#80 0x06fab5dc in wxAppBase::DeletePendingObjects() ()
+#81 0x06f304a8 in wxApp::MacDoOneEvent() ()
+#82 0x06f30020 in wxApp::MainLoop() ()
+#83 0x0630a1c8 in wxPyApp::MainLoop() (this=0x7d6f240) at 
+src/helpers.cpp:150
+#84 0x0634d860 in _wrap_PyApp_MainLoop (args=0x94c, kwargs=0x0) at 
+src/mac/_core_wrap.cpp:23096
+#85 0x95f4a8d0 in PyObject_Call ()
+#86 0x95fa9df0 in PyEval_GetFuncDesc ()
+#87 0x95fa6d44 in PyEval_EvalCode ()
+#88 0x95fa7e30 in PyEval_EvalCodeEx ()
+#89 0x95f5f354 in PyFunction_SetClosure ()
+#90 0x95f4a8d0 in PyObject_Call ()
+#91 0x95f529e8 in PyMethod_New ()
+#92 0x95f4a8d0 in PyObject_Call ()
+#93 0x95fa9ba8 in PyEval_GetFuncDesc ()
+#94 0x95fa9598 in PyEval_GetFuncDesc ()
+#95 0x95fa6c64 in PyEval_EvalCode ()
+#96 0x95fa9728 in PyEval_GetFuncDesc ()
+#97 0x95fa9580 in PyEval_GetFuncDesc ()
+#98 0x95fa6c64 in PyEval_EvalCode ()
+#99 0x95fa7e30 in PyEval_EvalCodeEx ()
+#100 0x95fa4734 in PyEval_EvalCode ()
+#101 0x95fbe100 in PyImport_ExecCodeModuleEx ()
+#102 0x95fbe808 in PyImport_ExecCodeModuleEx ()
+#103 0x95fbf784 in PyImport_ExecCodeModuleEx ()
+#104 0x95fc08c4 in PyImport_ImportModuleEx ()
+#105 0x95fc02e0 in PyImport_ImportModuleEx ()
+#106 0x95fbfe40 in PyImport_ImportModule ()
+#107 0x95fbffd4 in PyImport_ImportModuleEx ()
+#108 0x001edc88 in blender_import ()
+#109 0x95f4a8d0 in PyObject_Call ()
+#110 0x95fa91ec in PyEval_CallObjectWithKeywords ()
+#111 0x95fa6984 in PyEval_EvalCode ()
+#112 0x95fa7e30 in PyEval_EvalCodeEx ()
+#113 0x95fa4734 in PyEval_EvalCode ()
+#114 0x001ebd88 in BPY_txt_do_python_Text ()
+#115 0x00058a50 in run_python_script ()
+#116 0x000594cc in winqreadtextspace ()
+#117 0x000060fc in scrarea_dispatch_events ()
+#118 0x00007558 in screen_dispatch_events ()
+#119 0x00007c7c in screenmain ()
+#120 0x00003fec in main ()
+#121 0x00002e38 in _start (argc=8, argv=0xbffffd34, envp=0xbffffd58) at 
+/SourceCache/Csu/Csu-47/crt.c:267
+#122 0x8fe1a278 in __dyld__dyld_start ()
+
+so it seems its wx that causes the crash ...
+neither spe nor blender are the problem, but the wx module
+
+If I shall post that to the wx bugtracker, please gimme a hint where to 
+find it ...
+
+
+Bug 2:
+
+If I use command line options, like -d or a combination like -d -w -p 10 
+10 800 600 when I start blender, every single argv
+(from blender -d output):
+
+argv[1] = -d
+argv[2] = -w
+argv[3] = -p
+argv[4] = 10
+argv[5] = 10
+argv[6] = 800
+argv[7] = 600
+
+will be opened as a file in spe, when I launch it from inside blender, 
+plus the workspace files.
+
+thats irritating but not very harmful.
+
+
+greetz kay
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000113.html">[spe-mac] mac installation instructions (please review)
+</A></li>
+	<LI>Next message: <A HREF="000127.html">[spe-mac] bugs: blender crash on SPE exit; SPE opens argv of blender as files
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

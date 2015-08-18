@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] Have you been waiting for the SPE-OSX application bundle?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2007-March/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Have%20you%20been%20waiting%20for%20the%20SPE-OSX%20application%20bundle%3F&In-Reply-To=%3C2078a7ad0703040740h78085b47pa174fcc5255f0fc1%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000192.html">
+   <LINK REL="Next"  HREF="000194.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] Have you been waiting for the SPE-OSX application bundle?</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Have%20you%20been%20waiting%20for%20the%20SPE-OSX%20application%20bundle%3F&In-Reply-To=%3C2078a7ad0703040740h78085b47pa174fcc5255f0fc1%40mail.gmail.com%3E"
+       TITLE="[spe-mac] Have you been waiting for the SPE-OSX application bundle?">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Sun Mar  4 16:40:22 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000192.html">[spe-mac] Poll: native notebook or current custom notebook (please	vote!)
+</A></li>
+        <LI>Next message: <A HREF="000194.html">[spe-mac] Have you been waiting for the SPE-OSX application	bundle?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#193">[ date ]</a>
+              <a href="thread.html#193">[ thread ]</a>
+              <a href="subject.html#193">[ subject ]</a>
+              <a href="author.html#193">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+I am pleased to announce that Jurjen and Andrea will start working on
+an application bundle of SPE with py2app. It is still in the very
+beginning, so no deadline set yet. However if some of you have
+experience with bundling or py2app, please give a helping hand. You'll
+make a lot of Mac user happy.
+I forward the messages of Jurjen and Andrea, as I want that the
+discussion is here so you can give feedback during the process.
+Hopefully we can create a nice script, so that afterwards the
+application bundle can be built automatically.
+Thanks,
+Stani
+
+---------- Forwarded message ----------
+From: SPE Stani's Python Editor &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">spe.stani.be at gmail.com</A>&gt;
+Date: Mar 3, 2007 11:05 PM
+Subject: Re: SPE &amp; py2app
+To: Andrea Tomadin &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">tom.and at tiscalinet.it</A>&gt;
+Cc: &quot;Jurjen N.E. Bos&quot; &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">Jurjen.Bos at hetnet.nl</A>&gt;
+
+
+Cool!
+
+Now we have a Mac release team! I hope you both efforts succeed. A lot
+of people ask for a Spe package. Before someone has packaged SPE, but
+that's long ago. I can send you his latest files. If I find them.
+
+Does py2app comes with a small example? Anyway I have been working
+hard on a new way of building the spe setup.py and package. Before my
+way of packaging was not 100% correct, but I doubt if that is part of
+the problem. You should maybe first try to use py2app for a smaller
+demo.
+
+Stani
+
+On 3/3/07, Andrea Tomadin &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">tom.and at tiscalinet.it</A>&gt; wrote:
+&gt;<i> I thank you both for your kind attention to my question. I precise
+</I>&gt;<i> that I have been using both Python and Mac since a few months only
+</I>&gt;<i> (though quite intensively) so I'm a newbie to many issues.
+</I>&gt;<i>
+</I>&gt;<i> &gt; What do I need to do to get py2app to run?
+</I>&gt;<i>
+</I>&gt;<i> I have installed the MacPython2.4 distribution and almost all the
+</I>&gt;<i> packages that are found in:
+</I>&gt;<i> <A HREF="http://www.pythonmac.org/packages/py24-fat/index.html">http://www.pythonmac.org/packages/py24-fat/index.html</A>
+</I>&gt;<i> the distribution contains an Application Bundler, but I never got it
+</I>&gt;<i> to work. So I downloaded py2app from
+</I>&gt;<i> <A HREF="http://cheeseshop.python.org/pypi/py2app/">http://cheeseshop.python.org/pypi/py2app/</A>
+</I>&gt;<i> The installation is easy: first untar the archive and then
+</I>&gt;<i> export A='/Library/Frameworks/Python.framework/Version/Current/'
+</I>&gt;<i> python setup.py install --prefix=$A
+</I>&gt;<i> The executables get installed in $A/bin.
+</I>&gt;<i>
+</I>&gt;<i> Now, a simple run. Run a Terminal session with the environment variable
+</I>&gt;<i> export PYTHONPATH=&quot;$A&quot;'/lib/python2.4/site-packages'
+</I>&gt;<i> write a simple python script foo.py and issue:
+</I>&gt;<i> py2applet --make-setup foo.py
+</I>&gt;<i> python setup.py py2app
+</I>&gt;<i> (see <A HREF="http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html">http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html</A> )
+</I>&gt;<i> We find a foo.app in ./dist. We can double-click it, drag to the dock
+</I>&gt;<i> etc.
+</I>&gt;<i> Moreover, packages found in site-packages that are used by the
+</I>&gt;<i> application are copied into the bundle, so we should be able to
+</I>&gt;<i> distribute it for usage even on those systems that lack some specific
+</I>&gt;<i> package.
+</I>&gt;<i>
+</I>&gt;<i> If I do the same thing with the script doodle.py in
+</I>&gt;<i> <A HREF="http://svn.pythonmac.org/py2app/py2app/trunk/examples/wxPython/2.4/">http://svn.pythonmac.org/py2app/py2app/trunk/examples/wxPython/2.4/</A>
+</I>&gt;<i> doodle/
+</I>&gt;<i> I get a working GUI application.
+</I>&gt;<i>
+</I>&gt;<i> Then I download the SPE source and install it in the same location.
+</I>&gt;<i> If I run from the Terminal
+</I>&gt;<i> cd &quot;$A&quot;'lib/python2.4/site-packages/_spe'
+</I>&gt;<i> python SPE.py
+</I>&gt;<i> I get a working session of the editor, so I suppose that SPE.py is
+</I>&gt;<i> the main script of the package.
+</I>&gt;<i> I use it as target to py2app and everything seems to work fine, and I
+</I>&gt;<i> see a lot of files from the wxPython package being copied into the
+</I>&gt;<i> bundle.
+</I>&gt;<i> But the execution of the bundle fails upon declaring that no
+</I>&gt;<i> installation of wxPython is present in the system, and suggesting a
+</I>&gt;<i> download.
+</I>&gt;<i>
+</I>&gt;<i> So the problem seems to me merely &quot;formal&quot;, as the scripts after the
+</I>&gt;<i> bundling cannot find the path to a wxPython package. I tried to force a
+</I>&gt;<i> sys.path.insert(0, './Library ... /site-packages')
+</I>&gt;<i> at the very beginning of SPE.py, but nothing changed.
+</I>&gt;<i> As we saw that a running bundle of doodle.py can be build
+</I>&gt;<i> effortlessly including wxPython, the present failure must be a matter
+</I>&gt;<i> of redefining some import - but beats me, the code is quite long to
+</I>&gt;<i> find it out!
+</I>&gt;<i>
+</I>&gt;<i> I apologize for the length of this message, and I would be glad to be
+</I>&gt;<i> of any use for solving this issue :-)
+</I>&gt;<i>
+</I>&gt;<i> Andrea
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000192.html">[spe-mac] Poll: native notebook or current custom notebook (please	vote!)
+</A></li>
+	<LI>Next message: <A HREF="000194.html">[spe-mac] Have you been waiting for the SPE-OSX application	bundle?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#193">[ date ]</a>
+              <a href="thread.html#193">[ thread ]</a>
+              <a href="subject.html#193">[ subject ]</a>
+              <a href="author.html#193">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,390 @@
+From tonyyu at MIT.EDU  Tue Jun 26 01:11:48 2007
+From: tonyyu at MIT.EDU (Tony S. Yu)
+Date: Mon, 25 Jun 2007 19:11:48 -0400
+Subject: [spe-mac] unittest.main() throws AttributeError
+Message-ID: <46804BB4.8070105@mit.edu>
+
+I'm pretty new to both OS X and SPE, so please forgive me if this is a 
+stupid question or if I'm missing any information.
+
+I just installed SPE on my macbook using the SVN repositories, and I'm 
+running into a really weird problem. When I run unittest.main() from a 
+script, I get:
+
+    Traceback (most recent call last):
+    ...
+    File 
+"/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", 
+line 532, in loadTestsFromName
+    parent, obj = obj, getattr(obj, part)
+    AttributeError: 'module' object has no attribute ''
+
+The attribute at the end seems to be an empty string. If I comment out 
+unittest.main() from my script, everything run s fine.
+
+The weird thing is: if I execute my script from a terminal, everything 
+runs fine.
+
+BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9, and 
+the latest SPE from SVN.
+
+Thanks in advance,
+-Tony
+
+
+From spe.stani.be at gmail.com  Tue Jun 26 01:30:29 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Tue, 26 Jun 2007 01:30:29 +0200
+Subject: [spe-mac] unittest.main() throws AttributeError
+In-Reply-To: <46804BB4.8070105@mit.edu>
+References: <46804BB4.8070105@mit.edu>
+Message-ID: <46805015.3030606@gmail.com>
+
+What happens if you run it through the debugger? Ctrl+F9 or Alt+F9
+Stani
+
+Tony S. Yu schreef:
+> I'm pretty new to both OS X and SPE, so please forgive me if this is a 
+> stupid question or if I'm missing any information.
+> 
+> I just installed SPE on my macbook using the SVN repositories, and I'm 
+> running into a really weird problem. When I run unittest.main() from a 
+> script, I get:
+> 
+>     Traceback (most recent call last):
+>     ...
+>     File 
+> "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", 
+> line 532, in loadTestsFromName
+>     parent, obj = obj, getattr(obj, part)
+>     AttributeError: 'module' object has no attribute ''
+> 
+> The attribute at the end seems to be an empty string. If I comment out 
+> unittest.main() from my script, everything run s fine.
+> 
+> The weird thing is: if I execute my script from a terminal, everything 
+> runs fine.
+> 
+> BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9, and 
+> the latest SPE from SVN.
+> 
+> Thanks in advance,
+> -Tony
+> --
+> http://pythonide.stani.be
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+> 
+
+
+
+From tonyyu at MIT.EDU  Tue Jun 26 06:21:22 2007
+From: tonyyu at MIT.EDU (Tony S. Yu)
+Date: Tue, 26 Jun 2007 00:21:22 -0400
+Subject: [spe-mac] unittest.main() throws AttributeError
+In-Reply-To: <46805015.3030606@gmail.com>
+References: <46804BB4.8070105@mit.edu> <46805015.3030606@gmail.com>
+Message-ID: <46809442.6080606@mit.edu>
+
+Thanks for your reply! Unfortunately, I'm even more confused now:
+
+My script runs through the debugger without a hitch!
+
+After comparing the debugger run to the traceback I get back from SPE, I 
+noticed that the debugger doesn't reach half of the methods in the 
+traceback (attached).  When the debugger gets to the parseArgs() method 
+(see traceback) of unittest, a conditional statement recognizes that 
+unittest.main() has been called without arguments and returns to the 
+__init__ method of unittest.main(); thus, the createTests() method (see 
+traceback), which appears later in the parseArgs() method, is never 
+executed when I run debugger.
+
+Any ideas? Thanks,
+-Tony
+
+Stani's Python Editor wrote:
+> What happens if you run it through the debugger? Ctrl+F9 or Alt+F9
+> Stani
+>
+> Tony S. Yu schreef:
+>   
+>> I'm pretty new to both OS X and SPE, so please forgive me if this is a 
+>> stupid question or if I'm missing any information.
+>>
+>> I just installed SPE on my macbook using the SVN repositories, and I'm 
+>> running into a really weird problem. When I run unittest.main() from a 
+>> script, I get:
+>>
+>>     Traceback (most recent call last):
+>>     ...
+>>     File 
+>> "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", 
+>> line 532, in loadTestsFromName
+>>     parent, obj = obj, getattr(obj, part)
+>>     AttributeError: 'module' object has no attribute ''
+>>
+>> The attribute at the end seems to be an empty string. If I comment out 
+>> unittest.main() from my script, everything run s fine.
+>>
+>> The weird thing is: if I execute my script from a terminal, everything 
+>> runs fine.
+>>
+>> BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9, and 
+>> the latest SPE from SVN.
+>>
+>> Thanks in advance,
+>> -Tony
+>> --
+>> http://pythonide.stani.be
+>> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>>
+>>     
+>
+> --
+> http://pythonide.stani.be
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>   
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20070626/eb458ccd/attachment.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: traceback.txt
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20070626/eb458ccd/attachment.txt>
+
+From spe.stani.be at gmail.com  Tue Jun 26 12:34:32 2007
+From: spe.stani.be at gmail.com (Stani's Python Editor)
+Date: Tue, 26 Jun 2007 12:34:32 +0200
+Subject: [spe-mac] unittest.main() throws AttributeError
+In-Reply-To: <46809442.6080606@mit.edu>
+References: <46804BB4.8070105@mit.edu> <46805015.3030606@gmail.com>
+	<46809442.6080606@mit.edu>
+Message-ID: <4680EBB8.5030105@gmail.com>
+
+Please try out the new winpdb
+(http://www.digitalpeers.com/pythondebugger/), which will be in SPE
+soon. If the issue still exists there, contact Nir Aides through the
+winpdb forums about this.
+
+Stani
+
+Tony S. Yu schreef:
+> Thanks for your reply! Unfortunately, I'm even more confused now:
+> 
+> My script runs through the debugger without a hitch!
+> 
+> After comparing the debugger run to the traceback I get back from SPE, I
+> noticed that the debugger doesn't reach half of the methods in the
+> traceback (attached).  When the debugger gets to the parseArgs() method
+> (see traceback) of unittest, a conditional statement recognizes that
+> unittest.main() has been called without arguments and returns to the
+> __init__ method of unittest.main(); thus, the createTests() method (see
+> traceback), which appears later in the parseArgs() method, is never
+> executed when I run debugger.
+> 
+> Any ideas? Thanks,
+> -Tony
+> 
+> Stani's Python Editor wrote:
+>> What happens if you run it through the debugger? Ctrl+F9 or Alt+F9
+>> Stani
+>>
+>> Tony S. Yu schreef:
+>>  
+>>> I'm pretty new to both OS X and SPE, so please forgive me if this is
+>>> a stupid question or if I'm missing any information.
+>>>
+>>> I just installed SPE on my macbook using the SVN repositories, and
+>>> I'm running into a really weird problem. When I run unittest.main()
+>>> from a script, I get:
+>>>
+>>>     Traceback (most recent call last):
+>>>     ...
+>>>     File
+>>> "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py",
+>>> line 532, in loadTestsFromName
+>>>     parent, obj = obj, getattr(obj, part)
+>>>     AttributeError: 'module' object has no attribute ''
+>>>
+>>> The attribute at the end seems to be an empty string. If I comment
+>>> out unittest.main() from my script, everything run s fine.
+>>>
+>>> The weird thing is: if I execute my script from a terminal,
+>>> everything runs fine.
+>>>
+>>> BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9,
+>>> and the latest SPE from SVN.
+>>>
+>>> Thanks in advance,
+>>> -Tony
+>>> -- 
+>>> http://pythonide.stani.be
+>>> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>>>
+>>>     
+>>
+>> -- 
+>> http://pythonide.stani.be
+>> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>>   
+> 
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> Traceback (most recent call last):
+>  File "/Users/tony/Python/fidiff/sandbox.py", line 61, in ?
+> unittest.main()
+>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 758, in __init__
+> self.parseArgs(argv)
+>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 785, in parseArgs
+> self.createTests()
+>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 791, in createTests
+> self.module)
+>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 556, in loadTestsFromNames
+> suites = [self.loadTestsFromName(name, module) for name in names]
+>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 532, in loadTestsFromName
+> parent, obj = obj, getattr(obj, part)
+> AttributeError: 'module' object has no attribute ''
+> Script terminated.
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> --
+> http://pythonide.stani.be
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+
+
+From tonyyu at MIT.EDU  Tue Jun 26 16:35:51 2007
+From: tonyyu at MIT.EDU (Tony S. Yu)
+Date: Tue, 26 Jun 2007 10:35:51 -0400
+Subject: [spe-mac] unittest.main() throws AttributeError
+In-Reply-To: <4680EBB8.5030105@gmail.com>
+References: <46804BB4.8070105@mit.edu>
+	<46805015.3030606@gmail.com>	<46809442.6080606@mit.edu>
+	<4680EBB8.5030105@gmail.com>
+Message-ID: <46812447.1020305@mit.edu>
+
+So it turns out that I don't know how to use winpdb. Python **does** 
+raise an exception when I run unittest.main() with winpdb, I just didn't 
+realize this when I stepped through the program. To add confusion to the 
+mix, the exception occurs in a different function (the runTests method 
+called from __init__ of unittest) and it raises a SystemExit exception 
+instead of AttributeError (which was raised in spe). This happens to me 
+in both versions of winpdb (1.1.0 from spe and 1.1.4 from the website 
+below). Just to reiterate, I don't get either of these errors when I run 
+my script from the terminal.
+
+In any case, I don't think I'll have time to fiddle with this anymore. 
+I'll just wait until I install Ubuntu on my macbook before I try running 
+SPE.
+
+Thanks anyway,
+-Tony
+
+Stani's Python Editor wrote:
+> Please try out the new winpdb
+> (http://www.digitalpeers.com/pythondebugger/), which will be in SPE
+> soon. If the issue still exists there, contact Nir Aides through the
+> winpdb forums about this.
+>
+> Stani
+>
+> Tony S. Yu schreef:
+>   
+>> Thanks for your reply! Unfortunately, I'm even more confused now:
+>>
+>> My script runs through the debugger without a hitch!
+>>
+>> After comparing the debugger run to the traceback I get back from SPE, I
+>> noticed that the debugger doesn't reach half of the methods in the
+>> traceback (attached).  When the debugger gets to the parseArgs() method
+>> (see traceback) of unittest, a conditional statement recognizes that
+>> unittest.main() has been called without arguments and returns to the
+>> __init__ method of unittest.main(); thus, the createTests() method (see
+>> traceback), which appears later in the parseArgs() method, is never
+>> executed when I run debugger.
+>>
+>> Any ideas? Thanks,
+>> -Tony
+>>
+>> Stani's Python Editor wrote:
+>>     
+>>> What happens if you run it through the debugger? Ctrl+F9 or Alt+F9
+>>> Stani
+>>>
+>>> Tony S. Yu schreef:
+>>>  
+>>>       
+>>>> I'm pretty new to both OS X and SPE, so please forgive me if this is
+>>>> a stupid question or if I'm missing any information.
+>>>>
+>>>> I just installed SPE on my macbook using the SVN repositories, and
+>>>> I'm running into a really weird problem. When I run unittest.main()
+>>>> from a script, I get:
+>>>>
+>>>>     Traceback (most recent call last):
+>>>>     ...
+>>>>     File
+>>>> "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py",
+>>>> line 532, in loadTestsFromName
+>>>>     parent, obj = obj, getattr(obj, part)
+>>>>     AttributeError: 'module' object has no attribute ''
+>>>>
+>>>> The attribute at the end seems to be an empty string. If I comment
+>>>> out unittest.main() from my script, everything run s fine.
+>>>>
+>>>> The weird thing is: if I execute my script from a terminal,
+>>>> everything runs fine.
+>>>>
+>>>> BTW, I'm running Python 2.4.4 (from MacPython binary), OS X 10.4.9,
+>>>> and the latest SPE from SVN.
+>>>>
+>>>> Thanks in advance,
+>>>> -Tony
+>>>> -- 
+>>>> http://pythonide.stani.be
+>>>> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>>>>
+>>>>     
+>>>>         
+>>> -- 
+>>> http://pythonide.stani.be
+>>> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>>>   
+>>>       
+>>
+>> ------------------------------------------------------------------------
+>>
+>> Traceback (most recent call last):
+>>  File "/Users/tony/Python/fidiff/sandbox.py", line 61, in ?
+>> unittest.main()
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 758, in __init__
+>> self.parseArgs(argv)
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 785, in parseArgs
+>> self.createTests()
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 791, in createTests
+>> self.module)
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 556, in loadTestsFromNames
+>> suites = [self.loadTestsFromName(name, module) for name in names]
+>>  File "/Library/Frameworks/Python.framework/Versions/2.4//lib/python2.4/unittest.py", line 532, in loadTestsFromName
+>> parent, obj = obj, getattr(obj, part)
+>> AttributeError: 'module' object has no attribute ''
+>> Script terminated.
+>>
+>>
+>> ------------------------------------------------------------------------
+>>
+>> --
+>> http://pythonide.stani.be
+>> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>>     
+>
+> --
+> http://pythonide.stani.be
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>   
+
+

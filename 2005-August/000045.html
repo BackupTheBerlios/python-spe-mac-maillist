@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] Test: multiple document interface on mac
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-August/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Test%3A%20multiple%20document%20interface%20on%20mac&In-Reply-To=%3C42F18F17.9080903%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000044.html">
+   <LINK REL="Next"  HREF="000046.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] Test: multiple document interface on mac</H1>
+    <B>SPE - Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Test%3A%20multiple%20document%20interface%20on%20mac&In-Reply-To=%3C42F18F17.9080903%40gmail.com%3E"
+       TITLE="[spe-mac] Test: multiple document interface on mac">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Thu Aug  4 05:44:23 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000044.html">[spe-mac] Test: smdi.py
+</A></li>
+        <LI>Next message: <A HREF="000046.html">[spe-mac] Test: multiple document interface on mac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#45">[ date ]</a>
+              <a href="thread.html#45">[ thread ]</a>
+              <a href="subject.html#45">[ subject ]</a>
+              <a href="author.html#45">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+Now I implemented all the document interfaces I wanted. Now it should be 
+possible to run SPE on any platform how you prefer it single versus 
+multiple document interface. So SPE can adapt itself as a kameleon. It 
+would be nice if this would work smoothly, so let's get all the bugs out!
+
+1) For the mac tab lovers, this is my own implementation for those who 
+prefer a multiple document interface probably like safari. Please test 
+if this file runs well on Mac (not other os):
+
+    * Start the application and open with file&gt;new some child windows.
+      Look when you close if some errors happen
+    * Don't test it as an editor. The application on itself has no use.
+    * Don't test shortcuts.
+    * Send also screenshot of full desktop with Parent and some Child
+      windows as png or gif
+    * This test is not about the toolpalette
+
+2) I REALLY need your help to solve the single document interface, which 
+remained unsolved by lack of feedback. As I don't have a mac, I can't 
+debug it and it should not be too difficult for you. I quote from my 
+previous mail:
+
+&gt;<i> Looking to the screenshot, I have the following questions:
+</I>&gt;<i> - are there two parent windows (one with toolbar and one with tabs)?!
+</I>&gt;<i> - it is weird that nothing happens when you click on the tabs, not 
+</I>&gt;<i> even an error. Can you please execute this smdi.py (has only some more 
+</I>&gt;<i> print statements) and send me the log file(debug.txt):
+</I>&gt;<i> python spe.py --debug.txt&gt;debug.txt --&gt; I REALLY NEED THIS TO SEE WHY 
+</I>&gt;<i> THE TABS ARE NOT WORKING!!!!!
+</I>&gt;<i> - maybe some of you could plunge into the code and try to find out why 
+</I>&gt;<i> a window is not raised: The windows should be raised by 
+</I>&gt;<i> TabUnix.onFrameTab  which calls Tabs.raiseTab, which raises the actual 
+</I>&gt;<i> MdiTabsChildFrame (of which the Raise method is overwritten by its 
+</I>&gt;<i> Activate method). The bug should be obvious, which is a little bit 
+</I>&gt;<i> frustrating, as I can not test it on a Mac. 
+</I>
+To switch between document interfaces 1 and 2 in smdi.py SPE comment and 
+uncomment one of the last lines:
+if __name__=='__main__':
+    #__test__(debug=1,mdi=MDI_TABS_WIN)#single document interface for mac
+    __test__(debug=1,mdi=MDI_SPLIT_ALL)#multiple document interface for mac
+
+In general this smdi is more stable as the previous version, I removed 
+some code which might provoque segmentation faults and the like.
+
+Thanks,
+Stani
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/5eff6799/attachment.html">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/5eff6799/attachment.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smdi.py
+Type: text/x-python
+Size: 44318 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/5eff6799/attachment.py">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20050804/5eff6799/attachment.py</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000044.html">[spe-mac] Test: smdi.py
+</A></li>
+	<LI>Next message: <A HREF="000046.html">[spe-mac] Test: multiple document interface on mac
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#45">[ date ]</a>
+              <a href="thread.html#45">[ thread ]</a>
+              <a href="subject.html#45">[ subject ]</a>
+              <a href="author.html#45">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

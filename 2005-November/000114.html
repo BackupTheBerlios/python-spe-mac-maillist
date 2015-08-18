@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20spe-blender%20file%20adapted%20for%20Mac%20%28Python%202.3%20OSX%2010.3.9%29&In-Reply-To=%3C4387654E.7060608%40merz-akademie.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000111.html">
+   <LINK REL="Next"  HREF="000115.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)</H1>
+    <B>Kay Fricke</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20spe-blender%20file%20adapted%20for%20Mac%20%28Python%202.3%20OSX%2010.3.9%29&In-Reply-To=%3C4387654E.7060608%40merz-akademie.de%3E"
+       TITLE="[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)">kay.fricke at merz-akademie.de
+       </A><BR>
+    <I>Fri Nov 25 20:26:06 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000111.html">[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+</A></li>
+        <LI>Next message: <A HREF="000115.html">[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114">[ date ]</a>
+              <a href="thread.html#114">[ thread ]</a>
+              <a href="subject.html#114">[ subject ]</a>
+              <a href="author.html#114">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>hey Stani,
+
+meanwhile I tried to implement the suggestion made.
+I attached the code for inspection.
+
+the recognition works fine ... so far. except for PYTHONPATH, as stated 
+in the comment, it needs some regex too. Or I just skip that, and stick 
+with the sys.path.
+
+I tried it with blender 2.37 works perfect. With blender 2.40 SPE 
+wouldn't work, but only due to wxversion problems ...
+That Bug is reproducable with the old script too ...
+
+ &gt;debug output:
+Traceback (most recent call last):
+   File &quot;spe editor&quot;, line 14, in ?
+   File 
+&quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/_spe/SPE.py&quot;, 
+line 4, in ?
+     wxversion.ensureMinimal(WX_VERSION)
+   File 
+&quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site-packages/wxversion.py&quot;, 
+line 174, in ensureMinimal
+     raise VersionError(&quot;wxversion.ensureMinimal() must be called before 
+wxPython is imported&quot;)
+wxversion.VersionError: wxversion.ensureMinimal() must be called before 
+wxPython is imported
+
+
+with blender 2.37 python 2.3 is used, so the old SPE Release kicks in, 
+thats 0.7.5.f, which I have installed under 2.3.
+My Blender 2.40 version comes from 
+<A HREF="http://blendertestbuilds.de/index.php?dir=Testbuilds/Blender/MacOSX/BrianH/">http://blendertestbuilds.de/index.php?dir=Testbuilds/Blender/MacOSX/BrianH/</A>
+and is the Blender-18-Nov-2005-OSX.dmg build.
+That version uses python 2.4.0 and so the current _spe checkout from 
+subversion.
+
+hope this helps ...
+
+greetz kay
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: spe-editor.py
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/d71c43c2/attachment.ksh">https://lists.berlios.de/pipermail/python-spe-mac/attachments/20051125/d71c43c2/attachment.ksh</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000111.html">[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+</A></li>
+	<LI>Next message: <A HREF="000115.html">[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114">[ date ]</a>
+              <a href="thread.html#114">[ thread ]</a>
+              <a href="subject.html#114">[ subject ]</a>
+              <a href="author.html#114">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

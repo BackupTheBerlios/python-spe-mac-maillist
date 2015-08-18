@@ -1,0 +1,706 @@
+From hraban at fiee.net  Sun Jan  1 20:02:17 2006
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Sun, 1 Jan 2006 20:02:17 +0100
+Subject: [spe-mac] commandline arg issue
+Message-ID: <A93A8011-E0BC-4BCF-986F-44FCA5D6A68D@fiee.net>
+
+Hello Stani et al! A happy new year!
+
+I just found out: If I launch SPE from the shell with a script name  
+('spe myprog.py'), SPE opens the right file, but if I try to save, it  
+can't remember the path, i.e. acts always like 'Save As'.
+
+
+Gr??lis vom Hraban!
+---
+http://www.fiee.net/texnique/
+http://contextgarden.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+From rudolphv at gmail.com  Thu Jan 12 14:58:31 2006
+From: rudolphv at gmail.com (Rudolph van der Merwe)
+Date: Thu, 12 Jan 2006 15:58:31 +0200
+Subject: [spe-mac] Editor window font anti-aliasing
+Message-ID: <97670e910601120558l6e6e5d36kbca921647f661945@mail.gmail.com>
+
+Is is possible to turn off the anti-aliasing of the font in the main editor
+window? I would love to use the ProggyClean (
+http://www.proggyfonts.com/index.php?menu=download ) monospaced bitmap font
+for editing, but it only looks good at a font size of 16 without
+anti-aliasing (at least in OS X).
+
+On the Mac (running OS X) one can turn of anti-aliasing for the font in the
+standard Terminal.app window, so it should be possible to do this on an
+application by application basis, without having to change the global
+anti-aliasing settings.
+
+Rudolph
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060112/db7cb9dd/attachment.html>
+
+From spe.stani.be at gmail.com  Thu Jan 12 15:42:02 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 12 Jan 2006 15:42:02 +0100
+Subject: [spe-mac] Editor window font anti-aliasing
+In-Reply-To: <97670e910601120558l6e6e5d36kbca921647f661945@mail.gmail.com>
+References: <97670e910601120558l6e6e5d36kbca921647f661945@mail.gmail.com>
+Message-ID: <2078a7ad0601120642w11be9fdcw3a367fa08d3a15d4@mail.gmail.com>
+
+On 1/12/06, Rudolph van der Merwe <rudolphv at gmail.com> wrote:
+> Is is possible to turn off the anti-aliasing of the font in the main editor
+> window? I would love to use the ProggyClean (
+> http://www.proggyfonts.com/index.php?menu=download )
+> monospaced bitmap font for editing, but it only looks good at a font size of
+> 16 without anti-aliasing (at least in OS X).
+>
+> On the Mac (running OS X) one can turn of anti-aliasing for the font in the
+> standard Terminal.app window, so it should be possible to do this on an
+> application by application basis, without having to change the global
+> anti-aliasing settings.
+>
+> Rudolph
+
+Hi Rudolph,
+Mac users asked for anti-aliasing, but if you want to turn it off,
+feel free to hack into _spe/smwxp/stc.py and look for the lines
+(around 435):
+
+    def SetStyles(self):
+        self.StyleClearAll()
+
+        # anti-aliasing
+        if hasattr(self,'SetUseAntiAliasing'):
+            self.SetUseAntiAliasing(True)     #---> REPLACE THIS WITH False
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From spe.stani.be at gmail.com  Sun Jan 15 06:35:28 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 15 Jan 2006 06:35:28 +0100
+Subject: [spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+Message-ID: <2078a7ad0601142135v3436f442i95516bce517c6c35@mail.gmail.com>
+
+SPE 0.8.1.d [Release]<http://www.stani.be/python/spe/blog/categorylist_html?cat_id=1>
+
+
+ SPE gets rid of terminal windows when executing scripts. The output is
+shown nicely formatted with colors and hyperlinks to jump to the source
+code. Files can be run as such with or without dialog box to pass arguments.
+For those who prefer 'running scripts externally in terminals' is still
+available.
+
+(See http://pythonide.stani.be/manual/html/manual4_html_5029fe9c.gif)
+
+.
+
+On MacOS X and Linux SPE can now show files simultaneously as columns or
+rows for comparitive editing. You can select which files are shown, by Ctrl
+clicking them.
+
+(See http://pythonide.stani.be/manual/html/manual4_html_1cde0f5.jpg)
+
+.
+
+SPE was for the first time tested on and improved for Ubuntu (and hopefully
+so for Linux in general). I adapted SPE such that it can ran out of the box
+of an archive (zip or tar.gz). This has the advantage that Linux (but also
+Mac and Windows) don't have to install SPE anymore but can just run it out
+of a folder or USB stick, provided the right version of wxPython (2.6) is
+installed on the system as it is always the case with Ubuntu boxes. If you
+want to install SPE in this way, use the -no_setup.zip distribution, but
+don't forget to uninstall your previous version of SPE first.
+  *New features*:
+
+   - new run system with redirected output
+   - column and row view modes
+   - SPE can run just from a folder (provided wxPython 2.6 is present)
+
+  *Improved features*:
+
+   - file tabs (by Andrea Gavana)
+   - warning before executing whole file
+   - various improvements for Ubuntu/GTK
+   - 'find in files' in multiple paths when separated by ';' (Nick Trout)
+   - browser file order by relative path instead of base (Nick Trout)
+
+  *Fixes*:
+
+   - global todo fix (by Benjamin Hess)
+   - realtime id fix
+   - utf8 encoding recognition
+   - Windows 98 run fix (by Fuzzyman)
+   - fix for execute in shell (except,else,elif)
+   - passing arguments to running files (by Karl-Heinz Glahe)
+
+  *Manual*:
+
+   - Quick install without setup (Windows, Linux and MacOS X)
+   - Running files
+   - FAQ updated with what if SPE doesn't start up
+   - FAQ updated with 'Advertisements on website'
+
+  *Contributors*:
+
+   - Andrea Gavana, http://xoomer.virgilio.it/infinity77
+   - Benjamin Hess
+   - Fuzzyman, http://www.voidspace.org.uk
+   - Karl-Heinz Glahe
+   - Nick Trout
+
+  *Donations*:
+
+These generous donors get an one year abonnement on the SPE manual (>=
+100euro):
+
+   - Bernard Stern, http://www.prairiegames.com, (160 euro)
+   - Donald French (100 euro)
+
+These donors can ask for the manual:
+
+   - Gerard Blais (25 euro)
+   - Daniel Vittet (20 euro)
+   - Kyle Odom (15 euro)
+   - Delia Fecoriu (10 GBP)
+   - Princess Pearls (10 euro)
+
+The development of SPE is driven by donations.
+  *Request*:
+
+   - SPE is looking for an Google Analytics invitation. Anyone?
+
+.
+
+SVN 134
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060115/c5a02d63/attachment.html>
+
+From spe.stani.be at gmail.com  Sun Jan 15 14:18:59 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Sun, 15 Jan 2006 14:18:59 +0100
+Subject: [spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+In-Reply-To: <97670e910601150026l41786319k4e9fdd38901c26fa@mail.gmail.com>
+References: <2078a7ad0601142135v3436f442i95516bce517c6c35@mail.gmail.com>
+	 <97670e910601150026l41786319k4e9fdd38901c26fa@mail.gmail.com>
+Message-ID: <2078a7ad0601150518o7c39873dpdea8c6a73336972a@mail.gmail.com>
+
+On 1/15/06, Rudolph van der Merwe <rudolph at vdmerwe.net> wrote:
+>
+> Stani,
+>
+> There seems to be some issues with getting SPE 0.8.1.d running on Mac
+> OS X. For some reason, the _spe/defaults.cfg file is missing. The main
+> script also cannot find a bunch of *.png graphical elements. See
+> attached my debug.txt file.
+
+
+I just checked the archive and it is all there. There should be no problem.
+
+From spe.stani.be at gmail.com  Wed Jan 18 00:07:35 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 18 Jan 2006 00:07:35 +0100
+Subject: [spe-mac] Good news: browser in sidebar doesn't crash on wxPython 2.6.2
+Message-ID: <2078a7ad0601171507u4c738b79s51970d09d62561b1@mail.gmail.com>
+
+Hi,
+I tested the browser to include it again. It seems to work. Upgrading
+to wxPython 2.6.2 is extremely easy for Macintosh users (there is an
+uninstall script). So should I check if the right version is installed
+or can I just assume everybody upgrades?
+Stani
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From hraban at fiee.net  Thu Jan 19 00:18:51 2006
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Thu, 19 Jan 2006 00:18:51 +0100
+Subject: [spe-mac] deprecation warning
+Message-ID: <285AF4DE-87DC-4E7B-BF04-FEAEB85AEA71@fiee.net>
+
+This should be an easy fix:
+
+/Library/Frameworks/Python.framework/Versions/2.4/lib/python2.4/site- 
+packages/_spe/dialogs/separatorDialog.py:119: DeprecationWarning:  
+asTuple is deprecated, use `Get` instead
+   return ('#%s%s%s'%tuple(map(lambda x:sm.zfill(hex(x)[2:], 
+2),c.asTuple()))).upper()
+
+(Can't remember when that happened, though.)
+
+
+Greetlings from Lake Constance!
+Hraban
+---
+http://www.fiee.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+
+From rudolphv at gmail.com  Mon Jan 23 07:46:51 2006
+From: rudolphv at gmail.com (Rudolph van der Merwe)
+Date: Mon, 23 Jan 2006 08:46:51 +0200
+Subject: [spe-mac] Possible bug with eol (end of line) guide?
+Message-ID: <97670e910601222246w4270694fne99c02b9147e4a52@mail.gmail.com>
+
+I have SPE configured to indicate the end of line guide (vertical
+line) at column number 79, however, when I count the columns it seems
+like the line is at column 88. Is this a bug?
+
+
+--
+Rudolph van der Merwe
+
+
+From rudolphv at gmail.com  Wed Jan 25 11:24:22 2006
+From: rudolphv at gmail.com (Rudolph van der Merwe)
+Date: Wed, 25 Jan 2006 12:24:22 +0200
+Subject: [spe-mac] Editor window update/refresh is slow
+Message-ID: <97670e910601250224h4d15d11ye668a2f8340f96ec@mail.gmail.com>
+
+I'm experiencing quite slow scrolling and window updating in the main
+editor window of SPE. Is this normal?
+
+I'm running SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+(OS X 10.4.4)
+
+--
+Rudolph van der Merwe
+
+
+From spe.stani.be at gmail.com  Wed Jan 25 14:55:31 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 25 Jan 2006 14:55:31 +0100
+Subject: [spe-mac] Editor window update/refresh is slow
+In-Reply-To: <97670e910601250224h4d15d11ye668a2f8340f96ec@mail.gmail.com>
+References: <97670e910601250224h4d15d11ye668a2f8340f96ec@mail.gmail.com>
+Message-ID: <2078a7ad0601250555g7618cd1dq5e3abddff6bd2314@mail.gmail.com>
+
+It depends. How big are the files you are working with?
+Stani
+
+On 1/25/06, Rudolph van der Merwe <rudolphv at gmail.com> wrote:
+>
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate_______________________________________________
+> I'm experiencing quite slow scrolling and window updating in the main
+> editor window of SPE. Is this normal?
+>
+> I'm running SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+> (OS X 10.4.4)
+>
+> --
+> Rudolph van der Merwe
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060125/a2773cf7/attachment.html>
+
+From Richard.E.Brown at dartware.com  Wed Jan 25 15:09:39 2006
+From: Richard.E.Brown at dartware.com (Richard E. Brown)
+Date: 25 Jan 2006 09:09:39 EST
+Subject: [spe-mac] Editor window update/refresh is slow
+Message-ID: <2121621@blitz.dartware.com>
+
+--- Rudolph van der Merwe wrote:
+I'm experiencing quite slow scrolling and window updating in the main
+editor window of SPE. Is this normal?
+
+I'm running SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+(OS X 10.4.4)
+--- end of quote ---
+
+I have been waiting 'til we had a good version before mentioning this, and I
+think it's a good time now. 
+
+I think there are two items here.
+
+1)	I've noticed that the scrolling in SPE was slow on my TiBook - to the point
+that it feels a little sluggish. I just tried 0.8.1.d on my Windows laptop
+(similar speed) and it was pretty snappy. 
+
+2)	The newest SPE (SVN 149) had very peculiar window updating on my Mac (I
+didn't try it on the Windows box). The various panes would open very large, then
+shrink to their proper size each time a new file opened. Here's what I saw:
+
+-	On initial launch, the python terminal session openedin the full window; then
+shrunk down to the bottom third as normal.
+
+-	There's an error "Error opening workspace file : No section: 'openfiles'"
+displayed there.
+
+-	Opening a source file showed the entire source file filling the top pane (left
+to right edges), then the split bar dividing the top pane, then a section of a
+file hierarchy in the left pane (don't know what that was) then finally the
+normal list of functions, etc. in the left pane. I managed to catch a screen
+shot - attached.
+
+-	Finally the window fixes itself, and works properly. 
+
+I'm using an 867MHz G4 TiBook, 10.4.4, with 1 GByte of RAM. I'm using
+ActivePython 2.4.2, and using wxPython 2.6.2.1.
+
+Best regards,
+
+Rich Brown                    richard.e.brown at dartware.com
+Dartware, LLC                 http://www.dartware.com
+10 Buck Road, PO Box 130      Telephone: 603-643-9600
+Hanover, NH 03755-0130 USA    Fax: 603-643-2289
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: SPE-SVN149.jpg
+Type: image/jpeg
+Size: 63714 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060125/dd86ab80/attachment.jpg>
+
+From spe.stani.be at gmail.com  Thu Jan 26 00:36:43 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 26 Jan 2006 00:36:43 +0100
+Subject: [spe-mac] Editor window update/refresh is slow
+In-Reply-To: <2121621@blitz.dartware.com>
+References: <2121621@blitz.dartware.com>
+Message-ID: <2078a7ad0601251536o6f061f03ra78d8fbf0e20927e@mail.gmail.com>
+
+Hi Richard and Rudolph,
+
+On 25 Jan 2006 09:09:39 EST, Richard E. Brown <Richard.E.Brown at dartware.com>
+wrote:
+>
+> --- Rudolph van der Merwe wrote:
+> I'm experiencing quite slow scrolling and window updating in the main
+> editor window of SPE. Is this normal?
+
+
+Rudolph can you confirm if the "window updating" is the one Richard
+describes below or do you have other issues? If you work with large files,
+it is better to set "check realtime with" to none in Preferences>Editor if
+typing would get slow.
+
+I'm running SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+> (OS X 10.4.4)
+
+
+ Ha, I wished I had one of these ;-)
+
+--- end of quote ---
+>
+> I have been waiting 'til we had a good version before mentioning this,
+
+
+Please don't wait!
+
+and I
+> think it's a good time now.
+>
+> I think there are two items here.
+>
+> 1)      I've noticed that the scrolling in SPE was slow on my TiBook - to
+> the point
+> that it feels a little sluggish. I just tried 0.8.1.d on my Windows laptop
+> (similar speed) and it was pretty snappy.
+
+
+Can you check if this is a wxPython issue, by copying&pasting the same file
+in the wxPython demo and see if it behaves the same. I wouldn't know what
+would cause it too be slow. I'm afraid it is a wxMac issue.
+
+I guess snappy is the opposite of sluggish? It might prove it is a wxMac
+issue. Stefan, any thoughts about this?
+
+2)      The newest SPE (SVN 149) had very peculiar window updating on my Mac
+> (I
+> didn't try it on the Windows box).
+
+The various panes would open very large, then
+> shrink to their proper size each time a new file opened. Here's what I
+> saw:
+>
+> -       On initial launch, the python terminal session openedin the full
+> window; then
+> shrunk down to the bottom third as normal.
+
+
+The main window is a splitterwindow, it normally only updates its size at an
+on Idle event. I forced it using the UpdateSize method and it seems to be
+fixed now. (I'll update soon to the SVN.)
+
+-       There's an error "Error opening workspace file : No section:
+> 'openfiles'"
+> displayed there.
+
+
+Fixed, now only displayed in statusbar if SPE is in debugging mode.
+
+-       Opening a source file showed the entire source file filling the top
+> pane (left
+> to right edges), then the split bar dividing the top pane, then a section
+> of a
+> file hierarchy in the left pane (don't know what that was)
+
+
+The browser is back in town! It is the last tab of the sidebar. I strongly
+recommend everyone to read the new SPE tutorial of Dimitri:
+http://www.serpia.org/spe The browser is explained there.
+
+Anyway, the browser before (wxPython 2.6.1 ) was buggy and was left out.
+
+From rudolphv at gmail.com  Thu Jan 26 08:16:42 2006
+From: rudolphv at gmail.com (Rudolph van der Merwe)
+Date: Thu, 26 Jan 2006 09:16:42 +0200
+Subject: [spe-mac] Editor window update/refresh is slow
+In-Reply-To: <2078a7ad0601251536o6f061f03ra78d8fbf0e20927e@mail.gmail.com>
+References: <2121621@blitz.dartware.com>
+	 <2078a7ad0601251536o6f061f03ra78d8fbf0e20927e@mail.gmail.com>
+Message-ID: <97670e910601252316t55211c13xb2774a46beba0a8a@mail.gmail.com>
+
+On 1/26/06, SPE Stani's Python Editor <spe.stani.be at gmail.com> wrote:
+
+>  Rudolph can you confirm if the "window updating" is the one Richard
+> describes below or do you have other issues? If you work with large files,
+> it is better to set "check realtime with" to none in Preferences>Editor if
+> typing would get slow.
+
+I'm not seeing the same behaviour as Richard, but I'm not running the
+latest svn version of SPE. I'm using the latest release v0.8.1.d.
+
+I'm seeing sluggish scrolling even on small files.
+
+> > I'm running SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+> > (OS X 10.4.4)
+>
+>   Ha, I wished I had one of these ;-)
+
+Except for the dreaded "LCD horizontal lines issue"  (
+http://15inpbscreen.appleplace.com/ ) it is a great machine.
+
+
+>  Can you check if this is a wxPython issue, by copying&pasting the same file
+> in the wxPython demo and see if it behaves the same. I wouldn't know what
+> would cause it too be slow. I'm afraid it is a wxMac issue.
+
+I tried this and the sluggishness is not present, i.e., the slow
+update and scroll behaviour is only present in SPE. I also made sure
+to turn off realtime syntax checking in SPE.
+
+>  I guess snappy is the opposite of sluggish? It might prove it is a wxMac
+> issue. Stefan, any thoughts about this?
+
+Snappy is good. I don't think it is a wxMac issue though. I looked at
+another wxPython based IDE called DrPython (I think it also uses
+Scintilla) and it did not exhibit the sluggishness.
+
+Rudolph
+
+
+--
+Rudolph van der Merwe
+
+
+From spe.stani.be at gmail.com  Thu Jan 26 15:35:02 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 26 Jan 2006 15:35:02 +0100
+Subject: [spe-mac] Editor window update/refresh is slow
+In-Reply-To: <97670e910601252316t55211c13xb2774a46beba0a8a@mail.gmail.com>
+References: <2121621@blitz.dartware.com>
+	 <2078a7ad0601251536o6f061f03ra78d8fbf0e20927e@mail.gmail.com>
+	 <97670e910601252316t55211c13xb2774a46beba0a8a@mail.gmail.com>
+Message-ID: <2078a7ad0601260635g322ce473xeecc6d69cfd5c03@mail.gmail.com>
+
+On 1/26/06, Rudolph van der Merwe <rudolphv at gmail.com> wrote:
+>
+> >  Rudolph can you confirm if the "window updating" is the one Richard
+> > describes below or do you have other issues? If you work with large
+> files,
+> > it is better to set "check realtime with" to none in Preferences>Editor
+> if
+> > typing would get slow.
+>
+> I'm not seeing the same behaviour as Richard, but I'm not running the
+> latest svn version of SPE. I'm using the latest release v0.8.1.d.
+
+
+You can now download SPE 0.8.2.a!
+
+I'm seeing sluggish scrolling even on small files.
+
+
+Small file for me is <1000 lines.
+
+> > I'm running SPE on a Rev.E Powerbook G4 (1.67Ghz) with 2GB of memory
+> > > (OS X 10.4.4)
+> >
+> >   Ha, I wished I had one of these ;-)
+>
+> Except for the dreaded "LCD horizontal lines issue"  (
+> http://15inpbscreen.appleplace.com/ ) it is a great machine.
+>
+>
+> >  Can you check if this is a wxPython issue, by copying&pasting the same
+> file
+> > in the wxPython demo and see if it behaves the same. I wouldn't know
+> what
+> > would cause it too be slow. I'm afraid it is a wxMac issue.
+>
+> I tried this and the sluggishness is not present, i.e., the slow
+> update and scroll behaviour is only present in SPE. I also made sure
+> to turn off realtime syntax checking in SPE.
+
+
+OK, I'll try to find it. I can't promise anything as these things are
+sometimes quite hidden. What you mean with update? Keyboard typing? Can you
+also set update sidebar as 'when clicked' preferences>editor to see if that
+has effect on it?
+
+Stani
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060126/465f75e0/attachment.html>
+
+From spe.stani.be at gmail.com  Thu Jan 26 15:36:15 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Thu, 26 Jan 2006 15:36:15 +0100
+Subject: [spe-mac] SPE 0.8.2.a released: recommended upgrade
+In-Reply-To: <2078a7ad0601252212h1a7a68e5r61d9150be8944da9@mail.gmail.com>
+References: <2078a7ad0601252212h1a7a68e5r61d9150be8944da9@mail.gmail.com>
+Message-ID: <2078a7ad0601260636hddd25a8i9deae3a560b587b8@mail.gmail.com>
+
+This is an important a bugfix release for all platforms. Be sure to grab it
+when it comes out!! It has a new feature to customize your fonts and colors
+(styles). Please report any bugs quickly as SPE will be reviewed for Pycon.
+
+Thanks to Marco Ferreira there will be now a debian package to install SPE
+easily and create an entry in the start menu on debian based linux distro's
+such as Ubuntu. I'm also in contact with Matthias Klose to make an updated
+SPE available with the Ubuntu Dapper Drake release.
+
+:**New features**:
+
+- Configurable style editor for fonts and colors (Idle, ...)
+- Inspect interactively after running script in terminal
+- Debian installer for Ubuntu, etc... by Marco Ferreira
+
+:**Fixes**:
+
+- dot bug after ')'
+- prevent unsplitting by double clicking sidebar sash
+- tar.gz archive shrinked to 65% of its original size (only 833kb!)
+- Linux: fix for the Browser (tested on Ubuntu)
+- Linux: added firefox to webbrowser list and is default browser if present
+- Linux: run in terminal for konsole and gnome-terminal
+- Linux: sidebar fits better around it contents
+- Mac: sash is enlarged to 6 pixels
+- Mac: new feature: browser in sidebar (for wxPython 2.6.2+)
+- Linux &amp; Mac: a lot of visual glitches are fixed
+- Windows: SPE shortcut in Windows start menu works again
+- Windows: Run in terminal input
+- Windows: NotebookCtrl fixed
+
+
+:**Manual**:
+
+- Installation: added section for Ubuntu and Debian systems.
+- Tutorial: the SPE tutorial has been completely rewritten by Dimitri to be
+up to date with the latest version (review and leave your comments at
+http://www.serpia.org/spe ...)
+- global revision
+
+:**Donations**:
+
+- Marco Ferreira (Debian installers)
+
+:**Donations**:
+
+- Harry Miktarian (16.10 euro)
+- Amit Antebi (10 euro)
+- Steven Hepple (10 euro)
+
+Each of these donators can request the manual.
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20060126/6d30636f/attachment.html>
+
+From hraban at fiee.net  Thu Jan 26 18:28:57 2006
+From: hraban at fiee.net (Henning Hraban Ramm)
+Date: Thu, 26 Jan 2006 18:28:57 +0100
+Subject: [spe-mac] Editor window update/refresh is slow
+In-Reply-To: <2078a7ad0601260635g322ce473xeecc6d69cfd5c03@mail.gmail.com>
+References: <2121621@blitz.dartware.com> <2078a7ad0601251536o6f061f03ra78d8fbf0e20927e@mail.gmail.com> <97670e910601252316t55211c13xb2774a46beba0a8a@mail.gmail.com> <2078a7ad0601260635g322ce473xeecc6d69cfd5c03@mail.gmail.com>
+Message-ID: <41928E0B-0C59-423D-A873-F4FE77B70A20@fiee.net>
+
+Am 2006-01-26 um 15:35 schrieb SPE Stani's Python Editor:
+
+> I'm seeing sluggish scrolling even on small files.
+
+Same with me.
+
+> >  Can you check if this is a wxPython issue, by copying&pasting  
+> the same file
+> > in the wxPython demo and see if it behaves the same. I wouldn't  
+> know what
+> > would cause it too be slow. I'm afraid it is a wxMac issue.
+>
+> I tried this and the sluggishness is not present, i.e., the slow
+> update and scroll behaviour is only present in SPE. I also made sure
+> to turn off realtime syntax checking in SPE.
+
+Here even the wx demo is sluggish, e.g. if I type a dot in PyCrust it  
+needs years (ok, about 10-20 secs) to show the list of objects, same  
+in SPE, naturally.
+The stc demo has no problems.
+I guessed it's a problem of wxMac or my slow old machine (G4/400 but  
+with 1.75 GB RAM and latest updates of everything).
+But it may be more a problem of checking every keystroke etc. (SPE  
+does a lot more with stc than the demo).
+
+Sorry, I've no time for investigations at the moment, only wanted to  
+give feedback.
+
+Greetlings from Lake Constance!
+Hraban
+---
+http://www.fiee.net
+http://www.cacert.org (I'm an assurer)
+
+
+
+

@@ -1,0 +1,222 @@
+From tony at instaview.com  Tue Nov 28 01:25:23 2006
+From: tony at instaview.com (Tony)
+Date: Mon, 27 Nov 2006 19:25:23 -0500
+Subject: [spe-mac] Website down? Or worse?
+Message-ID: <200611271925.23636.tony@instaview.com>
+
+Tried to hop on to the website today to check for, and get, the latest for a 
+new install on a new laptop, but all i get is a "proxy error"..
+
+Is anyone else having troubles or is it just me?
+
+If its not just me, i hope nothing permanent has happened.
+
+
+
+From flavio at openrising.com  Tue Nov 28 01:34:17 2006
+From: flavio at openrising.com (Flavio Domingos)
+Date: Mon, 27 Nov 2006 16:34:17 -0800 (PST)
+Subject: [spe-mac] Website down? Or worse?
+In-Reply-To: <200611271925.23636.tony@instaview.com>
+Message-ID: <20061128003417.96773.qmail@web614.biz.mail.mud.yahoo.com>
+
+not working :(
+
+Tony <tony at instaview.com> wrote: _______________________________________________
+http://pythonide.stani.be
+http://pythonide.stani.be/manual/html/manual.html
+http://pythonide.stani.be/blog/sm_donate _______________________________________________
+Tried to hop on to the website today to check for, and get, the latest for a 
+new install on a new laptop, but all i get is a "proxy error"..
+
+Is anyone else having troubles or is it just me?
+
+If its not just me, i hope nothing permanent has happened.
+
+Python-spe-mac mailing list
+Python-spe-mac at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/python-spe-mac
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/python-spe-mac/attachments/20061127/1ad85792/attachment.html>
+
+From spe.stani.be at gmail.com  Wed Nov 29 15:56:11 2006
+From: spe.stani.be at gmail.com (SPE Stani's Python Editor)
+Date: Wed, 29 Nov 2006 15:56:11 +0100
+Subject: [spe-mac] Website down? Or worse?
+In-Reply-To: <20061128003417.96773.qmail@web614.biz.mail.mud.yahoo.com>
+References: <200611271925.23636.tony@instaview.com>
+	<20061128003417.96773.qmail@web614.biz.mail.mud.yahoo.com>
+Message-ID: <2078a7ad0611290656m7d71a67dhe029c921ce1fd703@mail.gmail.com>
+
+Nothing permanent, don't worry, but something bad temporarily. See the
+general spe-users list:
+
+---------- Forwarded message ----------
+From: SPE Stani's Python Editor <spe.stani.be at gmail.com>
+Date: Nov 29, 2006 3:53 PM
+Subject: Re: [spe-users] SPE is looking for a new webhost
+To: Mailing list for spe users <python-spe-users at lists.berlios.de>
+
+
+Yes, it went quicker as I thought unfortunately. I've posted on
+comp.lang.python and have received already a nice offer. I'll wait for
+other reactions and than make a choice. Don't worry the SPE website
+will come back.
+
+If some of you are familiar with one of the python frameworks
+(Zope/Plone, django, turbogears, ...) or with web design/building in
+general and want to help out, it will only be faster.
+
+Stani
+
+On 11/28/06, Chris Hengge <pyro9219 at gmail.com> wrote:
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> --
+>
+>
+>
+>
+> I'm assuming you still need a host since your site is down?
+>
+> On 11/21/06, SPE Stani's Python Editor <spe.stani.be at gmail.com > wrote:
+> > http://pythonide.stani.be
+> > http://pythonide.stani.be/manual/html/manual.html
+> > http://pythonide.stani.be/blog/sm_donate
+> > --
+> >
+> >
+> > SPE was hosted for a long while by Zettai. Unfortunately they will go
+> > out of business. So SPE is looking for a new webhost.
+> >
+> > These are the requirements:
+> > - python framework (Zope/Plone, django, turbogears, ...)
+> > - I have the freedom to use this website also for other projects
+> > besides SPE (such as sdxf (open source dxf library for python), my own
+> > portfolio, ...
+> > - I am allowed to place ads on the site
+> >
+> > These are some optional features which would be nice:
+> > - root access
+> > - debian or ubuntu based
+> >
+> > In return a small banner of the hosting (or sponsering) will be placed
+> > on the SPE site.
+> >
+> > In order to continue the development of SPE, it needs a hosting provider.
+> >
+> > Thanks for any suggestions,
+> >
+> > Stani
+> > _______________________________________________
+> > Python-spe-users mailing list
+> > Python-spe-users at lists.berlios.de
+> >
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+> >
+>
+>
+> _______________________________________________
+> Python-spe-users mailing list
+> Python-spe-users at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-users
+>
+>
+>
+
+
+--
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+On 11/28/06, Flavio Domingos <flavio at openrising.com> wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> _______________________________________________
+>
+>
+> not working :(
+>
+> Tony <tony at instaview.com> wrote:
+>  _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> _______________________________________________
+> Tried to hop on to the website today to check for, and get, the latest for a
+> new install on a new laptop, but all i get is a "proxy error"..
+>
+> Is anyone else having troubles or is it just me?
+>
+> If its not just me, i hope nothing permanent has happened.
+>
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+> Python-spe-mac mailing list
+> Python-spe-mac at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/python-spe-mac
+>
+>
+>
+
+
+-- 
+http://pythonide.stani.be
+http://pythonide.stani.be/screenshots
+http://pythonide.stani.be/manual/html/manual.html
+
+
+From tony at instaview.com  Wed Nov 29 16:37:29 2006
+From: tony at instaview.com (Tony)
+Date: Wed, 29 Nov 2006 10:37:29 -0500
+Subject: [spe-mac] Website down? Or worse?
+In-Reply-To: <2078a7ad0611290656m7d71a67dhe029c921ce1fd703@mail.gmail.com>
+References: <200611271925.23636.tony@instaview.com>
+	<20061128003417.96773.qmail@web614.biz.mail.mud.yahoo.com>
+	<2078a7ad0611290656m7d71a67dhe029c921ce1fd703@mail.gmail.com>
+Message-ID: <200611291037.29348.tony@instaview.com>
+
+Thats great, i must have missed the note on usenet. Got a bit worried there :)
+
+Id offer to help but I'm pretty bogged down at work ( year end is approaching 
+which means a plethora of reports and changes for the new legislature )
+
+
+On Wednesday 29 November 2006 09:56, SPE Stani's Python Editor wrote:
+> _______________________________________________
+> http://pythonide.stani.be
+> http://pythonide.stani.be/manual/html/manual.html
+> http://pythonide.stani.be/blog/sm_donate
+> _______________________________________________ Nothing permanent, don't
+> worry, but something bad temporarily. See the general spe-users list:
+>
+> ---------- Forwarded message ----------
+> From: SPE Stani's Python Editor <spe.stani.be at gmail.com>
+> Date: Nov 29, 2006 3:53 PM
+> Subject: Re: [spe-users] SPE is looking for a new webhost
+> To: Mailing list for spe users <python-spe-users at lists.berlios.de>
+>
+>
+> Yes, it went quicker as I thought unfortunately. I've posted on
+> comp.lang.python and have received already a nice offer. I'll wait for
+> other reactions and than make a choice. Don't worry the SPE website
+> will come back.
+>
+> If some of you are familiar with one of the python frameworks
+> (Zope/Plone, django, turbogears, ...) or with web design/building in
+> general and want to help out, it will only be faster.
+>
+> Stani
+>
+
+
+

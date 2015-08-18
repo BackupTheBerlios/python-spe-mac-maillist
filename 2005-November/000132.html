@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] SPE 0.8.0.a released!
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.8.0.a%20released%21&In-Reply-To=%3C1FCCBF59-68EF-4C3D-9908-CFB5076ACDA0%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000131.html">
+   <LINK REL="Next"  HREF="000136.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] SPE 0.8.0.a released!</H1>
+    <B>Cheng Zhang</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20SPE%200.8.0.a%20released%21&In-Reply-To=%3C1FCCBF59-68EF-4C3D-9908-CFB5076ACDA0%40gmail.com%3E"
+       TITLE="[spe-mac] SPE 0.8.0.a released!">czhang.cmu at gmail.com
+       </A><BR>
+    <I>Sun Nov 27 11:14:48 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000131.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+        <LI>Next message: <A HREF="000136.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#132">[ date ]</a>
+              <a href="thread.html#132">[ thread ]</a>
+              <a href="subject.html#132">[ subject ]</a>
+              <a href="author.html#132">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I can't use the menu &quot;Tools / Browse folder&quot; after syncing to rev#85,  
+revert back to rev#84 also have the same problem.
+
+The stack trace is:
+Traceback (most recent call last):
+   File &quot;/Users/czhang/project/oss/spe/trunk/_spe/Menu.py&quot;, line 369,  
+in menu_browse_folder
+     self.parentPanel.browse_folder()
+   File &quot;/Users/czhang/project/oss/spe/trunk/_spe/Parent.py&quot;, line  
+558, in browse_folder
+     webbrowser.open(dirname(fileName))
+   File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/webbrowser.py&quot;, line 43, in open
+     get().open(url, new, autoraise)
+   File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/webbrowser.py&quot;, line 315, in open
+     ic.launchurl(url)
+   File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/plat-mac/ic.py&quot;, line 235, in launchurl
+     return _dft_ic.launchurl(url, hint)
+   File &quot;/Library/Frameworks/Python.framework/Versions/2.4/lib/ 
+python2.4/plat-mac/ic.py&quot;, line 202, in launchurl
+     self.ic.ICLaunchURL(hint, url, 0, len(url))
+MacOS.Error: (-673, 'no URL found')
+
+Is such info enough?
+
+- Cheng
+
+On Nov 27, 2005, at 1:56 PM, SPE Stani's Python Editor wrote:
+
+&gt;<i> Subversion 85+ is committed.
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000131.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+	<LI>Next message: <A HREF="000136.html">[spe-mac] SPE 0.8.0.a released!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#132">[ date ]</a>
+              <a href="thread.html#132">[ thread ]</a>
+              <a href="subject.html#132">[ subject ]</a>
+              <a href="author.html#132">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

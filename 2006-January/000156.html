@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] Editor window font anti-aliasing
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2006-January/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Editor%20window%20font%20anti-aliasing&In-Reply-To=%3C2078a7ad0601120642w11be9fdcw3a367fa08d3a15d4%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000155.html">
+   <LINK REL="Next"  HREF="000157.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] Editor window font anti-aliasing</H1>
+    <B>SPE Stani's Python Editor</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20Editor%20window%20font%20anti-aliasing&In-Reply-To=%3C2078a7ad0601120642w11be9fdcw3a367fa08d3a15d4%40mail.gmail.com%3E"
+       TITLE="[spe-mac] Editor window font anti-aliasing">spe.stani.be at gmail.com
+       </A><BR>
+    <I>Thu Jan 12 15:42:02 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000155.html">[spe-mac] Editor window font anti-aliasing
+</A></li>
+        <LI>Next message: <A HREF="000157.html">[spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#156">[ date ]</a>
+              <a href="thread.html#156">[ thread ]</a>
+              <a href="subject.html#156">[ subject ]</a>
+              <a href="author.html#156">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 1/12/06, Rudolph van der Merwe &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">rudolphv at gmail.com</A>&gt; wrote:
+&gt;<i> Is is possible to turn off the anti-aliasing of the font in the main editor
+</I>&gt;<i> window? I would love to use the ProggyClean (
+</I>&gt;<i> <A HREF="http://www.proggyfonts.com/index.php?menu=download">http://www.proggyfonts.com/index.php?menu=download</A> )
+</I>&gt;<i> monospaced bitmap font for editing, but it only looks good at a font size of
+</I>&gt;<i> 16 without anti-aliasing (at least in OS X).
+</I>&gt;<i>
+</I>&gt;<i> On the Mac (running OS X) one can turn of anti-aliasing for the font in the
+</I>&gt;<i> standard Terminal.app window, so it should be possible to do this on an
+</I>&gt;<i> application by application basis, without having to change the global
+</I>&gt;<i> anti-aliasing settings.
+</I>&gt;<i>
+</I>&gt;<i> Rudolph
+</I>
+Hi Rudolph,
+Mac users asked for anti-aliasing, but if you want to turn it off,
+feel free to hack into _spe/smwxp/stc.py and look for the lines
+(around 435):
+
+    def SetStyles(self):
+        self.StyleClearAll()
+
+        # anti-aliasing
+        if hasattr(self,'SetUseAntiAliasing'):
+            self.SetUseAntiAliasing(True)     #---&gt; REPLACE THIS WITH False
+
+Stani
+
+--
+<A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+<A HREF="http://pythonide.stani.be/screenshots">http://pythonide.stani.be/screenshots</A>
+<A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000155.html">[spe-mac] Editor window font anti-aliasing
+</A></li>
+	<LI>Next message: <A HREF="000157.html">[spe-mac] SPE 0.8.1.d (redirected output,column/row view,ubuntu support)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#156">[ date ]</a>
+              <a href="thread.html#156">[ thread ]</a>
+              <a href="subject.html#156">[ subject ]</a>
+              <a href="author.html#156">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>

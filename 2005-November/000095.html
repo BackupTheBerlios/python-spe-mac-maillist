@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/python-spe-mac/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20spe-blender%20file%20adapted%20for%20Mac%20%28Python%202.3%20OSX%2010.3.9%29&In-Reply-To=%3C437C60AC.7000407%40merz-akademie.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000093.html">
+   <LINK REL="Next"  HREF="000097.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)</H1>
+    <B>Kay Fricke</B> 
+    <A HREF="mailto:python-spe-mac%40lists.berlios.de?Subject=Re%3A%20%5Bspe-mac%5D%20spe-blender%20file%20adapted%20for%20Mac%20%28Python%202.3%20OSX%2010.3.9%29&In-Reply-To=%3C437C60AC.7000407%40merz-akademie.de%3E"
+       TITLE="[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)">kay.fricke at merz-akademie.de
+       </A><BR>
+    <I>Thu Nov 17 11:51:24 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000093.html">[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+</A></li>
+        <LI>Next message: <A HREF="000097.html">[spe-mac] Python paths on OS X 10.4 (was: spe-blender-file...)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#95">[ date ]</a>
+              <a href="thread.html#95">[ thread ]</a>
+              <a href="subject.html#95">[ subject ]</a>
+              <a href="author.html#95">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Rick, Hi all,
+
+the machine i'm working on has a standard MacOS (10.3.9) Python 2.3 
+Framework installation, which is installed under: 
+/System/Library/Frameworks/Python.framework/Versions/2.3/
+and the sitepackages:
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/site-packages/
+or
+/Library/Python/2.3/
+
+It may be that things are different under OSX 10.4 or when you have 
+installed another Python distribution (not the apple package).
+
+to install spe use:
+ &gt;python setup.py install
+
+for wxpython 2.6 you can use the Mac installer.
+
+Spe alone starts only with the pythonw command, not python. The whole 
+command line is:
+ &gt;pythonw /Library/Python/2.3/_spe/SPE.py
+
+this works fine with no further changes to the environment var's.
+
+With blender, using blender 2.37a, Spe is not starting from the 
+spe.blend file, even when you set the environment variable PYTHONPATH 
+and start blender from a terminal.
+It will complain about not finding wx.
+
+So change the path construction in the spe.blend file, to point to the 
+Mac Location of the site-packages. Or use my speMac.blend file which you 
+can find attached to my first mail.
+
+and like magic, spe starts from within blender.
+
+oh, and not to forget:
+
+&quot;Have fun using your new SPE/Blender combination!&quot;
+
+please note that as I said earlier, my speMac.blend really is a fast 
+hack, just setting the site-packages path with a string, lacking a path 
+constructor, and switch for different os'es like win/mac/linux.
+If I find the time, I'll give that a try within the next days.
+
+comment:
+It looks like, when the Mac-Python installation packaged by apple is 
+used, the path layout is different from the standard python layout.
+
+question:
+Can anyone confirm that, who has made a python installation which is not 
+packaged by apple? If so the path construction must be changed/switched 
+accordingly to the kind of python installation used on the mac.
+
+best regards
+
+kay
+
+Rick Thomas wrote:
+&gt;<i> _______________________________________________
+</I>&gt;<i> <A HREF="http://pythonide.stani.be">http://pythonide.stani.be</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/manual/html/manual.html">http://pythonide.stani.be/manual/html/manual.html</A>
+</I>&gt;<i> <A HREF="http://pythonide.stani.be/blog/sm_donate">http://pythonide.stani.be/blog/sm_donate</A> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Thanks Kay!
+</I>&gt;<i> 
+</I>&gt;<i> If you can find the time, would it be possible for you to post a 
+</I>&gt;<i> step-by-step description of what you did -- starting with a &quot;plain 
+</I>&gt;<i> vanilla&quot; MacOS-X installation?
+</I>&gt;<i> 
+</I>&gt;<i> Hopefully, it is mostly a series of things of the form:
+</I>&gt;<i> 
+</I>&gt;<i>     &quot;Follow the excellent directions at ... to install ... , except that 
+</I>&gt;<i> at step ..., you need to do ...&quot;
+</I>&gt;<i> 
+</I>&gt;<i> and ending with:
+</I>&gt;<i> 
+</I>&gt;<i>     &quot;Have fun using your new SPE/Blender combination!&quot;
+</I>&gt;<i> 
+</I>&gt;<i> ADVThanksANCE!
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Rick
+</I>&gt;<i> 
+</I>&gt;<i> On Nov 16, 2005, at 3:45 PM, Kay Fricke wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Hi to all,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I've just worked my way into making spe work together with blender on 
+</I>&gt;&gt;<i> Mac OSX.
+</I>&gt;&gt;<i> I had a few difficulties starting it, and setting the Pythonpath 
+</I>&gt;&gt;<i> didn't solved anything.
+</I>&gt;&gt;<i> So I changed a few things in the blend file, to make it work.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Its just a quick hack, but should work for a standard Python 
+</I>&gt;&gt;<i> installation on the Mac.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> There was a problem with construction of the site-packages path.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Find attached a blend file which works fine for me.
+</I>&gt;&gt;<i> If i find the time, i'll post a more elegant and flexible construction 
+</I>&gt;&gt;<i> of the path to the site-packages.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> best regards
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> kay
+</I>&gt;&gt;<i> &lt;speMac.blend&gt;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Python-spe-mac mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/python-spe-mac">Python-spe-mac at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/python-spe-mac">http://lists.berlios.de/mailman/listinfo/python-spe-mac</A>
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000093.html">[spe-mac] spe-blender file adapted for Mac (Python 2.3 OSX 10.3.9)
+</A></li>
+	<LI>Next message: <A HREF="000097.html">[spe-mac] Python paths on OS X 10.4 (was: spe-blender-file...)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#95">[ date ]</a>
+              <a href="thread.html#95">[ thread ]</a>
+              <a href="subject.html#95">[ subject ]</a>
+              <a href="author.html#95">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/python-spe-mac">More information about the Python-spe-mac
+mailing list</a><br>
+</body></html>
